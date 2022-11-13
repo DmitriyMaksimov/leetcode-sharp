@@ -1,5 +1,4 @@
-﻿using FluentAssertions;
-using leetcode_sharp;
+﻿using leetcode_sharp;
 
 namespace UnitTests;
 
