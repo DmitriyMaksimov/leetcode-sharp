@@ -10,13 +10,9 @@ public class S00328UnitTests
     {
         var sut = new S00328();
 
-        var n5 = new S00328.ListNode(5);
-        var n4 = new S00328.ListNode(4, n5);
-        var n3 = new S00328.ListNode(3, n4);
-        var n2 = new S00328.ListNode(2, n3);
-        var n1 = new S00328.ListNode(1, n2);
+        var root = ListNode.Parse("[1,2,3,4,5]")!;
 
-        var oddEvenList = sut.OddEvenList(n1);
+        var oddEvenList = sut.OddEvenList(root);
         var ints = new List<int>();
         while (oddEvenList != null)
         {
