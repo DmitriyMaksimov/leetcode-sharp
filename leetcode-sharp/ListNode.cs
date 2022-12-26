@@ -1,11 +1,13 @@
-﻿namespace leetcode_sharp;
+﻿using System.Text;
+
+namespace leetcode_sharp;
 
 public class ListNode
 {
     public int val;
-    public ListNode next;
+    public ListNode? next;
 
-    public ListNode(int val = 0, ListNode next = null)
+    public ListNode(int val = 0, ListNode? next = null)
     {
         this.val = val;
         this.next = next;
@@ -45,5 +47,24 @@ public class ListNode
         }
 
         return head;
+    }
+
+    public static string ToString(ListNode? root)
+    {
+        var stringBuilder = new StringBuilder();
+        stringBuilder.Append('[');
+        var first = true;
+        
+        while (root != null)
+        {
+            if (!first) stringBuilder.Append(',');
+            stringBuilder.Append(root.val);
+            first = false;
+            root = root.next;
+        }
+        
+        stringBuilder.Append(']');
+
+        return stringBuilder.ToString();
     }
 }
