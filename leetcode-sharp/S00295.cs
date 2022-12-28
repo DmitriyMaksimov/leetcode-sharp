@@ -2,11 +2,11 @@
 
 // 295. Find Median from Data Stream
 // https://leetcode.com/problems/find-median-from-data-stream/
-public class MedianFinder
+public class S00295
 {
     private readonly List<int> _values = new();
 
-    public MedianFinder()
+    public S00295()
     {
         // Nothing
     }
