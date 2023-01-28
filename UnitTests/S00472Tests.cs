@@ -11,7 +11,6 @@ public class S00472Tests
         var sut = new S00472();
         sut.FindAllConcatenatedWordsInADict(new[] {"cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"}).Should()
             .Equal("catsdogcats", "dogcatsdog", "ratcatdogcat");
-        
     }
 
     [Test]
@@ -19,6 +18,5 @@ public class S00472Tests
     {
         var sut = new S00472();
         sut.FindAllConcatenatedWordsInADict(new[] {"cat","dog","catdog"}).Should().Equal("catdog");
-        
     }
 }
