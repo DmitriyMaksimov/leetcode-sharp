@@ -10,7 +10,7 @@ public class S00783
     {
         inorderTraversal(root);
         var diff = int.MaxValue;
-        for (int i = 0; i < _result.Count - 1; i++)
+        for (var i = 0; i < _result.Count - 1; i++)
         {
             diff = Math.Min(diff, Math.Abs(_result[i] - _result[i + 1]));
         }
