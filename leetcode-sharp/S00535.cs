@@ -4,31 +4,31 @@
 // https://leetcode.com/problems/encode-and-decode-tinyurl/
 public class S00535
 {
-    private const string baseUrl = "http://tinyurl.com/";
-    private Dictionary<string, string> _id2url = new();
-    private Dictionary<string, string> _url2id = new();
+    private const string BaseUrl = "http://tinyurl.com/";
+    private readonly Dictionary<string, string> _id2Url = new();
+    private readonly Dictionary<string, string> _url2Id = new();
     
     // Encodes a URL to a shortened URL
     public string encode(string longUrl)
     {
-        if (_url2id.TryGetValue(longUrl, out var id))
+        if (_url2Id.TryGetValue(longUrl, out var id))
         {
-            return baseUrl + id;
+            return BaseUrl + id;
         }
 
         var newId = Guid.NewGuid().ToString("N");
-        _url2id[longUrl] = newId;
-        _id2url[newId] = longUrl;
+        _url2Id[longUrl] = newId;
+        _id2Url[newId] = longUrl;
         
-        return baseUrl + newId;
+        return BaseUrl + newId;
     }
 
     // Decodes a shortened URL to its original URL.
-    public string decode(string shortUrl)
+    public string? decode(string shortUrl)
     {
-        var id = shortUrl[baseUrl.Length..];
+        var id = shortUrl[BaseUrl.Length..];
 
-        if (_id2url.TryGetValue(id, out var url))
+        if (_id2Url.TryGetValue(id, out var url))
         {
             return url;
         }
