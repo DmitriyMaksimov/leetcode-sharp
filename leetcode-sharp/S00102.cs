@@ -1,7 +1,7 @@
 ﻿namespace leetcode_sharp;
 
-// 103. Binary Tree Zigzag Level Order Traversal
-// https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+// 102. Binary Tree Level Order Traversal
+// https://leetcode.com/problems/binary-tree-level-order-traversal/
 public class S00102
 {
     public IList<IList<int>>? LevelOrder(TreeNode? root)
