@@ -9,7 +9,7 @@ public class S00108
         return nums.Length == 0 ? null : arrayToBst(nums, 0, nums.Length - 1);
     }
 
-    private TreeNode? arrayToBst(IReadOnlyList<int> nums, int lo, int hi)
+    private static TreeNode? arrayToBst(IReadOnlyList<int> nums, int lo, int hi)
     {
         if (lo > hi)
         {
