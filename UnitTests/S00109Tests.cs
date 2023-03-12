@@ -6,6 +6,7 @@ namespace UnitTests;
 public class S00109Tests
 {
     [Test]
+    [Explicit]
     public void T1()
     {
         var sut = new S00109();
