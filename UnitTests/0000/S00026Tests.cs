@@ -2,7 +2,7 @@ using leetcode_sharp;
 
 namespace UnitTests;
 
-public class S00026UnitTests
+public class S00026Tests
 {
     [Test]
     public void Test0()

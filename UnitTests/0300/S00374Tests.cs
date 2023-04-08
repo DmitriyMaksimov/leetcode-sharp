@@ -3,7 +3,7 @@
 namespace UnitTests;
 
 [TestFixture]
-public class S00374UnitTests
+public class S00374Tests
 {
     [TestCase(10, 6)]
     [TestCase(1, 1)]

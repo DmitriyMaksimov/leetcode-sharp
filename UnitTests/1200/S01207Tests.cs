@@ -3,7 +3,7 @@
 namespace UnitTests;
 
 [TestFixture]
-public class S01207UnitTests
+public class S01207Tests
 {
     [Test]
     public void Test1()

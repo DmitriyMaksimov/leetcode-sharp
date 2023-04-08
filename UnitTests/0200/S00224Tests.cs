@@ -4,7 +4,7 @@ using leetcode_sharp;
 namespace UnitTests;
 
 [TestFixture]
-public class S00224UnitTests
+public class S00224Tests
 {
     [Test]
     public void Test1()
