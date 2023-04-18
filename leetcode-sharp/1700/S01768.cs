@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace leetcode_sharp;
+﻿namespace leetcode_sharp;
 
 // 1768. Merge Strings Alternately
 // https://leetcode.com/problems/merge-strings-alternately/
