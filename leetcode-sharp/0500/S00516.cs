@@ -31,5 +31,4 @@ public class S00516
 
         return _cache[(i, j)] = Math.Max(getLCS(a, i + 1, b, j), getLCS(a, i, b, j + 1));
     }
-
 }
