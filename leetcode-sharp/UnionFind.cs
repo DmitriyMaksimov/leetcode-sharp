@@ -13,7 +13,7 @@ public class UnionFind
     }
 
     // Unite components
-    // Returns true when nodes 'a' and 'b' are in different components
+    // Returns true when nodes 'a' and 'b' were in different components
     public bool Unite(int a, int b)
     {
         if (FindComponent(a) == FindComponent(b))
