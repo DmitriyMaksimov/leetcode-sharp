@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0300;
+﻿namespace leetcode_sharp;
 
 // 367. Valid Perfect Square
 // https://leetcode.com/problems/valid-perfect-square/

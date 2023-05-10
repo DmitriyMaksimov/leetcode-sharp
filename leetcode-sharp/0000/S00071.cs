@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace leetcode_sharp._0000;
+﻿namespace leetcode_sharp;
 
 // 71. Simplify Path
 // https://leetcode.com/problems/simplify-path/

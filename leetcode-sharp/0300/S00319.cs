@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0300;
+﻿namespace leetcode_sharp;
 
 // 319. Bulb Switcher
 // https://leetcode.com/problems/bulb-switcher/

@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0300;
+﻿namespace leetcode_sharp;
 
 // 377. Combination Sum IV
 // https://leetcode.com/problems/combination-sum-iv/
