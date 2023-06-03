@@ -20,7 +20,7 @@ public class S01376
         return dfs(headID, informTime, adjList);
     }
 
-    private int dfs(int manager, IReadOnlyList<int> informTime, IReadOnlyDictionary<int, List<int>> adjList)
+    private static int dfs(int manager, IReadOnlyList<int> informTime, IReadOnlyDictionary<int, List<int>> adjList)
     {
         var maxTime = 0;
         if (adjList.ContainsKey(manager))
