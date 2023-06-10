@@ -1,4 +1,4 @@
-﻿using leetcode_sharp._2000;
+﻿using leetcode_sharp;
 
 namespace UnitTests;
 

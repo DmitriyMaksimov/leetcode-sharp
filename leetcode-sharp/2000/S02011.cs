@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._2000;
+﻿namespace leetcode_sharp;
 
 // 2011. Final Value of Variable After Performing Operations
 // https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
