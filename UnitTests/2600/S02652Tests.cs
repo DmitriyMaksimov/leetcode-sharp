@@ -1,6 +1,6 @@
 ﻿using leetcode_sharp;
 
-namespace UnitTests._2600;
+namespace UnitTests;
 
 [TestFixture]
 public class S02652Tests
