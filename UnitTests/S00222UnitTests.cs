@@ -9,7 +9,8 @@ public class S00222UnitTests
     public void Test1()
     {
         var sut = new S00222();
-        var root = new S00222.TreeNode(1, new S00222.TreeNode(2, new S00222.TreeNode(4), new S00222.TreeNode(5)), new S00222.TreeNode(3, new S00222.TreeNode(6)));
+        var root = TreeNode.Parse("[1,2,3,4,5,6]");
+        TreeNode.Print(root);
         sut.CountNodes(root).Should().Be(6);
     }
     
@@ -23,7 +24,7 @@ public class S00222UnitTests
     public void Test3()
     {
         var sut = new S00222();
-        var root = new S00222.TreeNode(1);
+        var root = TreeNode.Parse("[1]");
         sut.CountNodes(root).Should().Be(1);
     }
 }
