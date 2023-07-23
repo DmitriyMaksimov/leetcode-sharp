@@ -3,12 +3,12 @@
 namespace UnitTests;
 
 [TestFixture]
-public class MedianFinderUnitTests
+public class S00295Tests
 {
     [Test]
     public void Test1()
     {
-        var sut = new MedianFinder();
+        var sut = new S00295();
 
         sut.AddNum(2);
         sut.AddNum(3);
@@ -35,14 +35,14 @@ public class MedianFinderUnitTests
             null, 6.00000, null, 8.00000, null, 6.00000, null, 6.00000, null, 6.00000, null, 5.50000, null, 6.00000, null, 5.50000, null, 5.00000, null, 4.00000, null, 3.00000
         };
 
-        var sut = new MedianFinder();
+        var sut = new S00295();
 
         for (var i = 0; i < operations.Length; i++)
         {
             switch (operations[i])
             {
                 case "MedianFinder":
-                    sut = new MedianFinder();
+                    sut = new S00295();
                     break;
                 case "addNum":
                     sut.AddNum(args[i] ?? 0);
