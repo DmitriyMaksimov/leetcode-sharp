@@ -22,7 +22,7 @@ public class ListNode
 
         str = str.Replace(" ", "");
 
-        var enumerable = str[1..][..^1].Split(',').Select(x => int.TryParse(x, out var n) ? n : default);
+        var enumerable = str[1..][..^1].Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).Select(x => int.TryParse(x, out var n) ? n : default);
 
         if (!enumerable.Any())
         {
