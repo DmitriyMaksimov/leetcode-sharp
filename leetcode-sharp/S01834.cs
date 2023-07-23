@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/single-threaded-cpu/
 public class S01834
 {
-    private PriorityQueue<int, (int enqueueTime, int processingTime, int index)> _tasksByEnqueueTime = new();
-    private PriorityQueue<int, (int processingTime, int index)> _readyForExecution = new();
+    private readonly PriorityQueue<int, (int enqueueTime, int processingTime, int index)> _tasksByEnqueueTime = new();
+    private readonly PriorityQueue<int, (int processingTime, int index)> _readyForExecution = new();
     private int[][] _tasks;
 
     public int[] GetOrder(int[][] tasks)
