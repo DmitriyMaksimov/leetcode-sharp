@@ -2,7 +2,7 @@
 
 // 78. Subsets
 
-// https://leetcode.com/problems/subsets/?envType=study-plan-v2&envId=top-100-liked
+// https://leetcode.com/problems/subsets/
 public class S00078
 {
     private int[] _nums;
