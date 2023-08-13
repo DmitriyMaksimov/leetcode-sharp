@@ -46,4 +46,11 @@ public class S00452Tests
         var sut = new S00452();
         sut.FindMinArrowShots(new[] {new[] {-2147483648, 2147483647}}).Should().Be(1);
     }
+
+    [Test]
+    public void T7()
+    {
+        var sut = new S00452();
+        sut.FindMinArrowShots(new[] {new[] {-2147483648, 2147483647}, new[] {-2147483648, 2147483647}}).Should().Be(1);
+    }
 }

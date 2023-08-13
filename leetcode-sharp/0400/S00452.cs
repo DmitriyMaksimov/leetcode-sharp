@@ -17,7 +17,7 @@ public class S00452
         }
 
         var count = 0;
-        var minEnd = int.MinValue;
+        var minEnd = long.MinValue;
 
         var orderedPoints = points.OrderBy(x => x[0]);
 
