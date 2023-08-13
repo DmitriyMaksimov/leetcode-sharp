@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0000;
+﻿namespace leetcode_sharp;
 
 // 51. N-Queens
 // https://leetcode.com/problems/n-queens/

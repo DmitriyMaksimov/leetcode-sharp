@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0100;
+﻿namespace leetcode_sharp;
 
 // 148. Sort List
 // https://leetcode.com/problems/sort-list/

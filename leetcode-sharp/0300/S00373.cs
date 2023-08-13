@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0300;
+﻿namespace leetcode_sharp;
 
 // 373. Find K Pairs with Smallest Sums
 // https://leetcode.com/problems/find-k-pairs-with-smallest-sums/

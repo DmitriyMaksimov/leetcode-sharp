@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0000;
+﻿namespace leetcode_sharp;
 
 // 75. Sort Colors
 // https://leetcode.com/problems/sort-colors/

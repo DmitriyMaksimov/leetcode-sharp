@@ -1,4 +1,4 @@
-﻿namespace leetcode_sharp._0100;
+﻿namespace leetcode_sharp;
 
 // 160. Intersection of Two Linked Lists
 // https://leetcode.com/problems/intersection-of-two-linked-lists/

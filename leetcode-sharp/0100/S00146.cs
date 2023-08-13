@@ -1,5 +1,4 @@
-﻿
-namespace leetcode_sharp._0100;
+﻿namespace leetcode_sharp;
 
 public static class S00146
 {
