@@ -6,7 +6,7 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/convert-a-number-to-hexadecimal/
 public class S00405
 {
-    private char[] _hexDigits = "0123456789abcdef".ToCharArray();
+    private readonly char[] _hexDigits = "0123456789abcdef".ToCharArray();
 
     public string ToHex(int num)
     {
