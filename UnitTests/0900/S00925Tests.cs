@@ -18,4 +18,11 @@ public class S00925Tests
         var sut = new S00925();
         sut.IsLongPressedName("saeed", "ssaaedd").Should().BeFalse();
     }
+
+    [Test]
+    public void T3()
+    {
+        var sut = new S00925();
+        sut.IsLongPressedName("alex", "aaleexa").Should().BeFalse();
+    }
 }
