@@ -15,7 +15,7 @@ public class S00515
         while (queue.Count > 0)
         {
             var currLevelSize = queue.Count;
-            var maxVal = Int32.MinValue;
+            var maxVal = int.MinValue;
 
             for (var i = 0; i < currLevelSize; i++)
             {
