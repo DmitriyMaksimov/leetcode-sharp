@@ -1,20 +1,11 @@
-﻿using System.Text;
+﻿namespace leetcode_sharp;
 
-namespace leetcode_sharp;
-
-// 
+//  1980. Find Unique Binary String
 // https://leetcode.com/problems/find-unique-binary-string
 public class S01980
 {
     public string FindDifferentBinaryString(string[] nums)
     {
-        var sb = new StringBuilder();
-
-        for (var i = 0; i < nums.Length; i++)
-        {
-            sb.Append(nums[i][i] == '0' ? '1' : '0');
-        }
-
-        return sb.ToString();
+        return new string(nums.Select((s, n) => s[n] == '0' ? '1' : '0').ToArray());
     }
 }
