@@ -1,4 +1,6 @@
-﻿namespace leetcode_sharp;
+﻿using leetcode_sharp;
+
+namespace UnitTests;
 
 [TestFixture]
 public class S02946Tests
