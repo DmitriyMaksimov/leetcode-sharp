@@ -6,24 +6,26 @@ public class S01422
 {
     public int MaxScore(string s)
     {
-        var max = 0;
-        var left = 0;
-        var right = s.Count(t => t == '1');
-
-        foreach (var c in s)
+        var zeros = 0;
+        var ones = 0;
+        var max = int.MinValue;
+        for (var i = 0; i < s.Length; i++)
         {
-            if (c == '0')
+            if (s[i] == '0')
             {
-                left++;
+                zeros++;
             }
             else
             {
-                right--;
+                ones++;
             }
 
-            max = Math.Max(max, left + right);
+            if (i != s.Length - 1)
+            {
+                max = Math.Max(zeros - ones, max);
+            }
         }
 
-        return max;
+        return max + ones;
     }
 }

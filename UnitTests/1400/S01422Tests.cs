@@ -25,4 +25,11 @@ public class S01422Tests
         var sut = new S01422();
         sut.MaxScore("1111").Should().Be(3);
     }
+
+    [Test]
+    public void T4()
+    {
+        var sut = new S01422();
+        sut.MaxScore("00").Should().Be(1);
+    }
 }
