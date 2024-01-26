@@ -22,8 +22,8 @@ public class S00576
             }
         }
 
-        this._m = m;
-        this._n = n;
+        _m = m;
+        _n = n;
         return helper(maxMove, startRow, startColumn, dp);
     }
 
