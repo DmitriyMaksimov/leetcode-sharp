@@ -1,6 +1,6 @@
 ﻿using leetcode_sharp;
 
-namespace UnitTests.Weekly;
+namespace UnitTests;
 
 [TestFixture]
 public class S100215Tests
