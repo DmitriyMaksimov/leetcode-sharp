@@ -2,7 +2,7 @@
 
 // 1381. Design a Stack With Increment Operation
 // https://leetcode.com/problems/design-a-stack-with-increment-operation
-public class S01381
+public static class S01381
 {
     public class CustomStack
     {
