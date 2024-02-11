@@ -16,6 +16,6 @@ public class S100186Tests
     public void T2()
     {
         var sut = new S100186();
-        sut.CountMatchingSubarrays([1,4,4,1,3,5,5,3], [1,0,-1]).Should().Be(2);
+        sut.CountMatchingSubarrays([1, 4, 4, 1, 3, 5, 5, 3], [1, 0, -1]).Should().Be(2);
     }
 }
