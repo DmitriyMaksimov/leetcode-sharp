@@ -9,9 +9,9 @@ public class S00921
         var left = 0;
         var right = 0;
 
-        for (var i = 0; i < s.Length; ++i)
+        foreach (var c in s)
         {
-            if (s[i] == '(')
+            if (c == '(')
             {
                 right++;
             }
