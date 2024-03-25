@@ -4,7 +4,7 @@ namespace leetcode_sharp;
 
 // 1286. Iterator for Combination
 // https://leetcode.com/problems/iterator-for-combination
-public class S01286
+public static class S01286
 {
     public class CombinationIterator
     {
