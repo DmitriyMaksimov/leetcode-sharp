@@ -22,13 +22,8 @@ public class S00564
         long res = 0;
         var nl = long.Parse(n);
 
-        foreach (var candidate in candidates)
+        foreach (var candidate in candidates.Where(candidate => candidate != nl))
         {
-            if (candidate == nl)
-            {
-                continue;
-            }
-
             if (Math.Abs(candidate - nl) < diff)
             {
                 diff = Math.Abs(candidate - nl);
