@@ -6,43 +6,31 @@ public class S00684
 {
     public int[] FindRedundantConnection(int[][] edges)
     {
-        int[]? result = null;
-        var adjList = Enumerable.Repeat(new HashSet<int>(), 1001).ToList();
+        var parent = Enumerable.Range(0, 2001).ToArray();
 
         foreach (var edge in edges)
         {
-            var u = edge[0];
-            var v = edge[1];
+            var from = edge[0];
+            var to = edge[1];
 
-            if (Dfs(u, v, 0, adjList))
+            if (Find(parent, from) == Find(parent, to))
             {
-                result = edge;
+                return edge;
             }
-            else
-            {
-                adjList[u].Add(v);
-                adjList[v].Add(u);
-            }
+
+            parent[Find(parent, from)] = Find(parent, to);
         }
 
-        return result!;
+        return new int[2];
     }
 
-    private static bool Dfs(int u, int v, int pre, List<HashSet<int>> adjList)
+    private static int Find(int[] parent, int f)
     {
-        if (u == v)
+        if (f != parent[f])
         {
-            return true;
+            parent[f] = Find(parent, parent[f]);
         }
 
-        foreach (var w in adjList[u].Where(x => x != pre))
-        {
-            if (Dfs(w, v, u, adjList))
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return parent[f];
     }
 }
