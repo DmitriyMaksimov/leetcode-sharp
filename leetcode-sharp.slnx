@@ -1,0 +1,9 @@
+﻿<Solution>
+  <Folder Name="/SolutionItems/">
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+    <File Path=".github\workflows\dotnet.yml" />
+  </Folder>
+  <Project Path="leetcode-sharp\leetcode-sharp.csproj" Type="Classic C#" />
+  <Project Path="UnitTests\UnitTests.csproj" Type="Classic C#" />
+</Solution>
