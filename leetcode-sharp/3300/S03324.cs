@@ -6,12 +6,12 @@ public class S03324
 {
     public IList<string> StringSequence(string target)
     {
-        List<string> v = [];
+        List<string> result = [];
         var s = "a";
 
         foreach (var c in target)
         {
-            v.Add(s);
+            result.Add(s);
 
             var charArray = s.ToCharArray();
 
@@ -19,12 +19,12 @@ public class S03324
             {
                 var lastChar = charArray[^1];
                 charArray[^1]  = lastChar == 'z' ? 'a' : (char)(lastChar + 1);
-                v.Add(new string(charArray));
+                result.Add(new string(charArray));
             }
 
             s = new string(charArray) + 'a';
         }
 
-        return v;
+        return result;
     }
 }
