@@ -7,7 +7,7 @@ public class S02070
     public int[] MaximumBeauty(int[][] items, int[] queries)
     {
         var result = new int[queries.Length];
-        var queriesPair = queries.Select((int query, int index) => (query, index)).ToList();
+        var queriesPair = queries.Select((query, index) => (query, index)).ToList();
         queriesPair.Sort((a, b) => a.query.CompareTo(b.query));
         Array.Sort(items, (a, b) => a[0].CompareTo(b[0]));
 
