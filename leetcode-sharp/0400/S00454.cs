@@ -23,7 +23,7 @@ public class S00454
         {
             foreach (var b in nums2)
             {
-                var target = -1 * (a + b);
+                var target = -(a + b);
                 if (map.TryGetValue(target, out var value))
                 {
                     result += value;
