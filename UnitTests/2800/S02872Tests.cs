@@ -18,4 +18,11 @@ public class S02872Tests
         var sut = new S02872();
         sut.MaxKDivisibleComponents(7, [[0, 1], [0, 2], [1, 3], [1, 4], [2, 5], [2, 6]], [3, 0, 6, 1, 5, 2, 1], 3).Should().Be(3);
     }
+
+    [Test]
+    public void T3()
+    {
+        var sut = new S02872();
+        sut.MaxKDivisibleComponents(7, [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]], [1000000000,1000000000,1000000000,1000000000,1000000000,1000000000,1000000000], 7).Should().Be(1);
+    }
 }

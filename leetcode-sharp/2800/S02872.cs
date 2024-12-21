@@ -4,13 +4,13 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/maximum-number-of-k-divisible-components
 public class S02872
 {
-    private int[] _dp = null!;
+    private long[] _dp = null!;
     private bool[] _visited = null!;
     private int _result;
 
     public int MaxKDivisibleComponents(int n, int[][] edges, int[] values, int k)
     {
-        _dp = values.Select(x => x).ToArray();
+        _dp = values.Select(x => (long)x).ToArray();
 
         var adj = new List<int>[n];
         for (var i = 0; i < n; i++)
@@ -31,7 +31,7 @@ public class S02872
         return _result;
     }
 
-    private int Dfs(List<int>[] adj, int s, int k)
+    private long Dfs(List<int>[] adj, int s, int k)
     {
         _visited[s] = true;
 
