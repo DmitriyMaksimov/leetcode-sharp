@@ -46,19 +46,6 @@ public class S01462
             }
         }
 
-        var res = new List<bool>();
-        foreach (var pair in queries)
-        {
-            if (prerequisitesMap[pair[1]].Contains(pair[0]))
-            {
-                res.Add(true);
-            }
-            else
-            {
-                res.Add(false);
-            }
-        }
-
-        return res;
+        return queries.Select(pair => prerequisitesMap[pair[1]].Contains(pair[0])).ToList();
     }
 }
