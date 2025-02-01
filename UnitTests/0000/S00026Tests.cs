@@ -20,7 +20,7 @@ public class S00026Tests
         var nums = new[] {1, 1, 2};
         var newLen = sut.RemoveDuplicates(nums);
         Assert.That(newLen, Is.EqualTo(2));
-        nums[..newLen].Should().OnlyHaveUniqueItems();
+        Assert.That(nums[..newLen], Is.Unique);
     }
     
     [Test]
@@ -30,6 +30,6 @@ public class S00026Tests
         var nums = new[] {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         var newLen = sut.RemoveDuplicates(nums);
         Assert.That(newLen, Is.EqualTo(5));
-        nums[..newLen].Should().OnlyHaveUniqueItems();
+        Assert.That(nums[..newLen], Is.Unique);
     }
 }

@@ -9,7 +9,7 @@ public class S02733Tests
     public void T1()
     {
         var sut = new S02733();
-        sut.FindNonMinOrMax(new[] {3, 2, 1, 4}).Should().BeOneOf(2, 3);
+        Assert.That(sut.FindNonMinOrMax(new[] {3, 2, 1, 4}), Is.AnyOf(2, 3));
     }
 
     [Test]

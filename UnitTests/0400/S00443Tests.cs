@@ -11,7 +11,7 @@ public class S00443Tests
         var sut = new S00443();
         var chars = new[] {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
         Assert.That(sut.Compress(chars), Is.EqualTo(6));
-        chars.Should().StartWith(new []{'a', '2', 'b', '2', 'c', '3'});
+        Assert.That(chars, Is.EquivalentTo((char[]) ['a', '2', 'b', '2', 'c', '3', 'c']));
     }
 
     [Test]
@@ -20,7 +20,7 @@ public class S00443Tests
         var sut = new S00443();
         var chars = new[] {'a'};
         Assert.That(sut.Compress(chars), Is.EqualTo(1));
-        chars.Should().StartWith(new []{'a'});
+        Assert.That(chars, Is.EquivalentTo((char[]) ['a']));
     }
     
     [Test]
@@ -29,6 +29,6 @@ public class S00443Tests
         var sut = new S00443();
         var chars = new[] {'a','b','b','b','b','b','b','b','b','b','b','b','b'};
         Assert.That(sut.Compress(chars), Is.EqualTo(4));
-        chars.Should().StartWith(new []{'a','b','1','2'});
+        Assert.That(chars, Is.EquivalentTo((char[]) ['a', 'b', '1', '2', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']));
     }
 }

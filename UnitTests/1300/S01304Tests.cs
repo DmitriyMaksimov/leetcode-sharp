@@ -10,8 +10,8 @@ public class S01304Tests
     {
         var sut = new S01304();
         var sumZero = sut.SumZero(5);
-        sumZero.Should().HaveCount(5);
-        sumZero.Should().OnlyHaveUniqueItems();
+        Assert.That(sumZero, Has.Length.EqualTo(5));
+        Assert.That(sumZero, Is.Unique);
         Assert.That(sumZero.Sum(), Is.EqualTo(0));
     }
     
@@ -20,8 +20,8 @@ public class S01304Tests
     {
         var sut = new S01304();
         var sumZero = sut.SumZero(3);
-        sumZero.Should().HaveCount(3);
-        sumZero.Should().OnlyHaveUniqueItems();
+        Assert.That(sumZero, Has.Length.EqualTo(3));
+        Assert.That(sumZero, Is.Unique);
         Assert.That(sumZero.Sum(), Is.EqualTo(0));
     }
 
@@ -30,8 +30,8 @@ public class S01304Tests
     {
         var sut = new S01304();
         var sumZero = sut.SumZero(1);
-        sumZero.Should().HaveCount(1);
-        sumZero.Should().OnlyHaveUniqueItems();
+        Assert.That(sumZero, Has.Length.EqualTo(1));
+        Assert.That(sumZero, Is.Unique);
         Assert.That(sumZero.Sum(), Is.EqualTo(0));
     }
 }

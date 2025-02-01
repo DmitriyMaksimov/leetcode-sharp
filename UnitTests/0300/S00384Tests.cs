@@ -9,8 +9,8 @@ public class S00384Tests
     public void T1()
     {
         var solution = new S00384.Solution([1, 2, 3]);
-        solution.Shuffle().Distinct().Should().HaveCount(3);
+        Assert.That(solution.Shuffle().Distinct().Count(), Is.EqualTo(3));
         Assert.That(solution.Reset(), Is.EqualTo((int[]) [1, 2, 3]));
-        solution.Shuffle().Distinct().Should().HaveCount(3);
+        Assert.That(solution.Shuffle().Distinct().Count(), Is.EqualTo(3));
     }
 }

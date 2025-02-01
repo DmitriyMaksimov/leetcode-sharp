@@ -10,7 +10,7 @@ public class S00832Tests
     {
         var sut = new S00832();
         var image = sut.FlipAndInvertImage(new[] {new[] {1, 1, 0}, new[] {1, 0, 1}, new[] {0, 0, 0}});
-        image.Should().HaveCount(3);
+        Assert.That(image, Has.Length.EqualTo(3));
         Assert.That(image[0], Is.EqualTo((int[]) [1, 0, 0]));
         Assert.That(image[1], Is.EqualTo((int[]) [0, 1, 0]));
         Assert.That(image[2], Is.EqualTo((int[]) [1, 1, 1]));
@@ -21,7 +21,7 @@ public class S00832Tests
     {
         var sut = new S00832();
         var image = sut.FlipAndInvertImage(new[] {new[] {1, 1, 0, 0}, new[] {1, 0, 0, 1}, new[] {0, 1, 1, 1}, new[] {1, 0, 1, 0}});
-        image.Should().HaveCount(4);
+        Assert.That(image, Has.Length.EqualTo(4));
         Assert.That(image[0], Is.EqualTo((int[]) [1, 1, 0, 0]));
         Assert.That(image[1], Is.EqualTo((int[]) [0, 1, 1, 0]));
         Assert.That(image[2], Is.EqualTo((int[]) [0, 0, 0, 1]));

@@ -23,6 +23,6 @@ public class S03211Tests
     public void T3()
     {
         var sut = new S03211();
-        sut.ValidStrings(18).Should().HaveCount(6765);
+        Assert.That(sut.ValidStrings(18), Has.Count.EqualTo(6765));
     }
 }

@@ -9,7 +9,7 @@ public class S00637Tests
     public void T1()
     {
         var sut = new S00637();
-        var list = sut.AverageOfLevels(TreeNode.Parse("[3,9,20,null,null,15,7]")).Should().Equal(3.0, 14.5, 11.0);
+        Assert.That(sut.AverageOfLevels(TreeNode.Parse("[3,9,20,null,null,15,7]")), Is.EqualTo((double[]) [3.0, 14.5, 11.0]));
     }
 
     [Test]

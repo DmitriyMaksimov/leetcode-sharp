@@ -17,8 +17,8 @@ public class S00023Tests
             list = list.next;
         }
 
-        values.Should().HaveCount(8);
-        values.Should().BeInAscendingOrder();
+        Assert.That(values, Has.Count.EqualTo(8));
+        Assert.That(values, Is.Ordered);
     }
 
     [Test]

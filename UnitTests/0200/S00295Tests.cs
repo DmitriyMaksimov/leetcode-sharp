@@ -48,7 +48,7 @@ public class S00295Tests
                     sut.AddNum(args[i] ?? 0);
                     break;
                 case "findMedian":
-                    sut.FindMedian().Should().Be(expected[i], $"{i}");
+                    Assert.That(sut.FindMedian(), Is.EqualTo(expected[i]));
                     break;
             }
         }

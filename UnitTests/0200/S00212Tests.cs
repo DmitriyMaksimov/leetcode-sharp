@@ -16,7 +16,7 @@ public class S00212Tests
             new[] {'i', 'h', 'k', 'r'},
             new[] {'i', 'f', 'l', 'v'}
         };
-        sut.FindWords(board, new[] {"oath", "pea", "eat", "rain"}).Should().BeEquivalentTo("eat", "oath");
+        Assert.That(sut.FindWords(board, new[] {"oath", "pea", "eat", "rain"}), Is.EquivalentTo((string[]) ["eat", "oath"]));
     }
 
     [Test]

@@ -9,6 +9,6 @@ public class S00451Tests
     public void Test1()
     {
         var sut = new S00451();
-        sut.FrequencySort("tree").Should().BeOneOf("eert", "eetr");
+        Assert.That(sut.FrequencySort("tree"), Is.AnyOf("eert", "eetr"));
     }
 }

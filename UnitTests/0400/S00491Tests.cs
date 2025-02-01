@@ -11,10 +11,10 @@ public class S00491Tests
         var sut = new S00491();
         var expectation = new[] {new[] {4, 6}, new[] {4, 6, 7}, new[] {4, 6, 7, 7}, new[] {4, 7}, new[] {4, 7, 7}, new[] {6, 7}, new[] {6, 7, 7}, new[] {7, 7}};
         var result = sut.FindSubsequences(new[] {4, 6, 7, 7});
-        result.Should().HaveSameCount(expectation);
+        Assert.That(result, Has.Count.EqualTo(expectation.Length));
         foreach (var e in expectation)
         {
-            result.Should().ContainEquivalentOf(e);
+            Assert.That(result, Does.Contain(e));
         }
     }
 
@@ -29,6 +29,6 @@ public class S00491Tests
     public void T3()
     {
         var sut = new S00491();
-        sut.FindSubsequences(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}).Should().HaveCount(32752);
+        Assert.That(sut.FindSubsequences(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}), Has.Count.EqualTo(32752));
     }
 }

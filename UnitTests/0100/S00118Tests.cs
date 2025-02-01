@@ -10,7 +10,7 @@ public class S00118Tests
     {
         var sut = new S00118();
         var list = sut.Generate(5);
-        list.Should().HaveCount(5);
+        Assert.That(list, Has.Count.EqualTo(5));
         Assert.That(list[0], Is.EqualTo((int[]) [1]));
         Assert.That(list[1], Is.EqualTo((int[]) [1, 1]));
         Assert.That(list[2], Is.EqualTo((int[]) [1, 2, 1]));
@@ -23,7 +23,7 @@ public class S00118Tests
     {
         var sut = new S00118();
         var list = sut.Generate(1);
-        list.Should().HaveCount(1);
+        Assert.That(list, Has.Count.EqualTo(1));
         Assert.That(list[0], Is.EqualTo((int[]) [1]));
     }
 }

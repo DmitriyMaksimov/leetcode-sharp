@@ -9,13 +9,13 @@ public class S01792Tests
     public void T1()
     {
         var sut = new S01792();
-        sut.MaxAverageRatio([[1, 2], [3, 5], [2, 2]], 2).Should().BeApproximately(0.78333, 0.00001);
+        Assert.That(sut.MaxAverageRatio([[1, 2], [3, 5], [2, 2]], 2), Is.EqualTo(0.78333).Within(0.00001));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01792();
-        sut.MaxAverageRatio([[2, 4], [3, 9], [4, 5], [2, 10]], 4).Should().BeApproximately(0.53485, 0.00001);
+        Assert.That(sut.MaxAverageRatio([[2, 4], [3, 9], [4, 5], [2, 10]], 4), Is.EqualTo(0.53485).Within(0.00001));
     }
 }
