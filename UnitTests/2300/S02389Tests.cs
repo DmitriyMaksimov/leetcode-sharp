@@ -9,13 +9,13 @@ public class S02389Tests
     public void T1()
     {
         var sut = new S02389();
-        sut.AnswerQueries(new[] {4, 5, 2, 1}, new[] {3, 10, 21}).Should().Equal(2, 3, 4);
+        Assert.That(sut.AnswerQueries(new[] {4, 5, 2, 1}, new[] {3, 10, 21}), Is.EqualTo((int[]) [2, 3, 4]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02389();
-        sut.AnswerQueries(new[] {2, 3, 4, 5}, new[] {1}).Should().Equal(0);
+        Assert.That(sut.AnswerQueries(new[] {2, 3, 4, 5}, new[] {1}), Is.EqualTo((int[]) [0]));
     }
 }

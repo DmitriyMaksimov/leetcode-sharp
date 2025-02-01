@@ -9,13 +9,13 @@ public class S01238Tests
     public void T1()
     {
         var sut = new S01238();
-        sut.CircularPermutation(2, 3).Should().Equal(3, 2, 0, 1);
+        Assert.That(sut.CircularPermutation(2, 3), Is.EqualTo((int[]) [3, 2, 0, 1]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01238();
-        sut.CircularPermutation(3, 2).Should().Equal(2, 6, 7, 5, 4, 0, 1, 3);
+        Assert.That(sut.CircularPermutation(3, 2), Is.EqualTo((int[]) [2, 6, 7, 5, 4, 0, 1, 3]));
     }
 }

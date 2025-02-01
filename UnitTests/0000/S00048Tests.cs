@@ -16,9 +16,9 @@ public class S00048Tests
             new[] {7, 8, 9}
         };
         sut.Rotate(matrix);
-        matrix[0].Should().Equal(7, 4, 1);
-        matrix[1].Should().Equal(8, 5, 2);
-        matrix[2].Should().Equal(9, 6, 3);
+        Assert.That(matrix[0], Is.EqualTo((int[]) [7, 4, 1]));
+        Assert.That(matrix[1], Is.EqualTo((int[]) [8, 5, 2]));
+        Assert.That(matrix[2], Is.EqualTo((int[]) [9, 6, 3]));
     }
 
     [Test]
@@ -33,9 +33,9 @@ public class S00048Tests
             new[] {15, 14, 12, 16}
         };
         sut.Rotate(matrix);
-        matrix[0].Should().Equal(15, 13, 2, 5);
-        matrix[1].Should().Equal(14, 3, 4, 1);
-        matrix[2].Should().Equal(12, 6, 8, 9);
-        matrix[3].Should().Equal(16, 7, 10, 11);
+        Assert.That(matrix[0], Is.EqualTo((int[]) [15, 13, 2, 5]));
+        Assert.That(matrix[1], Is.EqualTo((int[]) [14, 3, 4, 1]));
+        Assert.That(matrix[2], Is.EqualTo((int[]) [12, 6, 8, 9]));
+        Assert.That(matrix[3], Is.EqualTo((int[]) [16, 7, 10, 11]));
     }
 }

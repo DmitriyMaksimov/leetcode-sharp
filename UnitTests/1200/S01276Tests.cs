@@ -9,7 +9,7 @@ public class S01276Tests
     public void T1()
     {
         var sut = new S01276();
-        sut.NumOfBurgers(16, 7).Should().Equal(1, 6);
+        Assert.That(sut.NumOfBurgers(16, 7), Is.EqualTo((int[]) [1, 6]));
     }
 
     [Test]

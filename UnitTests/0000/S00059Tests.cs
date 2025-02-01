@@ -10,8 +10,8 @@ public class S00059Tests
     {
         var sut = new S00059();
         var matrix = sut.GenerateMatrix(3);
-        matrix[0].Should().Equal(1, 2, 3);
-        matrix[1].Should().Equal(8, 9, 4);
-        matrix[2].Should().Equal(7, 6, 5);
+        Assert.That(matrix[0], Is.EqualTo((int[]) [1, 2, 3]));
+        Assert.That(matrix[1], Is.EqualTo((int[]) [8, 9, 4]));
+        Assert.That(matrix[2], Is.EqualTo((int[]) [7, 6, 5]));
     }
 }

@@ -9,14 +9,14 @@ public class S01408Tests
     public void T1()
     {
         var sut = new S01408();
-        sut.StringMatching(new[] {"mass", "as", "hero", "superhero"}).Should().Equal("as", "hero");
+        Assert.That(sut.StringMatching(new[] {"mass", "as", "hero", "superhero"}), Is.EqualTo((string[]) ["as", "hero"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01408();
-        sut.StringMatching(new[] {"leetcode", "et", "code"}).Should().Equal("et", "code");
+        Assert.That(sut.StringMatching(new[] {"leetcode", "et", "code"}), Is.EqualTo((string[]) ["et", "code"]));
     }
 
     [Test]

@@ -9,13 +9,13 @@ public class S01734Tests
     public void T1()
     {
         var sut = new S01734();
-        sut.Decode([3, 1]).Should().Equal(1, 2, 3);
+        Assert.That(sut.Decode([3, 1]), Is.EqualTo((int[]) [1, 2, 3]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01734();
-        sut.Decode([6, 5, 4, 6]).Should().Equal(2, 4, 1, 5, 3);
+        Assert.That(sut.Decode([6, 5, 4, 6]), Is.EqualTo((int[]) [2, 4, 1, 5, 3]));
     }
 }

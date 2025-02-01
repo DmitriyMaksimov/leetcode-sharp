@@ -9,7 +9,7 @@ public class S02452Tests
     public void T1()
     {
         var sut = new S02452();
-        sut.TwoEditWords(["word", "note", "ants", "wood"], ["wood", "joke", "moat"]).Should().Equal("word", "note", "wood");
+        Assert.That(sut.TwoEditWords(["word", "note", "ants", "wood"], ["wood", "joke", "moat"]), Is.EqualTo((string[]) ["word", "note", "wood"]));
     }
 
     [Test]

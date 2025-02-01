@@ -9,13 +9,13 @@ public class S03069Tests
     public void T1()
     {
         var sut = new S03069();
-        sut.ResultArray([2, 1, 3]).Should().Equal(2, 3, 1);
+        Assert.That(sut.ResultArray([2, 1, 3]), Is.EqualTo((int[]) [2, 3, 1]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03069();
-        sut.ResultArray([5, 4, 3, 8]).Should().Equal(5, 3, 4, 8);
+        Assert.That(sut.ResultArray([5, 4, 3, 8]), Is.EqualTo((int[]) [5, 3, 4, 8]));
     }
 }

@@ -9,20 +9,20 @@ public class S01324Tests
     public void T1()
     {
         var sut = new S01324();
-        sut.PrintVertically("HOW ARE YOU").Should().Equal("HAY", "ORO", "WEU");
+        Assert.That(sut.PrintVertically("HOW ARE YOU"), Is.EqualTo((string[]) ["HAY", "ORO", "WEU"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01324();
-        sut.PrintVertically("TO BE OR NOT TO BE").Should().Equal("TBONTB", "OEROOE", "   T");
+        Assert.That(sut.PrintVertically("TO BE OR NOT TO BE"), Is.EqualTo((string[]) ["TBONTB", "OEROOE", "   T"]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01324();
-        sut.PrintVertically("CONTEST IS COMING").Should().Equal("CIC", "OSO", "N M", "T I", "E N", "S G", "T");
+        Assert.That(sut.PrintVertically("CONTEST IS COMING"), Is.EqualTo((string[]) ["CIC", "OSO", "N M", "T I", "E N", "S G", "T"]));
     }
 }

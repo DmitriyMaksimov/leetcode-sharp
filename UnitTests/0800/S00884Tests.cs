@@ -9,13 +9,13 @@ public class S00884Tests
     public void T1()
     {
         var sut = new S00884();
-        sut.UncommonFromSentences("this apple is sweet", "this apple is sour").Should().Equal("sweet", "sour");
+        Assert.That(sut.UncommonFromSentences("this apple is sweet", "this apple is sour"), Is.EqualTo((string[]) ["sweet", "sour"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00884();
-        sut.UncommonFromSentences("apple apple", "banana").Should().Equal("banana");
+        Assert.That(sut.UncommonFromSentences("apple apple", "banana"), Is.EqualTo((string[]) ["banana"]));
     }
 }

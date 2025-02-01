@@ -9,13 +9,13 @@ public class S01170Tests
     public void T1()
     {
         var sut = new S01170();
-        sut.NumSmallerByFrequency(["cbd"], ["zaaaz"]).Should().Equal(1);
+        Assert.That(sut.NumSmallerByFrequency(["cbd"], ["zaaaz"]), Is.EqualTo((int[]) [1]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01170();
-        sut.NumSmallerByFrequency(["bbb", "cc"], ["a", "aa", "aaa", "aaaa"]).Should().Equal(1, 2);
+        Assert.That(sut.NumSmallerByFrequency(["bbb", "cc"], ["a", "aa", "aaa", "aaaa"]), Is.EqualTo((int[]) [1, 2]));
     }
 }

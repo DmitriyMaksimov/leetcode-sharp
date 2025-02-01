@@ -9,34 +9,34 @@ public class S00034Tests
     public void T1()
     {
         var sut = new S00034();
-        sut.SearchRange(new[] {5, 7, 7, 8, 8, 10}, 8).Should().Equal(3, 4);
+        Assert.That(sut.SearchRange(new[] {5, 7, 7, 8, 8, 10}, 8), Is.EqualTo((int[]) [3, 4]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00034();
-        sut.SearchRange(new[] {5, 7, 7, 8, 8, 10}, 6).Should().Equal(-1, -1);
+        Assert.That(sut.SearchRange(new[] {5, 7, 7, 8, 8, 10}, 6), Is.EqualTo((int[]) [-1, -1]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00034();
-        sut.SearchRange(Array.Empty<int>(), 0).Should().Equal(-1, -1);
+        Assert.That(sut.SearchRange(Array.Empty<int>(), 0), Is.EqualTo((int[]) [-1, -1]));
     }
 
     [Test]
     public void T4()
     {
         var sut = new S00034();
-        sut.SearchRange(new[] {2, 2}, 3).Should().Equal(-1, -1);
+        Assert.That(sut.SearchRange(new[] {2, 2}, 3), Is.EqualTo((int[]) [-1, -1]));
     }
 
     [Test]
     public void T5()
     {
         var sut = new S00034();
-        sut.SearchRange(new[] {2, 2}, 2).Should().Equal(0, 1);
+        Assert.That(sut.SearchRange(new[] {2, 2}, 2), Is.EqualTo((int[]) [0, 1]));
     }
 }

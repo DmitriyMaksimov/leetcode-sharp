@@ -15,8 +15,8 @@ public class S01600Tests
         sut.Birth("andy", "matthew"); // order: king > andy > matthew > bob > catherine
         sut.Birth("bob", "alex"); // order: king > andy > matthew > bob > alex > catherine
         sut.Birth("bob", "asha"); // order: king > andy > matthew > bob > alex > asha > catherine
-        sut.GetInheritanceOrder().Should().Equal("king", "andy", "matthew", "bob", "alex", "asha", "catherine");
+        Assert.That(sut.GetInheritanceOrder(), Is.EqualTo((string[]) ["king", "andy", "matthew", "bob", "alex", "asha", "catherine"]));
         sut.Death("bob"); // order: king > andy > matthew > bob > alex > asha > catherine
-        sut.GetInheritanceOrder().Should().Equal("king", "andy", "matthew", "alex", "asha", "catherine");
+        Assert.That(sut.GetInheritanceOrder(), Is.EqualTo((string[]) ["king", "andy", "matthew", "alex", "asha", "catherine"]));
     }
 }

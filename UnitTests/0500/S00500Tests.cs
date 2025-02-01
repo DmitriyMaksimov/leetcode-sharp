@@ -9,7 +9,7 @@ public class S00500Tests
     public void T1()
     {
         var sut = new S00500();
-        sut.FindWords(new[] {"Hello", "Alaska", "Dad", "Peace"}).Should().Equal("Alaska", "Dad");
+        Assert.That(sut.FindWords(new[] {"Hello", "Alaska", "Dad", "Peace"}), Is.EqualTo((string[]) ["Alaska", "Dad"]));
     }
 
     [Test]
@@ -23,20 +23,20 @@ public class S00500Tests
     public void T3()
     {
         var sut = new S00500();
-        sut.FindWords(new[] {"adsdf", "sfd"}).Should().Equal("adsdf", "sfd");
+        Assert.That(sut.FindWords(new[] {"adsdf", "sfd"}), Is.EqualTo((string[]) ["adsdf", "sfd"]));
     }
 
     [Test]
     public void T4()
     {
         var sut = new S00500();
-        sut.FindWords(new[] {"a", "b"}).Should().Equal("a", "b");
+        Assert.That(sut.FindWords(new[] {"a", "b"}), Is.EqualTo((string[]) ["a", "b"]));
     }
 
     [Test]
     public void T5()
     {
         var sut = new S00500();
-        sut.FindWords(new[] {"qz", "wq", "asdddafadsfa", "adfadfadfdassfawde"}).Should().Equal("wq", "asdddafadsfa");
+        Assert.That(sut.FindWords(new[] {"qz", "wq", "asdddafadsfa", "adfadfadfdassfawde"}), Is.EqualTo((string[]) ["wq", "asdddafadsfa"]));
     }
 }

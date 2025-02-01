@@ -9,22 +9,20 @@ public class S01706Tests
     public void T1()
     {
         var sut = new S01706();
-        sut.FindBall([[1, 1, 1, -1, -1], [1, 1, 1, -1, -1], [-1, -1, -1, 1, 1], [1, 1, 1, 1, -1], [-1, -1, -1, -1, -1]])
-            .Should().Equal(1, -1, -1, -1, -1);
+        Assert.That(sut.FindBall([[1, 1, 1, -1, -1], [1, 1, 1, -1, -1], [-1, -1, -1, 1, 1], [1, 1, 1, 1, -1], [-1, -1, -1, -1, -1]]), Is.EqualTo((int[]) [1, -1, -1, -1, -1]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01706();
-        sut.FindBall([[-1]]).Should().Equal(-1);
+        Assert.That(sut.FindBall([[-1]]), Is.EqualTo((int[]) [-1]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01706();
-        sut.FindBall([[1, 1, 1, 1, 1, 1], [-1, -1, -1, -1, -1, -1], [1, 1, 1, 1, 1, 1], [-1, -1, -1, -1, -1, -1]])
-            .Should().Equal(0, 1, 2, 3, 4, -1);
+        Assert.That(sut.FindBall([[1, 1, 1, 1, 1, 1], [-1, -1, -1, -1, -1, -1], [1, 1, 1, 1, 1, 1], [-1, -1, -1, -1, -1, -1]]), Is.EqualTo((int[]) [0, 1, 2, 3, 4, -1]));
     }
 }

@@ -11,7 +11,7 @@ public class S01089Tests
         var sut = new S01089();
         var arr = new[] {1, 0, 2, 3, 0, 4, 5, 0};
         sut.DuplicateZeros(arr);
-        arr.Should().Equal(1, 0, 0, 2, 3, 0, 0, 4);
+        Assert.That(arr, Is.EqualTo((int[]) [1, 0, 0, 2, 3, 0, 0, 4]));
     }
 
     [Test]
@@ -20,6 +20,6 @@ public class S01089Tests
         var sut = new S01089();
         var arr = new[] {1, 2, 3};
         sut.DuplicateZeros(arr);
-        arr.Should().Equal(1, 2, 3);
+        Assert.That(arr, Is.EqualTo((int[]) [1, 2, 3]));
     }
 }

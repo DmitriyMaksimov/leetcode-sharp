@@ -10,9 +10,9 @@ public class S00107Tests
     {
         var sut = new S00107();
         var list = sut.LevelOrderBottom(TreeNode.Parse("[3,9,20,null,null,15,7]"));
-        list[0].Should().Equal(15, 7);
-        list[1].Should().Equal(9, 20);
-        list[2].Should().Equal(3);
+        Assert.That(list[0], Is.EqualTo((int[]) [15, 7]));
+        Assert.That(list[1], Is.EqualTo((int[]) [9, 20]));
+        Assert.That(list[2], Is.EqualTo((int[]) [3]));
     }
 
     [Test]
@@ -34,8 +34,8 @@ public class S00107Tests
     {
         var sut = new S00107();
         var list = sut.LevelOrderBottom(TreeNode.Parse("[1,2,3,4,null,null,5]"));
-        list[0].Should().Equal(4, 5);
-        list[1].Should().Equal(2, 3);
-        list[2].Should().Equal(1);
+        Assert.That(list[0], Is.EqualTo((int[]) [4, 5]));
+        Assert.That(list[1], Is.EqualTo((int[]) [2, 3]));
+        Assert.That(list[2], Is.EqualTo((int[]) [1]));
     }
 }

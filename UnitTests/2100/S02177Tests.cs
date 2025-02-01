@@ -9,7 +9,7 @@ public class S02177Tests
     public void T1()
     {
         var sut = new S02177();
-        sut.SumOfThree(33).Should().Equal(10, 11, 12);
+        Assert.That(sut.SumOfThree(33), Is.EqualTo((int[]) [10, 11, 12]));
     }
 
     [Test]

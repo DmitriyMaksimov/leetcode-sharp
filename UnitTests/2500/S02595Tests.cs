@@ -9,13 +9,13 @@ public class S02595Tests
     public void T1()
     {
         var sut = new S02595();
-        sut.EvenOddBit(17).Should().Equal(2, 0);
+        Assert.That(sut.EvenOddBit(17), Is.EqualTo((int[]) [2, 0]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02595();
-        sut.EvenOddBit(2).Should().Equal(0, 1);
+        Assert.That(sut.EvenOddBit(2), Is.EqualTo((int[]) [0, 1]));
     }
 }

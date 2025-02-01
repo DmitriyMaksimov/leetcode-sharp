@@ -9,13 +9,13 @@ public class S00821Tests
     public void T1()
     {
         var sut = new S00821();
-        sut.ShortestToChar("loveleetcode", 'e').Should().Equal(3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0);
+        Assert.That(sut.ShortestToChar("loveleetcode", 'e'), Is.EqualTo((int[]) [3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00821();
-        sut.ShortestToChar("aaab", 'b').Should().Equal(3, 2, 1, 0);
+        Assert.That(sut.ShortestToChar("aaab", 'b'), Is.EqualTo((int[]) [3, 2, 1, 0]));
     }
 }

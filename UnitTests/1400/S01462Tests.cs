@@ -9,20 +9,20 @@ public class S01462Tests
     public void T1()
     {
         var sut = new S01462();
-        sut.CheckIfPrerequisite(2, [[1, 0]], [[0, 1], [1, 0]]).Should().Equal(false, true);
+        Assert.That(sut.CheckIfPrerequisite(2, [[1, 0]], [[0, 1], [1, 0]]), Is.EqualTo((bool[]) [false, true]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01462();
-        sut.CheckIfPrerequisite(2, [], [[1, 0], [0, 1]]).Should().Equal(false, false);
+        Assert.That(sut.CheckIfPrerequisite(2, [], [[1, 0], [0, 1]]), Is.EqualTo((bool[]) [false, false]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01462();
-        sut.CheckIfPrerequisite(3, [[1, 2], [1, 0], [2, 0]], [[1, 0], [1, 2]]).Should().Equal(true, true);
+        Assert.That(sut.CheckIfPrerequisite(3, [[1, 2], [1, 0], [2, 0]], [[1, 0], [1, 2]]), Is.EqualTo((bool[]) [true, true]));
     }
 }

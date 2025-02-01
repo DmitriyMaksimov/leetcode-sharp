@@ -9,7 +9,7 @@ public class S02248Tests
     public void T1()
     {
         var sut = new S02248();
-        sut.Intersection(new[] {new[] {3, 1, 2, 4, 5}, new[] {1, 2, 3, 4}, new[] {3, 4, 5, 6}}).Should().Equal(3, 4);
+        Assert.That(sut.Intersection(new[] {new[] {3, 1, 2, 4, 5}, new[] {1, 2, 3, 4}, new[] {3, 4, 5, 6}}), Is.EqualTo((int[]) [3, 4]));
     }
 
     [Test]

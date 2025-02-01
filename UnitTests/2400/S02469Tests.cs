@@ -9,13 +9,13 @@ public class S02469Tests
     public void Test1()
     {
         var sut = new S02469();
-        sut.ConvertTemperature(36.50).Should().Equal(309.65000, 97.70000);
+        Assert.That(sut.ConvertTemperature(36.50), Is.EqualTo((double[]) [309.65000, 97.70000]));
     }
     
     [Test]
     public void Test2()
     {
         var sut = new S02469();
-        sut.ConvertTemperature(122.11).Should().Equal(395.26000, 251.79800);
+        Assert.That(sut.ConvertTemperature(122.11), Is.EqualTo((double[]) [395.26000, 251.79800]));
     }
 }

@@ -11,7 +11,7 @@ public class S00189Tests
         var sut = new S00189();
         var nums = new[] {1, 2, 3, 4, 5, 6, 7};
         sut.Rotate(nums, 3);
-        nums.Should().Equal(5, 6, 7, 1, 2, 3, 4);
+        Assert.That(nums, Is.EqualTo((int[]) [5, 6, 7, 1, 2, 3, 4]));
     }
 
     [Test]
@@ -20,7 +20,7 @@ public class S00189Tests
         var sut = new S00189();
         var nums = new[] {-1, -100, 3, 99};
         sut.Rotate(nums, 2);
-        nums.Should().Equal(3, 99, -1, -100);
+        Assert.That(nums, Is.EqualTo((int[]) [3, 99, -1, -100]));
     }
 
     [Test]
@@ -29,6 +29,6 @@ public class S00189Tests
         var sut = new S00189();
         var nums = new[] {1, 2};
         sut.Rotate(nums, 3);
-        nums.Should().Equal(2, 1);
+        Assert.That(nums, Is.EqualTo((int[]) [2, 1]));
     }
 }

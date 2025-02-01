@@ -11,7 +11,7 @@ public class S00863Tests
         var sut = new S00863();
         var treeNode = TreeNode.Parse("[3,5,1,6,2,0,8,null,null,7,4]");
         var target = treeNode.left;
-        sut.DistanceK(treeNode, target, 2).Should().Equal(7,4,1);
+        Assert.That(sut.DistanceK(treeNode, target, 2), Is.EqualTo((int[]) [7,4,1]));
     }
 
     [Test]

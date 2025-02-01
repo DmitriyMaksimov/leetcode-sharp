@@ -9,15 +9,14 @@ public class S02788Tests
     public void T1()
     {
         var sut = new S02788();
-        sut.SplitWordsBySeparator(new[] {"one.two.three", "four.five", "six"}, '.').Should()
-            .Equal("one", "two", "three", "four", "five", "six");
+        Assert.That(sut.SplitWordsBySeparator(new[] {"one.two.three", "four.five", "six"}, '.'), Is.EqualTo((string[]) ["one", "two", "three", "four", "five", "six"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02788();
-        sut.SplitWordsBySeparator(new[] {"$easy$", "$problem$"}, '$').Should().Equal("easy", "problem");
+        Assert.That(sut.SplitWordsBySeparator(new[] {"$easy$", "$problem$"}, '$'), Is.EqualTo((string[]) ["easy", "problem"]));
     }
 
     [Test]

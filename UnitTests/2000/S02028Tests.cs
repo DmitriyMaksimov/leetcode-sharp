@@ -9,14 +9,14 @@ public class S02028Tests
     public void T1()
     {
         var sut = new S02028();
-        sut.MissingRolls([3, 2, 4, 3], 4, 2).Should().Equal(6, 6);
+        Assert.That(sut.MissingRolls([3, 2, 4, 3], 4, 2), Is.EqualTo((int[]) [6, 6]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02028();
-        sut.MissingRolls([1, 5, 6], 3, 4).Should().Equal(3, 2, 2, 2);
+        Assert.That(sut.MissingRolls([1, 5, 6], 3, 4), Is.EqualTo((int[]) [3, 2, 2, 2]));
     }
 
     [Test]

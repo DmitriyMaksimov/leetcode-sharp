@@ -9,13 +9,13 @@ public class S01111Tests
     public void T1()
     {
         var sut = new S01111();
-        sut.MaxDepthAfterSplit("(()())").Should().Equal(0, 1, 1, 1, 1, 0);
+        Assert.That(sut.MaxDepthAfterSplit("(()())"), Is.EqualTo((int[]) [0, 1, 1, 1, 1, 0]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01111();
-        sut.MaxDepthAfterSplit("()(())()").Should().Equal(0, 0, 0, 1, 1, 0, 0, 0);
+        Assert.That(sut.MaxDepthAfterSplit("()(())()"), Is.EqualTo((int[]) [0, 0, 0, 1, 1, 0, 0, 0]));
     }
 }

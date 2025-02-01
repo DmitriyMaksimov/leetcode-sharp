@@ -11,7 +11,7 @@ public class S00344Tests
         var sut = new S00344();
         var chars = new[] {'h', 'e', 'l', 'l', 'o'};
         sut.ReverseString(chars);
-        chars.Should().Equal('o', 'l', 'l', 'e', 'h');
+        Assert.That(chars, Is.EqualTo((int[]) ['o', 'l', 'l', 'e', 'h']));
     }
 
     [Test]
@@ -20,6 +20,6 @@ public class S00344Tests
         var sut = new S00344();
         var chars = new[] {'H', 'a', 'n', 'n', 'a', 'h'};
         sut.ReverseString(chars);
-        chars.Should().Equal('h', 'a', 'n', 'n', 'a', 'H');
+        Assert.That(chars, Is.EqualTo((int[]) ['h', 'a', 'n', 'n', 'a', 'H']));
     }
 }

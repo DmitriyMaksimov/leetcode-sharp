@@ -9,14 +9,13 @@ public class S00472Tests
     public void T1()
     {
         var sut = new S00472();
-        sut.FindAllConcatenatedWordsInADict(new[] {"cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"}).Should()
-            .Equal("catsdogcats", "dogcatsdog", "ratcatdogcat");
+        Assert.That(sut.FindAllConcatenatedWordsInADict(new[] {"cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"}), Is.EqualTo((string[]) ["catsdogcats", "dogcatsdog", "ratcatdogcat"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00472();
-        sut.FindAllConcatenatedWordsInADict(new[] {"cat","dog","catdog"}).Should().Equal("catdog");
+        Assert.That(sut.FindAllConcatenatedWordsInADict(new[] {"cat","dog","catdog"}), Is.EqualTo((string[]) ["catdog"]));
     }
 }

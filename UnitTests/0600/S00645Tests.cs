@@ -9,14 +9,14 @@ public class S00645Tests
     public void T1()
     {
         var sut = new S00645();
-        sut.FindErrorNums(new[] {1, 2, 2, 4}).Should().Equal(2, 3);
+        Assert.That(sut.FindErrorNums(new[] {1, 2, 2, 4}), Is.EqualTo((int[]) [2, 3]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00645();
-        sut.FindErrorNums(new[] {1, 1}).Should().Equal(1, 2);
+        Assert.That(sut.FindErrorNums(new[] {1, 1}), Is.EqualTo((int[]) [1, 2]));
     }
 
 }

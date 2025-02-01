@@ -9,7 +9,7 @@ public class S00144Tests
     public void T1()
     {
         var sut = new S00144();
-        sut.PreorderTraversal(TreeNode.Parse("[1,null,2,3]")).Should().Equal(1, 2, 3);
+        Assert.That(sut.PreorderTraversal(TreeNode.Parse("[1,null,2,3]")), Is.EqualTo((int[]) [1, 2, 3]));
     }
 
     [Test]
@@ -23,6 +23,6 @@ public class S00144Tests
     public void T3()
     {
         var sut = new S00144();
-        sut.PreorderTraversal(TreeNode.Parse("[1]")).Should().Equal(1);
+        Assert.That(sut.PreorderTraversal(TreeNode.Parse("[1]")), Is.EqualTo((int[]) [1]));
     }
 }

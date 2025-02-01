@@ -11,7 +11,7 @@ public class S00283Tests
         var sut = new S00283();
         var nums = new[] {0, 1, 0, 3, 12};
         sut.MoveZeroes(nums);
-        nums.Should().Equal(1, 3, 12, 0, 0);
+        Assert.That(nums, Is.EqualTo((int[]) [1, 3, 12, 0, 0]));
     }
 
     [Test]
@@ -20,7 +20,7 @@ public class S00283Tests
         var sut = new S00283();
         var nums = new[] {1, 0, 0, 3, 12};
         sut.MoveZeroes(nums);
-        nums.Should().Equal(1, 3, 12, 0, 0);
+        Assert.That(nums, Is.EqualTo((int[]) [1, 3, 12, 0, 0]));
     }
 
     [Test]
@@ -29,7 +29,7 @@ public class S00283Tests
         var sut = new S00283();
         var nums = new[] {0};
         sut.MoveZeroes(nums);
-        nums.Should().Equal(0);
+        Assert.That(nums, Is.EqualTo((int[]) [0]));
     }
 
     [Test]
@@ -38,7 +38,7 @@ public class S00283Tests
         var sut = new S00283();
         var nums = new[] {1};
         sut.MoveZeroes(nums);
-        nums.Should().Equal(1);
+        Assert.That(nums, Is.EqualTo((int[]) [1]));
     }
 
     [Test]
@@ -47,6 +47,6 @@ public class S00283Tests
         var sut = new S00283();
         var nums = new[] {2, 1};
         sut.MoveZeroes(nums);
-        nums.Should().Equal(2, 1);
+        Assert.That(nums, Is.EqualTo((int[]) [2, 1]));
     }
 }

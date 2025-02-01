@@ -9,13 +9,13 @@ public class S00763Tests
     public void T1()
     {
         var sut = new S00763();
-        sut.PartitionLabels("ababcbacadefegdehijhklij").Should().Equal(9, 7, 8);
+        Assert.That(sut.PartitionLabels("ababcbacadefegdehijhklij"), Is.EqualTo((int[]) [9, 7, 8]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00763();
-        sut.PartitionLabels("eccbbbbdec").Should().Equal(10);
+        Assert.That(sut.PartitionLabels("eccbbbbdec"), Is.EqualTo((int[]) [10]));
     }
 }

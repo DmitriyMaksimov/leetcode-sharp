@@ -9,13 +9,13 @@ public class S01718Tests
     public void T1()
     {
         var sut = new S01718();
-        sut.ConstructDistancedSequence(3).Should().Equal(3, 1, 2, 3, 2);
+        Assert.That(sut.ConstructDistancedSequence(3), Is.EqualTo((int[]) [3, 1, 2, 3, 2]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01718();
-        sut.ConstructDistancedSequence(5).Should().Equal(5, 3, 1, 4, 3, 5, 2, 4, 2);
+        Assert.That(sut.ConstructDistancedSequence(5), Is.EqualTo((int[]) [5, 3, 1, 4, 3, 5, 2, 4, 2]));
     }
 }

@@ -10,7 +10,7 @@ public class S00384Tests
     {
         var solution = new S00384.Solution([1, 2, 3]);
         solution.Shuffle().Distinct().Should().HaveCount(3);
-        solution.Reset().Should().Equal(1, 2, 3);
+        Assert.That(solution.Reset(), Is.EqualTo((int[]) [1, 2, 3]));
         solution.Shuffle().Distinct().Should().HaveCount(3);
     }
 }

@@ -14,10 +14,10 @@ public class S01418Tests
             ["Carla", "5", "Water"], ["Carla", "5", "Ceviche"], ["Rous", "3", "Ceviche"]
         ]);
         
-        displayTable[0].Should().Equal(["Table", "Beef Burrito", "Ceviche", "Fried Chicken", "Water"]);
-        displayTable[1].Should().Equal(["3", "0", "2", "1", "0"]);
-        displayTable[2].Should().Equal(["5", "0", "1", "0", "1"]);
-        displayTable[3].Should().Equal(["10", "1", "0", "0", "0"]);
+        Assert.That(displayTable[0], Is.EqualTo((string[]) ["Table", "Beef Burrito", "Ceviche", "Fried Chicken", "Water"]));
+        Assert.That(displayTable[1], Is.EqualTo((string[]) ["3", "0", "2", "1", "0"]));
+        Assert.That(displayTable[2], Is.EqualTo((string[]) ["5", "0", "1", "0", "1"]));
+        Assert.That(displayTable[3], Is.EqualTo((string[]) ["10", "1", "0", "0", "0"]));
     }
 
     [Test]
@@ -29,9 +29,9 @@ public class S01418Tests
             ["Adam", "1", "Canadian Waffles"], ["Brianna", "1", "Canadian Waffles"]
         ]);
 
-        displayTable[0].Should().Equal(["Table", "Canadian Waffles", "Fried Chicken"]);
-        displayTable[1].Should().Equal(["1", "2", "0"]);
-        displayTable[2].Should().Equal(["12", "0", "3"]);
+        Assert.That(displayTable[0], Is.EqualTo((string[]) ["Table", "Canadian Waffles", "Fried Chicken"]));
+        Assert.That(displayTable[1], Is.EqualTo((string[]) ["1", "2", "0"]));
+        Assert.That(displayTable[2], Is.EqualTo((string[]) ["12", "0", "3"]));
     }
 
     [Test]
@@ -40,8 +40,8 @@ public class S01418Tests
         var sut = new S01418();
         var displayTable = sut.DisplayTable([["Laura", "2", "Bean Burrito"], ["Jhon", "2", "Beef Burrito"], ["Melissa", "2", "Soda"]]);
 
-        displayTable[0].Should().Equal(["Table", "Bean Burrito", "Beef Burrito", "Soda"]);
-        displayTable[1].Should().Equal(["2", "1", "1", "1"]);
+        Assert.That(displayTable[0], Is.EqualTo((string[]) ["Table", "Bean Burrito", "Beef Burrito", "Soda"]));
+        Assert.That(displayTable[1], Is.EqualTo((string[]) ["2", "1", "1", "1"]));
     }
 
     [Test]
@@ -50,8 +50,8 @@ public class S01418Tests
         var sut = new S01418();
         var displayTable = sut.DisplayTable([["pKKgO","1","qgGxK"],["ZgW","3","XfuBe"]]);
 
-        displayTable[0].Should().Equal(["Table","XfuBe","qgGxK"]);
-        displayTable[1].Should().Equal(["1","0","1"]);
-        displayTable[2].Should().Equal(["3","1","0"]);
+        Assert.That(displayTable[0], Is.EqualTo((string[]) ["Table","XfuBe","qgGxK"]));
+        Assert.That(displayTable[1], Is.EqualTo((string[]) ["1","0","1"]));
+        Assert.That(displayTable[2], Is.EqualTo((string[]) ["3","1","0"]));
     }
 }

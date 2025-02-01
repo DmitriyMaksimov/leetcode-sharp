@@ -16,6 +16,6 @@ public class S02951Tests
     public void T2()
     {
         var sut = new S02951();
-        sut.FindPeaks(new[] {1, 4, 3, 8, 5}).Should().Equal(1, 3);
+        Assert.That(sut.FindPeaks(new[] {1, 4, 3, 8, 5}), Is.EqualTo((int[]) [1, 3]));
     }
 }

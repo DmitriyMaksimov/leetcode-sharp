@@ -9,19 +9,19 @@ public class S01125Tests
     public void T1()
     {
         var sut = new S01125();
-        sut.SmallestSufficientTeam(
+        Assert.That(sut.SmallestSufficientTeam(
             new[] {"java", "nodejs", "reactjs"},
             new List<IList<string>>
             {
                 new List<string> {"java"}, new List<string> {"nodejs"}, new List<string> {"nodejs", "reactjs"}
-            }).Should().Equal(0, 2);
+            }), Is.EqualTo((int[]) [0, 2]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01125();
-        sut.SmallestSufficientTeam(
+        Assert.That(sut.SmallestSufficientTeam(
             new[] {"algorithms", "math", "java", "reactjs", "csharp", "aws"},
             new List<IList<string>>
             {
@@ -31,6 +31,6 @@ public class S01125Tests
                 new List<string> {"reactjs", "csharp"},
                 new List<string> {"csharp", "math"},
                 new List<string> {"aws", "java"},
-            }).Should().Equal(1, 2);
+            }), Is.EqualTo((int[]) [1, 2]));
     }
 }

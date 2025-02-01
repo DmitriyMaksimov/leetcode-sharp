@@ -9,13 +9,13 @@ public class S00338Tests
     public void T1()
     {
         var sut = new S00338();
-        sut.CountBits(2).Should().Equal(0, 1, 1);
+        Assert.That(sut.CountBits(2), Is.EqualTo((int[]) [0, 1, 1]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00338();
-        sut.CountBits(5).Should().Equal(0, 1, 1, 2, 1, 2);
+        Assert.That(sut.CountBits(5), Is.EqualTo((int[]) [0, 1, 1, 2, 1, 2]));
     }
 }

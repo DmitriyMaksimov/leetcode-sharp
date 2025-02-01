@@ -9,20 +9,20 @@ public class S02089Tests
     public void T1()
     {
         var sut = new S02089();
-        sut.TargetIndices(new[] {1, 2, 5, 2, 3}, 2).Should().Equal(1, 2);
+        Assert.That(sut.TargetIndices(new[] {1, 2, 5, 2, 3}, 2), Is.EqualTo((int[]) [1, 2]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02089();
-        sut.TargetIndices(new[] {1, 2, 5, 2, 3}, 3).Should().Equal(3);
+        Assert.That(sut.TargetIndices(new[] {1, 2, 5, 2, 3}, 3), Is.EqualTo((int[]) [3]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02089();
-        sut.TargetIndices(new[] {1, 2, 5, 2, 3}, 5).Should().Equal(4);
+        Assert.That(sut.TargetIndices(new[] {1, 2, 5, 2, 3}, 5), Is.EqualTo((int[]) [4]));
     }
 }

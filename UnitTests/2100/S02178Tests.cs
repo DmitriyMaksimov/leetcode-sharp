@@ -9,7 +9,7 @@ public class S02178Tests
     public void T1()
     {
         var sut = new S02178();
-        sut.MaximumEvenSplit(12).Should().Equal(2, 4, 6);
+        Assert.That(sut.MaximumEvenSplit(12), Is.EqualTo((int[]) [2, 4, 6]));
     }
 
     [Test]
@@ -23,6 +23,6 @@ public class S02178Tests
     public void T3()
     {
         var sut = new S02178();
-        sut.MaximumEvenSplit(28).Should().Equal(2, 4, 6, 16);
+        Assert.That(sut.MaximumEvenSplit(28), Is.EqualTo((int[]) [2, 4, 6, 16]));
     }
 }

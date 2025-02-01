@@ -16,13 +16,13 @@ public class S00637Tests
     public void T2()
     {
         var sut = new S00637();
-        sut.AverageOfLevels(TreeNode.Parse("[3,9,20,15,7]")).Should().Equal(3.0, 14.5, 11.0);
+        Assert.That(sut.AverageOfLevels(TreeNode.Parse("[3,9,20,15,7]")), Is.EqualTo((double[]) [3.0, 14.5, 11.0]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00637();
-        sut.AverageOfLevels(TreeNode.Parse("[2147483647,2147483647,2147483647]")).Should().Equal(2147483647.0, 2147483647.0);
+        Assert.That(sut.AverageOfLevels(TreeNode.Parse("[2147483647,2147483647,2147483647]")), Is.EqualTo((double[]) [2147483647.0, 2147483647.0]));
     }
 }

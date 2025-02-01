@@ -9,13 +9,13 @@ public class S01920Tests
     public void Test1()
     {
         var sut = new S01920();
-        sut.BuildArray(new[] {0, 2, 1, 5, 3, 4}).Should().Equal(0, 1, 2, 4, 5, 3);
+        Assert.That(sut.BuildArray(new[] {0, 2, 1, 5, 3, 4}), Is.EqualTo((int[]) [0, 1, 2, 4, 5, 3]));
     }
 
     [Test]
     public void Test2()
     {
         var sut = new S01920();
-        sut.BuildArray(new[] {5, 0, 1, 2, 3, 4}).Should().Equal(4, 5, 0, 1, 2, 3);
+        Assert.That(sut.BuildArray(new[] {5, 0, 1, 2, 3, 4}), Is.EqualTo((int[]) [4, 5, 0, 1, 2, 3]));
     }
 }

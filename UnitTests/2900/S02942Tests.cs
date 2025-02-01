@@ -9,14 +9,14 @@ public class S02942Tests
     public void T1()
     {
         var sut = new S02942();
-        sut.FindWordsContaining(new[] {"leet", "code"}, 'e').Should().Equal(0, 1);
+        Assert.That(sut.FindWordsContaining(new[] {"leet", "code"}, 'e'), Is.EqualTo((int[]) [0, 1]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02942();
-        sut.FindWordsContaining(new[] {"abc", "bcd", "aaaa", "cbc"}, 'a').Should().Equal(0, 2);
+        Assert.That(sut.FindWordsContaining(new[] {"abc", "bcd", "aaaa", "cbc"}, 'a'), Is.EqualTo((int[]) [0, 2]));
     }
 
     [Test]

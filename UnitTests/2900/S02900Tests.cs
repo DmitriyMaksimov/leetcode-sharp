@@ -9,13 +9,13 @@ public class S02900Tests
     public void T1()
     {
         var sut = new S02900();
-        sut.GetLongestSubsequence(["e", "a", "b"], [0, 0, 1]).Should().Equal("e", "b");
+        Assert.That(sut.GetLongestSubsequence(["e", "a", "b"], [0, 0, 1]), Is.EqualTo((string[]) ["e", "b"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02900();
-        sut.GetLongestSubsequence(["a", "b", "c", "d"], [1, 0, 1, 1]).Should().Equal("a", "b", "c");
+        Assert.That(sut.GetLongestSubsequence(["a", "b", "c", "d"], [1, 0, 1, 1]), Is.EqualTo((string[]) ["a", "b", "c"]));
     }
 }

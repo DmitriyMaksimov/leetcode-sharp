@@ -9,13 +9,13 @@ public class S00508Tests
     public void T1()
     {
         var sut = new S00508();
-        sut.FindFrequentTreeSum(TreeNode.Parse("[5,2,-3]")).Should().Equal(2, -3, 4);
+        Assert.That(sut.FindFrequentTreeSum(TreeNode.Parse("[5,2,-3]")), Is.EqualTo((int[]) [2, -3, 4]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00508();
-        sut.FindFrequentTreeSum(TreeNode.Parse("[5,2,-5]")).Should().Equal(2);
+        Assert.That(sut.FindFrequentTreeSum(TreeNode.Parse("[5,2,-5]")), Is.EqualTo((int[]) [2]));
     }
 }

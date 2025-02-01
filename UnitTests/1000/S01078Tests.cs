@@ -9,13 +9,13 @@ public class S01078Tests
     public void T1()
     {
         var sut = new S01078();
-        sut.FindOcurrences("alice is a good girl she is a good student", "a", "good").Should().Equal("girl", "student");
+        Assert.That(sut.FindOcurrences("alice is a good girl she is a good student", "a", "good"), Is.EqualTo((string[]) ["girl", "student"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01078();
-        sut.FindOcurrences("we will we will rock you", "we", "will").Should().Equal("we", "rock");
+        Assert.That(sut.FindOcurrences("we will we will rock you", "we", "will"), Is.EqualTo((string[]) ["we", "rock"]));
     }
 }

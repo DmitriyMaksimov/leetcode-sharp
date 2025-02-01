@@ -9,7 +9,7 @@ public class S00030Tests
     public void T1()
     {
         var sut = new S00030();
-        sut.FindSubstring("barfoothefoobarman", new[] {"foo", "bar"}).Should().Equal(0, 9);
+        Assert.That(sut.FindSubstring("barfoothefoobarman", new[] {"foo", "bar"}), Is.EqualTo((int[]) [0, 9]));
     }
 
     [Test]
@@ -23,6 +23,6 @@ public class S00030Tests
     public void T3()
     {
         var sut = new S00030();
-        sut.FindSubstring("barfoofoobarthefoobarman", new[] {"bar", "foo", "the"}).Should().Equal(6, 9, 12);
+        Assert.That(sut.FindSubstring("barfoofoobarthefoobarman", new[] {"bar", "foo", "the"}), Is.EqualTo((int[]) [6, 9, 12]));
     }
 }

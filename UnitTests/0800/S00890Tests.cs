@@ -9,13 +9,13 @@ public class S00890Tests
     public void T1()
     {
         var sut = new S00890();
-        sut.FindAndReplacePattern(["abc", "deq", "mee", "aqq", "dkd", "ccc"], "abb").Should().Equal("mee", "aqq");
+        Assert.That(sut.FindAndReplacePattern(["abc", "deq", "mee", "aqq", "dkd", "ccc"], "abb"), Is.EqualTo((string[]) ["mee", "aqq"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00890();
-        sut.FindAndReplacePattern(["a", "b", "c"], "a").Should().Equal("a", "b", "c");
+        Assert.That(sut.FindAndReplacePattern(["a", "b", "c"], "a"), Is.EqualTo((string[]) ["a", "b", "c"]));
     }
 }

@@ -17,9 +17,9 @@ public class S00073Tests
         };
 
         sut.SetZeroes(matrix);
-        matrix[0].Should().Equal(1, 0, 1);
-        matrix[1].Should().Equal(0, 0, 0);
-        matrix[2].Should().Equal(1, 0, 1);
+        Assert.That(matrix[0], Is.EqualTo((int[]) [1, 0, 1]));
+        Assert.That(matrix[1], Is.EqualTo((int[]) [0, 0, 0]));
+        Assert.That(matrix[2], Is.EqualTo((int[]) [1, 0, 1]));
     }
 
     [Test]
@@ -34,8 +34,8 @@ public class S00073Tests
         };
 
         sut.SetZeroes(matrix);
-        matrix[0].Should().Equal(0, 0, 0, 0);
-        matrix[1].Should().Equal(0, 4, 5, 0);
-        matrix[2].Should().Equal(0, 3, 1, 0);
+        Assert.That(matrix[0], Is.EqualTo((int[]) [0, 0, 0, 0]));
+        Assert.That(matrix[1], Is.EqualTo((int[]) [0, 4, 5, 0]));
+        Assert.That(matrix[2], Is.EqualTo((int[]) [0, 3, 1, 0]));
     }
 }

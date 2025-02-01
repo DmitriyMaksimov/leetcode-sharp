@@ -9,20 +9,20 @@ public class S02138Tests
     public void T1()
     {
         var sut = new S02138();
-        sut.DivideString("abcdefghi", 3, 'x').Should().Equal("abc", "def", "ghi");
+        Assert.That(sut.DivideString("abcdefghi", 3, 'x'), Is.EqualTo((string[]) ["abc", "def", "ghi"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02138();
-        sut.DivideString("abcdefghij", 3, 'x').Should().Equal("abc", "def", "ghi", "jxx");
+        Assert.That(sut.DivideString("abcdefghij", 3, 'x'), Is.EqualTo((string[]) ["abc", "def", "ghi", "jxx"]));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S02138();
-        sut.DivideString("ctoyjrwtngqwt", 8, 'n').Should().Equal("ctoyjrwt", "ngqwtnnn");
+        Assert.That(sut.DivideString("ctoyjrwtngqwt", 8, 'n'), Is.EqualTo((string[]) ["ctoyjrwt", "ngqwtnnn"]));
     }
 }

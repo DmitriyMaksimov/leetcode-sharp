@@ -9,13 +9,13 @@ public class S02559Tests
     public void T1()
     {
         var sut = new S02559();
-        sut.VowelStrings(["aba", "bcb", "ece", "aa", "e"], [[0, 2], [1, 4], [1, 1]]).Should().Equal(2, 3, 0);
+        Assert.That(sut.VowelStrings(["aba", "bcb", "ece", "aa", "e"], [[0, 2], [1, 4], [1, 1]]), Is.EqualTo((int[]) [2, 3, 0]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02559();
-        sut.VowelStrings(["a", "e", "i"], [[0, 2], [0, 1], [2, 2]]).Should().Equal(3, 2, 1);
+        Assert.That(sut.VowelStrings(["a", "e", "i"], [[0, 2], [0, 1], [2, 2]]), Is.EqualTo((int[]) [3, 2, 1]));
     }
 }

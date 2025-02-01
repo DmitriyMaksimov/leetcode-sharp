@@ -9,13 +9,13 @@ public class S02416Tests
     public void T1()
     {
         var sut = new S02416();
-        sut.SumPrefixScores(["abc", "ab", "bc", "b"]).Should().Equal(5, 4, 3, 2);
+        Assert.That(sut.SumPrefixScores(["abc", "ab", "bc", "b"]), Is.EqualTo((int[]) [5, 4, 3, 2]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02416();
-        sut.SumPrefixScores(["abcd"]).Should().Equal(4);
+        Assert.That(sut.SumPrefixScores(["abcd"]), Is.EqualTo((int[]) [4]));
     }
 }

@@ -9,14 +9,14 @@ public class S00971Tests
     public void T1()
     {
         var sut = new S00971();
-        sut.FlipMatchVoyage(TreeNode.Parse("[1,2]"), [2, 1]).Should().Equal(-1);
+        Assert.That(sut.FlipMatchVoyage(TreeNode.Parse("[1,2]"), [2, 1]), Is.EqualTo((int[]) [-1]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00971();
-        sut.FlipMatchVoyage(TreeNode.Parse("[1,2,3]"), [1, 3, 2]).Should().Equal(1);
+        Assert.That(sut.FlipMatchVoyage(TreeNode.Parse("[1,2,3]"), [1, 3, 2]), Is.EqualTo((int[]) [1]));
     }
 
     [Test]

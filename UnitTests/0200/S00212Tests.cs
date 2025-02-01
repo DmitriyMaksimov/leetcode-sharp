@@ -51,7 +51,7 @@ public class S00212Tests
             new[] {'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'}
         };
 
-        sut.FindWords(board,
+        Assert.That(sut.FindWords(board,
             new[]
             {
                 "lllllll", "fffffff", "ssss", "s", "rr", "xxxx", "ttt", "eee", "ppppppp", "iiiiiiiii", "xxxxxxxxxx",
@@ -79,7 +79,7 @@ public class S00212Tests
                 "gggggggg", "xxxxx", "vvvv", "d", "qqqqqqqqq", "dd", "ggggggggg", "t", "yyyy", "bbb", "yyyyyyyyyy",
                 "tttttt", "ccccc", "aa", "eeeeee", "llllll", "kkkkkkkkkk", "sssssssss", "i", "hhhhhh", "oooooooooo",
                 "wwwwww", "ooooooooo", "zzzz", "k", "hhhhhhhh", "aaaaa", "mmmmm"
-            }).Should().Equal("aaaaaaaa", "aaaaaaa", "aaaaaa", "aaa", "aaaaaaaaa", "aaaaaaaaaa", "a", "aaaa", "aa",
-            "aaaaa");
+            }), Is.EqualTo((string[]) ["aaaaaaaa", "aaaaaaa", "aaaaaa", "aaa", "aaaaaaaaa", "aaaaaaaaaa", "a", "aaaa", "aa",
+        "aaaaa"]));
     }
 }

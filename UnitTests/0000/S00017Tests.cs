@@ -9,7 +9,7 @@ public class S00017Tests
     public void T1()
     {
         var sut = new S00017();
-        sut.LetterCombinations("23").Should().Equal("ad","ae","af","bd","be","bf","cd","ce","cf");
+        Assert.That(sut.LetterCombinations("23"), Is.EqualTo((string[]) ["ad","ae","af","bd","be","bf","cd","ce","cf"]));
     }
 
     [Test]
@@ -23,7 +23,7 @@ public class S00017Tests
     public void T3()
     {
         var sut = new S00017();
-        sut.LetterCombinations("2").Should().Equal("a","b","c");
+        Assert.That(sut.LetterCombinations("2"), Is.EqualTo((string[]) ["a","b","c"]));
     }
 
 }
