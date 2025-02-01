@@ -20,6 +20,6 @@ public class S00863Tests
         var sut = new S00863();
         var treeNode = TreeNode.Parse("[1]");
         var target = treeNode;
-        sut.DistanceK(treeNode, target, 3).Should().Equal();
+        Assert.That(sut.DistanceK(treeNode, target, 3), Is.Empty);
     }
 }

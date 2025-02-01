@@ -16,6 +16,6 @@ public class S02177Tests
     public void T2()
     {
         var sut = new S02177();
-        sut.SumOfThree(4).Should().Equal();
+        Assert.That(sut.SumOfThree(4), Is.Empty);
     }
 }

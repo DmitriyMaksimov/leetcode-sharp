@@ -23,6 +23,6 @@ public class S02028Tests
     public void T3()
     {
         var sut = new S02028();
-        sut.MissingRolls([1, 2, 3, 4], 6, 4).Should().Equal();
+        Assert.That(sut.MissingRolls([1, 2, 3, 4], 6, 4), Is.Empty);
     }
 }

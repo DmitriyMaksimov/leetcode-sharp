@@ -16,13 +16,13 @@ public class S01276Tests
     public void T2()
     {
         var sut = new S01276();
-        sut.NumOfBurgers(17, 4).Should().Equal();
+        Assert.That(sut.NumOfBurgers(17, 4), Is.Empty);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01276();
-        sut.NumOfBurgers(4, 17).Should().Equal();
+        Assert.That(sut.NumOfBurgers(4, 17), Is.Empty);
     }
 }

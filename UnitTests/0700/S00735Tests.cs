@@ -16,7 +16,7 @@ public class S00735Tests
     public void T2()
     {
         var sut = new S00735();
-        sut.AsteroidCollision(new[] {8, -8}).Should().Equal();
+        Assert.That(sut.AsteroidCollision(new[] {8, -8}), Is.Empty);
     }
 
     [Test]

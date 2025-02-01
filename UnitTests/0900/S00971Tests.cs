@@ -23,6 +23,6 @@ public class S00971Tests
     public void T3()
     {
         var sut = new S00971();
-        sut.FlipMatchVoyage(TreeNode.Parse("[1,2,3]"), [1, 2, 3]).Should().Equal();
+        Assert.That(sut.FlipMatchVoyage(TreeNode.Parse("[1,2,3]"), [1, 2, 3]), Is.Empty);
     }
 }

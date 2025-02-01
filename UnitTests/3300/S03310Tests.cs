@@ -23,6 +23,6 @@ public class S03310Tests
     public void T3()
     {
         var sut = new S03310();
-        sut.RemainingMethods(3, 2, [[1, 2], [0, 1], [2, 0]]).Should().Equal();
+        Assert.That(sut.RemainingMethods(3, 2, [[1, 2], [0, 1], [2, 0]]), Is.Empty);
     }
 }

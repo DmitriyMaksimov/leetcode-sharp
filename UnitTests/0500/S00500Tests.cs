@@ -16,7 +16,7 @@ public class S00500Tests
     public void T2()
     {
         var sut = new S00500();
-        sut.FindWords(new[] {"omk"}).Should().Equal();
+        Assert.That(sut.FindWords(new[] {"omk"}), Is.Empty);
     }
 
     [Test]

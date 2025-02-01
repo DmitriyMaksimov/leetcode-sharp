@@ -16,6 +16,6 @@ public class S02452Tests
     public void T2()
     {
         var sut = new S02452();
-        sut.TwoEditWords(["yes"], ["not"]).Should().Equal();
+        Assert.That(sut.TwoEditWords(["yes"], ["not"]), Is.Empty);
     }
 }

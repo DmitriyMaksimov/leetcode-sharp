@@ -23,6 +23,6 @@ public class S00039Tests
     public void T3()
     {
         var sut = new S00039();
-        sut.CombinationSum(new[] {2}, 1).Should().Equal();
+        Assert.That(sut.CombinationSum(new[] {2}, 1), Is.Empty);
     }
 }

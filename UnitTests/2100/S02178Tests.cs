@@ -16,7 +16,7 @@ public class S02178Tests
     public void T2()
     {
         var sut = new S02178();
-        sut.MaximumEvenSplit(7).Should().Equal();
+        Assert.That(sut.MaximumEvenSplit(7), Is.Empty);
     }
 
     [Test]

@@ -23,7 +23,7 @@ public class S00199Tests
     public void T3()
     {
         var sut = new S00199();
-        sut.RightSideView(TreeNode.Parse("[]")).Should().Equal();
+        Assert.That(sut.RightSideView(TreeNode.Parse("[]")), Is.Empty);
     }
 
 }

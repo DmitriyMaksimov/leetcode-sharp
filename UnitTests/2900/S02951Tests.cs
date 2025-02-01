@@ -9,7 +9,7 @@ public class S02951Tests
     public void T1()
     {
         var sut = new S02951();
-        sut.FindPeaks(new[] {2, 4, 4}).Should().Equal();
+        Assert.That(sut.FindPeaks(new[] {2, 4, 4}), Is.Empty);
     }
 
     [Test]

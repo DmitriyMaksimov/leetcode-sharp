@@ -23,6 +23,6 @@ public class S03285Tests
     public void T3()
     {
         var sut = new S03285();
-        sut.StableMountains([10, 1, 10, 1, 10], 10).Should().Equal();
+        Assert.That(sut.StableMountains([10, 1, 10, 1, 10], 10), Is.Empty);
     }
 }

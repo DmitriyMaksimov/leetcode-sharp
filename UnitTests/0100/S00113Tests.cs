@@ -16,13 +16,13 @@ public class S00113Tests
     public void T2()
     {
         var sut = new S00113();
-        sut.PathSum(TreeNode.Parse("[1,2,3]"), 5).Should().Equal();
+        Assert.That(sut.PathSum(TreeNode.Parse("[1,2,3]"), 5), Is.Empty);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00113();
-        sut.PathSum(TreeNode.Parse("[1,2]"), 0).Should().Equal();
+        Assert.That(sut.PathSum(TreeNode.Parse("[1,2]"), 0), Is.Empty);
     }
 }

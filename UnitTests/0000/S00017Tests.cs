@@ -16,7 +16,7 @@ public class S00017Tests
     public void T2()
     {
         var sut = new S00017();
-        sut.LetterCombinations("").Should().Equal();
+        Assert.That(sut.LetterCombinations(""), Is.Empty);
     }
     
     [Test]

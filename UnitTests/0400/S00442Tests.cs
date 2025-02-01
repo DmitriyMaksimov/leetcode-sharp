@@ -23,6 +23,6 @@ public class S00442Tests
     public void T3()
     {
         var sut = new S00442();
-        sut.FindDuplicates([1]).Should().Equal();
+        Assert.That(sut.FindDuplicates([1]), Is.Empty);
     }
 }

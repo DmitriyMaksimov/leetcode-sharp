@@ -23,6 +23,6 @@ public class S02942Tests
     public void T3()
     {
         var sut = new S02942();
-        sut.FindWordsContaining(new[] {"abc", "bcd", "aaaa", "cbc"}, 'z').Should().Equal();
+        Assert.That(sut.FindWordsContaining(new[] {"abc", "bcd", "aaaa", "cbc"}, 'z'), Is.Empty);
     }
 }

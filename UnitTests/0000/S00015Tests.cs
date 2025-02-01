@@ -16,7 +16,7 @@ public class S00015Tests
     public void T2()
     {
         var sut = new S00015();
-        sut.ThreeSum(new[] {0, 1, 1}).Should().Equal();
+        Assert.That(sut.ThreeSum(new[] {0, 1, 1}), Is.Empty);
     }
 
     [Test]
