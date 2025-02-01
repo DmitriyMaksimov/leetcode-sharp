@@ -9,20 +9,20 @@ public class S00376Tests
     public void T1()
     {
         var sut = new S00376();
-        sut.WiggleMaxLength(new[] {1, 7, 4, 9, 2, 5}).Should().Be(6);
+        Assert.That(sut.WiggleMaxLength(new[] {1, 7, 4, 9, 2, 5}), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00376();
-        sut.WiggleMaxLength(new[] {1, 17, 5, 10, 13, 15, 10, 5, 16, 8}).Should().Be(7);
+        Assert.That(sut.WiggleMaxLength(new[] {1, 17, 5, 10, 13, 15, 10, 5, 16, 8}), Is.EqualTo(7));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00376();
-        sut.WiggleMaxLength(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9}).Should().Be(2);
+        Assert.That(sut.WiggleMaxLength(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9}), Is.EqualTo(2));
     }
 }

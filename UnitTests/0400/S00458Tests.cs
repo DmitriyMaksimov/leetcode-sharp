@@ -9,20 +9,20 @@ public class S00458Tests
     public void T1()
     {
         var sut = new S00458();
-        sut.PoorPigs(4, 15, 15).Should().Be(2);
+        Assert.That(sut.PoorPigs(4, 15, 15), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00458();
-        sut.PoorPigs(4, 15, 30).Should().Be(2);
+        Assert.That(sut.PoorPigs(4, 15, 30), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00458();
-        sut.PoorPigs(125, 1, 4).Should().Be(3);
+        Assert.That(sut.PoorPigs(125, 1, 4), Is.EqualTo(3));
     }
 }

@@ -9,20 +9,20 @@ public class S02139Tests
     public void T1()
     {
         var sut = new S02139();
-        sut.MinMoves(5, 0).Should().Be(4);
+        Assert.That(sut.MinMoves(5, 0), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02139();
-        sut.MinMoves(19, 2).Should().Be(7);
+        Assert.That(sut.MinMoves(19, 2), Is.EqualTo(7));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02139();
-        sut.MinMoves(10, 4).Should().Be(4);
+        Assert.That(sut.MinMoves(10, 4), Is.EqualTo(4));
     }
 }

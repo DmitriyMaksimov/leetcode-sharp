@@ -9,20 +9,20 @@ public class S00067Tests
     public void T1()
     {
         var sut = new S00067();
-        sut.AddBinary("11", "1").Should().Be("100");
+        Assert.That(sut.AddBinary("11", "1"), Is.EqualTo("100"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00067();
-        sut.AddBinary("1010", "1011").Should().Be("10101");
+        Assert.That(sut.AddBinary("1010", "1011"), Is.EqualTo("10101"));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S00067();
-        sut.AddBinary("1111", "1111").Should().Be("11110");
+        Assert.That(sut.AddBinary("1111", "1111"), Is.EqualTo("11110"));
     }
 }

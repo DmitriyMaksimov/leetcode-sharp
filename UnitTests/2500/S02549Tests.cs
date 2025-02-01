@@ -9,20 +9,20 @@ public class S02549Tests
     public void T1()
     {
         var sut = new S02549();
-        sut.DistinctIntegers(5).Should().Be(4);
+        Assert.That(sut.DistinctIntegers(5), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02549();
-        sut.DistinctIntegers(3).Should().Be(2);
+        Assert.That(sut.DistinctIntegers(3), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02549();
-        sut.DistinctIntegers(1).Should().Be(1);
+        Assert.That(sut.DistinctIntegers(1), Is.EqualTo(1));
     }
 }

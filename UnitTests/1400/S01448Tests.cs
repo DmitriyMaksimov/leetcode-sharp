@@ -9,20 +9,20 @@ public class S01448Tests
     public void T1()
     {
         var sut = new S01448();
-        sut.GoodNodes(TreeNode.Parse("[3,1,4,3,null,1,5]")!).Should().Be(4);
+        Assert.That(sut.GoodNodes(TreeNode.Parse("[3,1,4,3,null,1,5]")!), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01448();
-        sut.GoodNodes(TreeNode.Parse("[3,3,null,4,2]")!).Should().Be(3);
+        Assert.That(sut.GoodNodes(TreeNode.Parse("[3,3,null,4,2]")!), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01448();
-        sut.GoodNodes(TreeNode.Parse("[1]")!).Should().Be(1);
+        Assert.That(sut.GoodNodes(TreeNode.Parse("[1]")!), Is.EqualTo(1));
     }
 }

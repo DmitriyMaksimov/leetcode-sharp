@@ -9,13 +9,13 @@ public class S00441Tests
     public void T1()
     {
         var sut = new S00441();
-        sut.ArrangeCoins(5).Should().Be(2);
+        Assert.That(sut.ArrangeCoins(5), Is.EqualTo(2));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00441();
-        sut.ArrangeCoins(8).Should().Be(3);
+        Assert.That(sut.ArrangeCoins(8), Is.EqualTo(3));
     }
 }

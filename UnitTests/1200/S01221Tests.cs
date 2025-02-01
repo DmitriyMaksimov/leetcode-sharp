@@ -9,20 +9,20 @@ public class S01221Tests
     public void T1()
     {
         var sut = new S01221();
-        sut.BalancedStringSplit("RLRRLLRLRL").Should().Be(4);
+        Assert.That(sut.BalancedStringSplit("RLRRLLRLRL"), Is.EqualTo(4));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01221();
-        sut.BalancedStringSplit("RLRRRLLRLL").Should().Be(2);
+        Assert.That(sut.BalancedStringSplit("RLRRRLLRLL"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01221();
-        sut.BalancedStringSplit("LLLLRRRR").Should().Be(1);
+        Assert.That(sut.BalancedStringSplit("LLLLRRRR"), Is.EqualTo(1));
     }
 }

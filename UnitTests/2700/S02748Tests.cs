@@ -9,13 +9,13 @@ public class S02748Tests
     public void T1()
     {
         var sut = new S02748();
-        sut.CountBeautifulPairs(new[] {2, 5, 1, 4}).Should().Be(5);
+        Assert.That(sut.CountBeautifulPairs(new[] {2, 5, 1, 4}), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02748();
-        sut.CountBeautifulPairs(new[] {11, 21, 12}).Should().Be(2);
+        Assert.That(sut.CountBeautifulPairs(new[] {11, 21, 12}), Is.EqualTo(2));
     }
 }

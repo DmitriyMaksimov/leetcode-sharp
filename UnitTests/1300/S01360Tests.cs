@@ -9,13 +9,13 @@ public class S01360Tests
     public void T1()
     {
         var sut = new S01360();
-        sut.DaysBetweenDates("2019-06-29", "2019-06-30").Should().Be(1);
+        Assert.That(sut.DaysBetweenDates("2019-06-29", "2019-06-30"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01360();
-        sut.DaysBetweenDates("2020-01-15", "2019-12-31").Should().Be(15);
+        Assert.That(sut.DaysBetweenDates("2020-01-15", "2019-12-31"), Is.EqualTo(15));
     }
 }

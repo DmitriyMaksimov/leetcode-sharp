@@ -9,13 +9,13 @@ public class S02290Tests
     public void T1()
     {
         var sut = new S02290();
-        sut.MinimumObstacles([[0, 1, 1], [1, 1, 0], [1, 1, 0]]).Should().Be(2);
+        Assert.That(sut.MinimumObstacles([[0, 1, 1], [1, 1, 0], [1, 1, 0]]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02290();
-        sut.MinimumObstacles([[0, 1, 0, 0, 0], [0, 1, 0, 1, 0], [0, 0, 0, 1, 0]]).Should().Be(0);
+        Assert.That(sut.MinimumObstacles([[0, 1, 0, 0, 0], [0, 1, 0, 1, 0], [0, 0, 0, 1, 0]]), Is.EqualTo(0));
     }
 }

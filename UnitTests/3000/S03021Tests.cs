@@ -9,19 +9,19 @@ public class S03021Tests
     public void T1()
     {
         var sut = new S03021();
-        sut.FlowerGame(3, 2).Should().Be(3);
+        Assert.That(sut.FlowerGame(3, 2), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03021();
-        sut.FlowerGame(1, 1).Should().Be(0);
+        Assert.That(sut.FlowerGame(1, 1), Is.EqualTo(0));
     }
     [Test]
     public void T3()
     {
         var sut = new S03021();
-        sut.FlowerGame(58280, 69389).Should().Be(2021995460);
+        Assert.That(sut.FlowerGame(58280, 69389), Is.EqualTo(2021995460));
     }
 }

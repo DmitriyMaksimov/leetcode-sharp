@@ -9,7 +9,7 @@ public class S00162Tests
     public void T1()
     {
         var sut = new S00162();
-        sut.FindPeakElement(new[] {1, 2, 3, 1}).Should().Be(2);
+        Assert.That(sut.FindPeakElement(new[] {1, 2, 3, 1}), Is.EqualTo(2));
     }
 
     [Test]

@@ -9,13 +9,13 @@ public class S02769Tests
     public void T1()
     {
         var sut = new S02769();
-        sut.TheMaximumAchievableX(4, 1).Should().Be(6);
+        Assert.That(sut.TheMaximumAchievableX(4, 1), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02769();
-        sut.TheMaximumAchievableX(3, 2).Should().Be(7);
+        Assert.That(sut.TheMaximumAchievableX(3, 2), Is.EqualTo(7));
     }
 }

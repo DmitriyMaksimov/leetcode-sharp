@@ -9,20 +9,20 @@ public class S03168Tests
     public void T1()
     {
         var sut = new S03168();
-        sut.MinimumChairs("EEEEEEE").Should().Be(7);
+        Assert.That(sut.MinimumChairs("EEEEEEE"), Is.EqualTo(7));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03168();
-        sut.MinimumChairs("ELELEEL").Should().Be(2);
+        Assert.That(sut.MinimumChairs("ELELEEL"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03168();
-        sut.MinimumChairs("ELEELEELLL").Should().Be(3);
+        Assert.That(sut.MinimumChairs("ELEELEELLL"), Is.EqualTo(3));
     }
 }

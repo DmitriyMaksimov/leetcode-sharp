@@ -9,20 +9,20 @@ public class S00273Tests
     public void T1()
     {
         var sut = new S00273();
-        sut.NumberToWords(123).Should().Be("One Hundred Twenty Three");
+        Assert.That(sut.NumberToWords(123), Is.EqualTo("One Hundred Twenty Three"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00273();
-        sut.NumberToWords(12345).Should().Be("Twelve Thousand Three Hundred Forty Five");
+        Assert.That(sut.NumberToWords(12345), Is.EqualTo("Twelve Thousand Three Hundred Forty Five"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00273();
-        sut.NumberToWords(1234567).Should().Be("One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven");
+        Assert.That(sut.NumberToWords(1234567), Is.EqualTo("One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"));
     }
 }

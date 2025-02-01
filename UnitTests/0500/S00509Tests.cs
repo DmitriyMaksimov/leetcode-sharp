@@ -9,19 +9,19 @@ public class S00509Tests
     public void T1()
     {
         var sut = new S00509();
-        sut.Fib(2).Should().Be(1);
+        Assert.That(sut.Fib(2), Is.EqualTo(1));
     }
     [Test]
     public void T2()
     {
         var sut = new S00509();
-        sut.Fib(3).Should().Be(2);
+        Assert.That(sut.Fib(3), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00509();
-        sut.Fib(4).Should().Be(3);
+        Assert.That(sut.Fib(4), Is.EqualTo(3));
     }
 }

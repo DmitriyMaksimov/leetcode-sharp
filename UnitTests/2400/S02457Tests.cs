@@ -9,20 +9,20 @@ public class S02457Tests
     public void T1()
     {
         var sut = new S02457();
-        sut.MakeIntegerBeautiful(16, 6).Should().Be(4);
+        Assert.That(sut.MakeIntegerBeautiful(16, 6), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02457();
-        sut.MakeIntegerBeautiful(467, 6).Should().Be(33);
+        Assert.That(sut.MakeIntegerBeautiful(467, 6), Is.EqualTo(33));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02457();
-        sut.MakeIntegerBeautiful(1, 1).Should().Be(0);
+        Assert.That(sut.MakeIntegerBeautiful(1, 1), Is.EqualTo(0));
     }
 }

@@ -9,20 +9,20 @@ public class S02947Tests
     public void T1()
     {
         var sut = new S02947();
-        sut.BeautifulSubstrings("baeyh", 2).Should().Be(2);
+        Assert.That(sut.BeautifulSubstrings("baeyh", 2), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02947();
-        sut.BeautifulSubstrings("abba", 1).Should().Be(3);
+        Assert.That(sut.BeautifulSubstrings("abba", 1), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02947();
-        sut.BeautifulSubstrings("bcdf", 1).Should().Be(0);
+        Assert.That(sut.BeautifulSubstrings("bcdf", 1), Is.EqualTo(0));
     }
 }

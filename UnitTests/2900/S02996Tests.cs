@@ -9,13 +9,13 @@ public class S02996Tests
     public void T1()
     {
         var sut = new S02996();
-        sut.MissingInteger(new[] {1, 2, 3, 2, 5}).Should().Be(6);
+        Assert.That(sut.MissingInteger(new[] {1, 2, 3, 2, 5}), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02996();
-        sut.MissingInteger(new[] {3, 4, 5, 1, 12, 14, 13}).Should().Be(15);
+        Assert.That(sut.MissingInteger(new[] {3, 4, 5, 1, 12, 14, 13}), Is.EqualTo(15));
     }
 }

@@ -9,13 +9,13 @@ public class S00921Tests
     public void T1()
     {
         var sut = new S00921();
-        sut.MinAddToMakeValid("())").Should().Be(1);
+        Assert.That(sut.MinAddToMakeValid("())"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00921();
-        sut.MinAddToMakeValid("(((").Should().Be(3);
+        Assert.That(sut.MinAddToMakeValid("((("), Is.EqualTo(3));
     }
 }

@@ -11,7 +11,7 @@ public class S00142Tests
         var sut = new S00142();
         var head = ListNode.Parse("[3,2,0,-4]");
         head.next.next.next = head.next;
-        sut.DetectCycle(head).val.Should().Be(2);
+        Assert.That(sut.DetectCycle(head).val, Is.EqualTo(2));
     }
     
     [Test]
@@ -20,7 +20,7 @@ public class S00142Tests
         var sut = new S00142();
         var head = ListNode.Parse("[1,2]");
         head.next = head;
-        sut.DetectCycle(head).val.Should().Be(1);
+        Assert.That(sut.DetectCycle(head).val, Is.EqualTo(1));
     }
 
     [Test]

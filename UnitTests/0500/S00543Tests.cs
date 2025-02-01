@@ -9,13 +9,13 @@ public class S00543Tests
     public void T1()
     {
         var sut = new S00543();
-        sut.DiameterOfBinaryTree(TreeNode.Parse("[1,2,3,4,5]")).Should().Be(3);
+        Assert.That(sut.DiameterOfBinaryTree(TreeNode.Parse("[1,2,3,4,5]")), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00543();
-        sut.DiameterOfBinaryTree(TreeNode.Parse("[1,2]")).Should().Be(1);
+        Assert.That(sut.DiameterOfBinaryTree(TreeNode.Parse("[1,2]")), Is.EqualTo(1));
     }
 }

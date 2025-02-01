@@ -9,13 +9,13 @@ public class S01947Tests
     public void T1()
     {
         var sut = new S01947();
-        sut.MaxCompatibilitySum([[1, 1, 0], [1, 0, 1], [0, 0, 1]], [[1, 0, 0], [0, 0, 1], [1, 1, 0]]).Should().Be(8);
+        Assert.That(sut.MaxCompatibilitySum([[1, 1, 0], [1, 0, 1], [0, 0, 1]], [[1, 0, 0], [0, 0, 1], [1, 1, 0]]), Is.EqualTo(8));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01947();
-        sut.MaxCompatibilitySum([[0, 0], [0, 0], [0, 0]], [[1, 1], [1, 1], [1, 1]]).Should().Be(0);
+        Assert.That(sut.MaxCompatibilitySum([[0, 0], [0, 0], [0, 0]], [[1, 1], [1, 1], [1, 1]]), Is.EqualTo(0));
     }
 }

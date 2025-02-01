@@ -9,20 +9,20 @@ public class S01155Tests
     public void T1()
     {
         var sut = new S01155();
-        sut.NumRollsToTarget(1, 6, 3).Should().Be(1);
+        Assert.That(sut.NumRollsToTarget(1, 6, 3), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01155();
-        sut.NumRollsToTarget(2, 6, 7).Should().Be(6);
+        Assert.That(sut.NumRollsToTarget(2, 6, 7), Is.EqualTo(6));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01155();
-        sut.NumRollsToTarget(30, 30, 500).Should().Be(222616187);
+        Assert.That(sut.NumRollsToTarget(30, 30, 500), Is.EqualTo(222616187));
     }
 }

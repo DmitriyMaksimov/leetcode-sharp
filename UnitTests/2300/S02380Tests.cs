@@ -9,13 +9,13 @@ public class S02380Tests
     public void T1()
     {
         var sut = new S02380();
-        sut.SecondsToRemoveOccurrences("0110101").Should().Be(4);
+        Assert.That(sut.SecondsToRemoveOccurrences("0110101"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02380();
-        sut.SecondsToRemoveOccurrences("11100").Should().Be(0);
+        Assert.That(sut.SecondsToRemoveOccurrences("11100"), Is.EqualTo(0));
     }
 }

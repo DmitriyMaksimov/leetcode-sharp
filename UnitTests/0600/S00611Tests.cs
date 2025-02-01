@@ -9,13 +9,13 @@ public class S00611Tests
     public void T1()
     {
         var sut = new S00611();
-        sut.TriangleNumber([2, 2, 3, 4]).Should().Be(3);
+        Assert.That(sut.TriangleNumber([2, 2, 3, 4]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00611();
-        sut.TriangleNumber([4, 2, 3, 4]).Should().Be(4);
+        Assert.That(sut.TriangleNumber([4, 2, 3, 4]), Is.EqualTo(4));
     }
 }

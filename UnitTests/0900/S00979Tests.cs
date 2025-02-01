@@ -9,13 +9,13 @@ public class S00979Tests
     public void T1()
     {
         var sut = new S00979();
-        sut.DistributeCoins(TreeNode.Parse("[3,0,0]")).Should().Be(2);
+        Assert.That(sut.DistributeCoins(TreeNode.Parse("[3,0,0]")), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00979();
-        sut.DistributeCoins(TreeNode.Parse("[0,3,0]")).Should().Be(3);
+        Assert.That(sut.DistributeCoins(TreeNode.Parse("[0,3,0]")), Is.EqualTo(3));
     }
 }

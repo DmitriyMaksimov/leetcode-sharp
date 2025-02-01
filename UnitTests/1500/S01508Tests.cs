@@ -9,20 +9,20 @@ public class S01508Tests
     public void T1()
     {
         var sut = new S01508();
-        sut.RangeSum([1, 2, 3, 4], 4, 1, 5).Should().Be(13);
+        Assert.That(sut.RangeSum([1, 2, 3, 4], 4, 1, 5), Is.EqualTo(13));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01508();
-        sut.RangeSum([1, 2, 3, 4], 4, 3, 4).Should().Be(6);
+        Assert.That(sut.RangeSum([1, 2, 3, 4], 4, 3, 4), Is.EqualTo(6));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01508();
-        sut.RangeSum([1, 2, 3, 4], 4, 1, 10).Should().Be(50);
+        Assert.That(sut.RangeSum([1, 2, 3, 4], 4, 1, 10), Is.EqualTo(50));
     }
 }

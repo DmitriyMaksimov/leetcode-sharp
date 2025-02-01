@@ -9,13 +9,13 @@ public class S02527Tests
     public void T1()
     {
         var sut = new S02527();
-        sut.XorBeauty([1, 4]).Should().Be(5);
+        Assert.That(sut.XorBeauty([1, 4]), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02527();
-        sut.XorBeauty([15, 45, 20, 2, 34, 35, 5, 44, 32, 30]).Should().Be(34);
+        Assert.That(sut.XorBeauty([15, 45, 20, 2, 34, 35, 5, 44, 32, 30]), Is.EqualTo(34));
     }
 }

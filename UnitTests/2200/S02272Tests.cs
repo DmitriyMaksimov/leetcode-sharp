@@ -9,13 +9,13 @@ public class S02272Tests
     public void T1()
     {
         var sut = new S02272();
-        sut.LargestVariance("aababbb").Should().Be(3);
+        Assert.That(sut.LargestVariance("aababbb"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02272();
-        sut.LargestVariance("abcde").Should().Be(0);
+        Assert.That(sut.LargestVariance("abcde"), Is.EqualTo(0));
     }
 }

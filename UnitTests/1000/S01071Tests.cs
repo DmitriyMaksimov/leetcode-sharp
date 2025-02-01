@@ -9,14 +9,14 @@ public class S01071Tests
     public void T1()
     {
         var sut = new S01071();
-        sut.GcdOfStrings("ABCABC", "ABC").Should().Be("ABC");
+        Assert.That(sut.GcdOfStrings("ABCABC", "ABC"), Is.EqualTo("ABC"));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01071();
-        sut.GcdOfStrings("ABABAB", "ABAB").Should().Be("AB");
+        Assert.That(sut.GcdOfStrings("ABABAB", "ABAB"), Is.EqualTo("AB"));
     }
 
     [Test]

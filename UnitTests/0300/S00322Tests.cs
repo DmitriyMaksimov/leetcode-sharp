@@ -9,20 +9,20 @@ public class S00322Tests
     public void T1()
     {
         var sut = new S00322();
-        sut.CoinChange(new[] {1, 2, 5}, 11).Should().Be(3);
+        Assert.That(sut.CoinChange(new[] {1, 2, 5}, 11), Is.EqualTo(3));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00322();
-        sut.CoinChange(new[] {2}, 3).Should().Be(-1);
+        Assert.That(sut.CoinChange(new[] {2}, 3), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00322();
-        sut.CoinChange(new[] {1}, 0).Should().Be(0);
+        Assert.That(sut.CoinChange(new[] {1}, 0), Is.EqualTo(0));
     }
 }

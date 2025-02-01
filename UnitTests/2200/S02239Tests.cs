@@ -9,13 +9,13 @@ public class S02239Tests
     public void T1()
     {
         var sut = new S02239();
-        sut.FindClosestNumber(new[] {-4, -2, 1, 4, 8}).Should().Be(1);
+        Assert.That(sut.FindClosestNumber(new[] {-4, -2, 1, 4, 8}), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02239();
-        sut.FindClosestNumber(new[] {2, -1, 1}).Should().Be(1);
+        Assert.That(sut.FindClosestNumber(new[] {2, -1, 1}), Is.EqualTo(1));
     }
 }

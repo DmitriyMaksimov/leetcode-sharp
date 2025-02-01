@@ -9,27 +9,27 @@ public class S01422Tests
     public void T1()
     {
         var sut = new S01422();
-        sut.MaxScore("011101").Should().Be(5);
+        Assert.That(sut.MaxScore("011101"), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01422();
-        sut.MaxScore("00111").Should().Be(5);
+        Assert.That(sut.MaxScore("00111"), Is.EqualTo(5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01422();
-        sut.MaxScore("1111").Should().Be(3);
+        Assert.That(sut.MaxScore("1111"), Is.EqualTo(3));
     }
 
     [Test]
     public void T4()
     {
         var sut = new S01422();
-        sut.MaxScore("00").Should().Be(1);
+        Assert.That(sut.MaxScore("00"), Is.EqualTo(1));
     }
 }

@@ -9,20 +9,20 @@ public class S02833Tests
     public void T1()
     {
         var sut = new S02833();
-        sut.FurthestDistanceFromOrigin("L_RL__R").Should().Be(3);
+        Assert.That(sut.FurthestDistanceFromOrigin("L_RL__R"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02833();
-        sut.FurthestDistanceFromOrigin("_R__LL_").Should().Be(5);
+        Assert.That(sut.FurthestDistanceFromOrigin("_R__LL_"), Is.EqualTo(5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02833();
-        sut.FurthestDistanceFromOrigin("_______").Should().Be(7);
+        Assert.That(sut.FurthestDistanceFromOrigin("_______"), Is.EqualTo(7));
     }
 }

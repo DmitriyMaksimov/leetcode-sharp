@@ -9,13 +9,13 @@ public class S00279Tests
     public void Test1()
     {
         var sut = new S00279();
-        sut.NumSquares(12).Should().Be(3);
+        Assert.That(sut.NumSquares(12), Is.EqualTo(3));
     }
     
     [Test]
     public void Test2()
     {
         var sut = new S00279();
-        sut.NumSquares(13).Should().Be(2);
+        Assert.That(sut.NumSquares(13), Is.EqualTo(2));
     }
 }

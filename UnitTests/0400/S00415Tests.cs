@@ -9,20 +9,20 @@ public class S00415Tests
     public void T1()
     {
         var sut = new S00415();
-        sut.AddStrings("11", "123").Should().Be("134");
+        Assert.That(sut.AddStrings("11", "123"), Is.EqualTo("134"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00415();
-        sut.AddStrings("456", "77").Should().Be("533");
+        Assert.That(sut.AddStrings("456", "77"), Is.EqualTo("533"));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S00415();
-        sut.AddStrings("0", "0").Should().Be("0");
+        Assert.That(sut.AddStrings("0", "0"), Is.EqualTo("0"));
     }
 }

@@ -9,27 +9,27 @@ public class S00071Tests
     public void T1()
     {
         var sut = new S00071();
-        sut.SimplifyPath("/home/").Should().Be("/home");
+        Assert.That(sut.SimplifyPath("/home/"), Is.EqualTo("/home"));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00071();
-        sut.SimplifyPath("/../").Should().Be("/");
+        Assert.That(sut.SimplifyPath("/../"), Is.EqualTo("/"));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S00071();
-        sut.SimplifyPath("/home//foo/").Should().Be("/home/foo");
+        Assert.That(sut.SimplifyPath("/home//foo/"), Is.EqualTo("/home/foo"));
     }
     
     [Test]
     public void T4()
     {
         var sut = new S00071();
-        sut.SimplifyPath("/a/./b/../../c/").Should().Be("/c");
+        Assert.That(sut.SimplifyPath("/a/./b/../../c/"), Is.EqualTo("/c"));
     }
 }

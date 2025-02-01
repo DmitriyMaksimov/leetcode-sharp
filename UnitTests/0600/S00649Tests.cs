@@ -9,13 +9,13 @@ public class S00649Tests
     public void T1()
     {
         var sut = new S00649();
-        sut.PredictPartyVictory("RD").Should().Be("Radiant");
+        Assert.That(sut.PredictPartyVictory("RD"), Is.EqualTo("Radiant"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00649();
-        sut.PredictPartyVictory("RDD").Should().Be("Dire");
+        Assert.That(sut.PredictPartyVictory("RDD"), Is.EqualTo("Dire"));
     }
 }

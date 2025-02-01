@@ -9,13 +9,13 @@ public class S00629Tests
     public void T1()
     {
         var sut = new S00629();
-        sut.KInversePairs(3, 0).Should().Be(1);
+        Assert.That(sut.KInversePairs(3, 0), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00629();
-        sut.KInversePairs(3, 1).Should().Be(2);
+        Assert.That(sut.KInversePairs(3, 1), Is.EqualTo(2));
     }
 }

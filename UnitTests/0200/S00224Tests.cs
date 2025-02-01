@@ -10,20 +10,20 @@ public class S00224Tests
     public void Test1()
     {
         var sut = new S00224();
-        sut.Calculate("1+1").Should().Be(2);
+        Assert.That(sut.Calculate("1+1"), Is.EqualTo(2));
     }    
     
     [Test]
     public void Test2()
     {
         var sut = new S00224();
-        sut.Calculate(" 2-1 + 2 ").Should().Be(3);
+        Assert.That(sut.Calculate(" 2-1 + 2 "), Is.EqualTo(3));
     }
     
     [Test]
     public void Test3()
     {
         var sut = new S00224();
-        sut.Calculate("(1+(4+5+2)-3)+(6+8)").Should().Be(23);
+        Assert.That(sut.Calculate("(1+(4+5+2)-3)+(6+8)"), Is.EqualTo(23));
     }    
 }

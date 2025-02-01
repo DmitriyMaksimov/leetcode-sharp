@@ -9,20 +9,20 @@ public class S00521Tests
     public void T1()
     {
         var sut = new S00521();
-        sut.FindLUSlength("aba", "cdc").Should().Be(3);
+        Assert.That(sut.FindLUSlength("aba", "cdc"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00521();
-        sut.FindLUSlength("aaa", "bbb").Should().Be(3);
+        Assert.That(sut.FindLUSlength("aaa", "bbb"), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00521();
-        sut.FindLUSlength("aaa", "aaa").Should().Be(-1);
+        Assert.That(sut.FindLUSlength("aaa", "aaa"), Is.EqualTo(-1));
     }
 }

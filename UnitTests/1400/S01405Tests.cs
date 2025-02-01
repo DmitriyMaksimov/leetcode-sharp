@@ -9,13 +9,13 @@ public class S01405Tests
     public void T1()
     {
         var sut = new S01405();
-        sut.LongestDiverseString(1, 1, 7).Should().Be("ccaccbcc");
+        Assert.That(sut.LongestDiverseString(1, 1, 7), Is.EqualTo("ccaccbcc"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01405();
-        sut.LongestDiverseString(7, 1, 0).Should().Be("aabaa");
+        Assert.That(sut.LongestDiverseString(7, 1, 0), Is.EqualTo("aabaa"));
     }
 }

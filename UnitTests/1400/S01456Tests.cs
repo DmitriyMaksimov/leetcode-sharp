@@ -9,20 +9,20 @@ public class S01456Tests
     public void T1()
     {
         var sut = new S01456();
-        sut.MaxVowels("abciiidef", 3).Should().Be(3);
+        Assert.That(sut.MaxVowels("abciiidef", 3), Is.EqualTo(3));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01456();
-        sut.MaxVowels("aeiou", 2).Should().Be(2);
+        Assert.That(sut.MaxVowels("aeiou", 2), Is.EqualTo(2));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S01456();
-        sut.MaxVowels("leetcode", 3).Should().Be(2);
+        Assert.That(sut.MaxVowels("leetcode", 3), Is.EqualTo(2));
     }
 }

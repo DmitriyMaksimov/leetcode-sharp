@@ -9,20 +9,20 @@ public class S02520Tests
     public void T1()
     {
         var sut = new S02520();
-        sut.CountDigits(7).Should().Be(1);
+        Assert.That(sut.CountDigits(7), Is.EqualTo(1));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S02520();
-        sut.CountDigits(121).Should().Be(2);
+        Assert.That(sut.CountDigits(121), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02520();
-        sut.CountDigits(1248).Should().Be(4);
+        Assert.That(sut.CountDigits(1248), Is.EqualTo(4));
     }
 }

@@ -9,20 +9,20 @@ public class S01269Tests
     public void T1()
     {
         var sut = new S01269();
-        sut.NumWays(3, 2).Should().Be(4);
+        Assert.That(sut.NumWays(3, 2), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01269();
-        sut.NumWays(2, 4).Should().Be(2);
+        Assert.That(sut.NumWays(2, 4), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01269();
-        sut.NumWays(4, 2).Should().Be(8);
+        Assert.That(sut.NumWays(4, 2), Is.EqualTo(8));
     }
 }

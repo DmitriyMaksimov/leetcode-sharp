@@ -9,20 +9,20 @@ public class S01759Tests
     public void T1()
     {
         var sut = new S01759();
-        sut.CountHomogenous("abbcccaa").Should().Be(13);
+        Assert.That(sut.CountHomogenous("abbcccaa"), Is.EqualTo(13));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01759();
-        sut.CountHomogenous("xy").Should().Be(2);
+        Assert.That(sut.CountHomogenous("xy"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01759();
-        sut.CountHomogenous("zzzzz").Should().Be(15);
+        Assert.That(sut.CountHomogenous("zzzzz"), Is.EqualTo(15));
     }
 }

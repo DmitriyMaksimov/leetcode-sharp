@@ -9,13 +9,13 @@ public class S03162Tests
     public void T1()
     {
         var sut = new S03162();
-        sut.NumberOfPairs([1, 3, 4], [1, 3, 4], 1).Should().Be(5);
+        Assert.That(sut.NumberOfPairs([1, 3, 4], [1, 3, 4], 1), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03162();
-        sut.NumberOfPairs([1, 2, 4, 12], [2, 4], 3).Should().Be(2);
+        Assert.That(sut.NumberOfPairs([1, 2, 4, 12], [2, 4], 3), Is.EqualTo(2));
     }
 }

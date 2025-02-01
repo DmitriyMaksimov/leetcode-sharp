@@ -9,13 +9,13 @@ public class S02937Tests
     public void T1()
     {
         var sut = new S02937();
-        sut.FindMinimumOperations("abc", "abb", "ab").Should().Be(2);
+        Assert.That(sut.FindMinimumOperations("abc", "abb", "ab"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02937();
-        sut.FindMinimumOperations("dac", "bac", "cac").Should().Be(-1);
+        Assert.That(sut.FindMinimumOperations("dac", "bac", "cac"), Is.EqualTo(-1));
     }
 }

@@ -9,20 +9,20 @@ public class S00091Tests
     public void T1()
     {
         var sut = new S00091();
-        sut.NumDecodings("12").Should().Be(2);
+        Assert.That(sut.NumDecodings("12"), Is.EqualTo(2));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00091();
-        sut.NumDecodings("226").Should().Be(3);
+        Assert.That(sut.NumDecodings("226"), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00091();
-        sut.NumDecodings("06").Should().Be(0);
+        Assert.That(sut.NumDecodings("06"), Is.EqualTo(0));
     }
 }

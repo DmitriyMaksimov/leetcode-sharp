@@ -9,28 +9,28 @@ public class S01675Tests
     public void T1()
     {
         var sut = new S01675();
-        sut.MinimumDeviation(new[] {1, 2, 3, 4}).Should().Be(1);
+        Assert.That(sut.MinimumDeviation(new[] {1, 2, 3, 4}), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01675();
-        sut.MinimumDeviation(new[] {4, 1, 5, 20, 3}).Should().Be(3);
+        Assert.That(sut.MinimumDeviation(new[] {4, 1, 5, 20, 3}), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01675();
-        sut.MinimumDeviation(new[] {2, 10, 8}).Should().Be(3);
+        Assert.That(sut.MinimumDeviation(new[] {2, 10, 8}), Is.EqualTo(3));
     }
 
     [Test]
     public void T4()
     {
         var sut = new S01675();
-        sut.MinimumDeviation(new[]
+        Assert.That(sut.MinimumDeviation(new[]
         {
             134010681, 174173654, 154121070, 159053997, 106747397, 190026023, 147934278, 185585548, 178865775, 107602912, 198140161, 113409650, 178111287, 183911223, 125049487,
             173473426, 147484027, 122559059, 151247320, 139819210, 116497406, 110462062, 124723111, 116244243, 194997680, 160088820, 158640346, 125677142, 133754057, 142859962,
@@ -319,6 +319,6 @@ public class S01675Tests
             108652172, 115281018, 137267404, 188359268, 154443155, 147428055, 148729550, 138029610, 118970405, 127583308, 144903300, 157847125, 172352735, 112157612, 194458241,
             176654151, 137456092, 184006408, 114928114, 142612455, 138353190, 186083438, 193073585, 191409238, 103874244, 163605199, 144778222, 150889844, 119482372, 165147698,
             151142164, 159303810, 114805035, 143722719
-        }).Should().Be(99958888);
+        }), Is.EqualTo(99958888));
     }
 }

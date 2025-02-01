@@ -9,13 +9,13 @@ public class S00650Tests
     public void T1()
     {
         var sut = new S00650();
-        sut.MinSteps(3).Should().Be(3);
+        Assert.That(sut.MinSteps(3), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00650();
-        sut.MinSteps(1).Should().Be(0);
+        Assert.That(sut.MinSteps(1), Is.EqualTo(0));
     }
 }

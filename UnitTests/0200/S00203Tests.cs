@@ -9,7 +9,7 @@ public class S00203Tests
     public void T1()
     {
         var sut = new S00203();
-        ListNode.ToString(sut.RemoveElements(ListNode.Parse("[1,2,6,3,4,5,6]"), 6)).Should().Be("[1,2,3,4,5]");
+        Assert.That(ListNode.ToString(sut.RemoveElements(ListNode.Parse("[1,2,6,3,4,5,6]"), 6)), Is.EqualTo("[1,2,3,4,5]"));
     }
     
     [Test]

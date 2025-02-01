@@ -12,7 +12,7 @@ public class S01304Tests
         var sumZero = sut.SumZero(5);
         sumZero.Should().HaveCount(5);
         sumZero.Should().OnlyHaveUniqueItems();
-        sumZero.Sum().Should().Be(0);
+        Assert.That(sumZero.Sum(), Is.EqualTo(0));
     }
     
     [Test]
@@ -22,7 +22,7 @@ public class S01304Tests
         var sumZero = sut.SumZero(3);
         sumZero.Should().HaveCount(3);
         sumZero.Should().OnlyHaveUniqueItems();
-        sumZero.Sum().Should().Be(0);
+        Assert.That(sumZero.Sum(), Is.EqualTo(0));
     }
 
     [Test]
@@ -32,6 +32,6 @@ public class S01304Tests
         var sumZero = sut.SumZero(1);
         sumZero.Should().HaveCount(1);
         sumZero.Should().OnlyHaveUniqueItems();
-        sumZero.Sum().Should().Be(0);
+        Assert.That(sumZero.Sum(), Is.EqualTo(0));
     }
 }

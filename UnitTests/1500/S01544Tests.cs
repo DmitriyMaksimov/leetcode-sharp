@@ -9,20 +9,20 @@ public class S01544Tests
     public void T1()
     {
         var sut = new S01544();
-        sut.MakeGood("leEeetcode").Should().Be("leetcode");
+        Assert.That(sut.MakeGood("leEeetcode"), Is.EqualTo("leetcode"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01544();
-        sut.MakeGood("abBAcC").Should().Be("");
+        Assert.That(sut.MakeGood("abBAcC"), Is.EqualTo(""));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01544();
-        sut.MakeGood("s").Should().Be("s");
+        Assert.That(sut.MakeGood("s"), Is.EqualTo("s"));
     }
 }

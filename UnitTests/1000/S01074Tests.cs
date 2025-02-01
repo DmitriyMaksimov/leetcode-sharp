@@ -9,20 +9,20 @@ public class S01074Tests
     public void T1()
     {
         var sut = new S01074();
-        sut.NumSubmatrixSumTarget([[0, 1, 0], [1, 1, 1], [0, 1, 0]], 0).Should().Be(4);
+        Assert.That(sut.NumSubmatrixSumTarget([[0, 1, 0], [1, 1, 1], [0, 1, 0]], 0), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01074();
-        sut.NumSubmatrixSumTarget([[1, -1], [-1, 1]], 0).Should().Be(5);
+        Assert.That(sut.NumSubmatrixSumTarget([[1, -1], [-1, 1]], 0), Is.EqualTo(5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01074();
-        sut.NumSubmatrixSumTarget([[904]], 0).Should().Be(0);
+        Assert.That(sut.NumSubmatrixSumTarget([[904]], 0), Is.EqualTo(0));
     }
 }

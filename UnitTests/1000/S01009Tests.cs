@@ -9,20 +9,20 @@ public class S01009Tests
     public void T1()
     {
         var sut = new S01009();
-        sut.BitwiseComplement(5).Should().Be(2);
+        Assert.That(sut.BitwiseComplement(5), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01009();
-        sut.BitwiseComplement(7).Should().Be(0);
+        Assert.That(sut.BitwiseComplement(7), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01009();
-        sut.BitwiseComplement(10).Should().Be(5);
+        Assert.That(sut.BitwiseComplement(10), Is.EqualTo(5));
     }
 }

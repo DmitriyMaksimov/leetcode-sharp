@@ -9,13 +9,13 @@ public class S02507Tests
     public void T1()
     {
         var sut = new S02507();
-        sut.SmallestValue(15).Should().Be(5);
+        Assert.That(sut.SmallestValue(15), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02507();
-        sut.SmallestValue(3).Should().Be(3);
+        Assert.That(sut.SmallestValue(3), Is.EqualTo(3));
     }
 }

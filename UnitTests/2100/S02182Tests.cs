@@ -9,13 +9,13 @@ public class S02182Tests
     public void T1()
     {
         var sut = new S02182();
-        sut.RepeatLimitedString("cczazcc", 3).Should().Be("zzcccac");
+        Assert.That(sut.RepeatLimitedString("cczazcc", 3), Is.EqualTo("zzcccac"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02182();
-        sut.RepeatLimitedString("aababab", 2).Should().Be("bbabaa");
+        Assert.That(sut.RepeatLimitedString("aababab", 2), Is.EqualTo("bbabaa"));
     }
 }

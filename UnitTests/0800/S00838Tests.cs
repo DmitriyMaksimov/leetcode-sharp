@@ -9,13 +9,13 @@ public class S00838Tests
     public void T1()
     {
         var sut = new S00838();
-        sut.PushDominoes("RR.L").Should().Be("RR.L");
+        Assert.That(sut.PushDominoes("RR.L"), Is.EqualTo("RR.L"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00838();
-        sut.PushDominoes(".L.R...LR..L..").Should().Be("LL.RR.LLRRLL..");
+        Assert.That(sut.PushDominoes(".L.R...LR..L.."), Is.EqualTo("LL.RR.LLRRLL.."));
     }
 }

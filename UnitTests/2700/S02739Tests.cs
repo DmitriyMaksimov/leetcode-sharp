@@ -9,13 +9,13 @@ public class S02739Tests
     public void T1()
     {
         var sut = new S02739();
-        sut.DistanceTraveled(5, 10).Should().Be(60);
+        Assert.That(sut.DistanceTraveled(5, 10), Is.EqualTo(60));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02739();
-        sut.DistanceTraveled(1, 2).Should().Be(10);
+        Assert.That(sut.DistanceTraveled(1, 2), Is.EqualTo(10));
     }
 }

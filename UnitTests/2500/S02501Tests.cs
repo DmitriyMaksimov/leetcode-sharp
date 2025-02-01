@@ -9,13 +9,13 @@ public class S02501Tests
     public void T1()
     {
         var sut = new S02501();
-        sut.LongestSquareStreak([4, 3, 6, 16, 8, 2]).Should().Be(3);
+        Assert.That(sut.LongestSquareStreak([4, 3, 6, 16, 8, 2]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02501();
-        sut.LongestSquareStreak([2, 3, 5, 6, 7]).Should().Be(-1);
+        Assert.That(sut.LongestSquareStreak([2, 3, 5, 6, 7]), Is.EqualTo(-1));
     }
 }

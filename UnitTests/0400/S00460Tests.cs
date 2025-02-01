@@ -12,17 +12,17 @@ public class S00460Tests
         
         sut.Put(1, 1);
         sut.Put(2, 2);
-        sut.Get(1).Should().Be(1);
+        Assert.That(sut.Get(1), Is.EqualTo(1));
 
         sut.Put(3, 3);
-        sut.Get(2).Should().Be(-1);
+        Assert.That(sut.Get(2), Is.EqualTo(-1));
 
-        sut.Get(3).Should().Be(3);
+        Assert.That(sut.Get(3), Is.EqualTo(3));
 
         sut.Put(4, 4);
-        sut.Get(1).Should().Be(-1);
-        sut.Get(3).Should().Be(3);
-        sut.Get(4).Should().Be(4);
+        Assert.That(sut.Get(1), Is.EqualTo(-1));
+        Assert.That(sut.Get(3), Is.EqualTo(3));
+        Assert.That(sut.Get(4), Is.EqualTo(4));
     }
     
     [Test]
@@ -34,6 +34,6 @@ public class S00460Tests
         sut.Put(2, 1);
         sut.Put(2, 2);
         sut.Put(4, 4);
-        sut.Get(2).Should().Be(2);
+        Assert.That(sut.Get(2), Is.EqualTo(2));
     }
 }

@@ -9,12 +9,12 @@ public class S00070Tests
     public void T1()
     {
         var sut = new S00070();
-        sut.ClimbStairs(2).Should().Be(2);
+        Assert.That(sut.ClimbStairs(2), Is.EqualTo(2));
     }
     [Test]
     public void T2()
     {
         var sut = new S00070();
-        sut.ClimbStairs(3).Should().Be(3);
+        Assert.That(sut.ClimbStairs(3), Is.EqualTo(3));
     }
 }

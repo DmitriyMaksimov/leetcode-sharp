@@ -9,20 +9,20 @@ public class S01748Tests
     public void T1()
     {
         var sut = new S01748();
-        sut.SumOfUnique(new[] {1, 2, 3, 2}).Should().Be(4);
+        Assert.That(sut.SumOfUnique(new[] {1, 2, 3, 2}), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01748();
-        sut.SumOfUnique(new[] {1, 1, 1, 1, 1}).Should().Be(0);
+        Assert.That(sut.SumOfUnique(new[] {1, 1, 1, 1, 1}), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01748();
-        sut.SumOfUnique(new[] {1, 2, 3, 4, 5}).Should().Be(15);
+        Assert.That(sut.SumOfUnique(new[] {1, 2, 3, 4, 5}), Is.EqualTo(15));
     }
 }

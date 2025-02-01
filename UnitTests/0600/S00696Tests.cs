@@ -9,13 +9,13 @@ public class S00696Tests
     public void T1()
     {
         var sut = new S00696();
-        sut.CountBinarySubstrings("00110011").Should().Be(6);
+        Assert.That(sut.CountBinarySubstrings("00110011"), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00696();
-        sut.CountBinarySubstrings("10101").Should().Be(4);
+        Assert.That(sut.CountBinarySubstrings("10101"), Is.EqualTo(4));
     }
 }

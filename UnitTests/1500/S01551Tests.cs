@@ -9,13 +9,13 @@ public class S01551Tests
     public void T1()
     {
         var sut = new S01551();
-        sut.MinOperations(3).Should().Be(2);
+        Assert.That(sut.MinOperations(3), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01551();
-        sut.MinOperations(6).Should().Be(9);
+        Assert.That(sut.MinOperations(6), Is.EqualTo(9));
     }
 }

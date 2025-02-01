@@ -9,20 +9,20 @@ public class S01531Tests
     public void T1()
     {
         var sut = new S01531();
-        sut.GetLengthOfOptimalCompression("aaabcccd", 2).Should().Be(4);
+        Assert.That(sut.GetLengthOfOptimalCompression("aaabcccd", 2), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01531();
-        sut.GetLengthOfOptimalCompression("aabbaa", 2).Should().Be(2);
+        Assert.That(sut.GetLengthOfOptimalCompression("aabbaa", 2), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01531();
-        sut.GetLengthOfOptimalCompression("aaaaaaaaaaa", 0).Should().Be(3);
+        Assert.That(sut.GetLengthOfOptimalCompression("aaaaaaaaaaa", 0), Is.EqualTo(3));
     }
 }

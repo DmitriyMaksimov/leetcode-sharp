@@ -9,20 +9,20 @@ public class S01915Tests
     public void T1()
     {
         var sut = new S01915();
-        sut.WonderfulSubstrings("aba").Should().Be(4);
+        Assert.That(sut.WonderfulSubstrings("aba"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01915();
-        sut.WonderfulSubstrings("aabb").Should().Be(9);
+        Assert.That(sut.WonderfulSubstrings("aabb"), Is.EqualTo(9));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01915();
-        sut.WonderfulSubstrings("he").Should().Be(2);
+        Assert.That(sut.WonderfulSubstrings("he"), Is.EqualTo(2));
     }
 }

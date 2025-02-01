@@ -9,13 +9,13 @@ public class S02160Tests
     public void T1()
     {
         var sut = new S02160();
-        sut.MinimumSum(2932).Should().Be(52);
+        Assert.That(sut.MinimumSum(2932), Is.EqualTo(52));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02160();
-        sut.MinimumSum(4009).Should().Be(13);
+        Assert.That(sut.MinimumSum(4009), Is.EqualTo(13));
     }
 }

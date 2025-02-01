@@ -9,20 +9,20 @@ public class S01366Tests
     public void T1()
     {
         var sut = new S01366();
-        sut.RankTeams(["ABC", "ACB", "ABC", "ACB", "ACB"]).Should().Be("ACB");
+        Assert.That(sut.RankTeams(["ABC", "ACB", "ABC", "ACB", "ACB"]), Is.EqualTo("ACB"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01366();
-        sut.RankTeams(["WXYZ", "XYZW"]).Should().Be("XWYZ");
+        Assert.That(sut.RankTeams(["WXYZ", "XYZW"]), Is.EqualTo("XWYZ"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01366();
-        sut.RankTeams(["ZMNAGUEDSJYLBOPHRQICWFXTVK"]).Should().Be("ZMNAGUEDSJYLBOPHRQICWFXTVK");
+        Assert.That(sut.RankTeams(["ZMNAGUEDSJYLBOPHRQICWFXTVK"]), Is.EqualTo("ZMNAGUEDSJYLBOPHRQICWFXTVK"));
     }
 }

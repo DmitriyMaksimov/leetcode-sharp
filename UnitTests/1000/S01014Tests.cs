@@ -9,13 +9,13 @@ public class S01014Tests
     public void T1()
     {
         var sut = new S01014();
-        sut.MaxScoreSightseeingPair(new[] {8, 1, 5, 2, 6}).Should().Be(11);
+        Assert.That(sut.MaxScoreSightseeingPair(new[] {8, 1, 5, 2, 6}), Is.EqualTo(11));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01014();
-        sut.MaxScoreSightseeingPair(new[] {1, 2}).Should().Be(2);
+        Assert.That(sut.MaxScoreSightseeingPair(new[] {1, 2}), Is.EqualTo(2));
     }
 }

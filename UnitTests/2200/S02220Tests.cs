@@ -9,13 +9,13 @@ public class S02220Tests
     public void T1()
     {
         var sut = new S02220();
-        sut.MinBitFlips(10, 7).Should().Be(3);
+        Assert.That(sut.MinBitFlips(10, 7), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02220();
-        sut.MinBitFlips(3, 4).Should().Be(3);
+        Assert.That(sut.MinBitFlips(3, 4), Is.EqualTo(3));
     }
 }

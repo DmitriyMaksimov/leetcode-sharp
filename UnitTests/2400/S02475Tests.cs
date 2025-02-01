@@ -9,13 +9,13 @@ public class S02475Tests
     public void T1()
     {
         var sut = new S02475();
-        sut.UnequalTriplets(new[] {4, 4, 2, 4, 3}).Should().Be(3);
+        Assert.That(sut.UnequalTriplets(new[] {4, 4, 2, 4, 3}), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02475();
-        sut.UnequalTriplets(new[] {1, 1, 1, 1, 1}).Should().Be(0);
+        Assert.That(sut.UnequalTriplets(new[] {1, 1, 1, 1, 1}), Is.EqualTo(0));
     }
 }

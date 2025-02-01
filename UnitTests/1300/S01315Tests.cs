@@ -9,13 +9,13 @@ public class S01315Tests
     public void T1()
     {
         var sut = new S01315();
-        sut.SumEvenGrandparent(TreeNode.Parse("[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]")).Should().Be(18);
+        Assert.That(sut.SumEvenGrandparent(TreeNode.Parse("[6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]")), Is.EqualTo(18));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01315();
-        sut.SumEvenGrandparent(TreeNode.Parse("[1]")).Should().Be(0);
+        Assert.That(sut.SumEvenGrandparent(TreeNode.Parse("[1]")), Is.EqualTo(0));
     }
 }

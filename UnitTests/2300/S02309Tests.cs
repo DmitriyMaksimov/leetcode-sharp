@@ -9,20 +9,20 @@ public class S02309Tests
     public void T1()
     {
         var sut = new S02309();
-        sut.GreatestLetter("lEeTcOdE").Should().Be("E");
+        Assert.That(sut.GreatestLetter("lEeTcOdE"), Is.EqualTo("E"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02309();
-        sut.GreatestLetter("arRAzFif").Should().Be("R");
+        Assert.That(sut.GreatestLetter("arRAzFif"), Is.EqualTo("R"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02309();
-        sut.GreatestLetter("AbCdEfGhIjK").Should().Be("");
+        Assert.That(sut.GreatestLetter("AbCdEfGhIjK"), Is.EqualTo(""));
     }
 }

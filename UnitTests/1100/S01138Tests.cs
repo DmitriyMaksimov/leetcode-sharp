@@ -9,20 +9,20 @@ public class S01138Tests
     public void T1()
     {
         var sut = new S01138();
-        sut.AlphabetBoardPath("leet").Should().Be("RDD!UURRR!!DDD!");
+        Assert.That(sut.AlphabetBoardPath("leet"), Is.EqualTo("RDD!UURRR!!DDD!"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01138();
-        sut.AlphabetBoardPath("code").Should().Be("RR!RRDD!UUL!R!");
+        Assert.That(sut.AlphabetBoardPath("code"), Is.EqualTo("RR!RRDD!UUL!R!"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01138();
-        sut.AlphabetBoardPath("zdz").Should().Be("DDDDD!UUUUURRR!LLLDDDDD!");
+        Assert.That(sut.AlphabetBoardPath("zdz"), Is.EqualTo("DDDDD!UUUUURRR!LLLDDDDD!"));
     }
 }

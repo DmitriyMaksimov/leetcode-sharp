@@ -9,13 +9,13 @@ public class S00820Tests
     public void T1()
     {
         var sut = new S00820();
-        sut.MinimumLengthEncoding(["time", "me", "bell"]).Should().Be(10);
+        Assert.That(sut.MinimumLengthEncoding(["time", "me", "bell"]), Is.EqualTo(10));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00820();
-        sut.MinimumLengthEncoding(["t"]).Should().Be(2);
+        Assert.That(sut.MinimumLengthEncoding(["t"]), Is.EqualTo(2));
     }
 }

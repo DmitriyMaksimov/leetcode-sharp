@@ -9,13 +9,13 @@ public class S00930Tests
     public void T1()
     {
         var sut = new S00930();
-        sut.NumSubarraysWithSum([1, 0, 1, 0, 1], 2).Should().Be(4);
+        Assert.That(sut.NumSubarraysWithSum([1, 0, 1, 0, 1], 2), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00930();
-        sut.NumSubarraysWithSum([0, 0, 0, 0, 0], 0).Should().Be(15);
+        Assert.That(sut.NumSubarraysWithSum([0, 0, 0, 0, 0], 0), Is.EqualTo(15));
     }
 }

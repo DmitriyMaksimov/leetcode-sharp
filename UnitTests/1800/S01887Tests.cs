@@ -9,20 +9,20 @@ public class S01887Tests
     public void T1()
     {
         var sut = new S01887();
-        sut.ReductionOperations(new[] {5, 1, 3}).Should().Be(3);
+        Assert.That(sut.ReductionOperations(new[] {5, 1, 3}), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01887();
-        sut.ReductionOperations(new[] {1, 1, 1}).Should().Be(0);
+        Assert.That(sut.ReductionOperations(new[] {1, 1, 1}), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01887();
-        sut.ReductionOperations(new[] {1, 1, 2, 2, 3}).Should().Be(4);
+        Assert.That(sut.ReductionOperations(new[] {1, 1, 2, 2, 3}), Is.EqualTo(4));
     }
 }

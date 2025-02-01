@@ -9,13 +9,13 @@ public class S02568Tests
     public void T1()
     {
         var sut = new S02568();
-        sut.MinImpossibleOR([2, 1]).Should().Be(4);
+        Assert.That(sut.MinImpossibleOR([2, 1]), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02568();
-        sut.MinImpossibleOR([5, 3, 2]).Should().Be(1);
+        Assert.That(sut.MinImpossibleOR([5, 3, 2]), Is.EqualTo(1));
     }
 }

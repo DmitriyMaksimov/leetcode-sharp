@@ -9,20 +9,20 @@ public class S00129Tests
     public void T1()
     {
         var sut = new S00129();
-        sut.SumNumbers(TreeNode.Parse("[1,2,3]")).Should().Be(25);
+        Assert.That(sut.SumNumbers(TreeNode.Parse("[1,2,3]")), Is.EqualTo(25));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00129();
-        sut.SumNumbers(TreeNode.Parse("[4,9,0,5,1]")).Should().Be(1026);
+        Assert.That(sut.SumNumbers(TreeNode.Parse("[4,9,0,5,1]")), Is.EqualTo(1026));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00129();
-        sut.SumNumbers(TreeNode.Parse("[1,null,5]")).Should().Be(15);
+        Assert.That(sut.SumNumbers(TreeNode.Parse("[1,null,5]")), Is.EqualTo(15));
     }
 }

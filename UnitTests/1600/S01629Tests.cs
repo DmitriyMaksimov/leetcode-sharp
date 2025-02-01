@@ -9,13 +9,13 @@ public class S01629Tests
     public void T1()
     {
         var sut = new S01629();
-        sut.SlowestKey(new[] {9, 29, 49, 50}, "cbcd").Should().Be('c');
+        Assert.That(sut.SlowestKey(new[] {9, 29, 49, 50}, "cbcd"), Is.EqualTo('c'));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01629();
-        sut.SlowestKey(new[] {12, 23, 36, 46, 62}, "spuda").Should().Be('a');
+        Assert.That(sut.SlowestKey(new[] {12, 23, 36, 46, 62}, "spuda"), Is.EqualTo('a'));
     }
 }

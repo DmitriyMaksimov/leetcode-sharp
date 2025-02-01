@@ -9,13 +9,13 @@ public class S01309Tests
     public void T1()
     {
         var sut = new S01309();
-        sut.FreqAlphabets("10#11#12").Should().Be("jkab");
+        Assert.That(sut.FreqAlphabets("10#11#12"), Is.EqualTo("jkab"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01309();
-        sut.FreqAlphabets("1326#").Should().Be("acz");
+        Assert.That(sut.FreqAlphabets("1326#"), Is.EqualTo("acz"));
     }
 }

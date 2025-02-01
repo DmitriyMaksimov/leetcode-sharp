@@ -9,13 +9,13 @@ public class S03228Tests
     public void T1()
     {
         var sut = new S03228();
-        sut.MaxOperations("1001101").Should().Be(4);
+        Assert.That(sut.MaxOperations("1001101"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03228();
-        sut.MaxOperations("00111").Should().Be(0);
+        Assert.That(sut.MaxOperations("00111"), Is.EqualTo(0));
     }
 }

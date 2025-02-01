@@ -9,13 +9,13 @@ public class S01154Tests
     public void T1()
     {
         var sut = new S01154();
-        sut.DayOfYear("2019-01-09").Should().Be(9);
+        Assert.That(sut.DayOfYear("2019-01-09"), Is.EqualTo(9));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01154();
-        sut.DayOfYear("2019-02-10").Should().Be(41);
+        Assert.That(sut.DayOfYear("2019-02-10"), Is.EqualTo(41));
     }
 }

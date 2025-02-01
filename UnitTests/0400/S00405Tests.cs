@@ -9,13 +9,13 @@ public class S00405Tests
     public void T1()
     {
         var sut = new S00405();
-        sut.ToHex(26).Should().Be("1a");
+        Assert.That(sut.ToHex(26), Is.EqualTo("1a"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00405();
-        sut.ToHex(-1).Should().Be("ffffffff");
+        Assert.That(sut.ToHex(-1), Is.EqualTo("ffffffff"));
     }
 }

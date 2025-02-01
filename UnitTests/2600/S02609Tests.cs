@@ -9,20 +9,20 @@ public class S02609Tests
     public void T1()
     {
         var sut = new S02609();
-        sut.FindTheLongestBalancedSubstring("01000111").Should().Be(6);
+        Assert.That(sut.FindTheLongestBalancedSubstring("01000111"), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02609();
-        sut.FindTheLongestBalancedSubstring("00111").Should().Be(4);
+        Assert.That(sut.FindTheLongestBalancedSubstring("00111"), Is.EqualTo(4));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02609();
-        sut.FindTheLongestBalancedSubstring("111").Should().Be(0);
+        Assert.That(sut.FindTheLongestBalancedSubstring("111"), Is.EqualTo(0));
     }
 }

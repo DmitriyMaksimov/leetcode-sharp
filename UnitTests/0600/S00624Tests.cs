@@ -9,13 +9,13 @@ public class S00624Tests
     public void T1()
     {
         var sut = new S00624();
-        sut.MaxDistance([[1, 2, 3], [4, 5], [1, 2, 3]]).Should().Be(4);
+        Assert.That(sut.MaxDistance([[1, 2, 3], [4, 5], [1, 2, 3]]), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00624();
-        sut.MaxDistance([[1], [1]]).Should().Be(0);
+        Assert.That(sut.MaxDistance([[1], [1]]), Is.EqualTo(0));
     }
 }

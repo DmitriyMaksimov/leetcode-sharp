@@ -9,13 +9,13 @@ public class S00671Tests
     public void T1()
     {
         var sut = new S00671();
-        sut.FindSecondMinimumValue(TreeNode.Parse("[2,2,5,null,null,5,7]")).Should().Be(5);
+        Assert.That(sut.FindSecondMinimumValue(TreeNode.Parse("[2,2,5,null,null,5,7]")), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00671();
-        sut.FindSecondMinimumValue(TreeNode.Parse("[2,2,2]")).Should().Be(-1);
+        Assert.That(sut.FindSecondMinimumValue(TreeNode.Parse("[2,2,2]")), Is.EqualTo(-1));
     }
 }

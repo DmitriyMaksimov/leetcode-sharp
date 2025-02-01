@@ -9,20 +9,20 @@ public class S01492Tests
     public void T1()
     {
         var sut = new S01492();
-        sut.KthFactor(12, 3).Should().Be(3);
+        Assert.That(sut.KthFactor(12, 3), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01492();
-        sut.KthFactor(7, 2).Should().Be(7);
+        Assert.That(sut.KthFactor(7, 2), Is.EqualTo(7));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01492();
-        sut.KthFactor(4, 4).Should().Be(-1);
+        Assert.That(sut.KthFactor(4, 4), Is.EqualTo(-1));
     }
 }

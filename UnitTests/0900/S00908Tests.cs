@@ -9,20 +9,20 @@ public class S00908Tests
     public void T1()
     {
         var sut = new S00908();
-        sut.SmallestRangeI(new[] {1}, 0).Should().Be(0);
+        Assert.That(sut.SmallestRangeI(new[] {1}, 0), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00908();
-        sut.SmallestRangeI(new[] {0, 10}, 2).Should().Be(6);
+        Assert.That(sut.SmallestRangeI(new[] {0, 10}, 2), Is.EqualTo(6));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00908();
-        sut.SmallestRangeI(new[] {1, 3, 6}, 3).Should().Be(0);
+        Assert.That(sut.SmallestRangeI(new[] {1, 3, 6}, 3), Is.EqualTo(0));
     }
 }

@@ -9,13 +9,13 @@ public class S02180Tests
     public void T1()
     {
         var sut = new S02180();
-        sut.CountEven(4).Should().Be(2);
+        Assert.That(sut.CountEven(4), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02180();
-        sut.CountEven(30).Should().Be(14);
+        Assert.That(sut.CountEven(30), Is.EqualTo(14));
     }
 }

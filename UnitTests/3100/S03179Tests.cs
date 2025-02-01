@@ -9,13 +9,13 @@ public class S03179Tests
     public void T1()
     {
         var sut = new S03179();
-        sut.ValueAfterKSeconds(4, 5).Should().Be(56);
+        Assert.That(sut.ValueAfterKSeconds(4, 5), Is.EqualTo(56));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03179();
-        sut.ValueAfterKSeconds(5, 3).Should().Be(35);
+        Assert.That(sut.ValueAfterKSeconds(5, 3), Is.EqualTo(35));
     }
 }

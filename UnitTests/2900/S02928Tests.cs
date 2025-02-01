@@ -9,13 +9,13 @@ public class S02928Tests
     public void T1()
     {
         var sut = new S02928();
-        sut.DistributeCandies(5, 2).Should().Be(3);
+        Assert.That(sut.DistributeCandies(5, 2), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02928();
-        sut.DistributeCandies(3, 3).Should().Be(10);
+        Assert.That(sut.DistributeCandies(3, 3), Is.EqualTo(10));
     }
 }

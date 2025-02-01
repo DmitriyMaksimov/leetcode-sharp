@@ -9,20 +9,20 @@ public class S01455Tests
     public void T1()
     {
         var sut = new S01455();
-        sut.IsPrefixOfWord("i love eating burger", "burg").Should().Be(4);
+        Assert.That(sut.IsPrefixOfWord("i love eating burger", "burg"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01455();
-        sut.IsPrefixOfWord("this problem is an easy problem", "pro").Should().Be(2);
+        Assert.That(sut.IsPrefixOfWord("this problem is an easy problem", "pro"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01455();
-        sut.IsPrefixOfWord("i am tired", "you").Should().Be(-1);
+        Assert.That(sut.IsPrefixOfWord("i am tired", "you"), Is.EqualTo(-1));
     }
 }

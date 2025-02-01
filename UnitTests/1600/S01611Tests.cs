@@ -9,13 +9,13 @@ public class S01611Tests
     public void T1()
     {
         var sut = new S01611();
-        sut.MinimumOneBitOperations(3).Should().Be(2);
+        Assert.That(sut.MinimumOneBitOperations(3), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01611();
-        sut.MinimumOneBitOperations(6).Should().Be(4);
+        Assert.That(sut.MinimumOneBitOperations(6), Is.EqualTo(4));
     }
 }

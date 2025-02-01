@@ -9,13 +9,13 @@ public class S00357Tests
     public void T1()
     {
         var sut = new S00357();
-        sut.CountNumbersWithUniqueDigits(2).Should().Be(91);
+        Assert.That(sut.CountNumbersWithUniqueDigits(2), Is.EqualTo(91));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00357();
-        sut.CountNumbersWithUniqueDigits(0).Should().Be(1);
+        Assert.That(sut.CountNumbersWithUniqueDigits(0), Is.EqualTo(1));
     }
 }

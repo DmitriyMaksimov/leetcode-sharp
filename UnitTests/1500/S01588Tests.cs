@@ -9,20 +9,20 @@ public class S01588Tests
     public void T1()
     {
         var sut = new S01588();
-        sut.SumOddLengthSubarrays(new[] {1, 4, 2, 5, 3}).Should().Be(58);
+        Assert.That(sut.SumOddLengthSubarrays(new[] {1, 4, 2, 5, 3}), Is.EqualTo(58));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01588();
-        sut.SumOddLengthSubarrays(new[] {1, 2}).Should().Be(3);
+        Assert.That(sut.SumOddLengthSubarrays(new[] {1, 2}), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01588();
-        sut.SumOddLengthSubarrays(new[] {10, 11, 12}).Should().Be(66);
+        Assert.That(sut.SumOddLengthSubarrays(new[] {10, 11, 12}), Is.EqualTo(66));
     }
 }

@@ -10,7 +10,7 @@ public class S00876Tests
     {
         var sut = new S00876();
 
-        sut.MiddleNode(ListNode.Parse("[1,2,3,4,5]")!).val.Should().Be(3);
+        Assert.That(sut.MiddleNode(ListNode.Parse("[1,2,3,4,5]")!).val, Is.EqualTo(3));
     }
 
     [Test]
@@ -18,6 +18,6 @@ public class S00876Tests
     {
         var sut = new S00876();
 
-        sut.MiddleNode(ListNode.Parse("[1,2,3,4,5,6]")!).val.Should().Be(4);
+        Assert.That(sut.MiddleNode(ListNode.Parse("[1,2,3,4,5,6]")!).val, Is.EqualTo(4));
     }
 }

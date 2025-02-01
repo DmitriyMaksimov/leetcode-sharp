@@ -9,20 +9,20 @@ public class S01806Tests
     public void T1()
     {
         var sut = new S01806();
-        sut.ReinitializePermutation(2).Should().Be(1);
+        Assert.That(sut.ReinitializePermutation(2), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01806();
-        sut.ReinitializePermutation(4).Should().Be(2);
+        Assert.That(sut.ReinitializePermutation(4), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01806();
-        sut.ReinitializePermutation(6).Should().Be(4);
+        Assert.That(sut.ReinitializePermutation(6), Is.EqualTo(4));
     }
 }

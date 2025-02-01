@@ -9,20 +9,20 @@ public class S01395Tests
     public void T1()
     {
         var sut = new S01395();
-        sut.NumTeams([2, 5, 3, 4, 1]).Should().Be(3);
+        Assert.That(sut.NumTeams([2, 5, 3, 4, 1]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01395();
-        sut.NumTeams([2, 1, 3]).Should().Be(0);
+        Assert.That(sut.NumTeams([2, 1, 3]), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01395();
-        sut.NumTeams([1, 2, 3, 4]).Should().Be(4);
+        Assert.That(sut.NumTeams([1, 2, 3, 4]), Is.EqualTo(4));
     }
 }

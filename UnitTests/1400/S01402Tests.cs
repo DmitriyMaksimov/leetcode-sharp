@@ -9,20 +9,20 @@ public class S01402Tests
     public void T1()
     {
         var sut = new S01402();
-        sut.MaxSatisfaction(new[] {-1, -8, 0, 5, -9}).Should().Be(14);
+        Assert.That(sut.MaxSatisfaction(new[] {-1, -8, 0, 5, -9}), Is.EqualTo(14));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01402();
-        sut.MaxSatisfaction(new[] {4, 3, 2}).Should().Be(20);
+        Assert.That(sut.MaxSatisfaction(new[] {4, 3, 2}), Is.EqualTo(20));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01402();
-        sut.MaxSatisfaction(new[] {-1, -4, -5}).Should().Be(0);
+        Assert.That(sut.MaxSatisfaction(new[] {-1, -4, -5}), Is.EqualTo(0));
     }
 }

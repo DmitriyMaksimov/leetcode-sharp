@@ -9,13 +9,13 @@ public class S03039Tests
     public void T1()
     {
         var sut = new S03039();
-        sut.LastNonEmptyString("aabcbbca").Should().Be("ba");
+        Assert.That(sut.LastNonEmptyString("aabcbbca"), Is.EqualTo("ba"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03039();
-        sut.LastNonEmptyString("abcd").Should().Be("abcd");
+        Assert.That(sut.LastNonEmptyString("abcd"), Is.EqualTo("abcd"));
     }
 }

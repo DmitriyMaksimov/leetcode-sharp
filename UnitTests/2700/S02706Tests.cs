@@ -9,13 +9,13 @@ public class S02706Tests
     public void T1()
     {
         var sut = new S02706();
-        sut.BuyChoco(new[] {1, 2, 2}, 3).Should().Be(0);
+        Assert.That(sut.BuyChoco(new[] {1, 2, 2}, 3), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02706();
-        sut.BuyChoco(new[] {3, 2, 3}, 3).Should().Be(3);
+        Assert.That(sut.BuyChoco(new[] {3, 2, 3}, 3), Is.EqualTo(3));
     }
 }

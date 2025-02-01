@@ -9,20 +9,20 @@ public class S02981Tests
     public void T1()
     {
         var sut = new S02981();
-        sut.MaximumLength("aaaa").Should().Be(2);
+        Assert.That(sut.MaximumLength("aaaa"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02981();
-        sut.MaximumLength("abcdef").Should().Be(-1);
+        Assert.That(sut.MaximumLength("abcdef"), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02981();
-        sut.MaximumLength("abcaba").Should().Be(1);
+        Assert.That(sut.MaximumLength("abcaba"), Is.EqualTo(1));
     }
 }

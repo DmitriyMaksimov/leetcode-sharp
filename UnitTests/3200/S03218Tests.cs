@@ -9,13 +9,13 @@ public class S03218Tests
     public void T1()
     {
         var sut = new S03218();
-        sut.MinimumCost(3, 2, [1, 3], [5]).Should().Be(13);
+        Assert.That(sut.MinimumCost(3, 2, [1, 3], [5]), Is.EqualTo(13));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03218();
-        sut.MinimumCost(2, 2, [7], [4]).Should().Be(15);
+        Assert.That(sut.MinimumCost(2, 2, [7], [4]), Is.EqualTo(15));
     }
 }

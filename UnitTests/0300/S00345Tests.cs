@@ -9,13 +9,13 @@ public class S00345Tests
     public void T1()
     {
         var sut = new S00345();
-        sut.ReverseVowels("hello").Should().Be("holle");
+        Assert.That(sut.ReverseVowels("hello"), Is.EqualTo("holle"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00345();
-        sut.ReverseVowels("leetcode").Should().Be("leotcede");
+        Assert.That(sut.ReverseVowels("leetcode"), Is.EqualTo("leotcede"));
     }
 }

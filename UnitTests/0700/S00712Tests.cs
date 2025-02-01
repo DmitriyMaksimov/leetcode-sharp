@@ -9,13 +9,13 @@ public class S00712Tests
     public void T1()
     {
         var sut = new S00712();
-        sut.MinimumDeleteSum("sea", "eat").Should().Be(231);
+        Assert.That(sut.MinimumDeleteSum("sea", "eat"), Is.EqualTo(231));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00712();
-        sut.MinimumDeleteSum("delete", "leet").Should().Be(403);
+        Assert.That(sut.MinimumDeleteSum("delete", "leet"), Is.EqualTo(403));
     }
 }

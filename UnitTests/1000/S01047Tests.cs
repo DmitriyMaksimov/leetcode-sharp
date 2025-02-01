@@ -9,13 +9,13 @@ public class S01047Tests
     public void T1()
     {
         var sut = new S01047();
-        sut.RemoveDuplicates("abbaca").Should().Be("ca");
+        Assert.That(sut.RemoveDuplicates("abbaca"), Is.EqualTo("ca"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01047();
-        sut.RemoveDuplicates("azxxzy").Should().Be("ay");
+        Assert.That(sut.RemoveDuplicates("azxxzy"), Is.EqualTo("ay"));
     }
 }

@@ -9,20 +9,20 @@ public class S02127Tests
     public void T1()
     {
         var sut = new S02127();
-        sut.MaximumInvitations([2, 2, 1, 2]).Should().Be(3);
+        Assert.That(sut.MaximumInvitations([2, 2, 1, 2]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02127();
-        sut.MaximumInvitations([1, 2, 0]).Should().Be(3);
+        Assert.That(sut.MaximumInvitations([1, 2, 0]), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02127();
-        sut.MaximumInvitations([3, 0, 1, 4, 1]).Should().Be(4);
+        Assert.That(sut.MaximumInvitations([3, 0, 1, 4, 1]), Is.EqualTo(4));
     }
 }

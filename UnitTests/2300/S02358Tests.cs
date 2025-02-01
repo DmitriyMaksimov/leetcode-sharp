@@ -9,13 +9,13 @@ public class S02358Tests
     public void T1()
     {
         var sut = new S02358();
-        sut.MaximumGroups([10, 6, 12, 7, 3, 5]).Should().Be(3);
+        Assert.That(sut.MaximumGroups([10, 6, 12, 7, 3, 5]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02358();
-        sut.MaximumGroups([8, 8]).Should().Be(1);
+        Assert.That(sut.MaximumGroups([8, 8]), Is.EqualTo(1));
     }
 }

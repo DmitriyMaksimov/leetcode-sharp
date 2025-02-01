@@ -9,20 +9,20 @@ public class S01220Tests
     public void T1()
     {
         var sut = new S01220();
-        sut.CountVowelPermutation(1).Should().Be(5);
+        Assert.That(sut.CountVowelPermutation(1), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01220();
-        sut.CountVowelPermutation(2).Should().Be(10);
+        Assert.That(sut.CountVowelPermutation(2), Is.EqualTo(10));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01220();
-        sut.CountVowelPermutation(5).Should().Be(68);
+        Assert.That(sut.CountVowelPermutation(5), Is.EqualTo(68));
     }
 }

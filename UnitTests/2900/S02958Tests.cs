@@ -9,20 +9,20 @@ public class S02958Tests
     public void T1()
     {
         var sut = new S02958();
-        sut.MaxSubarrayLength([1, 2, 3, 1, 2, 3, 1, 2], 2).Should().Be(6);
+        Assert.That(sut.MaxSubarrayLength([1, 2, 3, 1, 2, 3, 1, 2], 2), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02958();
-        sut.MaxSubarrayLength([1, 2, 1, 2, 1, 2, 1, 2], 1).Should().Be(2);
+        Assert.That(sut.MaxSubarrayLength([1, 2, 1, 2, 1, 2, 1, 2], 1), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02958();
-        sut.MaxSubarrayLength([5, 5, 5, 5, 5, 5, 5], 4).Should().Be(4);
+        Assert.That(sut.MaxSubarrayLength([5, 5, 5, 5, 5, 5, 5], 4), Is.EqualTo(4));
     }
 }

@@ -9,20 +9,20 @@ public class S02486Tests
     public void T1()
     {
         var sut = new S02486();
-        sut.AppendCharacters("coaching", "coding").Should().Be(4);
+        Assert.That(sut.AppendCharacters("coaching", "coding"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02486();
-        sut.AppendCharacters("abcde", "a").Should().Be(0);
+        Assert.That(sut.AppendCharacters("abcde", "a"), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02486();
-        sut.AppendCharacters("z", "abcde").Should().Be(5);
+        Assert.That(sut.AppendCharacters("z", "abcde"), Is.EqualTo(5));
     }
 }

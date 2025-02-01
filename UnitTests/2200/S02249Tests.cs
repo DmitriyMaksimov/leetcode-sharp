@@ -9,13 +9,13 @@ public class S02249Tests
     public void T1()
     {
         var sut = new S02249();
-        sut.CountLatticePoints([[2, 2, 1]]).Should().Be(5);
+        Assert.That(sut.CountLatticePoints([[2, 2, 1]]), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02249();
-        sut.CountLatticePoints([[2, 2, 2], [3, 4, 1]]).Should().Be(16);
+        Assert.That(sut.CountLatticePoints([[2, 2, 2], [3, 4, 1]]), Is.EqualTo(16));
     }
 }

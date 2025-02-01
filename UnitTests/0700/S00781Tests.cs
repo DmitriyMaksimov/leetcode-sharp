@@ -9,13 +9,13 @@ public class S00781Tests
     public void T1()
     {
         var sut = new S00781();
-        sut.NumRabbits([1, 1, 2]).Should().Be(5);
+        Assert.That(sut.NumRabbits([1, 1, 2]), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00781();
-        sut.NumRabbits([10, 10, 10]).Should().Be(11);
+        Assert.That(sut.NumRabbits([10, 10, 10]), Is.EqualTo(11));
     }
 }

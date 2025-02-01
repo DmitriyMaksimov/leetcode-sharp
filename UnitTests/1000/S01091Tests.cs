@@ -9,20 +9,20 @@ public class S01091Tests
     public void T1()
     {
         var sut = new S01091();
-        sut.ShortestPathBinaryMatrix(new[] {new[] {0, 1}, new[] {1, 0}}).Should().Be(2);
+        Assert.That(sut.ShortestPathBinaryMatrix(new[] {new[] {0, 1}, new[] {1, 0}}), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01091();
-        sut.ShortestPathBinaryMatrix(new[] {new[] {0, 0, 0}, new[] {1, 1, 0}, new[] {1, 1, 0}}).Should().Be(4);
+        Assert.That(sut.ShortestPathBinaryMatrix(new[] {new[] {0, 0, 0}, new[] {1, 1, 0}, new[] {1, 1, 0}}), Is.EqualTo(4));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01091();
-        sut.ShortestPathBinaryMatrix(new[] {new[] {1, 0, 0}, new[] {1, 1, 0}, new[] {1, 1, 0}}).Should().Be(-1);
+        Assert.That(sut.ShortestPathBinaryMatrix(new[] {new[] {1, 0, 0}, new[] {1, 1, 0}, new[] {1, 1, 0}}), Is.EqualTo(-1));
     }
 }

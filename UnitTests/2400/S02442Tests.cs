@@ -9,13 +9,13 @@ public class S02442Tests
     public void T1()
     {
         var sut = new S02442();
-        sut.CountDistinctIntegers(new[] {1, 13, 10, 12, 31}).Should().Be(6);
+        Assert.That(sut.CountDistinctIntegers(new[] {1, 13, 10, 12, 31}), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02442();
-        sut.CountDistinctIntegers(new[] {2, 2, 2}).Should().Be(1);
+        Assert.That(sut.CountDistinctIntegers(new[] {2, 2, 2}), Is.EqualTo(1));
     }
 }

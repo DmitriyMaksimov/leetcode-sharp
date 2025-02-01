@@ -9,20 +9,20 @@ public class S00944Tests
     public void T1()
     {
         var sut = new S00944();
-        sut.MinDeletionSize(new[] {"cba","daf","ghi"}).Should().Be(1);
+        Assert.That(sut.MinDeletionSize(new[] {"cba","daf","ghi"}), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00944();
-        sut.MinDeletionSize(new[] {"a","b"}).Should().Be(0);
+        Assert.That(sut.MinDeletionSize(new[] {"a","b"}), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00944();
-        sut.MinDeletionSize(new[] {"zyx","wvu","tsr"}).Should().Be(3);
+        Assert.That(sut.MinDeletionSize(new[] {"zyx","wvu","tsr"}), Is.EqualTo(3));
     }
 }

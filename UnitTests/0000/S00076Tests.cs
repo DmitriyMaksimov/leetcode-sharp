@@ -9,21 +9,21 @@ public class S00076Tests
     public void T1()
     {
         var sut = new S00076();
-        sut.MinWindow("ADOBECODEBANC", "ABC").Should().Be("BANC");
+        Assert.That(sut.MinWindow("ADOBECODEBANC", "ABC"), Is.EqualTo("BANC"));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00076();
-        sut.MinWindow("a", "a").Should().Be("a");
+        Assert.That(sut.MinWindow("a", "a"), Is.EqualTo("a"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00076();
-        sut.MinWindow("a", "aa").Should().Be("");
+        Assert.That(sut.MinWindow("a", "aa"), Is.EqualTo(""));
     }
 
 }

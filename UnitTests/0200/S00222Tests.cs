@@ -11,20 +11,20 @@ public class S00222Tests
         var sut = new S00222();
         var root = TreeNode.Parse("[1,2,3,4,5,6]");
         TreeNode.Print(root);
-        sut.CountNodes(root).Should().Be(6);
+        Assert.That(sut.CountNodes(root), Is.EqualTo(6));
     }
     
     [Test]
     public void Test2()
     {
         var sut = new S00222();
-        sut.CountNodes(null).Should().Be(0);
+        Assert.That(sut.CountNodes(null), Is.EqualTo(0));
     }
     [Test]
     public void Test3()
     {
         var sut = new S00222();
         var root = TreeNode.Parse("[1]");
-        sut.CountNodes(root).Should().Be(1);
+        Assert.That(sut.CountNodes(root), Is.EqualTo(1));
     }
 }

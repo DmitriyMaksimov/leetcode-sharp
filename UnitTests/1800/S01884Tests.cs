@@ -9,13 +9,13 @@ public class S01884Tests
     public void T1()
     {
         var sut = new S01884();
-        sut.TwoEggDrop(2).Should().Be(2);
+        Assert.That(sut.TwoEggDrop(2), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01884();
-        sut.TwoEggDrop(100).Should().Be(14);
+        Assert.That(sut.TwoEggDrop(100), Is.EqualTo(14));
     }
 }

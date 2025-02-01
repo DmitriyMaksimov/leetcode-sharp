@@ -9,20 +9,20 @@ public class S01017Tests
     public void T1()
     {
         var sut = new S01017();
-        sut.BaseNeg2(2).Should().Be("110");
+        Assert.That(sut.BaseNeg2(2), Is.EqualTo("110"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01017();
-        sut.BaseNeg2(3).Should().Be("111");
+        Assert.That(sut.BaseNeg2(3), Is.EqualTo("111"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01017();
-        sut.BaseNeg2(4).Should().Be("100");
+        Assert.That(sut.BaseNeg2(4), Is.EqualTo("100"));
     }
 }

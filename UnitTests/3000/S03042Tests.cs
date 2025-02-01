@@ -9,20 +9,20 @@ public class S03042Tests
     public void T1()
     {
         var sut = new S03042();
-        sut.CountPrefixSuffixPairs(["a", "aba", "ababa", "aa"]).Should().Be(4);
+        Assert.That(sut.CountPrefixSuffixPairs(["a", "aba", "ababa", "aa"]), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03042();
-        sut.CountPrefixSuffixPairs(["pa", "papa", "ma", "mama"]).Should().Be(2);
+        Assert.That(sut.CountPrefixSuffixPairs(["pa", "papa", "ma", "mama"]), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03042();
-        sut.CountPrefixSuffixPairs(["abab", "ab"]).Should().Be(0);
+        Assert.That(sut.CountPrefixSuffixPairs(["abab", "ab"]), Is.EqualTo(0));
     }
 }

@@ -9,14 +9,14 @@ public class S02785Tests
     public void T1()
     {
         var sut = new S02785();
-        sut.SortVowels("lEetcOde").Should().Be("lEOtcede");
+        Assert.That(sut.SortVowels("lEetcOde"), Is.EqualTo("lEOtcede"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02785();
-        sut.SortVowels("lYmpH").Should().Be("lYmpH");
+        Assert.That(sut.SortVowels("lYmpH"), Is.EqualTo("lYmpH"));
     }
 
 }

@@ -9,13 +9,13 @@ public class S03090Tests
     public void T1()
     {
         var sut = new S03090();
-        sut.MaximumLengthSubstring("bcbbbcba").Should().Be(4);
+        Assert.That(sut.MaximumLengthSubstring("bcbbbcba"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03090();
-        sut.MaximumLengthSubstring("aaaa").Should().Be(2);
+        Assert.That(sut.MaximumLengthSubstring("aaaa"), Is.EqualTo(2));
     }
 }

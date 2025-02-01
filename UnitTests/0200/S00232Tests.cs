@@ -12,8 +12,8 @@ public class S00232Tests
 
         sut.Push(1); // queue is: [1]
         sut.Push(2); // queue is: [1, 2] (leftmost is front of the queue)
-        sut.Peek().Should().Be(1); // return 1
-        sut.Pop().Should().Be(1); // return 1, queue is [2]
+        Assert.That(sut.Peek(), Is.EqualTo(1)); // return 1
+        Assert.That(sut.Pop(), Is.EqualTo(1)); // return 1, queue is [2]
         sut.Empty().Should().BeFalse(); // return false
     }
 }

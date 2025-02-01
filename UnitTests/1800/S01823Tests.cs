@@ -9,13 +9,13 @@ public class S01823Tests
     public void T1()
     {
         var sut = new S01823();
-        sut.FindTheWinner(5, 2).Should().Be(3);
+        Assert.That(sut.FindTheWinner(5, 2), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01823();
-        sut.FindTheWinner(6, 5).Should().Be(1);
+        Assert.That(sut.FindTheWinner(6, 5), Is.EqualTo(1));
     }
 }

@@ -9,20 +9,20 @@ public class S01189Tests
     public void T1()
     {
         var sut = new S01189();
-        sut.MaxNumberOfBalloons("nlaebolko").Should().Be(1);
+        Assert.That(sut.MaxNumberOfBalloons("nlaebolko"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01189();
-        sut.MaxNumberOfBalloons("loonbalxballpoon").Should().Be(2);
+        Assert.That(sut.MaxNumberOfBalloons("loonbalxballpoon"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01189();
-        sut.MaxNumberOfBalloons("leetcode").Should().Be(0);
+        Assert.That(sut.MaxNumberOfBalloons("leetcode"), Is.EqualTo(0));
     }
 }

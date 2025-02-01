@@ -9,20 +9,20 @@ public class S01323Tests
     public void T1()
     {
         var sut = new S01323();
-        sut.Maximum69Number(9669).Should().Be(9969);
+        Assert.That(sut.Maximum69Number(9669), Is.EqualTo(9969));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01323();
-        sut.Maximum69Number(9996).Should().Be(9999);
+        Assert.That(sut.Maximum69Number(9996), Is.EqualTo(9999));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01323();
-        sut.Maximum69Number(9999).Should().Be(9999);
+        Assert.That(sut.Maximum69Number(9999), Is.EqualTo(9999));
     }
 }

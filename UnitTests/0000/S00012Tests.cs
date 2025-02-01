@@ -9,48 +9,48 @@ public class S00012Tests
     public void Test1()
     {
         var sut = new S00012();
-        sut.IntToRoman(3).Should().Be("III");
+        Assert.That(sut.IntToRoman(3), Is.EqualTo("III"));
     }
     
     [Test]
     public void Test2()
     {
         var sut = new S00012();
-        sut.IntToRoman(58).Should().Be("LVIII");
+        Assert.That(sut.IntToRoman(58), Is.EqualTo("LVIII"));
     }   
     
     [Test]
     public void Test3()
     {
         var sut = new S00012();
-        sut.IntToRoman(1994).Should().Be("MCMXCIV");
+        Assert.That(sut.IntToRoman(1994), Is.EqualTo("MCMXCIV"));
     }
 
     [Test]
     public void Test4()
     {
         var sut = new S00012();
-        sut.IntToRoman(60).Should().Be("LX");
+        Assert.That(sut.IntToRoman(60), Is.EqualTo("LX"));
     }
 
     [Test]
     public void Test5()
     {
         var sut = new S00012();
-        sut.IntToRoman(70).Should().Be("LXX");
+        Assert.That(sut.IntToRoman(70), Is.EqualTo("LXX"));
     }
 
     [Test]
     public void Test6()
     {
         var sut = new S00012();
-        sut.IntToRoman(80).Should().Be("LXXX");
+        Assert.That(sut.IntToRoman(80), Is.EqualTo("LXXX"));
     }
 
     [Test]
     public void Test7()
     {
         var sut = new S00012();
-        sut.IntToRoman(600).Should().Be("DC");
+        Assert.That(sut.IntToRoman(600), Is.EqualTo("DC"));
     }
 }

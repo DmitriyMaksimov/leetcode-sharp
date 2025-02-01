@@ -9,13 +9,13 @@ public class S03271Tests
     public void T1()
     {
         var sut = new S03271();
-        sut.StringHash("abcd", 2).Should().Be("bf");
+        Assert.That(sut.StringHash("abcd", 2), Is.EqualTo("bf"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03271();
-        sut.StringHash("mxz", 3).Should().Be("i");
+        Assert.That(sut.StringHash("mxz", 3), Is.EqualTo("i"));
     }
 }

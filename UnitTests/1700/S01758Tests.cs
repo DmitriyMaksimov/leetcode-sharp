@@ -9,20 +9,20 @@ public class S01758Tests
     public void T1()
     {
         var sut = new S01758();
-        sut.MinOperations("0100").Should().Be(1);
+        Assert.That(sut.MinOperations("0100"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01758();
-        sut.MinOperations("10").Should().Be(0);
+        Assert.That(sut.MinOperations("10"), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01758();
-        sut.MinOperations("1111").Should().Be(2);
+        Assert.That(sut.MinOperations("1111"), Is.EqualTo(2));
     }
 }

@@ -9,13 +9,13 @@ public class S00072Tests
     public void T1()
     {
         var sut = new S00072();
-        sut.MinDistance("horse", "ros").Should().Be(3);
+        Assert.That(sut.MinDistance("horse", "ros"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00072();
-        sut.MinDistance("intention", "execution").Should().Be(5);
+        Assert.That(sut.MinDistance("intention", "execution"), Is.EqualTo(5));
     }
 }

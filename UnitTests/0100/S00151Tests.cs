@@ -9,20 +9,20 @@ public class S00151Tests
     public void Test1()
     {
         var sut = new S00151();
-        sut.ReverseWords("the sky is blue").Should().Be("blue is sky the");
+        Assert.That(sut.ReverseWords("the sky is blue"), Is.EqualTo("blue is sky the"));
     }
     
     [Test]
     public void Test2()
     {
         var sut = new S00151();
-        sut.ReverseWords("  hello world  ").Should().Be("world hello");
+        Assert.That(sut.ReverseWords("  hello world  "), Is.EqualTo("world hello"));
     }
     
     [Test]
     public void Test3()
     {
         var sut = new S00151();
-        sut.ReverseWords("a good   example").Should().Be("example good a");
+        Assert.That(sut.ReverseWords("a good   example"), Is.EqualTo("example good a"));
     }
 }

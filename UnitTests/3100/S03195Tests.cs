@@ -9,20 +9,20 @@ public class S03195Tests
     public void T1()
     {
         var sut = new S03195();
-        sut.MinimumArea([[0, 1, 0], [1, 0, 1]]).Should().Be(6);
+        Assert.That(sut.MinimumArea([[0, 1, 0], [1, 0, 1]]), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03195();
-        sut.MinimumArea([[1, 0], [0, 0]]).Should().Be(1);
+        Assert.That(sut.MinimumArea([[1, 0], [0, 0]]), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03195();
-        sut.MinimumArea([[0, 1]]).Should().Be(1);
+        Assert.That(sut.MinimumArea([[0, 1]]), Is.EqualTo(1));
     }
 }

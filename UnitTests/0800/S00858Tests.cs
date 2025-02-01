@@ -9,13 +9,13 @@ public class S00858Tests
     public void T1()
     {
         var sut = new S00858();
-        sut.MirrorReflection(2, 1).Should().Be(2);
+        Assert.That(sut.MirrorReflection(2, 1), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00858();
-        sut.MirrorReflection(3, 1).Should().Be(1);
+        Assert.That(sut.MirrorReflection(3, 1), Is.EqualTo(1));
     }
 }

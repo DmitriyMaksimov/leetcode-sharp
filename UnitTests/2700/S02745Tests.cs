@@ -9,13 +9,13 @@ public class S02745Tests
     public void T1()
     {
         var sut = new S02745();
-        sut.LongestString(2, 5, 1).Should().Be(12);
+        Assert.That(sut.LongestString(2, 5, 1), Is.EqualTo(12));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02745();
-        sut.LongestString(3, 2, 2).Should().Be(14);
+        Assert.That(sut.LongestString(3, 2, 2), Is.EqualTo(14));
     }
 }

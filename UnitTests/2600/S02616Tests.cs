@@ -9,13 +9,13 @@ public class S02616Tests
     public void T1()
     {
         var sut = new S02616();
-        sut.MinimizeMax(new[] {10, 1, 2, 7, 1, 3}, 2).Should().Be(1);
+        Assert.That(sut.MinimizeMax(new[] {10, 1, 2, 7, 1, 3}, 2), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02616();
-        sut.MinimizeMax(new[] {4, 2, 1, 2}, 1).Should().Be(0);
+        Assert.That(sut.MinimizeMax(new[] {4, 2, 1, 2}, 1), Is.EqualTo(0));
     }
 }

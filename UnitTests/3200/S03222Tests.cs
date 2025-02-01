@@ -9,13 +9,13 @@ public class S03222Tests
     public void T1()
     {
         var sut = new S03222();
-        sut.LosingPlayer(2, 7).Should().Be("Alice");
+        Assert.That(sut.LosingPlayer(2, 7), Is.EqualTo("Alice"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03222();
-        sut.LosingPlayer(4, 11).Should().Be("Bob");
+        Assert.That(sut.LosingPlayer(4, 11), Is.EqualTo("Bob"));
     }
 }

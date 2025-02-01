@@ -9,13 +9,13 @@ public class S00419Tests
     public void T1()
     {
         var sut = new S00419();
-        sut.CountBattleships([['X', '.', '.', 'X'], ['.', '.', '.', 'X'], ['.', '.', '.', 'X']]).Should().Be(2);
+        Assert.That(sut.CountBattleships([['X', '.', '.', 'X'], ['.', '.', '.', 'X'], ['.', '.', '.', 'X']]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00419();
-        sut.CountBattleships([['.']]).Should().Be(0);
+        Assert.That(sut.CountBattleships([['.']]), Is.EqualTo(0));
     }
 }

@@ -37,7 +37,7 @@ public class S00328Tests
     [TestCase("123432", false)]
     public void Palindrome(string s, bool expected)
     {
-        isPalindrome(s).Should().Be(expected);
+        Assert.That(isPalindrome(s), Is.EqualTo(expected));
     }
 
     private static bool isPalindrome(string s)

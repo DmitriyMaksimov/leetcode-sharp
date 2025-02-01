@@ -9,13 +9,13 @@ public class S00481Tests
     public void T1()
     {
         var sut = new S00481();
-        sut.MagicalString(6).Should().Be(3);
+        Assert.That(sut.MagicalString(6), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00481();
-        sut.MagicalString(1).Should().Be(1);
+        Assert.That(sut.MagicalString(1), Is.EqualTo(1));
     }
 }

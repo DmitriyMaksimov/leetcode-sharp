@@ -9,13 +9,13 @@ public class S00564Tests
     public void T1()
     {
         var sut = new S00564();
-        sut.NearestPalindromic("123").Should().Be("121");
+        Assert.That(sut.NearestPalindromic("123"), Is.EqualTo("121"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00564();
-        sut.NearestPalindromic("1").Should().Be("0");
+        Assert.That(sut.NearestPalindromic("1"), Is.EqualTo("0"));
     }
 }

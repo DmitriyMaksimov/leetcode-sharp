@@ -11,8 +11,8 @@ public class S00225Tests
         var myStack = new S00225.MyStack();
         myStack.Push(1);
         myStack.Push(2);
-        myStack.Top().Should().Be(2);
-        myStack.Pop().Should().Be(2);
+        Assert.That(myStack.Top(), Is.EqualTo(2));
+        Assert.That(myStack.Pop(), Is.EqualTo(2));
         myStack.Empty().Should().BeFalse();
     }
 }

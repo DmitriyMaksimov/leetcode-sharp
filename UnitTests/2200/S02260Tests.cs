@@ -9,13 +9,13 @@ public class S02260Tests
     public void T1()
     {
         var sut = new S02260();
-        sut.MinimumCardPickup([3, 4, 2, 3, 4, 7]).Should().Be(4);
+        Assert.That(sut.MinimumCardPickup([3, 4, 2, 3, 4, 7]), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02260();
-        sut.MinimumCardPickup([1, 0, 5, 3]).Should().Be(-1);
+        Assert.That(sut.MinimumCardPickup([1, 0, 5, 3]), Is.EqualTo(-1));
     }
 }

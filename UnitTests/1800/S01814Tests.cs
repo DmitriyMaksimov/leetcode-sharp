@@ -9,13 +9,13 @@ public class S01814Tests
     public void T1()
     {
         var sut = new S01814();
-        sut.CountNicePairs(new[] {42, 11, 1, 97}).Should().Be(2);
+        Assert.That(sut.CountNicePairs(new[] {42, 11, 1, 97}), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01814();
-        sut.CountNicePairs(new[] {13, 10, 35, 24, 76}).Should().Be(4);
+        Assert.That(sut.CountNicePairs(new[] {13, 10, 35, 24, 76}), Is.EqualTo(4));
     }
 }

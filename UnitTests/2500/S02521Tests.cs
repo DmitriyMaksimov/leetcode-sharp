@@ -9,20 +9,20 @@ public class S02521Tests
     public void T1()
     {
         var sut = new S02521();
-        sut.DistinctPrimeFactors([2, 4, 3, 7, 10, 6]).Should().Be(4);
+        Assert.That(sut.DistinctPrimeFactors([2, 4, 3, 7, 10, 6]), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02521();
-        sut.DistinctPrimeFactors([2, 4, 8, 16]).Should().Be(1);
+        Assert.That(sut.DistinctPrimeFactors([2, 4, 8, 16]), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02521();
-        sut.DistinctPrimeFactors([27]).Should().Be(1);
+        Assert.That(sut.DistinctPrimeFactors([27]), Is.EqualTo(1));
     }
 }

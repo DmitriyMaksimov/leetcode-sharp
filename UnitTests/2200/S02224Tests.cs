@@ -9,13 +9,13 @@ public class S02224Tests
     public void T1()
     {
         var sut = new S02224();
-        sut.ConvertTime("02:30", "04:35").Should().Be(3);
+        Assert.That(sut.ConvertTime("02:30", "04:35"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02224();
-        sut.ConvertTime("11:00", "11:01").Should().Be(1);
+        Assert.That(sut.ConvertTime("11:00", "11:01"), Is.EqualTo(1));
     }
 }

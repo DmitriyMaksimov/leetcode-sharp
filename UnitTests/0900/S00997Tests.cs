@@ -9,20 +9,20 @@ public class S00997Tests
     public void T1()
     {
         var sut = new S00997();
-        sut.FindJudge(2, new[] {new[] {1, 2}}).Should().Be(2);
+        Assert.That(sut.FindJudge(2, new[] {new[] {1, 2}}), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00997();
-        sut.FindJudge(3, new[] {new[] {1, 3}, new[] {2, 3}}).Should().Be(3);
+        Assert.That(sut.FindJudge(3, new[] {new[] {1, 3}, new[] {2, 3}}), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00997();
-        sut.FindJudge(3, new[] {new[] {1, 3}, new[] {2, 3}, new[] {3, 1}}).Should().Be(-1);
+        Assert.That(sut.FindJudge(3, new[] {new[] {1, 3}, new[] {2, 3}, new[] {3, 1}}), Is.EqualTo(-1));
     }
 }

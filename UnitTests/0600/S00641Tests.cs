@@ -13,12 +13,12 @@ public class S00641Tests
         sut.InsertLast(2).Should().BeTrue();
         sut.InsertFront(3).Should().BeTrue();
         sut.InsertFront(4).Should().BeFalse();
-        sut.GetRear().Should().Be(2);
+        Assert.That(sut.GetRear(), Is.EqualTo(2));
         sut.IsFull().Should().BeTrue();
         sut.DeleteLast().Should().BeTrue();
         sut.InsertFront(4).Should().BeTrue();
-        sut.GetFront().Should().Be(4);
+        Assert.That(sut.GetFront(), Is.EqualTo(4));
         sut.DeleteFront().Should().BeTrue();
-        sut.GetFront().Should().Be(3);
+        Assert.That(sut.GetFront(), Is.EqualTo(3));
     }
 }

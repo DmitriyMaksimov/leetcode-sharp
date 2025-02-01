@@ -9,13 +9,13 @@ public class S02673Tests
     public void T1()
     {
         var sut = new S02673();
-        sut.MinIncrements(7, [1, 5, 2, 2, 3, 3, 1]).Should().Be(6);
+        Assert.That(sut.MinIncrements(7, [1, 5, 2, 2, 3, 3, 1]), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02673();
-        sut.MinIncrements(3, [5, 3, 3]).Should().Be(0);
+        Assert.That(sut.MinIncrements(3, [5, 3, 3]), Is.EqualTo(0));
     }
 }

@@ -9,13 +9,13 @@ public class S01760Tests
     public void T1()
     {
         var sut = new S01760();
-        sut.MinimumSize([9], 2).Should().Be(3);
+        Assert.That(sut.MinimumSize([9], 2), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01760();
-        sut.MinimumSize([2, 4, 8, 2], 4).Should().Be(2);
+        Assert.That(sut.MinimumSize([2, 4, 8, 2], 4), Is.EqualTo(2));
     }
 }

@@ -9,13 +9,13 @@ public class S02600Tests
     public void T1()
     {
         var sut = new S02600();
-        sut.KItemsWithMaximumSum(3, 2, 0, 2).Should().Be(2);
+        Assert.That(sut.KItemsWithMaximumSum(3, 2, 0, 2), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02600();
-        sut.KItemsWithMaximumSum(3, 2, 0, 4).Should().Be(3);
+        Assert.That(sut.KItemsWithMaximumSum(3, 2, 0, 4), Is.EqualTo(3));
     }
 }

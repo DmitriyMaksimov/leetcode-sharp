@@ -9,13 +9,13 @@ public class S02516Tests
     public void T1()
     {
         var sut = new S02516();
-        sut.TakeCharacters("aabaaaacaabc", 2).Should().Be(8);
+        Assert.That(sut.TakeCharacters("aabaaaacaabc", 2), Is.EqualTo(8));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02516();
-        sut.TakeCharacters("a", 1).Should().Be(-1);
+        Assert.That(sut.TakeCharacters("a", 1), Is.EqualTo(-1));
     }
 }

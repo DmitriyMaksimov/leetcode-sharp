@@ -9,13 +9,13 @@ public class S02712Tests
     public void T1()
     {
         var sut = new S02712();
-        sut.MinimumCost("0011").Should().Be(2);
+        Assert.That(sut.MinimumCost("0011"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02712();
-        sut.MinimumCost("010101").Should().Be(9);
+        Assert.That(sut.MinimumCost("010101"), Is.EqualTo(9));
     }
 }

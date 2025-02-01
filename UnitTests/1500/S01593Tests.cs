@@ -9,20 +9,20 @@ public class S01593Tests
     public void T1()
     {
         var sut = new S01593();
-        sut.MaxUniqueSplit("ababccc").Should().Be(5);
+        Assert.That(sut.MaxUniqueSplit("ababccc"), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01593();
-        sut.MaxUniqueSplit("aba").Should().Be(2);
+        Assert.That(sut.MaxUniqueSplit("aba"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01593();
-        sut.MaxUniqueSplit("aa").Should().Be(1);
+        Assert.That(sut.MaxUniqueSplit("aa"), Is.EqualTo(1));
     }
 }

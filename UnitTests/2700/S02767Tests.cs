@@ -9,20 +9,20 @@ public class S02767Tests
     public void T1()
     {
         var sut = new S02767();
-        sut.MinimumBeautifulSubstrings("1011").Should().Be(2);
+        Assert.That(sut.MinimumBeautifulSubstrings("1011"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02767();
-        sut.MinimumBeautifulSubstrings("111").Should().Be(3);
+        Assert.That(sut.MinimumBeautifulSubstrings("111"), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02767();
-        sut.MinimumBeautifulSubstrings("0").Should().Be(-1);
+        Assert.That(sut.MinimumBeautifulSubstrings("0"), Is.EqualTo(-1));
     }
 }

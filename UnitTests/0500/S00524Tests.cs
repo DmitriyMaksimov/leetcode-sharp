@@ -9,13 +9,13 @@ public class S00524Tests
     public void T1()
     {
         var sut = new S00524();
-        sut.FindLongestWord("abpcplea", ["ale", "apple", "monkey", "plea"]).Should().Be("apple");
+        Assert.That(sut.FindLongestWord("abpcplea", ["ale", "apple", "monkey", "plea"]), Is.EqualTo("apple"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00524();
-        sut.FindLongestWord("abpcplea", ["a", "b", "c"]).Should().Be("a");
+        Assert.That(sut.FindLongestWord("abpcplea", ["a", "b", "c"]), Is.EqualTo("a"));
     }
 }

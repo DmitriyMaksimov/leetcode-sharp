@@ -9,20 +9,20 @@ public class S01358Tests
     public void T1()
     {
         var sut = new S01358();
-        sut.NumberOfSubstrings("abcabc").Should().Be(10);
+        Assert.That(sut.NumberOfSubstrings("abcabc"), Is.EqualTo(10));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01358();
-        sut.NumberOfSubstrings("aaacb").Should().Be(3);
+        Assert.That(sut.NumberOfSubstrings("aaacb"), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01358();
-        sut.NumberOfSubstrings("abc").Should().Be(1);
+        Assert.That(sut.NumberOfSubstrings("abc"), Is.EqualTo(1));
     }
 }

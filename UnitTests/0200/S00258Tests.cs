@@ -9,13 +9,13 @@ public class S00258Tests
     public void T1()
     {
         var sut = new S00258();
-        sut.AddDigits(38).Should().Be(2);
+        Assert.That(sut.AddDigits(38), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00258();
-        sut.AddDigits(0).Should().Be(0);
+        Assert.That(sut.AddDigits(0), Is.EqualTo(0));
     }
 }

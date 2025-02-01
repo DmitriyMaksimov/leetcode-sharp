@@ -9,20 +9,20 @@ public class S01404Tests
     public void T1()
     {
         var sut = new S01404();
-        sut.NumSteps("1101").Should().Be(6);
+        Assert.That(sut.NumSteps("1101"), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01404();
-        sut.NumSteps("10").Should().Be(1);
+        Assert.That(sut.NumSteps("10"), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01404();
-        sut.NumSteps("1").Should().Be(0);
+        Assert.That(sut.NumSteps("1"), Is.EqualTo(0));
     }
 }

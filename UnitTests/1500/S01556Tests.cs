@@ -9,13 +9,13 @@ public class S01556Tests
     public void T1()
     {
         var sut = new S01556();
-        sut.ThousandSeparator(987).Should().Be("987");
+        Assert.That(sut.ThousandSeparator(987), Is.EqualTo("987"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01556();
-        sut.ThousandSeparator(1234).Should().Be("1.234");
+        Assert.That(sut.ThousandSeparator(1234), Is.EqualTo("1.234"));
     }
 }

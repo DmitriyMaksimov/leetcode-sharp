@@ -9,20 +9,20 @@ public class S01910Tests
     public void T1()
     {
         var sut = new S01910();
-        sut.RemoveOccurrences("daabcbaabcbc", "abc").Should().Be("dab");
+        Assert.That(sut.RemoveOccurrences("daabcbaabcbc", "abc"), Is.EqualTo("dab"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01910();
-        sut.RemoveOccurrences("axxxxyyyyb", "xy").Should().Be("ab");
+        Assert.That(sut.RemoveOccurrences("axxxxyyyyb", "xy"), Is.EqualTo("ab"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01910();
-        sut.RemoveOccurrences("aabababa", "aba").Should().Be("ba");
+        Assert.That(sut.RemoveOccurrences("aabababa", "aba"), Is.EqualTo("ba"));
     }
 }

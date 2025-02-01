@@ -9,13 +9,13 @@ public class S01638Tests
     public void T1()
     {
         var sut = new S01638();
-        sut.CountSubstrings("aba", "baba").Should().Be(6);
+        Assert.That(sut.CountSubstrings("aba", "baba"), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01638();
-        sut.CountSubstrings("ab", "bb").Should().Be(3);
+        Assert.That(sut.CountSubstrings("ab", "bb"), Is.EqualTo(3));
     }
 }

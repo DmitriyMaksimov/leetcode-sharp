@@ -9,13 +9,13 @@ public class S01525Tests
     public void T1()
     {
         var sut = new S01525();
-        sut.NumSplits("aacaba").Should().Be(2);
+        Assert.That(sut.NumSplits("aacaba"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01525();
-        sut.NumSplits("abcd").Should().Be(1);
+        Assert.That(sut.NumSplits("abcd"), Is.EqualTo(1));
     }
 }

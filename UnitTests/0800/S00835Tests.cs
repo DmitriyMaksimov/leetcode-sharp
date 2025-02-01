@@ -9,20 +9,20 @@ public class S00835Tests
     public void T1()
     {
         var sut = new S00835();
-        sut.LargestOverlap([[1, 1, 0], [0, 1, 0], [0, 1, 0]], [[0, 0, 0], [0, 1, 1], [0, 0, 1]]).Should().Be(3);
+        Assert.That(sut.LargestOverlap([[1, 1, 0], [0, 1, 0], [0, 1, 0]], [[0, 0, 0], [0, 1, 1], [0, 0, 1]]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00835();
-        sut.LargestOverlap([[1]], [[1]]).Should().Be(1);
+        Assert.That(sut.LargestOverlap([[1]], [[1]]), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00835();
-        sut.LargestOverlap([[0]], [[0]]).Should().Be(0);
+        Assert.That(sut.LargestOverlap([[0]], [[0]]), Is.EqualTo(0));
     }
 }

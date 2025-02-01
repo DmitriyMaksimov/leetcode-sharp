@@ -9,20 +9,20 @@ public class S01248Tests
     public void T1()
     {
         var sut = new S01248();
-        sut.NumberOfSubarrays([1, 1, 2, 1, 1], 3).Should().Be(2);
+        Assert.That(sut.NumberOfSubarrays([1, 1, 2, 1, 1], 3), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01248();
-        sut.NumberOfSubarrays([2, 4, 6], 1).Should().Be(0);
+        Assert.That(sut.NumberOfSubarrays([2, 4, 6], 1), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01248();
-        sut.NumberOfSubarrays([2, 2, 2, 1, 2, 2, 1, 2, 2, 2], 2).Should().Be(16);
+        Assert.That(sut.NumberOfSubarrays([2, 2, 2, 1, 2, 2, 1, 2, 2, 2], 2), Is.EqualTo(16));
     }
 }

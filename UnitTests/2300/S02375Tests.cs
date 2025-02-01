@@ -9,13 +9,13 @@ public class S02375Tests
     public void T1()
     {
         var sut = new S02375();
-        sut.SmallestNumber("IIIDIDDD").Should().Be("123549876");
+        Assert.That(sut.SmallestNumber("IIIDIDDD"), Is.EqualTo("123549876"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02375();
-        sut.SmallestNumber("DDD").Should().Be("4321");
+        Assert.That(sut.SmallestNumber("DDD"), Is.EqualTo("4321"));
     }
 }

@@ -9,13 +9,13 @@ public class S01010Tests
     public void T1()
     {
         var sut = new S01010();
-        sut.NumPairsDivisibleBy60([30, 20, 150, 100, 40]).Should().Be(3);
+        Assert.That(sut.NumPairsDivisibleBy60([30, 20, 150, 100, 40]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01010();
-        sut.NumPairsDivisibleBy60([60, 60, 60]).Should().Be(3);
+        Assert.That(sut.NumPairsDivisibleBy60([60, 60, 60]), Is.EqualTo(3));
     }
 }

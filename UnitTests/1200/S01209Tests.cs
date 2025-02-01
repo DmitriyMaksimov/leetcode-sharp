@@ -9,20 +9,20 @@ public class S01209Tests
     public void T1()
     {
         var sut = new S01209();
-        sut.RemoveDuplicates("abcd", 2).Should().Be("abcd");
+        Assert.That(sut.RemoveDuplicates("abcd", 2), Is.EqualTo("abcd"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01209();
-        sut.RemoveDuplicates("deeedbbcccbdaa", 3).Should().Be("aa");
+        Assert.That(sut.RemoveDuplicates("deeedbbcccbdaa", 3), Is.EqualTo("aa"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01209();
-        sut.RemoveDuplicates("pbbcggttciiippooaais", 2).Should().Be("ps");
+        Assert.That(sut.RemoveDuplicates("pbbcggttciiippooaais", 2), Is.EqualTo("ps"));
     }
 }

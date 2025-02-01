@@ -9,20 +9,20 @@ public class S01185Tests
     public void T1()
     {
         var sut = new S01185();
-        sut.DayOfTheWeek(31, 8, 2019).Should().Be("Saturday");
+        Assert.That(sut.DayOfTheWeek(31, 8, 2019), Is.EqualTo("Saturday"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01185();
-        sut.DayOfTheWeek(18, 7, 1999).Should().Be("Sunday");
+        Assert.That(sut.DayOfTheWeek(18, 7, 1999), Is.EqualTo("Sunday"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01185();
-        sut.DayOfTheWeek(15, 8, 1993).Should().Be("Sunday");
+        Assert.That(sut.DayOfTheWeek(15, 8, 1993), Is.EqualTo("Sunday"));
     }
 }

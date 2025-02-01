@@ -9,20 +9,20 @@ public class S00541Tests
     public void T1()
     {
         var sut = new S00541();
-        sut.ReverseStr("abcdefg", 2).Should().Be("bacdfeg");
+        Assert.That(sut.ReverseStr("abcdefg", 2), Is.EqualTo("bacdfeg"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00541();
-        sut.ReverseStr("abcd", 2).Should().Be("bacd");
+        Assert.That(sut.ReverseStr("abcd", 2), Is.EqualTo("bacd"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00541();
-        sut.ReverseStr("abcd", 4).Should().Be("dcba");
+        Assert.That(sut.ReverseStr("abcd", 4), Is.EqualTo("dcba"));
     }
 }

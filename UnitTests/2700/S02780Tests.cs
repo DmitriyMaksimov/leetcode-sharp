@@ -9,13 +9,13 @@ public class S02780Tests
     public void T1()
     {
         var sut = new S02780();
-        sut.MinimumIndex([1, 2, 2, 2]).Should().Be(2);
+        Assert.That(sut.MinimumIndex([1, 2, 2, 2]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02780();
-        sut.MinimumIndex([2, 1, 3, 1, 1, 1, 7, 1, 2, 1]).Should().Be(4);
+        Assert.That(sut.MinimumIndex([2, 1, 3, 1, 1, 1, 7, 1, 2, 1]), Is.EqualTo(4));
     }
 }

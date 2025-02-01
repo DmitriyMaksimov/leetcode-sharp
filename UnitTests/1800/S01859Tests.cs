@@ -9,13 +9,13 @@ public class S01859Tests
     public void T1()
     {
         var sut = new S01859();
-        sut.SortSentence("is2 sentence4 This1 a3").Should().Be("This is a sentence");
+        Assert.That(sut.SortSentence("is2 sentence4 This1 a3"), Is.EqualTo("This is a sentence"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01859();
-        sut.SortSentence("Myself2 Me1 I4 and3").Should().Be("Me Myself and I");
+        Assert.That(sut.SortSentence("Myself2 Me1 I4 and3"), Is.EqualTo("Me Myself and I"));
     }
 }

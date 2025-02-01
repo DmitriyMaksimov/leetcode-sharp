@@ -9,13 +9,13 @@ public class S00135Tests
     public void T1()
     {
         var sut = new S00135();
-        sut.Candy(new[] {1, 0, 2}).Should().Be(5);
+        Assert.That(sut.Candy(new[] {1, 0, 2}), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00135();
-        sut.Candy(new[] {1, 2, 2}).Should().Be(4);
+        Assert.That(sut.Candy(new[] {1, 2, 2}), Is.EqualTo(4));
     }
 }

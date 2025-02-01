@@ -9,20 +9,20 @@ public class S01736Tests
     public void T1()
     {
         var sut = new S01736();
-        sut.MaximumTime("2?:?0").Should().Be("23:50");
+        Assert.That(sut.MaximumTime("2?:?0"), Is.EqualTo("23:50"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01736();
-        sut.MaximumTime("0?:3?").Should().Be("09:39");
+        Assert.That(sut.MaximumTime("0?:3?"), Is.EqualTo("09:39"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01736();
-        sut.MaximumTime("1?:22").Should().Be("19:22");
+        Assert.That(sut.MaximumTime("1?:22"), Is.EqualTo("19:22"));
     }
 }

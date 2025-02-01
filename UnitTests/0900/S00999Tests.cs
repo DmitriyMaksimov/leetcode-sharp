@@ -9,7 +9,7 @@ public class S00999Tests
     public void T1()
     {
         var sut = new S00999();
-        sut.NumRookCaptures(
+        Assert.That(sut.NumRookCaptures(
             new[]
             {
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'},
@@ -20,14 +20,14 @@ public class S00999Tests
                 new[] {'.', '.', '.', 'p', '.', '.', '.', '.'},
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'},
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'}
-            }).Should().Be(3);
+            }), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00999();
-        sut.NumRookCaptures(
+        Assert.That(sut.NumRookCaptures(
             new[]
             {
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'},
@@ -38,14 +38,14 @@ public class S00999Tests
                 new[] {'.', 'p', 'p', 'p', 'p', 'p', '.', '.'},
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'},
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'}
-            }).Should().Be(0);
+            }), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00999();
-        sut.NumRookCaptures(
+        Assert.That(sut.NumRookCaptures(
             new[]
             {
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'},
@@ -56,6 +56,6 @@ public class S00999Tests
                 new[] {'.', '.', '.', 'B', '.', '.', '.', '.'},
                 new[] {'.', '.', '.', 'p', '.', '.', '.', '.'},
                 new[] {'.', '.', '.', '.', '.', '.', '.', '.'}
-            }).Should().Be(3);
+            }), Is.EqualTo(3));
     }
 }

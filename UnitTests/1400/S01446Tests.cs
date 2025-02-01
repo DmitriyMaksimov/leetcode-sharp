@@ -9,13 +9,13 @@ public class S01446Tests
     public void T1()
     {
         var sut = new S01446();
-        sut.MaxPower("leetcode").Should().Be(2);
+        Assert.That(sut.MaxPower("leetcode"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01446();
-        sut.MaxPower("abbcccddddeeeeedcba").Should().Be(5);
+        Assert.That(sut.MaxPower("abbcccddddeeeeedcba"), Is.EqualTo(5));
     }
 }

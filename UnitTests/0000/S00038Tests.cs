@@ -9,13 +9,13 @@ public class S00038Tests
     public void T1()
     {
         var sut = new S00038();
-        sut.CountAndSay(4).Should().Be("1211");
+        Assert.That(sut.CountAndSay(4), Is.EqualTo("1211"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00038();
-        sut.CountAndSay(1).Should().Be("1");
+        Assert.That(sut.CountAndSay(1), Is.EqualTo("1"));
     }
 }

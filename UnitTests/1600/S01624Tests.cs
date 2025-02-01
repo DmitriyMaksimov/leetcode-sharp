@@ -9,20 +9,20 @@ public class S01624Tests
     public void T1()
     {
         var sut = new S01624();
-        sut.MaxLengthBetweenEqualCharacters("aa").Should().Be(0);
+        Assert.That(sut.MaxLengthBetweenEqualCharacters("aa"), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01624();
-        sut.MaxLengthBetweenEqualCharacters("abca").Should().Be(2);
+        Assert.That(sut.MaxLengthBetweenEqualCharacters("abca"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01624();
-        sut.MaxLengthBetweenEqualCharacters("cbzxy").Should().Be(-1);
+        Assert.That(sut.MaxLengthBetweenEqualCharacters("cbzxy"), Is.EqualTo(-1));
     }
 }

@@ -9,33 +9,33 @@ public class S01436Tests
     public void T1()
     {
         var sut = new S01436();
-        sut.DestCity(new List<IList<string>>
+        Assert.That(sut.DestCity(new List<IList<string>>
         {
             new List<string> {"London", "New York"},
             new List<string> {"New York", "Lima"},
             new List<string> {"Lima", "Sao Paulo"}
-        }).Should().Be("Sao Paulo");
+        }), Is.EqualTo("Sao Paulo"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01436();
-        sut.DestCity(new List<IList<string>>
+        Assert.That(sut.DestCity(new List<IList<string>>
         {
             new List<string> {"B", "C"},
             new List<string> {"D", "B"},
             new List<string> {"C", "A"}
-        }).Should().Be("A");
+        }), Is.EqualTo("A"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01436();
-        sut.DestCity(new List<IList<string>>
+        Assert.That(sut.DestCity(new List<IList<string>>
         {
             new List<string> {"A", "Z"}
-        }).Should().Be("Z");
+        }), Is.EqualTo("Z"));
     }
 }

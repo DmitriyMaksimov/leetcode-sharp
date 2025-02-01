@@ -9,20 +9,20 @@ public class S02259Tests
     public void T1()
     {
         var sut = new S02259();
-        sut.RemoveDigit("123", '3').Should().Be("12");
+        Assert.That(sut.RemoveDigit("123", '3'), Is.EqualTo("12"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02259();
-        sut.RemoveDigit("1231", '1').Should().Be("231");
+        Assert.That(sut.RemoveDigit("1231", '1'), Is.EqualTo("231"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02259();
-        sut.RemoveDigit("551", '5').Should().Be("51");
+        Assert.That(sut.RemoveDigit("551", '5'), Is.EqualTo("51"));
     }
 }

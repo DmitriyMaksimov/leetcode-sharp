@@ -13,10 +13,10 @@ public class S00295Tests
         sut.AddNum(2);
         sut.AddNum(3);
 
-        sut.FindMedian().Should().Be(2.5);
+        Assert.That(sut.FindMedian(), Is.EqualTo(2.5));
 
         sut.AddNum(4);
-        sut.FindMedian().Should().Be(3);
+        Assert.That(sut.FindMedian(), Is.EqualTo(3));
     }
 
     [Test]

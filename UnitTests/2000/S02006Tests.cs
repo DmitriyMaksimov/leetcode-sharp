@@ -9,20 +9,20 @@ public class S02006Tests
     public void T1()
     {
         var sut = new S02006();
-        sut.CountKDifference(new[] {1, 2, 2, 1}, 1).Should().Be(4);
+        Assert.That(sut.CountKDifference(new[] {1, 2, 2, 1}, 1), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02006();
-        sut.CountKDifference(new[] {1, 3}, 3).Should().Be(0);
+        Assert.That(sut.CountKDifference(new[] {1, 3}, 3), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02006();
-        sut.CountKDifference(new[] {3, 2, 1, 5, 4}, 2).Should().Be(3);
+        Assert.That(sut.CountKDifference(new[] {3, 2, 1, 5, 4}, 2), Is.EqualTo(3));
     }
 }

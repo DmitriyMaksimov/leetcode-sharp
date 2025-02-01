@@ -9,20 +9,20 @@ public class S00377Tests
     public void T1()
     {
         var sut = new S00377();
-        sut.CombinationSum4(new[] {1, 2, 3}, 4).Should().Be(7);
+        Assert.That(sut.CombinationSum4(new[] {1, 2, 3}, 4), Is.EqualTo(7));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00377();
-        sut.CombinationSum4(new[] {9}, 3).Should().Be(0);
+        Assert.That(sut.CombinationSum4(new[] {9}, 3), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00377();
-        sut.CombinationSum4(new[] {4, 2, 1}, 32).Should().Be(39882198);
+        Assert.That(sut.CombinationSum4(new[] {4, 2, 1}, 32), Is.EqualTo(39882198));
     }
 }

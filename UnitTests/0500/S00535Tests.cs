@@ -10,6 +10,6 @@ public class S00535Tests
     {
         var sut = new S00535();
         var tiny = sut.encode(url);
-        sut.decode(tiny).Should().Be(url);
+        Assert.That(sut.decode(tiny), Is.EqualTo(url));
     }
 }

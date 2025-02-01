@@ -9,20 +9,20 @@ public class S02062Tests
     public void T1()
     {
         var sut = new S02062();
-        sut.CountVowelSubstrings("aeiouu").Should().Be(2);
+        Assert.That(sut.CountVowelSubstrings("aeiouu"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02062();
-        sut.CountVowelSubstrings("unicornarihan").Should().Be(0);
+        Assert.That(sut.CountVowelSubstrings("unicornarihan"), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02062();
-        sut.CountVowelSubstrings("cuaieuouac").Should().Be(7);
+        Assert.That(sut.CountVowelSubstrings("cuaieuouac"), Is.EqualTo(7));
     }
 }

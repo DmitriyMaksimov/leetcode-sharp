@@ -9,13 +9,13 @@ public class S03137Tests
     public void T1()
     {
         var sut = new S03137();
-        sut.MinimumOperationsToMakeKPeriodic("leetcodeleet", 4).Should().Be(1);
+        Assert.That(sut.MinimumOperationsToMakeKPeriodic("leetcodeleet", 4), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03137();
-        sut.MinimumOperationsToMakeKPeriodic("leetcoleet", 2).Should().Be(3);
+        Assert.That(sut.MinimumOperationsToMakeKPeriodic("leetcoleet", 2), Is.EqualTo(3));
     }
 }

@@ -9,20 +9,20 @@ public class S03258Tests
     public void T1()
     {
         var sut = new S03258();
-        sut.CountKConstraintSubstrings("10101", 1).Should().Be(12);
+        Assert.That(sut.CountKConstraintSubstrings("10101", 1), Is.EqualTo(12));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03258();
-        sut.CountKConstraintSubstrings("1010101", 2).Should().Be(25);
+        Assert.That(sut.CountKConstraintSubstrings("1010101", 2), Is.EqualTo(25));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03258();
-        sut.CountKConstraintSubstrings("11111", 1).Should().Be(15);
+        Assert.That(sut.CountKConstraintSubstrings("11111", 1), Is.EqualTo(15));
     }
 }

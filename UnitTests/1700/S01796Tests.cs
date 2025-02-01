@@ -9,13 +9,13 @@ public class S01796Tests
     public void T1()
     {
         var sut = new S01796();
-        sut.SecondHighest("dfa12321afd").Should().Be(2);
+        Assert.That(sut.SecondHighest("dfa12321afd"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01796();
-        sut.SecondHighest("abc1111").Should().Be(-1);
+        Assert.That(sut.SecondHighest("abc1111"), Is.EqualTo(-1));
     }
 }

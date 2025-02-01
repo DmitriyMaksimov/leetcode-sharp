@@ -9,20 +9,20 @@ public class S00007Tests
     public void T1()
     {
         var sut = new S00007();
-        sut.Reverse(123).Should().Be(321);
+        Assert.That(sut.Reverse(123), Is.EqualTo(321));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00007();
-        sut.Reverse(-123).Should().Be(-321);
+        Assert.That(sut.Reverse(-123), Is.EqualTo(-321));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00007();
-        sut.Reverse(120).Should().Be(21);
+        Assert.That(sut.Reverse(120), Is.EqualTo(21));
     }
 }

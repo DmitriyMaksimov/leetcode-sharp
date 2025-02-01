@@ -9,13 +9,13 @@ public class S02379Tests
     public void T1()
     {
         var sut = new S02379();
-        sut.MinimumRecolors("WBBWWBBWBW", 7).Should().Be(3);
+        Assert.That(sut.MinimumRecolors("WBBWWBBWBW", 7), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02379();
-        sut.MinimumRecolors("WBWBBBW", 2).Should().Be(0);
+        Assert.That(sut.MinimumRecolors("WBWBBBW", 2), Is.EqualTo(0));
     }
 }

@@ -9,13 +9,13 @@ public class S01592Tests
     public void T1()
     {
         var sut = new S01592();
-        sut.ReorderSpaces("  this   is  a sentence ").Should().Be("this   is   a   sentence");
+        Assert.That(sut.ReorderSpaces("  this   is  a sentence "), Is.EqualTo("this   is   a   sentence"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01592();
-        sut.ReorderSpaces(" practice   makes   perfect").Should().Be("practice   makes   perfect ");
+        Assert.That(sut.ReorderSpaces(" practice   makes   perfect"), Is.EqualTo("practice   makes   perfect "));
     }
 }

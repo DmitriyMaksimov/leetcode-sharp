@@ -9,13 +9,13 @@ public class S00423Tests
     public void T1()
     {
         var sut = new S00423();
-        sut.OriginalDigits("owoztneoer").Should().Be("012");
+        Assert.That(sut.OriginalDigits("owoztneoer"), Is.EqualTo("012"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00423();
-        sut.OriginalDigits("fviefuro").Should().Be("45");
+        Assert.That(sut.OriginalDigits("fviefuro"), Is.EqualTo("45"));
     }
 }

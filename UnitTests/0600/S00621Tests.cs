@@ -9,20 +9,20 @@ public class S00621Tests
     public void T1()
     {
         var sut = new S00621();
-        sut.LeastInterval(['A', 'A', 'A', 'B', 'B', 'B'], 2).Should().Be(8);
+        Assert.That(sut.LeastInterval(['A', 'A', 'A', 'B', 'B', 'B'], 2), Is.EqualTo(8));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00621();
-        sut.LeastInterval(['A', 'C', 'A', 'B', 'D', 'B'], 1).Should().Be(6);
+        Assert.That(sut.LeastInterval(['A', 'C', 'A', 'B', 'D', 'B'], 1), Is.EqualTo(6));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00621();
-        sut.LeastInterval(['A', 'A', 'A', 'B', 'B', 'B'], 3).Should().Be(10);
+        Assert.That(sut.LeastInterval(['A', 'A', 'A', 'B', 'B', 'B'], 3), Is.EqualTo(10));
     }
 }

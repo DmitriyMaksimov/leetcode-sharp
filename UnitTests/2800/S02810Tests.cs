@@ -9,13 +9,13 @@ public class S02810Tests
     public void T1()
     {
         var sut = new S02810();
-        sut.FinalString("string").Should().Be("rtsng");
+        Assert.That(sut.FinalString("string"), Is.EqualTo("rtsng"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02810();
-        sut.FinalString("poiinter").Should().Be("ponter");
+        Assert.That(sut.FinalString("poiinter"), Is.EqualTo("ponter"));
     }
 }

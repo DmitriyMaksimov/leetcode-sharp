@@ -9,20 +9,20 @@ public class S01798Tests
     public void T1()
     {
         var sut = new S01798();
-        sut.GetMaximumConsecutive([1, 3]).Should().Be(2);
+        Assert.That(sut.GetMaximumConsecutive([1, 3]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01798();
-        sut.GetMaximumConsecutive([1, 1, 1, 4]).Should().Be(8);
+        Assert.That(sut.GetMaximumConsecutive([1, 1, 1, 4]), Is.EqualTo(8));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01798();
-        sut.GetMaximumConsecutive([1, 4, 10, 3, 1]).Should().Be(20);
+        Assert.That(sut.GetMaximumConsecutive([1, 4, 10, 3, 1]), Is.EqualTo(20));
     }
 }

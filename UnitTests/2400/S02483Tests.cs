@@ -9,20 +9,20 @@ public class S02483Tests
     public void T1()
     {
         var sut = new S02483();
-        sut.BestClosingTime("YYNY").Should().Be(2);
+        Assert.That(sut.BestClosingTime("YYNY"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02483();
-        sut.BestClosingTime("NNNNN").Should().Be(0);
+        Assert.That(sut.BestClosingTime("NNNNN"), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02483();
-        sut.BestClosingTime("YYYY").Should().Be(4);
+        Assert.That(sut.BestClosingTime("YYYY"), Is.EqualTo(4));
     }
 }

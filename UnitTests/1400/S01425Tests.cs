@@ -9,20 +9,20 @@ public class S01425Tests
     public void T1()
     {
         var sut = new S01425();
-        sut.ConstrainedSubsetSum(new[] {10, 2, -10, 5, 20}, 2).Should().Be(37);
+        Assert.That(sut.ConstrainedSubsetSum(new[] {10, 2, -10, 5, 20}, 2), Is.EqualTo(37));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01425();
-        sut.ConstrainedSubsetSum(new[] {-1, -2, -3}, 1).Should().Be(-1);
+        Assert.That(sut.ConstrainedSubsetSum(new[] {-1, -2, -3}, 1), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01425();
-        sut.ConstrainedSubsetSum(new[] {10, -2, -10, -5, 20}, 2).Should().Be(23);
+        Assert.That(sut.ConstrainedSubsetSum(new[] {10, -2, -10, -5, 20}, 2), Is.EqualTo(23));
     }
 }

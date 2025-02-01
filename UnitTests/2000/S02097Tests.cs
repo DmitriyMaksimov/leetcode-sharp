@@ -41,8 +41,8 @@ public class S02097Tests
     {
         for (var i = 0; i < arrangement.Length; i++)
         {
-            arrangement[i][0].Should().Be(ints[i][0]);
-            arrangement[i][1].Should().Be(ints[i][1]);
+            Assert.That(arrangement[i][0], Is.EqualTo(ints[i][0]));
+            Assert.That(arrangement[i][1], Is.EqualTo(ints[i][1]));
         }
     }
 }

@@ -9,20 +9,20 @@ public class S00003Tests
     public void T1()
     {
         var sut = new S00003();
-        sut.LengthOfLongestSubstring("abcabcbb").Should().Be(3);
+        Assert.That(sut.LengthOfLongestSubstring("abcabcbb"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00003();
-        sut.LengthOfLongestSubstring("bbbbb").Should().Be(1);
+        Assert.That(sut.LengthOfLongestSubstring("bbbbb"), Is.EqualTo(1));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S00003();
-        sut.LengthOfLongestSubstring("pwwkew").Should().Be(3);
+        Assert.That(sut.LengthOfLongestSubstring("pwwkew"), Is.EqualTo(3));
     }
 }

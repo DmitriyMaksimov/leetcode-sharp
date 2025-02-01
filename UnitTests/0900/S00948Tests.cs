@@ -9,20 +9,20 @@ public class S00948Tests
     public void T1()
     {
         var sut = new S00948();
-        sut.BagOfTokensScore([100], 50).Should().Be(0);
+        Assert.That(sut.BagOfTokensScore([100], 50), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00948();
-        sut.BagOfTokensScore([200, 100], 150).Should().Be(1);
+        Assert.That(sut.BagOfTokensScore([200, 100], 150), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00948();
-        sut.BagOfTokensScore([100, 200, 300, 400], 200).Should().Be(2);
+        Assert.That(sut.BagOfTokensScore([100, 200, 300, 400], 200), Is.EqualTo(2));
     }
 }

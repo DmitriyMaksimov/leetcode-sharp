@@ -9,20 +9,20 @@ public class S00719Tests
     public void T1()
     {
         var sut = new S00719();
-        sut.SmallestDistancePair([1, 3, 1], 1).Should().Be(0);
+        Assert.That(sut.SmallestDistancePair([1, 3, 1], 1), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00719();
-        sut.SmallestDistancePair([1, 1, 1], 2).Should().Be(0);
+        Assert.That(sut.SmallestDistancePair([1, 1, 1], 2), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00719();
-        sut.SmallestDistancePair([1, 6, 1], 3).Should().Be(5);
+        Assert.That(sut.SmallestDistancePair([1, 6, 1], 3), Is.EqualTo(5));
     }
 }

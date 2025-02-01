@@ -9,13 +9,13 @@ public class S00893Tests
     public void T1()
     {
         var sut = new S00893();
-        sut.NumSpecialEquivGroups(["abcd", "cdab", "cbad", "xyzz", "zzxy", "zzyx"]).Should().Be(3);
+        Assert.That(sut.NumSpecialEquivGroups(["abcd", "cdab", "cbad", "xyzz", "zzxy", "zzyx"]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00893();
-        sut.NumSpecialEquivGroups(["abc", "acb", "bac", "bca", "cab", "cba"]).Should().Be(3);
+        Assert.That(sut.NumSpecialEquivGroups(["abc", "acb", "bac", "bca", "cab", "cba"]), Is.EqualTo(3));
     }
 }

@@ -9,13 +9,13 @@ public class S00424Tests
     public void T1()
     {
         var sut = new S00424();
-        sut.CharacterReplacement("ABAB", 2).Should().Be(4);
+        Assert.That(sut.CharacterReplacement("ABAB", 2), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00424();
-        sut.CharacterReplacement("AABABBA", 1).Should().Be(4);
+        Assert.That(sut.CharacterReplacement("AABABBA", 1), Is.EqualTo(4));
     }
 }

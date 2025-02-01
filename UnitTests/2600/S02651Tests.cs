@@ -9,13 +9,13 @@ public class S02651Tests
     public void T1()
     {
         var sut = new S02651();
-        sut.FindDelayedArrivalTime(15, 5).Should().Be(20);
+        Assert.That(sut.FindDelayedArrivalTime(15, 5), Is.EqualTo(20));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02651();
-        sut.FindDelayedArrivalTime(13, 11).Should().Be(0);
+        Assert.That(sut.FindDelayedArrivalTime(13, 11), Is.EqualTo(0));
     }
 }

@@ -9,13 +9,13 @@ public class S00808Tests
     public void T1()
     {
         var sut = new S00808();
-        sut.SoupServings(50).Should().Be(0.625);
+        Assert.That(sut.SoupServings(50), Is.EqualTo(0.625));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00808();
-        sut.SoupServings(100).Should().Be(0.71875);
+        Assert.That(sut.SoupServings(100), Is.EqualTo(0.71875));
     }
 }

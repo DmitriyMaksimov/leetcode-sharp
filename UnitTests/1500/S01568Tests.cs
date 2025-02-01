@@ -9,13 +9,13 @@ public class S01568Tests
     public void T1()
     {
         var sut = new S01568();
-        sut.MinDays([[0, 1, 1, 0], [0, 1, 1, 0], [0, 0, 0, 0]]).Should().Be(2);
+        Assert.That(sut.MinDays([[0, 1, 1, 0], [0, 1, 1, 0], [0, 0, 0, 0]]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01568();
-        sut.MinDays([[1, 1]]).Should().Be(2);
+        Assert.That(sut.MinDays([[1, 1]]), Is.EqualTo(2));
     }
 }

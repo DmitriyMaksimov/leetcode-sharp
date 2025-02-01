@@ -9,13 +9,13 @@ public class S00343Tests
     public void T1()
     {
         var sut = new S00343();
-        sut.IntegerBreak(2).Should().Be(1);
+        Assert.That(sut.IntegerBreak(2), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00343();
-        sut.IntegerBreak(10).Should().Be(36);
+        Assert.That(sut.IntegerBreak(10), Is.EqualTo(36));
     }
 }

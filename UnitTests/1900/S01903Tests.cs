@@ -9,20 +9,20 @@ public class S01903Tests
     public void T1()
     {
         var sut = new S01903();
-        sut.LargestOddNumber("52").Should().Be("5");
+        Assert.That(sut.LargestOddNumber("52"), Is.EqualTo("5"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01903();
-        sut.LargestOddNumber("4206").Should().Be("");
+        Assert.That(sut.LargestOddNumber("4206"), Is.EqualTo(""));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01903();
-        sut.LargestOddNumber("35427").Should().Be("35427");
+        Assert.That(sut.LargestOddNumber("35427"), Is.EqualTo("35427"));
     }
 }

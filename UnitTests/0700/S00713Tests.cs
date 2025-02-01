@@ -9,13 +9,13 @@ public class S00713Tests
     public void T1()
     {
         var sut = new S00713();
-        sut.NumSubarrayProductLessThanK([10, 5, 2, 6], 100).Should().Be(8);
+        Assert.That(sut.NumSubarrayProductLessThanK([10, 5, 2, 6], 100), Is.EqualTo(8));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00713();
-        sut.NumSubarrayProductLessThanK([1, 2, 3], 0).Should().Be(0);
+        Assert.That(sut.NumSubarrayProductLessThanK([1, 2, 3], 0), Is.EqualTo(0));
     }
 }

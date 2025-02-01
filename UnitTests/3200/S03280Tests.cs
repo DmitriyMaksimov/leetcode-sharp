@@ -9,13 +9,13 @@ public class S03280Tests
     public void T1()
     {
         var sut = new S03280();
-        sut.ConvertDateToBinary("2080-02-29").Should().Be("100000100000-10-11101");
+        Assert.That(sut.ConvertDateToBinary("2080-02-29"), Is.EqualTo("100000100000-10-11101"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03280();
-        sut.ConvertDateToBinary("1900-01-01").Should().Be("11101101100-1-1");
+        Assert.That(sut.ConvertDateToBinary("1900-01-01"), Is.EqualTo("11101101100-1-1"));
     }
 }

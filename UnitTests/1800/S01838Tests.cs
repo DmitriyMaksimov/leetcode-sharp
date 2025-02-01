@@ -9,20 +9,20 @@ public class S01838Tests
     public void T1()
     {
         var sut = new S01838();
-        sut.MaxFrequency(new[] {1, 2, 4}, 5).Should().Be(3);
+        Assert.That(sut.MaxFrequency(new[] {1, 2, 4}, 5), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01838();
-        sut.MaxFrequency(new[] {1, 4, 8, 13}, 5).Should().Be(2);
+        Assert.That(sut.MaxFrequency(new[] {1, 4, 8, 13}, 5), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01838();
-        sut.MaxFrequency(new[] {3, 9, 6}, 2).Should().Be(1);
+        Assert.That(sut.MaxFrequency(new[] {3, 9, 6}, 2), Is.EqualTo(1));
     }
 }

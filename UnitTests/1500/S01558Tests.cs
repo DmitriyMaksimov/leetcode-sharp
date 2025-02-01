@@ -9,20 +9,20 @@ public class S01558Tests
     public void T1()
     {
         var sut = new S01558();
-        sut.MinOperations([1, 5]).Should().Be(5);
+        Assert.That(sut.MinOperations([1, 5]), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01558();
-        sut.MinOperations([2, 2]).Should().Be(3);
+        Assert.That(sut.MinOperations([2, 2]), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01558();
-        sut.MinOperations([4, 2, 5]).Should().Be(6);
+        Assert.That(sut.MinOperations([4, 2, 5]), Is.EqualTo(6));
     }
 }

@@ -9,13 +9,13 @@ public class S00526Tests
     public void T1()
     {
         var sut = new S00526();
-        sut.CountArrangement(2).Should().Be(2);
+        Assert.That(sut.CountArrangement(2), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00526();
-        sut.CountArrangement(1).Should().Be(1);
+        Assert.That(sut.CountArrangement(1), Is.EqualTo(1));
     }
 }

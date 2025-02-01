@@ -9,20 +9,20 @@ public class S00839Tests
     public void T1()
     {
         var sut = new S00839();
-        sut.NumSimilarGroups(new[] {"tars","rats","arts","star"}).Should().Be(2);
+        Assert.That(sut.NumSimilarGroups(new[] {"tars","rats","arts","star"}), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00839();
-        sut.NumSimilarGroups(new[] {"omv","ovm"}).Should().Be(1);
+        Assert.That(sut.NumSimilarGroups(new[] {"omv","ovm"}), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00839();
-        sut.NumSimilarGroups(new[] {"abc","abc"}).Should().Be(1);
+        Assert.That(sut.NumSimilarGroups(new[] {"abc","abc"}), Is.EqualTo(1));
     }
 }

@@ -9,13 +9,13 @@ public class S01399Tests
     public void T1()
     {
         var sut = new S01399();
-        sut.CountLargestGroup(13).Should().Be(4);
+        Assert.That(sut.CountLargestGroup(13), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01399();
-        sut.CountLargestGroup(2).Should().Be(2);
+        Assert.That(sut.CountLargestGroup(2), Is.EqualTo(2));
     }
 }

@@ -9,13 +9,13 @@ public class S00434Tests
     public void T1()
     {
         var sut = new S00434();
-        sut.CountSegments("Hello, my name is John").Should().Be(5);
+        Assert.That(sut.CountSegments("Hello, my name is John"), Is.EqualTo(5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00434();
-        sut.CountSegments("Hello").Should().Be(1);
+        Assert.That(sut.CountSegments("Hello"), Is.EqualTo(1));
     }
 }

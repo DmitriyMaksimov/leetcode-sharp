@@ -9,20 +9,20 @@ public class S03178Tests
     public void T1()
     {
         var sut = new S03178();
-        sut.NumberOfChild(2, 5).Should().Be(1);
+        Assert.That(sut.NumberOfChild(2, 5), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03178();
-        sut.NumberOfChild(5, 6).Should().Be(2);
+        Assert.That(sut.NumberOfChild(5, 6), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03178();
-        sut.NumberOfChild(4, 2).Should().Be(2);
+        Assert.That(sut.NumberOfChild(4, 2), Is.EqualTo(2));
     }
 }

@@ -9,13 +9,13 @@ public class S02511Tests
     public void T1()
     {
         var sut = new S02511();
-        sut.CaptureForts(new[] {1, 0, 0, -1, 0, 0, 0, 0, 1}).Should().Be(4);
+        Assert.That(sut.CaptureForts(new[] {1, 0, 0, -1, 0, 0, 0, 0, 1}), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02511();
-        sut.CaptureForts(new[] {0, 0, 1, -1}).Should().Be(0);
+        Assert.That(sut.CaptureForts(new[] {0, 0, 1, -1}), Is.EqualTo(0));
     }
 }

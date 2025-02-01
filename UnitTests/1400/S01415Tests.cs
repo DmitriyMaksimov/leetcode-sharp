@@ -9,20 +9,20 @@ public class S01415Tests
     public void T1()
     {
         var sut = new S01415();
-        sut.GetHappyString(1, 3).Should().Be("c");
+        Assert.That(sut.GetHappyString(1, 3), Is.EqualTo("c"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01415();
-        sut.GetHappyString(1, 4).Should().Be("");
+        Assert.That(sut.GetHappyString(1, 4), Is.EqualTo(""));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01415();
-        sut.GetHappyString(3, 9).Should().Be("cab");
+        Assert.That(sut.GetHappyString(3, 9), Is.EqualTo("cab"));
     }
 }

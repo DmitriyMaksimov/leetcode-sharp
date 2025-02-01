@@ -9,13 +9,13 @@ public class S01925Tests
     public void T1()
     {
         var sut = new S01925();
-        sut.CountTriples(5).Should().Be(2);
+        Assert.That(sut.CountTriples(5), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01925();
-        sut.CountTriples(10).Should().Be(4);
+        Assert.That(sut.CountTriples(10), Is.EqualTo(4));
     }
 }

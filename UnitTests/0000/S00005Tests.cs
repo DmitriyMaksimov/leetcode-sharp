@@ -9,13 +9,13 @@ public class S00005Tests
     public void T1()
     {
         var sut = new S00005();
-        sut.LongestPalindrome("babad").Should().Be("bab");
+        Assert.That(sut.LongestPalindrome("babad"), Is.EqualTo("bab"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00005();
-        sut.LongestPalindrome("cbbd").Should().Be("bb");
+        Assert.That(sut.LongestPalindrome("cbbd"), Is.EqualTo("bb"));
     }
 }

@@ -9,13 +9,13 @@ public class S02397Tests
     public void T1()
     {
         var sut = new S02397();
-        sut.MaximumRows([[0, 0, 0], [1, 0, 1], [0, 1, 1], [0, 0, 1]], 2).Should().Be(3);
+        Assert.That(sut.MaximumRows([[0, 0, 0], [1, 0, 1], [0, 1, 1], [0, 0, 1]], 2), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02397();
-        sut.MaximumRows([[1], [0]], 1).Should().Be(2);
+        Assert.That(sut.MaximumRows([[1], [0]], 1), Is.EqualTo(2));
     }
 }

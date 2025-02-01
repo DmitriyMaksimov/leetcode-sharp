@@ -9,20 +9,20 @@ public class S01021Tests
     public void T1()
     {
         var sut = new S01021();
-        sut.RemoveOuterParentheses("(()())(())").Should().Be("()()()");
+        Assert.That(sut.RemoveOuterParentheses("(()())(())"), Is.EqualTo("()()()"));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01021();
-        sut.RemoveOuterParentheses("(()())(())(()(()))").Should().Be("()()()()(())");
+        Assert.That(sut.RemoveOuterParentheses("(()())(())(()(()))"), Is.EqualTo("()()()()(())"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01021();
-        sut.RemoveOuterParentheses("()()").Should().Be("");
+        Assert.That(sut.RemoveOuterParentheses("()()"), Is.EqualTo(""));
     }
 }

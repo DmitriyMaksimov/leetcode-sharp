@@ -16,13 +16,13 @@ public class S02733Tests
     public void T2()
     {
         var sut = new S02733();
-        sut.FindNonMinOrMax(new[] {1, 2}).Should().Be(-1);
+        Assert.That(sut.FindNonMinOrMax(new[] {1, 2}), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02733();
-        sut.FindNonMinOrMax(new[] {2, 1, 3}).Should().Be(2);
+        Assert.That(sut.FindNonMinOrMax(new[] {2, 1, 3}), Is.EqualTo(2));
     }
 }

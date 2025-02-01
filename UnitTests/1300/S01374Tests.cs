@@ -9,20 +9,20 @@ public class S01374Tests
     public void T1()
     {
         var sut = new S01374();
-        sut.GenerateTheString(4).Should().Be("aaab");
+        Assert.That(sut.GenerateTheString(4), Is.EqualTo("aaab"));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01374();
-        sut.GenerateTheString(2).Should().Be("ab");
+        Assert.That(sut.GenerateTheString(2), Is.EqualTo("ab"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01374();
-        sut.GenerateTheString(7).Should().Be("aaaaaaa");
+        Assert.That(sut.GenerateTheString(7), Is.EqualTo("aaaaaaa"));
     }
 }

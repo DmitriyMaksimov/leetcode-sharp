@@ -9,20 +9,20 @@ public class S02971Tests
     public void T1()
     {
         var sut = new S02971();
-        sut.LargestPerimeter([5, 5, 5]).Should().Be(15);
+        Assert.That(sut.LargestPerimeter([5, 5, 5]), Is.EqualTo(15));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02971();
-        sut.LargestPerimeter([1, 12, 1, 2, 5, 50, 3]).Should().Be(12);
+        Assert.That(sut.LargestPerimeter([1, 12, 1, 2, 5, 50, 3]), Is.EqualTo(12));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02971();
-        sut.LargestPerimeter([5, 5, 50]).Should().Be(-1);
+        Assert.That(sut.LargestPerimeter([5, 5, 50]), Is.EqualTo(-1));
     }
 }

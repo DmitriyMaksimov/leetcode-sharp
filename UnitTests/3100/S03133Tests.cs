@@ -9,13 +9,13 @@ public class S03133Tests
     public void T1()
     {
         var sut = new S03133();
-        sut.MinEnd(3, 4).Should().Be(6);
+        Assert.That(sut.MinEnd(3, 4), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03133();
-        sut.MinEnd(2, 7).Should().Be(15);
+        Assert.That(sut.MinEnd(2, 7), Is.EqualTo(15));
     }
 }

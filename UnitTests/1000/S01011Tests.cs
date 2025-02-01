@@ -9,20 +9,20 @@ public class S01011Tests
     public void T1()
     {
         var sut = new S01011();
-        sut.ShipWithinDays(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5).Should().Be(15);
+        Assert.That(sut.ShipWithinDays(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 5), Is.EqualTo(15));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01011();
-        sut.ShipWithinDays(new[] {3, 2, 2, 4, 1, 4}, 3).Should().Be(6);
+        Assert.That(sut.ShipWithinDays(new[] {3, 2, 2, 4, 1, 4}, 3), Is.EqualTo(6));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01011();
-        sut.ShipWithinDays(new[] {1, 2, 3, 1, 1}, 4).Should().Be(3);
+        Assert.That(sut.ShipWithinDays(new[] {1, 2, 3, 1, 1}, 4), Is.EqualTo(3));
     }
 }

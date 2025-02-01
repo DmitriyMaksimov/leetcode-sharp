@@ -9,13 +9,13 @@ public class S02696Tests
     public void T1()
     {
         var sut = new S02696();
-        sut.MinLength("ABFCACDB").Should().Be(2);
+        Assert.That(sut.MinLength("ABFCACDB"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02696();
-        sut.MinLength("ACBBD").Should().Be(5);
+        Assert.That(sut.MinLength("ACBBD"), Is.EqualTo(5));
     }
 }

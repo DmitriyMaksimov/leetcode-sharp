@@ -9,13 +9,13 @@ public class S01006Tests
     public void T1()
     {
         var sut = new S01006();
-        sut.Clumsy(4).Should().Be(7);
+        Assert.That(sut.Clumsy(4), Is.EqualTo(7));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01006();
-        sut.Clumsy(10).Should().Be(12);
+        Assert.That(sut.Clumsy(10), Is.EqualTo(12));
     }
 }

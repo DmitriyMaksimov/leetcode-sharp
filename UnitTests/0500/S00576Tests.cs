@@ -9,13 +9,13 @@ public class S00576Tests
     public void T1()
     {
         var sut = new S00576();
-        sut.FindPaths(2, 2, 2, 0, 0).Should().Be(6);
+        Assert.That(sut.FindPaths(2, 2, 2, 0, 0), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00576();
-        sut.FindPaths(1, 3, 3, 0, 1).Should().Be(12);
+        Assert.That(sut.FindPaths(1, 3, 3, 0, 1), Is.EqualTo(12));
     }
 }

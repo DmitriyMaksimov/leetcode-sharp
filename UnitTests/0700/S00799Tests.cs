@@ -9,20 +9,20 @@ public class S00799Tests
     public void T1()
     {
         var sut = new S00799();
-        sut.ChampagneTower(1, 1, 1).Should().Be(0);
+        Assert.That(sut.ChampagneTower(1, 1, 1), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00799();
-        sut.ChampagneTower(2, 1, 1).Should().Be(0.5);
+        Assert.That(sut.ChampagneTower(2, 1, 1), Is.EqualTo(0.5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00799();
-        sut.ChampagneTower(100000009, 33, 17).Should().Be(1);
+        Assert.That(sut.ChampagneTower(100000009, 33, 17), Is.EqualTo(1));
     }
 }

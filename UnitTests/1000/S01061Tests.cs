@@ -9,27 +9,27 @@ public class S01061Tests
     public void T1()
     {
         var sut = new S01061();
-        sut.SmallestEquivalentString("parker", "morris", "parser").Should().Be("makkek");
+        Assert.That(sut.SmallestEquivalentString("parker", "morris", "parser"), Is.EqualTo("makkek"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01061();
-        sut.SmallestEquivalentString("hello", "world", "hold").Should().Be("hdld");
+        Assert.That(sut.SmallestEquivalentString("hello", "world", "hold"), Is.EqualTo("hdld"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01061();
-        sut.SmallestEquivalentString("leetcode", "programs", "sourcecode").Should().Be("aauaaaaada");
+        Assert.That(sut.SmallestEquivalentString("leetcode", "programs", "sourcecode"), Is.EqualTo("aauaaaaada"));
     }
     
     [Test]
     public void T4()
     {
         var sut = new S01061();
-        sut.SmallestEquivalentString("cgokcgerolkgksgbhgmaaealacnsshofjinidiigbjerdnkolc", "rjjlkbmnprkslilqmbnlasardrossiogrcboomrbcmgmglsrsj", "bxbwjlbdazfejdsaacsjgrlxqhiddwaeguxhqoupicyzfeupcn").Should().Be("axawaaaaazaaaaaaaaaaaaaxaaaaawaaauxaaauaaayzaauaaa");
+        Assert.That(sut.SmallestEquivalentString("cgokcgerolkgksgbhgmaaealacnsshofjinidiigbjerdnkolc", "rjjlkbmnprkslilqmbnlasardrossiogrcboomrbcmgmglsrsj", "bxbwjlbdazfejdsaacsjgrlxqhiddwaeguxhqoupicyzfeupcn"), Is.EqualTo("axawaaaaazaaaaaaaaaaaaaxaaaaawaaauxaaauaaayzaauaaa"));
     }
 }

@@ -9,20 +9,20 @@ public class S01319Tests
     public void T1()
     {
         var sut = new S01319();
-        sut.MakeConnected(4, new[] {new[] {0, 1}, new[] {0, 2}, new[] {1, 2}}).Should().Be(1);
+        Assert.That(sut.MakeConnected(4, new[] {new[] {0, 1}, new[] {0, 2}, new[] {1, 2}}), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01319();
-        sut.MakeConnected(6, new[] {new[] {0, 1}, new[] {0, 2}, new[] {0, 3}, new[] {1, 2}}).Should().Be(-1);
+        Assert.That(sut.MakeConnected(6, new[] {new[] {0, 1}, new[] {0, 2}, new[] {0, 3}, new[] {1, 2}}), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01319();
-        sut.MakeConnected(6, new[] {new[] {0, 1}, new[] {0, 2}, new[] {0, 3}, new[] {1, 2}, new[] {1, 3}}).Should().Be(2);
+        Assert.That(sut.MakeConnected(6, new[] {new[] {0, 1}, new[] {0, 2}, new[] {0, 3}, new[] {1, 2}, new[] {1, 3}}), Is.EqualTo(2));
     }
 }

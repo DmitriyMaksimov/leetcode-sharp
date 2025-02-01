@@ -9,13 +9,13 @@ public class S01876Tests
     public void T1()
     {
         var sut = new S01876();
-        sut.CountGoodSubstrings("xyzzaz").Should().Be(1);
+        Assert.That(sut.CountGoodSubstrings("xyzzaz"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01876();
-        sut.CountGoodSubstrings("aababcabc").Should().Be(4);
+        Assert.That(sut.CountGoodSubstrings("aababcabc"), Is.EqualTo(4));
     }
 }

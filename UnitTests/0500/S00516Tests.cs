@@ -9,13 +9,13 @@ public class S00516Tests
     public void T1()
     {
         var sut = new S00516();
-        sut.LongestPalindromeSubseq("bbbab").Should().Be(4);
+        Assert.That(sut.LongestPalindromeSubseq("bbbab"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00516();
-        sut.LongestPalindromeSubseq("cbbd").Should().Be(2);
+        Assert.That(sut.LongestPalindromeSubseq("cbbd"), Is.EqualTo(2));
     }
 }

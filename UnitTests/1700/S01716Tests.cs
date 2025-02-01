@@ -9,20 +9,20 @@ public class S01716Tests
     public void T1()
     {
         var sut = new S01716();
-        sut.TotalMoney(4).Should().Be(10);
+        Assert.That(sut.TotalMoney(4), Is.EqualTo(10));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01716();
-        sut.TotalMoney(10).Should().Be(37);
+        Assert.That(sut.TotalMoney(10), Is.EqualTo(37));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01716();
-        sut.TotalMoney(20).Should().Be(96);
+        Assert.That(sut.TotalMoney(20), Is.EqualTo(96));
     }
 }

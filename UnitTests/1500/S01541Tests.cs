@@ -9,20 +9,20 @@ public class S01541Tests
     public void T1()
     {
         var sut = new S01541();
-        sut.MinInsertions("(()))").Should().Be(1);
+        Assert.That(sut.MinInsertions("(()))"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01541();
-        sut.MinInsertions("())").Should().Be(0);
+        Assert.That(sut.MinInsertions("())"), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01541();
-        sut.MinInsertions("))())(").Should().Be(3);
+        Assert.That(sut.MinInsertions("))())("), Is.EqualTo(3));
     }
 }

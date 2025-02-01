@@ -9,13 +9,13 @@ public class S00833Tests
     public void T1()
     {
         var sut = new S00833();
-        sut.FindReplaceString("abcd", [0, 2], ["a", "cd"], ["eee", "ffff"]).Should().Be("eeebffff");
+        Assert.That(sut.FindReplaceString("abcd", [0, 2], ["a", "cd"], ["eee", "ffff"]), Is.EqualTo("eeebffff"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00833();
-        sut.FindReplaceString("abcd", [0, 2], ["ab", "ec"], ["eee", "ffff"]).Should().Be("eeecd");
+        Assert.That(sut.FindReplaceString("abcd", [0, 2], ["ab", "ec"], ["eee", "ffff"]), Is.EqualTo("eeecd"));
     }
 }

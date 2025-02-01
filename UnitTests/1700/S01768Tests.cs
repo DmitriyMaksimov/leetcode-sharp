@@ -9,19 +9,19 @@ public class S01768Tests
     public void T1()
     {
         var sut = new S01768();
-        sut.MergeAlternately("abc", "pqr").Should().Be("apbqcr");
+        Assert.That(sut.MergeAlternately("abc", "pqr"), Is.EqualTo("apbqcr"));
     }
     [Test]
     public void T2()
     {
         var sut = new S01768();
-        sut.MergeAlternately("ab", "pqrs").Should().Be("apbqrs");
+        Assert.That(sut.MergeAlternately("ab", "pqrs"), Is.EqualTo("apbqrs"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01768();
-        sut.MergeAlternately("abcd", "pq").Should().Be("apbqcd");
+        Assert.That(sut.MergeAlternately("abcd", "pq"), Is.EqualTo("apbqcd"));
     }
 }

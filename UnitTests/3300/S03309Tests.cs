@@ -9,13 +9,13 @@ public class S03309Tests
     public void T1()
     {
         var sut = new S03309();
-        sut.MaxGoodNumber([1, 2, 3]).Should().Be(30);
+        Assert.That(sut.MaxGoodNumber([1, 2, 3]), Is.EqualTo(30));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03309();
-        sut.MaxGoodNumber([2, 8, 16]).Should().Be(1296);
+        Assert.That(sut.MaxGoodNumber([2, 8, 16]), Is.EqualTo(1296));
     }
 }

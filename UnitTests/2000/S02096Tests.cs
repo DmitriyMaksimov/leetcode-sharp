@@ -9,13 +9,13 @@ public class S02096Tests
     public void T1()
     {
         var sut = new S02096();
-        sut.GetDirections(TreeNode.Parse("[5,1,2,3,null,6,4]")!, 3, 6).Should().Be("UURL");
+        Assert.That(sut.GetDirections(TreeNode.Parse("[5,1,2,3,null,6,4]")!, 3, 6), Is.EqualTo("UURL"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02096();
-        sut.GetDirections(TreeNode.Parse("[2,1]")!, 2, 1).Should().Be("L");
+        Assert.That(sut.GetDirections(TreeNode.Parse("[2,1]")!, 2, 1), Is.EqualTo("L"));
     }
 }

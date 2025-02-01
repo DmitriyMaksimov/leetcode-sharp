@@ -9,13 +9,13 @@ public class S00316Tests
     public void T1()
     {
         var sut = new S00316();
-        sut.RemoveDuplicateLetters("bcabc").Should().Be("abc");
+        Assert.That(sut.RemoveDuplicateLetters("bcabc"), Is.EqualTo("abc"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00316();
-        sut.RemoveDuplicateLetters("cbacdcbc").Should().Be("acdb");
+        Assert.That(sut.RemoveDuplicateLetters("cbacdcbc"), Is.EqualTo("acdb"));
     }
 }

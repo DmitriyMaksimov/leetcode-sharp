@@ -9,20 +9,20 @@ public class S01247Tests
     public void T1()
     {
         var sut = new S01247();
-        sut.MinimumSwap("xx", "yy").Should().Be(1);
+        Assert.That(sut.MinimumSwap("xx", "yy"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01247();
-        sut.MinimumSwap("xy", "yx").Should().Be(2);
+        Assert.That(sut.MinimumSwap("xy", "yx"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01247();
-        sut.MinimumSwap("xx", "xy").Should().Be(-1);
+        Assert.That(sut.MinimumSwap("xx", "xy"), Is.EqualTo(-1));
     }
 }

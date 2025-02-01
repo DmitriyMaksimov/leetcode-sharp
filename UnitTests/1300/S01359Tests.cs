@@ -9,20 +9,20 @@ public class S01359Tests
     public void T1()
     {
         var sut = new S01359();
-        sut.CountOrders(1).Should().Be(1);
+        Assert.That(sut.CountOrders(1), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01359();
-        sut.CountOrders(2).Should().Be(6);
+        Assert.That(sut.CountOrders(2), Is.EqualTo(6));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01359();
-        sut.CountOrders(3).Should().Be(90);
+        Assert.That(sut.CountOrders(3), Is.EqualTo(90));
     }
 }

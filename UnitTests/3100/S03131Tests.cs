@@ -9,20 +9,20 @@ public class S03131Tests
     public void T1()
     {
         var sut = new S03131();
-        sut.AddedInteger([2, 6, 4], [9, 7, 5]).Should().Be(3);
+        Assert.That(sut.AddedInteger([2, 6, 4], [9, 7, 5]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03131();
-        sut.AddedInteger([10], [5]).Should().Be(-5);
+        Assert.That(sut.AddedInteger([10], [5]), Is.EqualTo(-5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03131();
-        sut.AddedInteger([1, 1, 1, 1], [1, 1, 1, 1]).Should().Be(0);
+        Assert.That(sut.AddedInteger([1, 1, 1, 1], [1, 1, 1, 1]), Is.EqualTo(0));
     }
 }

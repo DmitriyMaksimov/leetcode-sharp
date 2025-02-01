@@ -9,13 +9,13 @@ public class S00052Tests
     public void T1()
     {
         var sut = new S00052();
-        sut.TotalNQueens(4).Should().Be(2);
+        Assert.That(sut.TotalNQueens(4), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00052();
-        sut.TotalNQueens(1).Should().Be(1);
+        Assert.That(sut.TotalNQueens(1), Is.EqualTo(1));
     }
 }

@@ -9,20 +9,20 @@ public class S02287Tests
     public void T1()
     {
         var sut = new S02287();
-        sut.RearrangeCharacters("ilovecodingonleetcode", "code").Should().Be(2);
+        Assert.That(sut.RearrangeCharacters("ilovecodingonleetcode", "code"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02287();
-        sut.RearrangeCharacters("abcba", "abc").Should().Be(1);
+        Assert.That(sut.RearrangeCharacters("abcba", "abc"), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02287();
-        sut.RearrangeCharacters("abbaccaddaeea", "aaaaa").Should().Be(1);
+        Assert.That(sut.RearrangeCharacters("abbaccaddaeea", "aaaaa"), Is.EqualTo(1));
     }
 }

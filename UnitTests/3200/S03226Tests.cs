@@ -9,20 +9,20 @@ public class S03226Tests
     public void T1()
     {
         var sut = new S03226();
-        sut.MinChanges(13, 4).Should().Be(2);
+        Assert.That(sut.MinChanges(13, 4), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03226();
-        sut.MinChanges(21, 21).Should().Be(0);
+        Assert.That(sut.MinChanges(21, 21), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03226();
-        sut.MinChanges(14, 13).Should().Be(-1);
+        Assert.That(sut.MinChanges(14, 13), Is.EqualTo(-1));
     }
 }

@@ -9,20 +9,20 @@ public class S01753Tests
     public void T1()
     {
         var sut = new S01753();
-        sut.MaximumScore(2, 4, 6).Should().Be(6);
+        Assert.That(sut.MaximumScore(2, 4, 6), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01753();
-        sut.MaximumScore(4, 4, 6).Should().Be(7);
+        Assert.That(sut.MaximumScore(4, 4, 6), Is.EqualTo(7));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01753();
-        sut.MaximumScore(1, 8, 8).Should().Be(8);
+        Assert.That(sut.MaximumScore(1, 8, 8), Is.EqualTo(8));
     }
 }

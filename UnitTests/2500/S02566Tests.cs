@@ -9,13 +9,13 @@ public class S02566Tests
     public void T1()
     {
         var sut = new S02566();
-        sut.MinMaxDifference(11891).Should().Be(99009);
+        Assert.That(sut.MinMaxDifference(11891), Is.EqualTo(99009));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02566();
-        sut.MinMaxDifference(90).Should().Be(99);
+        Assert.That(sut.MinMaxDifference(90), Is.EqualTo(99));
     }
 }

@@ -9,20 +9,20 @@ public class S01807Tests
     public void T1()
     {
         var sut = new S01807();
-        sut.Evaluate("(name)is(age)yearsold", [["name", "bob"], ["age", "two"]]).Should().Be("bobistwoyearsold");
+        Assert.That(sut.Evaluate("(name)is(age)yearsold", [["name", "bob"], ["age", "two"]]), Is.EqualTo("bobistwoyearsold"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01807();
-        sut.Evaluate("hi(name)", [["a", "b"]]).Should().Be("hi?");
+        Assert.That(sut.Evaluate("hi(name)", [["a", "b"]]), Is.EqualTo("hi?"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01807();
-        sut.Evaluate("(a)(a)(a)aaa", [["a", "yes"]]).Should().Be("yesyesyesaaa");
+        Assert.That(sut.Evaluate("(a)(a)(a)aaa", [["a", "yes"]]), Is.EqualTo("yesyesyesaaa"));
     }
 }

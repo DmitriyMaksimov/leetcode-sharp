@@ -11,10 +11,10 @@ public class S00432Tests
         var sut = new S00432.AllOne();
         sut.Inc("hello");
         sut.Inc("hello");
-        sut.GetMaxKey().Should().Be("hello");
-        sut.GetMinKey().Should().Be("hello");
+        Assert.That(sut.GetMaxKey(), Is.EqualTo("hello"));
+        Assert.That(sut.GetMinKey(), Is.EqualTo("hello"));
         sut.Inc("leet");
-        sut.GetMaxKey().Should().Be("hello");
-        sut.GetMinKey().Should().Be("leet");
+        Assert.That(sut.GetMaxKey(), Is.EqualTo("hello"));
+        Assert.That(sut.GetMinKey(), Is.EqualTo("leet"));
     }
 }

@@ -9,13 +9,13 @@ public class S02185Tests
     public void T1()
     {
         var sut = new S02185();
-        sut.PrefixCount(new[] {"pay", "attention", "practice", "attend"}, "at").Should().Be(2);
+        Assert.That(sut.PrefixCount(new[] {"pay", "attention", "practice", "attend"}, "at"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02185();
-        sut.PrefixCount(new[] {"leetcode", "win", "loops", "success"}, "code").Should().Be(0);
+        Assert.That(sut.PrefixCount(new[] {"leetcode", "win", "loops", "success"}, "code"), Is.EqualTo(0));
     }
 }

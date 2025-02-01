@@ -9,13 +9,13 @@ public class S03210Tests
     public void T1()
     {
         var sut = new S03210();
-        sut.GetEncryptedString("dart", 3).Should().Be("tdar");
+        Assert.That(sut.GetEncryptedString("dart", 3), Is.EqualTo("tdar"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03210();
-        sut.GetEncryptedString("aaa", 1).Should().Be("aaa");
+        Assert.That(sut.GetEncryptedString("aaa", 1), Is.EqualTo("aaa"));
     }
 }

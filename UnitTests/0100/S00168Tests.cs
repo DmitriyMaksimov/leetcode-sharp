@@ -9,28 +9,28 @@ public class S00168Tests
     public void T1()
     {
         var sut = new S00168();
-        sut.ConvertToTitle(1).Should().Be("A");
+        Assert.That(sut.ConvertToTitle(1), Is.EqualTo("A"));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00168();
-        sut.ConvertToTitle(28).Should().Be("AB");
+        Assert.That(sut.ConvertToTitle(28), Is.EqualTo("AB"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00168();
-        sut.ConvertToTitle(701).Should().Be("ZY");
+        Assert.That(sut.ConvertToTitle(701), Is.EqualTo("ZY"));
     }
 
     [Test]
     public void T4()
     {
         var sut = new S00168();
-        sut.ConvertToTitle(26).Should().Be("Z");
+        Assert.That(sut.ConvertToTitle(26), Is.EqualTo("Z"));
     }
 
 }

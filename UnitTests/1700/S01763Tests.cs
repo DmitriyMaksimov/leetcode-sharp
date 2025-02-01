@@ -9,20 +9,20 @@ public class S01763Tests
     public void T1()
     {
         var sut = new S01763();
-        sut.LongestNiceSubstring("YazaAay").Should().Be("aAa");
+        Assert.That(sut.LongestNiceSubstring("YazaAay"), Is.EqualTo("aAa"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01763();
-        sut.LongestNiceSubstring("Bb").Should().Be("Bb");
+        Assert.That(sut.LongestNiceSubstring("Bb"), Is.EqualTo("Bb"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01763();
-        sut.LongestNiceSubstring("c").Should().Be("");
+        Assert.That(sut.LongestNiceSubstring("c"), Is.EqualTo(""));
     }
 }

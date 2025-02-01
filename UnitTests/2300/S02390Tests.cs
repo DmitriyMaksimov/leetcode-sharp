@@ -9,13 +9,13 @@ public class S02390Tests
     public void T1()
     {
         var sut = new S02390();
-        sut.RemoveStars("leet**cod*e").Should().Be("lecoe");
+        Assert.That(sut.RemoveStars("leet**cod*e"), Is.EqualTo("lecoe"));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S02390();
-        sut.RemoveStars("erase*****").Should().Be("");
+        Assert.That(sut.RemoveStars("erase*****"), Is.EqualTo(""));
     }
 }

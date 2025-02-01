@@ -9,20 +9,20 @@ public class S00330Tests
     public void T1()
     {
         var sut = new S00330();
-        sut.MinPatches([1, 3], 6).Should().Be(1);
+        Assert.That(sut.MinPatches([1, 3], 6), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00330();
-        sut.MinPatches([1, 5, 10], 20).Should().Be(2);
+        Assert.That(sut.MinPatches([1, 5, 10], 20), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00330();
-        sut.MinPatches([1, 2, 2], 5).Should().Be(0);
+        Assert.That(sut.MinPatches([1, 2, 2], 5), Is.EqualTo(0));
     }
 }

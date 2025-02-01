@@ -9,20 +9,20 @@ public class S00788Tests
     public void T1()
     {
         var sut = new S00788();
-        sut.RotatedDigits(10).Should().Be(4);
+        Assert.That(sut.RotatedDigits(10), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00788();
-        sut.RotatedDigits(1).Should().Be(0);
+        Assert.That(sut.RotatedDigits(1), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00788();
-        sut.RotatedDigits(2).Should().Be(1);
+        Assert.That(sut.RotatedDigits(2), Is.EqualTo(1));
     }
 }

@@ -9,13 +9,13 @@ public class S00976Tests
     public void T1()
     {
         var sut = new S00976();
-        sut.LargestPerimeter(new[] {2, 1, 2}).Should().Be(5);
+        Assert.That(sut.LargestPerimeter(new[] {2, 1, 2}), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00976();
-        sut.LargestPerimeter(new[] {1, 2, 1, 10}).Should().Be(0);
+        Assert.That(sut.LargestPerimeter(new[] {1, 2, 1, 10}), Is.EqualTo(0));
     }
 }

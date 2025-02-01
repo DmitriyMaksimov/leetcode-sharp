@@ -9,20 +9,20 @@ public class S02044Tests
     public void T1()
     {
         var sut = new S02044();
-        sut.CountMaxOrSubsets([3, 1]).Should().Be(2);
+        Assert.That(sut.CountMaxOrSubsets([3, 1]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02044();
-        sut.CountMaxOrSubsets([2, 2, 2]).Should().Be(7);
+        Assert.That(sut.CountMaxOrSubsets([2, 2, 2]), Is.EqualTo(7));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02044();
-        sut.CountMaxOrSubsets([3, 2, 1, 5]).Should().Be(6);
+        Assert.That(sut.CountMaxOrSubsets([3, 2, 1, 5]), Is.EqualTo(6));
     }
 }

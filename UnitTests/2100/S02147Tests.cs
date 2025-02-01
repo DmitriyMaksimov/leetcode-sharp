@@ -9,20 +9,20 @@ public class S02147Tests
     public void T1()
     {
         var sut = new S02147();
-        sut.NumberOfWays("SSPPSPS").Should().Be(3);
+        Assert.That(sut.NumberOfWays("SSPPSPS"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02147();
-        sut.NumberOfWays("PPSPSP").Should().Be(1);
+        Assert.That(sut.NumberOfWays("PPSPSP"), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02147();
-        sut.NumberOfWays("S").Should().Be(0);
+        Assert.That(sut.NumberOfWays("S"), Is.EqualTo(0));
     }
 }

@@ -9,13 +9,13 @@ public class S02864Tests
     public void T1()
     {
         var sut = new S02864();
-        sut.MaximumOddBinaryNumber("010").Should().Be("001");
+        Assert.That(sut.MaximumOddBinaryNumber("010"), Is.EqualTo("001"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02864();
-        sut.MaximumOddBinaryNumber("0101").Should().Be("1001");
+        Assert.That(sut.MaximumOddBinaryNumber("0101"), Is.EqualTo("1001"));
     }
 }

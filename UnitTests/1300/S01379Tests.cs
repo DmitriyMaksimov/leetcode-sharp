@@ -14,7 +14,7 @@ public class S01379Tests
         var targetOriginal = original.right;
         var expected = clone.right;
         var targetCopy = sut.GetTargetCopy(original, clone, targetOriginal);
-        targetCopy.Should().Be(expected);
+        Assert.That(targetCopy, Is.EqualTo(expected));
     }
 
     [Test]
@@ -26,7 +26,7 @@ public class S01379Tests
         var targetOriginal = original;
         var expected = clone;
         var targetCopy = sut.GetTargetCopy(original, clone, targetOriginal);
-        targetCopy.Should().Be(expected);
+        Assert.That(targetCopy, Is.EqualTo(expected));
     }
     
     [Test]
@@ -38,6 +38,6 @@ public class S01379Tests
         var targetOriginal = original.right.right.right;
         var expected = clone.right.right.right;
         var targetCopy = sut.GetTargetCopy(original, clone, targetOriginal);
-        targetCopy.Should().Be(expected);
+        Assert.That(targetCopy, Is.EqualTo(expected));
     }
 }

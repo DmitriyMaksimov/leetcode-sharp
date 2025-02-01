@@ -9,13 +9,13 @@ public class S01375Tests
     public void T1()
     {
         var sut = new S01375();
-        sut.NumTimesAllBlue([3, 2, 4, 1, 5]).Should().Be(2);
+        Assert.That(sut.NumTimesAllBlue([3, 2, 4, 1, 5]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01375();
-        sut.NumTimesAllBlue([4, 1, 2, 3]).Should().Be(1);
+        Assert.That(sut.NumTimesAllBlue([4, 1, 2, 3]), Is.EqualTo(1));
     }
 }

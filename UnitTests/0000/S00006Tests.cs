@@ -9,20 +9,20 @@ public class S00006Tests
     public void T1()
     {
         var sut = new S00006();
-        sut.Convert("PAYPALISHIRING", 3).Should().Be("PAHNAPLSIIGYIR");
+        Assert.That(sut.Convert("PAYPALISHIRING", 3), Is.EqualTo("PAHNAPLSIIGYIR"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00006();
-        sut.Convert("PAYPALISHIRING", 4).Should().Be("PINALSIGYAHRPI");
+        Assert.That(sut.Convert("PAYPALISHIRING", 4), Is.EqualTo("PINALSIGYAHRPI"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00006();
-        sut.Convert("A", 1).Should().Be("A");
+        Assert.That(sut.Convert("A", 1), Is.EqualTo("A"));
     }
 }

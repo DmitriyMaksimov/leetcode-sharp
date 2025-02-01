@@ -10,7 +10,7 @@ public class S01143Tests
     {
         var sut = new S01143();
 
-        sut.LongestCommonSubsequence("abcde", "ace").Should().Be(3);
+        Assert.That(sut.LongestCommonSubsequence("abcde", "ace"), Is.EqualTo(3));
     }
 
     [Test]
@@ -18,7 +18,7 @@ public class S01143Tests
     {
         var sut = new S01143();
 
-        sut.LongestCommonSubsequence("abc", "abc").Should().Be(3);
+        Assert.That(sut.LongestCommonSubsequence("abc", "abc"), Is.EqualTo(3));
     }
 
     [Test]
@@ -26,7 +26,7 @@ public class S01143Tests
     {
         var sut = new S01143();
 
-        sut.LongestCommonSubsequence("abc", "def").Should().Be(0);
+        Assert.That(sut.LongestCommonSubsequence("abc", "def"), Is.EqualTo(0));
     }
 
     [Test]
@@ -34,7 +34,7 @@ public class S01143Tests
     {
         var sut = new S01143();
 
-        sut.LongestCommonSubsequence("nematode knowledge", "empty bottle").Should().Be(7);
+        Assert.That(sut.LongestCommonSubsequence("nematode knowledge", "empty bottle"), Is.EqualTo(7));
     }
 
     [Test]
@@ -42,6 +42,6 @@ public class S01143Tests
     {
         var sut = new S01143();
 
-        sut.LongestCommonSubsequence("Let's try to use some longer strings to check performance", "Performance is a tricky one - it works well on small data sets, but could be painfully slow on large ones").Should().Be(31);
+        Assert.That(sut.LongestCommonSubsequence("Let's try to use some longer strings to check performance", "Performance is a tricky one - it works well on small data sets, but could be painfully slow on large ones"), Is.EqualTo(31));
     }
 }

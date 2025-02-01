@@ -9,20 +9,20 @@ public class S02027Tests
     public void T1()
     {
         var sut = new S02027();
-        sut.MinimumMoves("XXX").Should().Be(1);
+        Assert.That(sut.MinimumMoves("XXX"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02027();
-        sut.MinimumMoves("XXOX").Should().Be(2);
+        Assert.That(sut.MinimumMoves("XXOX"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02027();
-        sut.MinimumMoves("OOOO").Should().Be(0);
+        Assert.That(sut.MinimumMoves("OOOO"), Is.EqualTo(0));
     }
 }

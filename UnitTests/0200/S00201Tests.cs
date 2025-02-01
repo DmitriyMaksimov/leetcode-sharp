@@ -9,20 +9,20 @@ public class S00201Tests
     public void T1()
     {
         var sut = new S00201();
-        sut.RangeBitwiseAnd(5, 7).Should().Be(4);
+        Assert.That(sut.RangeBitwiseAnd(5, 7), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00201();
-        sut.RangeBitwiseAnd(0, 0).Should().Be(0);
+        Assert.That(sut.RangeBitwiseAnd(0, 0), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00201();
-        sut.RangeBitwiseAnd(1, 2147483647).Should().Be(0);
+        Assert.That(sut.RangeBitwiseAnd(1, 2147483647), Is.EqualTo(0));
     }
 }

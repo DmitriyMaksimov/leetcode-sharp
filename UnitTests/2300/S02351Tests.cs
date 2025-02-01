@@ -9,13 +9,13 @@ public class S02351Tests
     public void T1()
     {
         var sut = new S02351();
-        sut.RepeatedCharacter("abccbaacz").Should().Be('c');
+        Assert.That(sut.RepeatedCharacter("abccbaacz"), Is.EqualTo('c'));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02351();
-        sut.RepeatedCharacter("abcdd").Should().Be('d');
+        Assert.That(sut.RepeatedCharacter("abcdd"), Is.EqualTo('d'));
     }
 }

@@ -9,13 +9,13 @@ public class S00514Tests
     public void T1()
     {
         var sut = new S00514();
-        sut.FindRotateSteps("godding", "gd").Should().Be(4);
+        Assert.That(sut.FindRotateSteps("godding", "gd"), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00514();
-        sut.FindRotateSteps("godding", "godding").Should().Be(13);
+        Assert.That(sut.FindRotateSteps("godding", "godding"), Is.EqualTo(13));
     }
 }

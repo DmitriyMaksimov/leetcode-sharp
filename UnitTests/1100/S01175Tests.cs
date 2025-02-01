@@ -9,13 +9,13 @@ public class S01175Tests
     public void T1()
     {
         var sut = new S01175();
-        sut.NumPrimeArrangements(5).Should().Be(12);
+        Assert.That(sut.NumPrimeArrangements(5), Is.EqualTo(12));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01175();
-        sut.NumPrimeArrangements(100).Should().Be(682289015);
+        Assert.That(sut.NumPrimeArrangements(100), Is.EqualTo(682289015));
     }
 }

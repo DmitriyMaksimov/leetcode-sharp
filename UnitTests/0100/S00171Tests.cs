@@ -10,7 +10,7 @@ public class S00171Tests
     {
         var sut = new S00171();
 
-        sut.TitleToNumber("A").Should().Be(1);
+        Assert.That(sut.TitleToNumber("A"), Is.EqualTo(1));
     }
     
     [Test]
@@ -18,7 +18,7 @@ public class S00171Tests
     {
         var sut = new S00171();
 
-        sut.TitleToNumber("AB").Should().Be(28);
+        Assert.That(sut.TitleToNumber("AB"), Is.EqualTo(28));
     }
     
     [Test]
@@ -26,6 +26,6 @@ public class S00171Tests
     {
         var sut = new S00171();
 
-        sut.TitleToNumber("ZY").Should().Be(701);
+        Assert.That(sut.TitleToNumber("ZY"), Is.EqualTo(701));
     }
 }

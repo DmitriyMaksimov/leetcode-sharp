@@ -9,13 +9,13 @@ public class S02186Tests
     public void T1()
     {
         var sut = new S02186();
-        sut.MinSteps("leetcode", "coats").Should().Be(7);
+        Assert.That(sut.MinSteps("leetcode", "coats"), Is.EqualTo(7));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02186();
-        sut.MinSteps("night", "thing").Should().Be(0);
+        Assert.That(sut.MinSteps("night", "thing"), Is.EqualTo(0));
     }
 }

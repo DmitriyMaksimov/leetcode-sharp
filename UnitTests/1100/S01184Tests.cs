@@ -9,20 +9,20 @@ public class S01184Tests
     public void T1()
     {
         var sut = new S01184();
-        sut.DistanceBetweenBusStops(new[] {1, 2, 3, 4}, 0, 1).Should().Be(1);
+        Assert.That(sut.DistanceBetweenBusStops(new[] {1, 2, 3, 4}, 0, 1), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01184();
-        sut.DistanceBetweenBusStops(new[] {1, 2, 3, 4}, 0, 2).Should().Be(3);
+        Assert.That(sut.DistanceBetweenBusStops(new[] {1, 2, 3, 4}, 0, 2), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01184();
-        sut.DistanceBetweenBusStops(new[] {1, 2, 3, 4}, 0, 3).Should().Be(4);
+        Assert.That(sut.DistanceBetweenBusStops(new[] {1, 2, 3, 4}, 0, 3), Is.EqualTo(4));
     }
 }

@@ -9,13 +9,13 @@ public class S00214Tests
     public void T1()
     {
         var sut = new S00214();
-        sut.ShortestPalindrome("aacecaaa").Should().Be("aaacecaaa");
+        Assert.That(sut.ShortestPalindrome("aacecaaa"), Is.EqualTo("aaacecaaa"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00214();
-        sut.ShortestPalindrome("abcd").Should().Be("dcbabcd");
+        Assert.That(sut.ShortestPalindrome("abcd"), Is.EqualTo("dcbabcd"));
     }
 }

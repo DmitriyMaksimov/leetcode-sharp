@@ -10,7 +10,7 @@ public class S01137Tests
     {
         var sut = new S01137();
 
-        sut.Tribonacci(4).Should().Be(4);
+        Assert.That(sut.Tribonacci(4), Is.EqualTo(4));
     }
 
     [Test]
@@ -18,7 +18,7 @@ public class S01137Tests
     {
         var sut = new S01137();
 
-        sut.Tribonacci(25).Should().Be(1389537);
+        Assert.That(sut.Tribonacci(25), Is.EqualTo(1389537));
     }
 
     [Test]
@@ -26,6 +26,6 @@ public class S01137Tests
     {
         var sut = new S01137();
 
-        sut.Tribonacci(37).Should().Be(2082876103);
+        Assert.That(sut.Tribonacci(37), Is.EqualTo(2082876103));
     }
 }

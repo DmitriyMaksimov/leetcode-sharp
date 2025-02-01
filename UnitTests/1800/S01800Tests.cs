@@ -9,20 +9,20 @@ public class S01800Tests
     public void T1()
     {
         var sut = new S01800();
-        sut.MaxAscendingSum(new[] {10, 20, 30, 5, 10, 50}).Should().Be(65);
+        Assert.That(sut.MaxAscendingSum(new[] {10, 20, 30, 5, 10, 50}), Is.EqualTo(65));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01800();
-        sut.MaxAscendingSum(new[] {10, 20, 30, 40, 50}).Should().Be(150);
+        Assert.That(sut.MaxAscendingSum(new[] {10, 20, 30, 40, 50}), Is.EqualTo(150));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01800();
-        sut.MaxAscendingSum(new[] {12, 17, 15, 13, 10, 11, 12}).Should().Be(33);
+        Assert.That(sut.MaxAscendingSum(new[] {12, 17, 15, 13, 10, 11, 12}), Is.EqualTo(33));
     }
 }

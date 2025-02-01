@@ -9,13 +9,13 @@ public class S00697Tests
     public void T1()
     {
         var sut = new S00697();
-        sut.FindShortestSubArray(new[] {1, 2, 2, 3, 1}).Should().Be(2);
+        Assert.That(sut.FindShortestSubArray(new[] {1, 2, 2, 3, 1}), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00697();
-        sut.FindShortestSubArray(new[] {1, 2, 2, 3, 1, 4, 2}).Should().Be(6);
+        Assert.That(sut.FindShortestSubArray(new[] {1, 2, 2, 3, 1, 4, 2}), Is.EqualTo(6));
     }
 }

@@ -9,13 +9,13 @@ public class S00389Tests
     public void T1()
     {
         var sut = new S00389();
-        sut.FindTheDifference("abcd", "abcde").Should().Be('e');
+        Assert.That(sut.FindTheDifference("abcd", "abcde"), Is.EqualTo('e'));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00389();
-        sut.FindTheDifference("", "y").Should().Be('y');
+        Assert.That(sut.FindTheDifference("", "y"), Is.EqualTo('y'));
     }
 }

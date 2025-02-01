@@ -9,20 +9,20 @@ public class S02652Tests
     public void T1()
     {
         var sut = new S02652();
-        sut.SumOfMultiples(7).Should().Be(21);
+        Assert.That(sut.SumOfMultiples(7), Is.EqualTo(21));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S02652();
-        sut.SumOfMultiples(10).Should().Be(40);
+        Assert.That(sut.SumOfMultiples(10), Is.EqualTo(40));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02652();
-        sut.SumOfMultiples(9).Should().Be(30);
+        Assert.That(sut.SumOfMultiples(9), Is.EqualTo(30));
     }
 }

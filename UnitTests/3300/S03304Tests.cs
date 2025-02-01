@@ -9,13 +9,13 @@ public class S03304Tests
     public void T1()
     {
         var sut = new S03304();
-        sut.KthCharacter(5).Should().Be('b');
+        Assert.That(sut.KthCharacter(5), Is.EqualTo('b'));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03304();
-        sut.KthCharacter(10).Should().Be('c');
+        Assert.That(sut.KthCharacter(10), Is.EqualTo('c'));
     }
 }

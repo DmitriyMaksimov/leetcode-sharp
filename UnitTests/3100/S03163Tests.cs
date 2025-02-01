@@ -9,13 +9,13 @@ public class S03163Tests
     public void T1()
     {
         var sut = new S03163();
-        sut.CompressedString("abcde").Should().Be("1a1b1c1d1e");
+        Assert.That(sut.CompressedString("abcde"), Is.EqualTo("1a1b1c1d1e"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03163();
-        sut.CompressedString("aaaaaaaaaaaaaabb").Should().Be("9a5a2b");
+        Assert.That(sut.CompressedString("aaaaaaaaaaaaaabb"), Is.EqualTo("9a5a2b"));
     }
 }

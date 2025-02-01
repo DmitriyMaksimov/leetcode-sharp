@@ -9,13 +9,13 @@ public class S02451Tests
     public void T1()
     {
         var sut = new S02451();
-        sut.OddString(new[] {"adc", "wzy", "abc"}).Should().Be("abc");
+        Assert.That(sut.OddString(new[] {"adc", "wzy", "abc"}), Is.EqualTo("abc"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02451();
-        sut.OddString(new[] {"aaa", "bob", "ccc", "ddd"}).Should().Be("bob");
+        Assert.That(sut.OddString(new[] {"aaa", "bob", "ccc", "ddd"}), Is.EqualTo("bob"));
     }
 }

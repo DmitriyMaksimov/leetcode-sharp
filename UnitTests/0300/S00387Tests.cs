@@ -9,20 +9,20 @@ public class S00387Tests
     public void T1()
     {
         var sut = new S00387();
-        sut.FirstUniqChar("leetcode").Should().Be(0);
+        Assert.That(sut.FirstUniqChar("leetcode"), Is.EqualTo(0));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00387();
-        sut.FirstUniqChar("loveleetcode").Should().Be(2);
+        Assert.That(sut.FirstUniqChar("loveleetcode"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00387();
-        sut.FirstUniqChar("aabb").Should().Be(-1);
+        Assert.That(sut.FirstUniqChar("aabb"), Is.EqualTo(-1));
     }
 }

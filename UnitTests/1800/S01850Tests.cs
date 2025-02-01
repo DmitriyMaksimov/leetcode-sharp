@@ -9,20 +9,20 @@ public class S01850Tests
     public void T1()
     {
         var sut = new S01850();
-        sut.GetMinSwaps("5489355142", 4).Should().Be(2);
+        Assert.That(sut.GetMinSwaps("5489355142", 4), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01850();
-        sut.GetMinSwaps("11112", 4).Should().Be(4);
+        Assert.That(sut.GetMinSwaps("11112", 4), Is.EqualTo(4));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01850();
-        sut.GetMinSwaps("00123", 1).Should().Be(1);
+        Assert.That(sut.GetMinSwaps("00123", 1), Is.EqualTo(1));
     }
 }

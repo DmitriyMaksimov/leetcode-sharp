@@ -9,13 +9,13 @@ public class S00791Tests
     public void T1()
     {
         var sut = new S00791();
-        sut.CustomSortString("cba", "abcd").Should().Be("cbad");
+        Assert.That(sut.CustomSortString("cba", "abcd"), Is.EqualTo("cbad"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00791();
-        sut.CustomSortString("bcafg", "abcd").Should().Be("bcad");
+        Assert.That(sut.CustomSortString("bcafg", "abcd"), Is.EqualTo("bcad"));
     }
 }

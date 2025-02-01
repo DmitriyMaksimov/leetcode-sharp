@@ -9,13 +9,13 @@ public class S02240Tests
     public void T1()
     {
         var sut = new S02240();
-        sut.WaysToBuyPensPencils(20, 10, 5).Should().Be(9);
+        Assert.That(sut.WaysToBuyPensPencils(20, 10, 5), Is.EqualTo(9));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02240();
-        sut.WaysToBuyPensPencils(5, 10, 10).Should().Be(1);
+        Assert.That(sut.WaysToBuyPensPencils(5, 10, 10), Is.EqualTo(1));
     }
 }

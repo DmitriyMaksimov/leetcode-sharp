@@ -9,27 +9,27 @@ public class S00278Tests
     public void T1()
     {
         var sut = new S00278(4);
-        sut.FirstBadVersion(5).Should().Be(4);
+        Assert.That(sut.FirstBadVersion(5), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00278(1);
-        sut.FirstBadVersion(1).Should().Be(1);
+        Assert.That(sut.FirstBadVersion(1), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00278(2);
-        sut.FirstBadVersion(3).Should().Be(2);
+        Assert.That(sut.FirstBadVersion(3), Is.EqualTo(2));
     }
     
     [Test]
     public void T4()
     {
         var sut = new S00278(1702766719);
-        sut.FirstBadVersion(2126753390).Should().Be(1702766719);
+        Assert.That(sut.FirstBadVersion(2126753390), Is.EqualTo(1702766719));
     }
 }

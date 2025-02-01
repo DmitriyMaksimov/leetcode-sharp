@@ -9,13 +9,13 @@ public class S01663Tests
     public void T1()
     {
         var sut = new S01663();
-        sut.GetSmallestString(3, 27).Should().Be("aay");
+        Assert.That(sut.GetSmallestString(3, 27), Is.EqualTo("aay"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01663();
-        sut.GetSmallestString(5, 73).Should().Be("aaszz");
+        Assert.That(sut.GetSmallestString(5, 73), Is.EqualTo("aaszz"));
     }
 }

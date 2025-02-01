@@ -9,13 +9,13 @@ public class S03174Tests
     public void T1()
     {
         var sut = new S03174();
-        sut.ClearDigits("abc").Should().Be("abc");
+        Assert.That(sut.ClearDigits("abc"), Is.EqualTo("abc"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03174();
-        sut.ClearDigits("cb34").Should().Be("");
+        Assert.That(sut.ClearDigits("cb34"), Is.EqualTo(""));
     }
 }

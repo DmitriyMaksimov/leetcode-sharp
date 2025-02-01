@@ -9,20 +9,20 @@ public class S02053Tests
     public void T1()
     {
         var sut = new S02053();
-        sut.KthDistinct(new[] {"d", "b", "c", "b", "c", "a"}, 2).Should().Be("a");
+        Assert.That(sut.KthDistinct(new[] {"d", "b", "c", "b", "c", "a"}, 2), Is.EqualTo("a"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02053();
-        sut.KthDistinct(new[] {"aaa", "aa", "a"}, 1).Should().Be("aaa");
+        Assert.That(sut.KthDistinct(new[] {"aaa", "aa", "a"}, 1), Is.EqualTo("aaa"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02053();
-        sut.KthDistinct(new[] {"a", "b", "a"}, 3).Should().Be("");
+        Assert.That(sut.KthDistinct(new[] {"a", "b", "a"}, 3), Is.EqualTo(""));
     }
 }

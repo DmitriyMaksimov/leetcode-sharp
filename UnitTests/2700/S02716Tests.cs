@@ -9,20 +9,20 @@ public class S02716Tests
     public void T1()
     {
         var sut = new S02716();
-        sut.MinimizedStringLength("aaabc").Should().Be(3);
+        Assert.That(sut.MinimizedStringLength("aaabc"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02716();
-        sut.MinimizedStringLength("cbbd").Should().Be(3);
+        Assert.That(sut.MinimizedStringLength("cbbd"), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02716();
-        sut.MinimizedStringLength("dddaaa").Should().Be(2);
+        Assert.That(sut.MinimizedStringLength("dddaaa"), Is.EqualTo(2));
     }
 }

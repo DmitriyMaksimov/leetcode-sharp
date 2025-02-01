@@ -9,20 +9,20 @@ public class S01963Tests
     public void T1()
     {
         var sut = new S01963();
-        sut.MinSwaps("][][").Should().Be(1);
+        Assert.That(sut.MinSwaps("][]["), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01963();
-        sut.MinSwaps("]]][[[").Should().Be(2);
+        Assert.That(sut.MinSwaps("]]][[["), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01963();
-        sut.MinSwaps("[]").Should().Be(0);
+        Assert.That(sut.MinSwaps("[]"), Is.EqualTo(0));
     }
 }

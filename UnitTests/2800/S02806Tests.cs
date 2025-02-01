@@ -9,13 +9,13 @@ public class S02806Tests
     public void T1()
     {
         var sut = new S02806();
-        sut.AccountBalanceAfterPurchase(9).Should().Be(90);
+        Assert.That(sut.AccountBalanceAfterPurchase(9), Is.EqualTo(90));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02806();
-        sut.AccountBalanceAfterPurchase(15).Should().Be(80);
+        Assert.That(sut.AccountBalanceAfterPurchase(15), Is.EqualTo(80));
     }
 }

@@ -12,9 +12,9 @@ public class S00155Tests
         minStack.Push(-2);
         minStack.Push(0);
         minStack.Push(-3);
-        minStack.GetMin().Should().Be(-3);
+        Assert.That(minStack.GetMin(), Is.EqualTo(-3));
         minStack.Pop();
-        minStack.Top().Should().Be(0);
-        minStack.GetMin().Should().Be(-2);
+        Assert.That(minStack.Top(), Is.EqualTo(0));
+        Assert.That(minStack.GetMin(), Is.EqualTo(-2));
     }
 }

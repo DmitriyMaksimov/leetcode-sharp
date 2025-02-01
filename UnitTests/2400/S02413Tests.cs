@@ -9,13 +9,13 @@ public class S02413Tests
     public void T1()
     {
         var sut = new S02413();
-        sut.SmallestEvenMultiple(5).Should().Be(10);
+        Assert.That(sut.SmallestEvenMultiple(5), Is.EqualTo(10));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02413();
-        sut.SmallestEvenMultiple(6).Should().Be(6);
+        Assert.That(sut.SmallestEvenMultiple(6), Is.EqualTo(6));
     }
 }

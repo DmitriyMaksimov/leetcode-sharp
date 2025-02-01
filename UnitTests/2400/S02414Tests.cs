@@ -9,13 +9,13 @@ public class S02414Tests
     public void T1()
     {
         var sut = new S02414();
-        sut.LongestContinuousSubstring("abacaba").Should().Be(2);
+        Assert.That(sut.LongestContinuousSubstring("abacaba"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02414();
-        sut.LongestContinuousSubstring("abcde").Should().Be(5);
+        Assert.That(sut.LongestContinuousSubstring("abcde"), Is.EqualTo(5));
     }
 }

@@ -9,13 +9,13 @@ public class S02154Tests
     public void T1()
     {
         var sut = new S02154();
-        sut.FindFinalValue(new[] {5, 3, 6, 1, 12}, 3).Should().Be(24);
+        Assert.That(sut.FindFinalValue(new[] {5, 3, 6, 1, 12}, 3), Is.EqualTo(24));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02154();
-        sut.FindFinalValue(new[] {2, 7, 9}, 4).Should().Be(4);
+        Assert.That(sut.FindFinalValue(new[] {2, 7, 9}, 4), Is.EqualTo(4));
     }
 }

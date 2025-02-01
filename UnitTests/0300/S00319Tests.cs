@@ -9,20 +9,20 @@ public class S00319Tests
     public void T1()
     {
         var sut = new S00319();
-        sut.BulbSwitch(3).Should().Be(1);
+        Assert.That(sut.BulbSwitch(3), Is.EqualTo(1));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00319();
-        sut.BulbSwitch(0).Should().Be(0);
+        Assert.That(sut.BulbSwitch(0), Is.EqualTo(0));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S00319();
-        sut.BulbSwitch(1).Should().Be(1);
+        Assert.That(sut.BulbSwitch(1), Is.EqualTo(1));
     }
 }

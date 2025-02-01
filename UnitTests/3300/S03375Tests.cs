@@ -9,20 +9,20 @@ public class S03375Tests
     public void T1()
     {
         var sut = new S03375();
-        sut.MinOperations([5, 2, 5, 4, 5], 2).Should().Be(2);
+        Assert.That(sut.MinOperations([5, 2, 5, 4, 5], 2), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03375();
-        sut.MinOperations([2, 1, 2], 2).Should().Be(-1);
+        Assert.That(sut.MinOperations([2, 1, 2], 2), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03375();
-        sut.MinOperations([9, 7, 5, 3], 1).Should().Be(4);
+        Assert.That(sut.MinOperations([9, 7, 5, 3], 1), Is.EqualTo(4));
     }
 }

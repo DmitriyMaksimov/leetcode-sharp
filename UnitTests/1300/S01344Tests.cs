@@ -9,20 +9,20 @@ public class S01344Tests
     public void T1()
     {
         var sut = new S01344();
-        sut.AngleClock(12, 30).Should().Be(165);
+        Assert.That(sut.AngleClock(12, 30), Is.EqualTo(165));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01344();
-        sut.AngleClock(3, 30).Should().Be(75);
+        Assert.That(sut.AngleClock(3, 30), Is.EqualTo(75));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01344();
-        sut.AngleClock(3, 15).Should().Be(7.5);
+        Assert.That(sut.AngleClock(3, 15), Is.EqualTo(7.5));
     }
 }

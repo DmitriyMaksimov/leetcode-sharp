@@ -9,13 +9,13 @@ public class S01130Tests
     public void T1()
     {
         var sut = new S01130();
-        sut.MctFromLeafValues([6, 2, 4]).Should().Be(32);
+        Assert.That(sut.MctFromLeafValues([6, 2, 4]), Is.EqualTo(32));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01130();
-        sut.MctFromLeafValues([4, 11]).Should().Be(44);
+        Assert.That(sut.MctFromLeafValues([4, 11]), Is.EqualTo(44));
     }
 }

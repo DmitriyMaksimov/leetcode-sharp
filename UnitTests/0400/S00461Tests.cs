@@ -9,13 +9,13 @@ public class S00461Tests
     public void T1()
     {
         var sut = new S00461();
-        sut.HammingDistance(1, 4).Should().Be(2);
+        Assert.That(sut.HammingDistance(1, 4), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00461();
-        sut.HammingDistance(3, 1).Should().Be(1);
+        Assert.That(sut.HammingDistance(3, 1), Is.EqualTo(1));
     }
 }

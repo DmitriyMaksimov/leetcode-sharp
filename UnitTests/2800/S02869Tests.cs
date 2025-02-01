@@ -9,20 +9,20 @@ public class S02869Tests
     public void T1()
     {
         var sut = new S02869();
-        sut.MinOperations(new[] {3, 1, 5, 4, 2}, 2).Should().Be(4);
+        Assert.That(sut.MinOperations(new[] {3, 1, 5, 4, 2}, 2), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02869();
-        sut.MinOperations(new[] {3, 1, 5, 4, 2}, 5).Should().Be(5);
+        Assert.That(sut.MinOperations(new[] {3, 1, 5, 4, 2}, 5), Is.EqualTo(5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02869();
-        sut.MinOperations(new[] {3, 2, 5, 3, 1}, 3).Should().Be(4);
+        Assert.That(sut.MinOperations(new[] {3, 2, 5, 3, 1}, 3), Is.EqualTo(4));
     }
 }

@@ -13,7 +13,7 @@ public class S00690Tests
         var e3 = new S00690.Employee { id = 3, importance = 3, subordinates = [] };
 
         var sut = new S00690();
-        sut.GetImportance([e1, e2, e3], 1).Should().Be(11);
+        Assert.That(sut.GetImportance([e1, e2, e3], 1), Is.EqualTo(11));
     }
 
     [Test]
@@ -23,6 +23,6 @@ public class S00690Tests
         var e2 = new S00690.Employee { id = 5, importance = -3, subordinates = [] };
 
         var sut = new S00690();
-        sut.GetImportance([e1, e2], 5).Should().Be(-3);
+        Assert.That(sut.GetImportance([e1, e2], 5), Is.EqualTo(-3));
     }
 }

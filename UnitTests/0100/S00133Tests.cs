@@ -23,7 +23,7 @@ public class S00133Tests
 
         cloneGraph.Should().NotBeNull();
         cloneGraph.Should().NotBeSameAs(n1);
-        cloneGraph.val.Should().Be(1);
+        Assert.That(cloneGraph.val, Is.EqualTo(1));
         var neighbors2 = cloneGraph.neighbors.Should().Contain(x => x.val == 2).Which.neighbors;
         var neighbors4 = cloneGraph.neighbors.Should().Contain(x => x.val == 4).Which.neighbors;
 
@@ -45,7 +45,7 @@ public class S00133Tests
         var n1 = new S00133.Node(1);
         var cloneGraph = sut.CloneGraph(n1);
         cloneGraph.Should().NotBeSameAs(n1);
-        cloneGraph.val.Should().Be(1);
+        Assert.That(cloneGraph.val, Is.EqualTo(1));
         cloneGraph.neighbors.Should().BeEmpty();
     }
 }

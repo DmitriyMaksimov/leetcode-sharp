@@ -9,20 +9,20 @@ public class S01202Tests
     public void T1()
     {
         var sut = new S01202();
-        sut.SmallestStringWithSwaps("dcab", [[0, 3], [1, 2]]).Should().Be("bacd");
+        Assert.That(sut.SmallestStringWithSwaps("dcab", [[0, 3], [1, 2]]), Is.EqualTo("bacd"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01202();
-        sut.SmallestStringWithSwaps("dcab", [[0, 3], [1, 2], [0, 2]]).Should().Be("abcd");
+        Assert.That(sut.SmallestStringWithSwaps("dcab", [[0, 3], [1, 2], [0, 2]]), Is.EqualTo("abcd"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01202();
-        sut.SmallestStringWithSwaps("cba", [[0, 1], [1, 2]]).Should().Be("abc");
+        Assert.That(sut.SmallestStringWithSwaps("cba", [[0, 1], [1, 2]]), Is.EqualTo("abc"));
     }
 }

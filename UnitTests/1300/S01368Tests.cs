@@ -9,20 +9,20 @@ public class S01368Tests
     public void T1()
     {
         var sut = new S01368();
-        sut.MinCost([[1, 1, 1, 1], [2, 2, 2, 2], [1, 1, 1, 1], [2, 2, 2, 2]]).Should().Be(3);
+        Assert.That(sut.MinCost([[1, 1, 1, 1], [2, 2, 2, 2], [1, 1, 1, 1], [2, 2, 2, 2]]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01368();
-        sut.MinCost([[1, 1, 3], [3, 2, 2], [1, 1, 4]]).Should().Be(0);
+        Assert.That(sut.MinCost([[1, 1, 3], [3, 2, 2], [1, 1, 4]]), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01368();
-        sut.MinCost([[1, 2], [4, 3]]).Should().Be(1);
+        Assert.That(sut.MinCost([[1, 2], [4, 3]]), Is.EqualTo(1));
     }
 }

@@ -9,13 +9,13 @@ public class S02579Tests
     public void T1()
     {
         var sut = new S02579();
-        sut.ColoredCells(1).Should().Be(1);
+        Assert.That(sut.ColoredCells(1), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02579();
-        sut.ColoredCells(2).Should().Be(5);
+        Assert.That(sut.ColoredCells(2), Is.EqualTo(5));
     }
 }

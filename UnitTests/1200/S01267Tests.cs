@@ -9,20 +9,20 @@ public class S01267Tests
     public void T1()
     {
         var sut = new S01267();
-        sut.CountServers([[1, 0], [0, 1]]).Should().Be(0);
+        Assert.That(sut.CountServers([[1, 0], [0, 1]]), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01267();
-        sut.CountServers([[1, 0], [1, 1]]).Should().Be(3);
+        Assert.That(sut.CountServers([[1, 0], [1, 1]]), Is.EqualTo(3));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01267();
-        sut.CountServers([[1, 1, 0, 0], [0, 0, 1, 0], [0, 0, 1, 0], [0, 0, 0, 1]]).Should().Be(4);
+        Assert.That(sut.CountServers([[1, 1, 0, 0], [0, 0, 1, 0], [0, 0, 1, 0], [0, 0, 0, 1]]), Is.EqualTo(4));
     }
 }

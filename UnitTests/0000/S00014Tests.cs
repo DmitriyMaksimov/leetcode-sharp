@@ -9,13 +9,13 @@ public class S00014Tests
     public void T1()
     {
         var sut = new S00014();
-        sut.LongestCommonPrefix(new[] {"flower", "flow", "flight"}).Should().Be("fl");
+        Assert.That(sut.LongestCommonPrefix(new[] {"flower", "flow", "flight"}), Is.EqualTo("fl"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00014();
-        sut.LongestCommonPrefix(new[] {"dog", "racecar", "car"}).Should().Be("");
+        Assert.That(sut.LongestCommonPrefix(new[] {"dog", "racecar", "car"}), Is.EqualTo(""));
     }
 }

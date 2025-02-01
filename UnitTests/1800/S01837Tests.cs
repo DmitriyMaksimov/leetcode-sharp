@@ -9,13 +9,13 @@ public class S01837Tests
     public void T1()
     {
         var sut = new S01837();
-        sut.SumBase(34, 6).Should().Be(9);
+        Assert.That(sut.SumBase(34, 6), Is.EqualTo(9));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01837();
-        sut.SumBase(10, 10).Should().Be(1);
+        Assert.That(sut.SumBase(10, 10), Is.EqualTo(1));
     }
 }

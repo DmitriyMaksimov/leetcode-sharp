@@ -9,20 +9,20 @@ public class S01347Tests
     public void T1()
     {
         var sut = new S01347();
-        sut.MinSteps("bab", "aba").Should().Be(1);
+        Assert.That(sut.MinSteps("bab", "aba"), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01347();
-        sut.MinSteps("leetcode", "practice").Should().Be(5);
+        Assert.That(sut.MinSteps("leetcode", "practice"), Is.EqualTo(5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01347();
-        sut.MinSteps("anagram", "mangaar").Should().Be(0);
+        Assert.That(sut.MinSteps("anagram", "mangaar"), Is.EqualTo(0));
     }
 }

@@ -9,14 +9,14 @@ public class S00173Tests
     public void T1()
     {
         var bstIterator = new S00173.BSTIterator(TreeNode.Parse("[7, 3, 15, null, null, 9, 20]"));
-        bstIterator.Next().Should().Be(3);
-        bstIterator.Next().Should().Be(7);
+        Assert.That(bstIterator.Next(), Is.EqualTo(3));
+        Assert.That(bstIterator.Next(), Is.EqualTo(7));
         bstIterator.HasNext().Should().BeTrue();
-        bstIterator.Next().Should().Be(9);
+        Assert.That(bstIterator.Next(), Is.EqualTo(9));
         bstIterator.HasNext().Should().BeTrue();
-        bstIterator.Next().Should().Be(15);
+        Assert.That(bstIterator.Next(), Is.EqualTo(15));
         bstIterator.HasNext().Should().BeTrue();
-        bstIterator.Next().Should().Be(20);
+        Assert.That(bstIterator.Next(), Is.EqualTo(20));
         bstIterator.HasNext().Should().BeFalse();
     }
 

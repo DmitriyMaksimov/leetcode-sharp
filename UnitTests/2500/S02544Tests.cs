@@ -9,20 +9,20 @@ public class S02544Tests
     public void T1()
     {
         var sut = new S02544();
-        sut.AlternateDigitSum(521).Should().Be(4);
+        Assert.That(sut.AlternateDigitSum(521), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02544();
-        sut.AlternateDigitSum(111).Should().Be(1);
+        Assert.That(sut.AlternateDigitSum(111), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02544();
-        sut.AlternateDigitSum(886996).Should().Be(0);
+        Assert.That(sut.AlternateDigitSum(886996), Is.EqualTo(0));
     }
 }

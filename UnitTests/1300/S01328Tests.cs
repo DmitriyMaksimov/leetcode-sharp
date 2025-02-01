@@ -9,13 +9,13 @@ public class S01328Tests
     public void T1()
     {
         var sut = new S01328();
-        sut.BreakPalindrome("abccba").Should().Be("aaccba");
+        Assert.That(sut.BreakPalindrome("abccba"), Is.EqualTo("aaccba"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01328();
-        sut.BreakPalindrome("a").Should().Be("");
+        Assert.That(sut.BreakPalindrome("a"), Is.EqualTo(""));
     }
 }

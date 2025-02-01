@@ -9,13 +9,13 @@ public class S02930Tests
     public void T1()
     {
         var sut = new S02930();
-        sut.StringCount(4).Should().Be(12);
+        Assert.That(sut.StringCount(4), Is.EqualTo(12));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02930();
-        sut.StringCount(10).Should().Be(83943898);
+        Assert.That(sut.StringCount(10), Is.EqualTo(83943898));
     }
 }

@@ -12,7 +12,7 @@ public class S00922Tests
         var nums = sut.SortArrayByParityII(new[] {4, 2, 5, 7});
         for (var i = 0; i < nums.Length; i++)
         {
-            (nums[i] % 2).Should().Be(i % 2);
+            Assert.That((nums[i] % 2), Is.EqualTo(i % 2));
         }
     }
 
@@ -23,7 +23,7 @@ public class S00922Tests
         var nums = sut.SortArrayByParityII(new[] {2, 3});
         for (var i = 0; i < nums.Length; i++)
         {
-            (nums[i] % 2).Should().Be(i % 2);
+            Assert.That((nums[i] % 2), Is.EqualTo(i % 2));
         }
     }
 }

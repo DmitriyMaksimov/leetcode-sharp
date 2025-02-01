@@ -9,13 +9,13 @@ public class S02588Tests
     public void T1()
     {
         var sut = new S02588();
-        sut.BeautifulSubarrays([4, 3, 1, 2, 4]).Should().Be(2);
+        Assert.That(sut.BeautifulSubarrays([4, 3, 1, 2, 4]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02588();
-        sut.BeautifulSubarrays([1, 10, 4]).Should().Be(0);
+        Assert.That(sut.BeautifulSubarrays([1, 10, 4]), Is.EqualTo(0));
     }
 }

@@ -9,13 +9,13 @@ public class S02278Tests
     public void T1()
     {
         var sut = new S02278();
-        sut.PercentageLetter("foobar", 'o').Should().Be(33);
+        Assert.That(sut.PercentageLetter("foobar", 'o'), Is.EqualTo(33));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02278();
-        sut.PercentageLetter("jjjj", 'k').Should().Be(0);
+        Assert.That(sut.PercentageLetter("jjjj", 'k'), Is.EqualTo(0));
     }
 }

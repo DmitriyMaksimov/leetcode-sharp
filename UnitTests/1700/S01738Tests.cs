@@ -9,20 +9,20 @@ public class S01738Tests
     public void T1()
     {
         var sut = new S01738();
-        sut.KthLargestValue([[5, 2], [1, 6]], 1).Should().Be(7);
+        Assert.That(sut.KthLargestValue([[5, 2], [1, 6]], 1), Is.EqualTo(7));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01738();
-        sut.KthLargestValue([[5, 2], [1, 6]], 2).Should().Be(5);
+        Assert.That(sut.KthLargestValue([[5, 2], [1, 6]], 2), Is.EqualTo(5));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01738();
-        sut.KthLargestValue([[5, 2], [1, 6]], 3).Should().Be(4);
+        Assert.That(sut.KthLargestValue([[5, 2], [1, 6]], 3), Is.EqualTo(4));
     }
 }

@@ -9,20 +9,20 @@ public class S01647Tests
     public void T1()
     {
         var sut = new S01647();
-        sut.MinDeletions("aab").Should().Be(0);
+        Assert.That(sut.MinDeletions("aab"), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01647();
-        sut.MinDeletions("aaabbbcc").Should().Be(2);
+        Assert.That(sut.MinDeletions("aaabbbcc"), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01647();
-        sut.MinDeletions("ceabaacb").Should().Be(2);
+        Assert.That(sut.MinDeletions("ceabaacb"), Is.EqualTo(2));
     }
 }

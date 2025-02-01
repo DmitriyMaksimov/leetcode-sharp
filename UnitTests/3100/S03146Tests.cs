@@ -9,13 +9,13 @@ public class S03146Tests
     public void T1()
     {
         var sut = new S03146();
-        sut.FindPermutationDifference("abc", "bac").Should().Be(2);
+        Assert.That(sut.FindPermutationDifference("abc", "bac"), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03146();
-        sut.FindPermutationDifference("abcde", "edbac").Should().Be(12);
+        Assert.That(sut.FindPermutationDifference("abcde", "edbac"), Is.EqualTo(12));
     }
 }

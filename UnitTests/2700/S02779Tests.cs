@@ -9,13 +9,13 @@ public class S02779Tests
     public void T1()
     {
         var sut = new S02779();
-        sut.MaximumBeauty([4, 6, 1, 2], 2).Should().Be(3);
+        Assert.That(sut.MaximumBeauty([4, 6, 1, 2], 2), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02779();
-        sut.MaximumBeauty([1, 1, 1, 1], 10).Should().Be(4);
+        Assert.That(sut.MaximumBeauty([1, 1, 1, 1], 10), Is.EqualTo(4));
     }
 }

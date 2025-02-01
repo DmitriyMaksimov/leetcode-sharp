@@ -9,13 +9,13 @@ public class S03099Tests
     public void T1()
     {
         var sut = new S03099();
-        sut.SumOfTheDigitsOfHarshadNumber(18).Should().Be(9);
+        Assert.That(sut.SumOfTheDigitsOfHarshadNumber(18), Is.EqualTo(9));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03099();
-        sut.SumOfTheDigitsOfHarshadNumber(23).Should().Be(-1);
+        Assert.That(sut.SumOfTheDigitsOfHarshadNumber(23), Is.EqualTo(-1));
     }
 }

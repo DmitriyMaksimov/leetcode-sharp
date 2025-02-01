@@ -9,20 +9,20 @@ public class S03239Tests
     public void T1()
     {
         var sut = new S03239();
-        sut.MinFlips([[1, 0, 0], [0, 0, 0], [0, 0, 1]]).Should().Be(2);
+        Assert.That(sut.MinFlips([[1, 0, 0], [0, 0, 0], [0, 0, 1]]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03239();
-        sut.MinFlips([[0, 1], [0, 1], [0, 0]]).Should().Be(1);
+        Assert.That(sut.MinFlips([[0, 1], [0, 1], [0, 0]]), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03239();
-        sut.MinFlips([[1], [0]]).Should().Be(0);
+        Assert.That(sut.MinFlips([[1], [0]]), Is.EqualTo(0));
     }
 }

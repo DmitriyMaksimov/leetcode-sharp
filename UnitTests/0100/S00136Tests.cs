@@ -9,13 +9,13 @@ public class S00136Tests
     public void T1()
     {
         var sut = new S00136();
-        sut.SingleNumber(new[] {2, 2, 1}).Should().Be(1);
+        Assert.That(sut.SingleNumber(new[] {2, 2, 1}), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00136();
-        sut.SingleNumber(new[] {4, 1, 2, 1, 2}).Should().Be(4);
+        Assert.That(sut.SingleNumber(new[] {4, 1, 2, 1, 2}), Is.EqualTo(4));
     }
 }

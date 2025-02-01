@@ -9,20 +9,20 @@ public class S01974Tests
     public void T1()
     {
         var sut = new S01974();
-        sut.MinTimeToType("abc").Should().Be(5);
+        Assert.That(sut.MinTimeToType("abc"), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01974();
-        sut.MinTimeToType("bza").Should().Be(7);
+        Assert.That(sut.MinTimeToType("bza"), Is.EqualTo(7));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01974();
-        sut.MinTimeToType("zjpc").Should().Be(34);
+        Assert.That(sut.MinTimeToType("zjpc"), Is.EqualTo(34));
     }
 }

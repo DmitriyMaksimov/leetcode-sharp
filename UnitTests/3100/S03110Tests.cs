@@ -9,13 +9,13 @@ public class S03110Tests
     public void T1()
     {
         var sut = new S03110();
-        sut.ScoreOfString("hello").Should().Be(13);
+        Assert.That(sut.ScoreOfString("hello"), Is.EqualTo(13));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03110();
-        sut.ScoreOfString("zaz").Should().Be(50);
+        Assert.That(sut.ScoreOfString("zaz"), Is.EqualTo(50));
     }
 }

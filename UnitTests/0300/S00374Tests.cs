@@ -11,6 +11,6 @@ public class S00374Tests
     public void Test1(int n, int pick)
     {
         var sut = new S00374(pick.CompareTo);
-        sut.GuessNumber(n).Should().Be(pick);
+        Assert.That(sut.GuessNumber(n), Is.EqualTo(pick));
     }    
 }
