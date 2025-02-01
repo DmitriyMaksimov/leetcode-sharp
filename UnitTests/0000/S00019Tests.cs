@@ -9,27 +9,27 @@ public class S00019Tests
     public void T1()
     {
         var sut = new S00019();
-        Assert.That(ListNode.ToString(sut.RemoveNthFromEnd(ListNode.Parse("[1,2,3,4,5]"), 2)), Is.EqualTo("[1,2,3,5]"));
+        Assert.That(sut.RemoveNthFromEnd(ListNode.Parse("[1,2,3,4,5]"), 2).AsString(), Is.EqualTo("[1,2,3,5]"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00019();
-        Assert.That(ListNode.ToString(sut.RemoveNthFromEnd(ListNode.Parse("[1]"), 1)), Is.EqualTo("[]"));
+        Assert.That(sut.RemoveNthFromEnd(ListNode.Parse("[1]"), 1).AsString(), Is.EqualTo("[]"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00019();
-        Assert.That(ListNode.ToString(sut.RemoveNthFromEnd(ListNode.Parse("[1, 2]"), 1)), Is.EqualTo("[1]"));
+        Assert.That(sut.RemoveNthFromEnd(ListNode.Parse("[1, 2]"), 1).AsString(), Is.EqualTo("[1]"));
     }
     
     [Test]
     public void T4()
     {
         var sut = new S00019();
-        Assert.That(ListNode.ToString(sut.RemoveNthFromEnd(ListNode.Parse("[1, 2]"), 2)), Is.EqualTo("[2]"));
+        Assert.That(sut.RemoveNthFromEnd(ListNode.Parse("[1, 2]"), 2).AsString(), Is.EqualTo("[2]"));
     }
 }
