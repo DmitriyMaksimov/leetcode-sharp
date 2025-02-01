@@ -10,7 +10,7 @@ public class S00109Tests
     public void T1()
     {
         var sut = new S00109();
-        sut.SortedListToBST(ListNode.Parse("[-10,-3,0,5,9]")).Should().BeEquivalentTo(TreeNode.Parse("[0,-3,9,-10,null,5]"));
+        Assert.That(sut.SortedListToBST(ListNode.Parse("[-10,-3,0,5,9]")).AsString(), Is.EqualTo("[0,-3,9,-10,null,5]"));
     }
     
     [Test]

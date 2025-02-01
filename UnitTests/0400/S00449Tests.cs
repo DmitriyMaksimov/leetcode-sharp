@@ -10,7 +10,7 @@ public class S00449Tests
     {
         var sut = new S00449.Codec();
         var serialize = sut.serialize(TreeNode.Parse("[2,1,3]"));
-        sut.deserialize(serialize).Should().BeEquivalentTo(TreeNode.Parse("[2,1,3]"));
+        Assert.That(sut.deserialize(serialize).AsString(), Is.EqualTo("[2,1,3]"));
     }
 
     [Test]
@@ -18,6 +18,6 @@ public class S00449Tests
     {
         var sut = new S00449.Codec();
         var serialize = sut.serialize(TreeNode.Parse("[]"));
-        sut.deserialize(serialize).Should().BeEquivalentTo(TreeNode.Parse("[]"));
+        Assert.That(sut.deserialize(serialize).AsString(), Is.EqualTo("[]"));
     }
 }

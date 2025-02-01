@@ -11,7 +11,7 @@ public class S00099Tests
         var sut = new S00099();
         var treeNode = TreeNode.Parse("[1,3,null,null,2]");
         sut.RecoverTree(treeNode);
-        treeNode.Should().BeEquivalentTo(TreeNode.Parse("[3,1,null,null,2]"));
+        Assert.That(treeNode.AsString(), Is.EqualTo("[3,1,null,null,2]"));
     }
 
     [Test]
@@ -20,6 +20,6 @@ public class S00099Tests
         var sut = new S00099();
         var treeNode = TreeNode.Parse("[3,1,4,null,null,2]");
         sut.RecoverTree(treeNode);
-        treeNode.Should().BeEquivalentTo(TreeNode.Parse("[2,1,4,null,null,3]"));
+        Assert.That(treeNode.AsString(), Is.EqualTo("[2,1,4,null,null,3]"));
     }
 }

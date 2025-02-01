@@ -9,7 +9,7 @@ public class S00700Tests
     public void T1()
     {
         var sut = new S00700();
-        sut.SearchBST(TreeNode.Parse("[4,2,7,1,3]"), 2).Should().BeEquivalentTo(TreeNode.Parse("[2,1,3]"));
+        Assert.That(sut.SearchBST(TreeNode.Parse("[4,2,7,1,3]"), 2).AsString(), Is.EqualTo("[2,1,3]"));
     }
     
     [Test]
