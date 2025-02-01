@@ -25,20 +25,20 @@ public class S00023Tests
     public void T2()
     {
         var sut = new S00023();
-        sut.MergeKLists(null).Should().BeNull();
+        Assert.That(sut.MergeKLists(null), Is.Null);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00023();
-        sut.MergeKLists(new [] {(ListNode?) null}).Should().BeNull();
+        Assert.That(sut.MergeKLists(new [] {(ListNode?) null}), Is.Null);
     }
 
     [Test]
     public void T4()
     {
         var sut = new S00023();
-        sut.MergeKLists(Array.Empty<ListNode?>()).Should().BeNull();
+        Assert.That(sut.MergeKLists(Array.Empty<ListNode?>()), Is.Null);
     }
 }

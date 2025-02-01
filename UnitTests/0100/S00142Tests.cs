@@ -27,6 +27,6 @@ public class S00142Tests
     public void T3()
     {
         var sut = new S00142();
-        sut.DetectCycle(ListNode.Parse("[1]")).Should().BeNull();
+        Assert.That(sut.DetectCycle(ListNode.Parse("[1]")), Is.Null);
     }
 }

@@ -23,6 +23,6 @@ public class S00450Tests
     public void T3()
     {
         var sut = new S00450();
-        sut.DeleteNode(null, 0).Should().BeNull();
+        Assert.That(sut.DeleteNode(null, 0), Is.Null);
     }
 }

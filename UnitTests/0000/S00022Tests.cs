@@ -9,7 +9,7 @@ public class S00022Tests
     public void T1()
     {
         var sut = new S00022();
-        sut.GenerateParenthesis(3).Should().BeEquivalentTo("((()))", "(()())", "(())()", "()(())", "()()()");
+        Assert.That(sut.GenerateParenthesis(3), Is.EquivalentTo((string[]) ["((()))", "(()())", "(())()", "()(())", "()()()"]));
     }
 
     [Test]

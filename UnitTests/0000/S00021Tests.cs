@@ -16,6 +16,6 @@ public class S00021Tests
     public void T2()
     {
         var sut = new S00021();
-        sut.MergeTwoLists(null, null).Should().BeNull();
+        Assert.That(sut.MergeTwoLists(null, null), Is.Null);
     }
 }

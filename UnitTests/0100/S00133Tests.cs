@@ -35,7 +35,7 @@ public class S00133Tests
     public void T2()
     {
         var sut = new S00133();
-        sut.CloneGraph(null).Should().BeNull();
+        Assert.That(sut.CloneGraph(null), Is.Null);
     }
 
     [Test]

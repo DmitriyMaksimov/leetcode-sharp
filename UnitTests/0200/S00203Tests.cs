@@ -16,13 +16,13 @@ public class S00203Tests
     public void T2()
     {
         var sut = new S00203();
-        sut.RemoveElements(null, 1).Should().BeNull();
+        Assert.That(sut.RemoveElements(null, 1), Is.Null);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00203();
-        sut.RemoveElements(ListNode.Parse("[7,7,7,7]"), 7).Should().BeNull();
+        Assert.That(sut.RemoveElements(ListNode.Parse("[7,7,7,7]"), 7), Is.Null);
     }
 }

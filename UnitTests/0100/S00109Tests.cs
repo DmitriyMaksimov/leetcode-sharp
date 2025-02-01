@@ -17,6 +17,6 @@ public class S00109Tests
     public void T2()
     {
         var sut = new S00109();
-        sut.SortedListToBST(ListNode.Parse("[]")).Should().BeNull();
+        Assert.That(sut.SortedListToBST(ListNode.Parse("[]")), Is.Null);
     }
 }

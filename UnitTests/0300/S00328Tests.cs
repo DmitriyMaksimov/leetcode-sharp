@@ -28,7 +28,7 @@ public class S00328Tests
     {
         var sut = new S00328();
 
-        sut.OddEvenList(null).Should().BeNull();
+        Assert.That(sut.OddEvenList(null), Is.Null);
     }
 
     [Test]
