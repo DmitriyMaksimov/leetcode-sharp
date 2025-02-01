@@ -23,6 +23,6 @@ public class S02094Tests
     public void T3()
     {
         var sut = new S02094();
-        sut.FindEvenNumbers(new[] {3, 7, 5}).Should().BeEmpty();
+        Assert.That(sut.FindEvenNumbers(new[] {3, 7, 5}), Is.Empty);
     }
 }

@@ -16,7 +16,7 @@ public class S00030Tests
     public void T2()
     {
         var sut = new S00030();
-        sut.FindSubstring("wordgoodgoodgoodbestword", new[] {"word", "good", "best", "word"}).Should().BeEmpty();
+        Assert.That(sut.FindSubstring("wordgoodgoodgoodbestword", new[] {"word", "good", "best", "word"}), Is.Empty);
     }
 
     [Test]

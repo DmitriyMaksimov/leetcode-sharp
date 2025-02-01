@@ -23,6 +23,6 @@ public class S00140Tests
     public void T3()
     {
         var sut = new S00140();
-        sut.WordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"]).Should().BeEmpty();
+        Assert.That(sut.WordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"]), Is.Empty);
     }
 }

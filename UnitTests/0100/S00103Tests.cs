@@ -26,7 +26,7 @@ public class S00103Tests
     public void T3()
     {
         var sut = new S00103();
-        sut.ZigzagLevelOrder(null).Should().BeEmpty();
+        Assert.That(sut.ZigzagLevelOrder(null), Is.Empty);
     }
 
     [Test]

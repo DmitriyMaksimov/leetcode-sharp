@@ -16,7 +16,7 @@ public class S00144Tests
     public void T2()
     {
         var sut = new S00144();
-        sut.PreorderTraversal(null).Should().BeEmpty();
+        Assert.That(sut.PreorderTraversal(null), Is.Empty);
     }
 
     [Test]

@@ -16,6 +16,6 @@ public class S00401Tests
     public void T2()
     {
         var sut = new S00401();
-        sut.ReadBinaryWatch(9).Should().BeEmpty();
+        Assert.That(sut.ReadBinaryWatch(9), Is.Empty);
     }
 }

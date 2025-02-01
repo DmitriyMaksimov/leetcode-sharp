@@ -23,6 +23,6 @@ public class S02751Tests
     public void T3()
     {
         var sut = new S02751();
-        sut.SurvivedRobotsHealths([1, 2, 5, 6], [10, 10, 11, 11], "RLRL").Should().BeEmpty();
+        Assert.That(sut.SurvivedRobotsHealths([1, 2, 5, 6], [10, 10, 11, 11], "RLRL"), Is.Empty);
     }
 }

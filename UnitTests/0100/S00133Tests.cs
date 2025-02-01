@@ -46,6 +46,6 @@ public class S00133Tests
         var cloneGraph = sut.CloneGraph(n1);
         cloneGraph.Should().NotBeSameAs(n1);
         Assert.That(cloneGraph.val, Is.EqualTo(1));
-        cloneGraph.neighbors.Should().BeEmpty();
+        Assert.That(cloneGraph.neighbors, Is.Empty);
     }
 }

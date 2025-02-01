@@ -16,6 +16,6 @@ public class S02966Tests
     public void T2()
     {
         var sut = new S02966();
-        sut.DivideArray([1, 3, 3, 2, 7, 3], 3).Should().BeEmpty();
+        Assert.That(sut.DivideArray([1, 3, 3, 2, 7, 3], 3), Is.Empty);
     }
 }

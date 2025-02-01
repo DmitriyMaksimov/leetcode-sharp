@@ -16,7 +16,7 @@ public class S00830Tests
     public void T2()
     {
         var sut = new S00830();
-        sut.LargeGroupPositions("abc").Should().BeEmpty();
+        Assert.That(sut.LargeGroupPositions("abc"), Is.Empty);
     }
 
     [Test]

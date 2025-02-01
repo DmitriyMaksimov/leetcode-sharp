@@ -23,6 +23,6 @@ public class S02788Tests
     public void T3()
     {
         var sut = new S02788();
-        sut.SplitWordsBySeparator(new[] {"|||"}, '|').Should().BeEmpty();
+        Assert.That(sut.SplitWordsBySeparator(new[] {"|||"}, '|'), Is.Empty);
     }
 }

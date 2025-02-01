@@ -23,6 +23,6 @@ public class S00216Tests
     public void T3()
     {
         var sut = new S00216();
-        sut.CombinationSum3(4, 1).Should().BeEmpty();
+        Assert.That(sut.CombinationSum3(4, 1), Is.Empty);
     }
 }

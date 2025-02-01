@@ -23,6 +23,6 @@ public class S01408Tests
     public void T3()
     {
         var sut = new S01408();
-        sut.StringMatching(new[] {"blue", "green", "bu"}).Should().BeEmpty();
+        Assert.That(sut.StringMatching(new[] {"blue", "green", "bu"}), Is.Empty);
     }
 }

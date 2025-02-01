@@ -23,6 +23,6 @@ public class S00438Tests
     public void T3()
     {
         var sut = new S00438();
-        sut.FindAnagrams("aaaaaaaaaa", "aaaaaaaaaaaaa").Should().BeEmpty();
+        Assert.That(sut.FindAnagrams("aaaaaaaaaa", "aaaaaaaaaaaaa"), Is.Empty);
     }
 }

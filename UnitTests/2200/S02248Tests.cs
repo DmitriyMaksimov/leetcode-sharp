@@ -16,6 +16,6 @@ public class S02248Tests
     public void T2()
     {
         var sut = new S02248();
-        sut.Intersection(new[] {new[] {1, 2, 3}, new[] {4, 5, 6}}).Should().BeEmpty();
+        Assert.That(sut.Intersection(new[] {new[] {1, 2, 3}, new[] {4, 5, 6}}), Is.Empty);
     }
 }

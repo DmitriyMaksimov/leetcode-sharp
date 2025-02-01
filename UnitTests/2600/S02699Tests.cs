@@ -16,7 +16,7 @@ public class S02699Tests
     public void T2()
     {
         var sut = new S02699();
-        sut.ModifiedGraphEdges(3, [[0, 1, -1], [0, 2, 5]], 0, 2, 6).Should().BeEmpty();
+        Assert.That(sut.ModifiedGraphEdges(3, [[0, 1, -1], [0, 2, 5]], 0, 2, 6), Is.Empty);
     }
 
     [Test]

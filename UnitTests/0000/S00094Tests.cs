@@ -16,7 +16,7 @@ public class S00094Tests
     public void T2()
     {
         var sut = new S00094();
-        sut.InorderTraversal(null).Should().BeEmpty();
+        Assert.That(sut.InorderTraversal(null), Is.Empty);
     }
     
     [Test]

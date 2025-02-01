@@ -26,7 +26,7 @@ public class S00102Tests
     public void T3()
     {
         var sut = new S00102();
-        sut.LevelOrder(null).Should().BeEmpty();
+        Assert.That(sut.LevelOrder(null), Is.Empty);
     }
 
     [Test]

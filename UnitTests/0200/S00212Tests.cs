@@ -28,7 +28,7 @@ public class S00212Tests
             new[] {'a', 'b'},
             new[] {'c', 'd'},
         };
-        sut.FindWords(board, new[] {"abcb"}).Should().BeEmpty();
+        Assert.That(sut.FindWords(board, new[] {"abcb"}), Is.Empty);
     }
 
     [Test]

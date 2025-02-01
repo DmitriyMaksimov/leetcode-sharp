@@ -16,6 +16,6 @@ public class S02392Tests
     public void T2()
     {
         var sut = new S02392();
-        sut.BuildMatrix(3, [[1, 2], [2, 3], [3, 1], [2, 3]], [[2, 1]]).Should().BeEmpty();
+        Assert.That(sut.BuildMatrix(3, [[1, 2], [2, 3], [3, 1], [2, 3]], [[2, 1]]), Is.Empty);
     }
 }

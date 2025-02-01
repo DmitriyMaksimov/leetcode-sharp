@@ -9,7 +9,7 @@ public class S00590Tests
     public void T1()
     {
         var sut = new S00590();
-        sut.Postorder(null).Should().BeEmpty();
+        Assert.That(sut.Postorder(null), Is.Empty);
     }
 
     [Test]

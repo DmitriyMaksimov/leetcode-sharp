@@ -22,6 +22,6 @@ public class S02215Tests
         var list = sut.FindDifference(new[] {1, 2, 3, 3}, new[] {1, 1, 2, 2});
         list.Should().HaveCount(2);
         Assert.That(list[0], Is.EqualTo((int[]) [3]));
-        list[1].Should().BeEmpty();
+        Assert.That(list[1], Is.Empty);
     }
 }

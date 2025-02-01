@@ -16,6 +16,6 @@ public class S00986Tests
     public void T2()
     {
         var sut = new S00986();
-        sut.IntervalIntersection([[1, 3], [5, 9]], []).Should().BeEmpty();
+        Assert.That(sut.IntervalIntersection([[1, 3], [5, 9]], []), Is.Empty);
     }
 }

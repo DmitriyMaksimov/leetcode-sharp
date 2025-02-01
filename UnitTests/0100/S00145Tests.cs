@@ -16,7 +16,7 @@ public class S00145Tests
     public void T2()
     {
         var sut = new S00145();
-        sut.PostorderTraversal(null).Should().BeEmpty();
+        Assert.That(sut.PostorderTraversal(null), Is.Empty);
     }
     
     [Test]

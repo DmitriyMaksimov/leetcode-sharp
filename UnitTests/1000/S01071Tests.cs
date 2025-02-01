@@ -23,6 +23,6 @@ public class S01071Tests
     public void T3()
     {
         var sut = new S01071();
-        sut.GcdOfStrings("LEET", "CODE").Should().BeEmpty();
+        Assert.That(sut.GcdOfStrings("LEET", "CODE"), Is.Empty);
     }
 }
