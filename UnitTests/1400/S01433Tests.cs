@@ -9,20 +9,20 @@ public class S01433Tests
     public void T1()
     {
         var sut = new S01433();
-        sut.CheckIfCanBreak("abc", "xya").Should().BeTrue();
+        Assert.That(sut.CheckIfCanBreak("abc", "xya"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01433();
-        sut.CheckIfCanBreak("abe", "acd").Should().BeFalse();
+        Assert.That(sut.CheckIfCanBreak("abe", "acd"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01433();
-        sut.CheckIfCanBreak("leetcodee", "interview").Should().BeTrue();
+        Assert.That(sut.CheckIfCanBreak("leetcodee", "interview"), Is.True);
     }
 }

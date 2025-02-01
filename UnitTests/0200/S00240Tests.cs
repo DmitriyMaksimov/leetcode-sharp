@@ -17,7 +17,7 @@ public class S00240Tests
             new[] {10, 13, 14, 17, 24},
             new[] {18, 21, 23, 26, 30}
         };
-        sut.SearchMatrix(matrix, 5).Should().BeTrue();
+        Assert.That(sut.SearchMatrix(matrix, 5), Is.True);
     }
 
     [Test]
@@ -32,6 +32,6 @@ public class S00240Tests
             new[] {10, 13, 14, 17, 24},
             new[] {18, 21, 23, 26, 30}
         };
-        sut.SearchMatrix(matrix, 20).Should().BeFalse();
+        Assert.That(sut.SearchMatrix(matrix, 20), Is.False);
     }
 }

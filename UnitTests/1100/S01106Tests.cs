@@ -9,20 +9,20 @@ public class S01106Tests
     public void T1()
     {
         var sut = new S01106();
-        sut.ParseBoolExpr("&(|(f))").Should().BeFalse();
+        Assert.That(sut.ParseBoolExpr("&(|(f))"), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01106();
-        sut.ParseBoolExpr("|(f,f,f,t)").Should().BeTrue();
+        Assert.That(sut.ParseBoolExpr("|(f,f,f,t)"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01106();
-        sut.ParseBoolExpr("!(&(f,t))").Should().BeTrue();
+        Assert.That(sut.ParseBoolExpr("!(&(f,t))"), Is.True);
     }
 }

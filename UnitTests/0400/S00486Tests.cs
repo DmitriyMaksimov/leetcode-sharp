@@ -9,13 +9,13 @@ public class S00486Tests
     public void T1()
     {
         var sut = new S00486();
-        sut.PredictTheWinner(new[] {1, 5, 2}).Should().BeFalse();
+        Assert.That(sut.PredictTheWinner(new[] {1, 5, 2}), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00486();
-        sut.PredictTheWinner(new[] {1, 5, 233, 7}).Should().BeTrue();
+        Assert.That(sut.PredictTheWinner(new[] {1, 5, 233, 7}), Is.True);
     }
 }

@@ -9,13 +9,13 @@ public class S00657Tests
     public void T1()
     {
         var sut = new S00657();
-        sut.JudgeCircle("UD").Should().BeTrue();
+        Assert.That(sut.JudgeCircle("UD"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00657();
-        sut.JudgeCircle("LL").Should().BeFalse();
+        Assert.That(sut.JudgeCircle("LL"), Is.False);
     }
 }

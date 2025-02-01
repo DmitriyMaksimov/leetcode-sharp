@@ -9,13 +9,13 @@ public class S01037Tests
     public void T1()
     {
         var sut = new S01037();
-        sut.IsBoomerang(new[] {new[] {1, 1}, new[] {2, 3}, new[] {3, 2}}).Should().BeTrue();
+        Assert.That(sut.IsBoomerang(new[] {new[] {1, 1}, new[] {2, 3}, new[] {3, 2}}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01037();
-        sut.IsBoomerang(new[] {new[] {1, 1}, new[] {2, 2}, new[] {3, 3}}).Should().BeFalse();
+        Assert.That(sut.IsBoomerang(new[] {new[] {1, 1}, new[] {2, 2}, new[] {3, 3}}), Is.False);
     }
 }

@@ -9,13 +9,13 @@ public class S01784Tests
     public void T1()
     {
         var sut = new S01784();
-        sut.CheckOnesSegment("1001").Should().BeFalse();
+        Assert.That(sut.CheckOnesSegment("1001"), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01784();
-        sut.CheckOnesSegment("110").Should().BeTrue();
+        Assert.That(sut.CheckOnesSegment("110"), Is.True);
     }
 }

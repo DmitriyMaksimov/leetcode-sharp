@@ -9,20 +9,20 @@ public class S01041Tests
     public void T1()
     {
         var sut = new S01041();
-        sut.IsRobotBounded("GGLLGG").Should().BeTrue();
+        Assert.That(sut.IsRobotBounded("GGLLGG"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01041();
-        sut.IsRobotBounded("GG").Should().BeFalse();
+        Assert.That(sut.IsRobotBounded("GG"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01041();
-        sut.IsRobotBounded("GL").Should().BeTrue();
+        Assert.That(sut.IsRobotBounded("GL"), Is.True);
     }
 }

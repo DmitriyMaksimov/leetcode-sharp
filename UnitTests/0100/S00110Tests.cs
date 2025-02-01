@@ -9,20 +9,20 @@ public class S00110Tests
     public void T1()
     {
         var sut = new S00110();
-        sut.IsBalanced(TreeNode.Parse("[3,9,20,null,null,15,7]")).Should().BeTrue();
+        Assert.That(sut.IsBalanced(TreeNode.Parse("[3,9,20,null,null,15,7]")), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00110();
-        sut.IsBalanced(TreeNode.Parse("[1,2,2,3,3,null,null,4,4]")).Should().BeFalse();
+        Assert.That(sut.IsBalanced(TreeNode.Parse("[1,2,2,3,3,null,null,4,4]")), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00110();
-        sut.IsBalanced(null).Should().BeTrue();
+        Assert.That(sut.IsBalanced(null), Is.True);
     }
 }

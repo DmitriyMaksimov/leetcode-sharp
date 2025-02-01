@@ -9,20 +9,20 @@ public class S03407Tests
     public void T1()
     {
         var sut = new S03407();
-        sut.HasMatch("leetcode", "ee*e").Should().BeTrue();
+        Assert.That(sut.HasMatch("leetcode", "ee*e"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03407();
-        sut.HasMatch("car", "c*v").Should().BeFalse();
+        Assert.That(sut.HasMatch("car", "c*v"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03407();
-        sut.HasMatch("luck", "u*").Should().BeTrue();
+        Assert.That(sut.HasMatch("luck", "u*"), Is.True);
     }
 }

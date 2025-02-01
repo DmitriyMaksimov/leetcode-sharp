@@ -9,20 +9,20 @@ public class S00846Tests
     public void T1()
     {
         var sut = new S00846();
-        sut.IsNStraightHand([1, 2, 3, 6, 2, 3, 4, 7, 8], 3).Should().BeTrue();
+        Assert.That(sut.IsNStraightHand([1, 2, 3, 6, 2, 3, 4, 7, 8], 3), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00846();
-        sut.IsNStraightHand([1, 2, 3, 4, 5], 4).Should().BeFalse();
+        Assert.That(sut.IsNStraightHand([1, 2, 3, 4, 5], 4), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00846();
-        sut.IsNStraightHand([2, 1], 2).Should().BeTrue();
+        Assert.That(sut.IsNStraightHand([2, 1], 2), Is.True);
     }
 }

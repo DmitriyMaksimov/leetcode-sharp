@@ -9,13 +9,13 @@ public class S02331Tests
     public void T1()
     {
         var sut = new S02331();
-        sut.EvaluateTree(TreeNode.Parse("[2,1,3,null,null,0,1]")!).Should().BeTrue();
+        Assert.That(sut.EvaluateTree(TreeNode.Parse("[2,1,3,null,null,0,1]")!), Is.True);
     }
     [Test]
     public void T3()
     {
         var sut = new S02331();
-        sut.EvaluateTree(TreeNode.Parse("[0]")!).Should().BeFalse();
+        Assert.That(sut.EvaluateTree(TreeNode.Parse("[0]")!), Is.False);
     }
 
 }

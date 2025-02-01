@@ -9,20 +9,20 @@ public class S02825Tests
     public void T1()
     {
         var sut = new S02825();
-        sut.CanMakeSubsequence("abc", "ad").Should().BeTrue();
+        Assert.That(sut.CanMakeSubsequence("abc", "ad"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02825();
-        sut.CanMakeSubsequence("zc", "ad").Should().BeTrue();
+        Assert.That(sut.CanMakeSubsequence("zc", "ad"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02825();
-        sut.CanMakeSubsequence("ab", "d").Should().BeFalse();
+        Assert.That(sut.CanMakeSubsequence("ab", "d"), Is.False);
     }
 }

@@ -9,20 +9,20 @@ public class S01752Tests
     public void T1()
     {
         var sut = new S01752();
-        sut.Check(new[] {3, 4, 5, 1, 2}).Should().BeTrue();
+        Assert.That(sut.Check(new[] {3, 4, 5, 1, 2}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01752();
-        sut.Check(new[] {2, 1, 3, 4}).Should().BeFalse();
+        Assert.That(sut.Check(new[] {2, 1, 3, 4}), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01752();
-        sut.Check(new[] {1, 2, 3}).Should().BeTrue();
+        Assert.That(sut.Check(new[] {1, 2, 3}), Is.True);
     }
 }

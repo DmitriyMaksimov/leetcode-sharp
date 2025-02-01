@@ -11,11 +11,11 @@ public class S00705Tests
         var myHashSet = new S00705.MyHashSet();
         myHashSet.Add(1);
         myHashSet.Add(2);
-        myHashSet.Contains(1).Should().BeTrue();
-        myHashSet.Contains(3).Should().BeFalse();
+        Assert.That(myHashSet.Contains(1), Is.True);
+        Assert.That(myHashSet.Contains(3), Is.False);
         myHashSet.Add(2);
-        myHashSet.Contains(2).Should().BeTrue();
+        Assert.That(myHashSet.Contains(2), Is.True);
         myHashSet.Remove(2);
-        myHashSet.Contains(2).Should().BeFalse();
+        Assert.That(myHashSet.Contains(2), Is.False);
     }
 }

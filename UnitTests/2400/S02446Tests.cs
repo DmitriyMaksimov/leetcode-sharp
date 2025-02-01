@@ -9,20 +9,20 @@ public class S02446Tests
     public void T1()
     {
         var sut = new S02446();
-        sut.HaveConflict(new[] {"01:15", "02:00"}, new[] {"02:00", "03:00"}).Should().BeTrue();
+        Assert.That(sut.HaveConflict(new[] {"01:15", "02:00"}, new[] {"02:00", "03:00"}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02446();
-        sut.HaveConflict(new[] {"01:00", "02:00"}, new[] {"01:20", "03:00"}).Should().BeTrue();
+        Assert.That(sut.HaveConflict(new[] {"01:00", "02:00"}, new[] {"01:20", "03:00"}), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02446();
-        sut.HaveConflict(new[] {"10:00", "11:00"}, new[] {"14:00", "15:00"}).Should().BeFalse();
+        Assert.That(sut.HaveConflict(new[] {"10:00", "11:00"}, new[] {"14:00", "15:00"}), Is.False);
     }
 }

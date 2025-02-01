@@ -9,13 +9,13 @@ public class S03349Tests
     public void T1()
     {
         var sut = new S03349();
-        sut.HasIncreasingSubarrays([2, 5, 7, 8, 9, 2, 3, 4, 3, 1], 3).Should().BeTrue();
+        Assert.That(sut.HasIncreasingSubarrays([2, 5, 7, 8, 9, 2, 3, 4, 3, 1], 3), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03349();
-        sut.HasIncreasingSubarrays([1, 2, 3, 4, 4, 4, 4, 5, 6, 7], 5).Should().BeFalse();
+        Assert.That(sut.HasIncreasingSubarrays([1, 2, 3, 4, 4, 4, 4, 5, 6, 7], 5), Is.False);
     }
 }

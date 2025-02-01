@@ -9,20 +9,20 @@ public class S00678Tests
     public void T1()
     {
         var sut = new S00678();
-        sut.CheckValidString("()").Should().BeTrue();
+        Assert.That(sut.CheckValidString("()"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00678();
-        sut.CheckValidString("(*)").Should().BeTrue();
+        Assert.That(sut.CheckValidString("(*)"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00678();
-        sut.CheckValidString("(*))").Should().BeTrue();
+        Assert.That(sut.CheckValidString("(*))"), Is.True);
     }
 }

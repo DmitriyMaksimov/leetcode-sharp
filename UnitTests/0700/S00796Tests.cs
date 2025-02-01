@@ -9,13 +9,13 @@ public class S00796Tests
     public void T1()
     {
         var sut = new S00796();
-        sut.RotateString("abcde", "cdeab").Should().BeTrue();
+        Assert.That(sut.RotateString("abcde", "cdeab"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00796();
-        sut.RotateString("abcde", "abced").Should().BeFalse();
+        Assert.That(sut.RotateString("abcde", "abced"), Is.False);
     }
 }

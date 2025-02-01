@@ -9,20 +9,20 @@ public class S02299Tests
     public void T1()
     {
         var sut = new S02299();
-        sut.StrongPasswordCheckerII("IloveLe3tcode!").Should().BeTrue();
+        Assert.That(sut.StrongPasswordCheckerII("IloveLe3tcode!"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02299();
-        sut.StrongPasswordCheckerII("Me+You--IsMyDream").Should().BeFalse();
+        Assert.That(sut.StrongPasswordCheckerII("Me+You--IsMyDream"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02299();
-        sut.StrongPasswordCheckerII("1aB!").Should().BeFalse();
+        Assert.That(sut.StrongPasswordCheckerII("1aB!"), Is.False);
     }
 }

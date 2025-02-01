@@ -9,21 +9,21 @@ public class S00292Tests
     public void T1()
     {
         var sut = new S00292();
-        sut.CanWinNim(4).Should().BeFalse();
+        Assert.That(sut.CanWinNim(4), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00292();
-        sut.CanWinNim(1).Should().BeTrue();
+        Assert.That(sut.CanWinNim(1), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00292();
-        sut.CanWinNim(2).Should().BeTrue();
+        Assert.That(sut.CanWinNim(2), Is.True);
     }
 
 }

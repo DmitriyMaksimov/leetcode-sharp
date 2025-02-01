@@ -13,6 +13,6 @@ public class S00225Tests
         myStack.Push(2);
         Assert.That(myStack.Top(), Is.EqualTo(2));
         Assert.That(myStack.Pop(), Is.EqualTo(2));
-        myStack.Empty().Should().BeFalse();
+        Assert.That(myStack.Empty(), Is.False);
     }
 }

@@ -9,14 +9,14 @@ public class S00958Tests
     public void T1()
     {
         var sut = new S00958();
-        sut.IsCompleteTree(TreeNode.Parse("[1,2,3,4,5,6]")).Should().BeTrue();
+        Assert.That(sut.IsCompleteTree(TreeNode.Parse("[1,2,3,4,5,6]")), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00958();
-        sut.IsCompleteTree(TreeNode.Parse("[1,2,3,4,5,null,7]")).Should().BeFalse();
+        Assert.That(sut.IsCompleteTree(TreeNode.Parse("[1,2,3,4,5,null,7]")), Is.False);
     }
 
     [Test]
@@ -24,6 +24,6 @@ public class S00958Tests
     {
         var sut = new S00958();
         TreeNode.Print(TreeNode.Parse("[1,2,3,4,5,6,7,8,9,10,11,12,13,null,null,15]"));
-        sut.IsCompleteTree(TreeNode.Parse("[1,2,3,4,5,6,7,8,9,10,11,12,13,null,null,15]")).Should().BeFalse();
+        Assert.That(sut.IsCompleteTree(TreeNode.Parse("[1,2,3,4,5,6,7,8,9,10,11,12,13,null,null,15]")), Is.False);
     }
 }

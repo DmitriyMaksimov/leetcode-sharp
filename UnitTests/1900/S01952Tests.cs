@@ -9,13 +9,13 @@ public class S01952Tests
     public void T1()
     {
         var sut = new S01952();
-        sut.IsThree(2).Should().BeFalse();
+        Assert.That(sut.IsThree(2), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01952();
-        sut.IsThree(4).Should().BeTrue();
+        Assert.That(sut.IsThree(4), Is.True);
     }
 }

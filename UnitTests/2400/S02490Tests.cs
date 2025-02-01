@@ -9,20 +9,20 @@ public class S02490Tests
     public void T1()
     {
         var sut = new S02490();
-        sut.IsCircularSentence("leetcode exercises sound delightful").Should().BeTrue();
+        Assert.That(sut.IsCircularSentence("leetcode exercises sound delightful"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02490();
-        sut.IsCircularSentence("eetcode").Should().BeTrue();
+        Assert.That(sut.IsCircularSentence("eetcode"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02490();
-        sut.IsCircularSentence("Leetcode is cool").Should().BeFalse();
+        Assert.That(sut.IsCircularSentence("Leetcode is cool"), Is.False);
     }
 }

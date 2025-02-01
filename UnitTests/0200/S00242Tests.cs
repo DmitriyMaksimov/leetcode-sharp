@@ -9,13 +9,13 @@ public class S00242Tests
     public void T1()
     {
         var sut = new S00242();
-        sut.IsAnagram("anagram", "nagaram").Should().BeTrue();
+        Assert.That(sut.IsAnagram("anagram", "nagaram"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00242();
-        sut.IsAnagram("rat", "car").Should().BeFalse();
+        Assert.That(sut.IsAnagram("rat", "car"), Is.False);
     }
 }

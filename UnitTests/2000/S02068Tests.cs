@@ -9,20 +9,20 @@ public class S02068Tests
     public void T1()
     {
         var sut = new S02068();
-        sut.CheckAlmostEquivalent("aaaa", "bccb").Should().BeFalse();
+        Assert.That(sut.CheckAlmostEquivalent("aaaa", "bccb"), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02068();
-        sut.CheckAlmostEquivalent("abcdeef", "abaaacc").Should().BeTrue();
+        Assert.That(sut.CheckAlmostEquivalent("abcdeef", "abaaacc"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02068();
-        sut.CheckAlmostEquivalent("cccddabba", "babababab").Should().BeTrue();
+        Assert.That(sut.CheckAlmostEquivalent("cccddabba", "babababab"), Is.True);
     }
 }

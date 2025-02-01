@@ -9,28 +9,28 @@ public class S00139Tests
     public void T1()
     {
         var sut = new S00139();
-        sut.WordBreak("leetcode", new List<string> {"leet", "code"}).Should().BeTrue();
+        Assert.That(sut.WordBreak("leetcode", new List<string> {"leet", "code"}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00139();
-        sut.WordBreak("applepenapple", new List<string> {"apple", "pen"}).Should().BeTrue();
+        Assert.That(sut.WordBreak("applepenapple", new List<string> {"apple", "pen"}), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00139();
-        sut.WordBreak("catsandog", new List<string> {"cats", "dog", "sand", "and", "cat"}).Should().BeFalse();
+        Assert.That(sut.WordBreak("catsandog", new List<string> {"cats", "dog", "sand", "and", "cat"}), Is.False);
     }
 
     [Test]
     public void T4()
     {
         var sut = new S00139();
-        sut.WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
-            new List<string> {"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"}).Should().BeFalse();
+        Assert.That(sut.WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+            new List<string> {"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"}), Is.False);
     }
 }

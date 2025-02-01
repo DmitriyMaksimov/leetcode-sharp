@@ -9,13 +9,13 @@ public class S01025Tests
     public void T1()
     {
         var sut = new S01025();
-        sut.DivisorGame(2).Should().BeTrue();
+        Assert.That(sut.DivisorGame(2), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01025();
-        sut.DivisorGame(3).Should().BeFalse();
+        Assert.That(sut.DivisorGame(3), Is.False);
     }
 }

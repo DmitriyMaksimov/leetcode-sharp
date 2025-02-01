@@ -9,13 +9,13 @@ public class S01437Tests
     public void T1()
     {
         var sut = new S01437();
-        sut.KLengthApart(new[] {1, 0, 0, 0, 1, 0, 0, 1}, 2).Should().BeTrue();
+        Assert.That(sut.KLengthApart(new[] {1, 0, 0, 0, 1, 0, 0, 1}, 2), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01437();
-        sut.KLengthApart(new[] {1, 0, 0, 1, 0, 1}, 2).Should().BeFalse();
+        Assert.That(sut.KLengthApart(new[] {1, 0, 0, 1, 0, 1}, 2), Is.False);
     }
 }

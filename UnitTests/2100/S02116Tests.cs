@@ -9,20 +9,20 @@ public class S02116Tests
     public void T1()
     {
         var sut = new S02116();
-        sut.CanBeValid("))()))", "010100").Should().BeTrue();
+        Assert.That(sut.CanBeValid("))()))", "010100"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02116();
-        sut.CanBeValid("()()", "0000").Should().BeTrue();
+        Assert.That(sut.CanBeValid("()()", "0000"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02116();
-        sut.CanBeValid(")", "0").Should().BeFalse();
+        Assert.That(sut.CanBeValid(")", "0"), Is.False);
     }
 }

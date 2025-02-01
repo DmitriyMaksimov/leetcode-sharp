@@ -9,20 +9,20 @@ public class S00219Tests
     public void T1()
     {
         var sut = new S00219();
-        sut.ContainsNearbyDuplicate(new[] {1, 2, 3, 1}, 3).Should().BeTrue();
+        Assert.That(sut.ContainsNearbyDuplicate(new[] {1, 2, 3, 1}, 3), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00219();
-        sut.ContainsNearbyDuplicate(new[] {1, 0, 1, 1}, 1).Should().BeTrue();
+        Assert.That(sut.ContainsNearbyDuplicate(new[] {1, 0, 1, 1}, 1), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00219();
-        sut.ContainsNearbyDuplicate(new[] {1, 2, 3, 1, 2, 3}, 2).Should().BeFalse();
+        Assert.That(sut.ContainsNearbyDuplicate(new[] {1, 2, 3, 1, 2, 3}, 2), Is.False);
     }
 }

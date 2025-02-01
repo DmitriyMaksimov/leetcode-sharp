@@ -9,13 +9,13 @@ public class S01502Tests
     public void T1()
     {
         var sut = new S01502();
-        sut.CanMakeArithmeticProgression(new[] {3, 5, 1}).Should().BeTrue();
+        Assert.That(sut.CanMakeArithmeticProgression(new[] {3, 5, 1}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01502();
-        sut.CanMakeArithmeticProgression(new[] {1, 2, 4}).Should().BeFalse();
+        Assert.That(sut.CanMakeArithmeticProgression(new[] {1, 2, 4}), Is.False);
     }
 }

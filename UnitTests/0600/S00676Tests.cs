@@ -10,9 +10,9 @@ public class S00676Tests
     {
         var sut = new S00676.MagicDictionary();
         sut.BuildDict(["hello", "leetcode"]);
-        sut.Search("hello").Should().BeFalse();
-        sut.Search("hhllo").Should().BeTrue();
-        sut.Search("hell").Should().BeFalse();
-        sut.Search("leetcoded").Should().BeFalse();
+        Assert.That(sut.Search("hello"), Is.False);
+        Assert.That(sut.Search("hhllo"), Is.True);
+        Assert.That(sut.Search("hell"), Is.False);
+        Assert.That(sut.Search("leetcoded"), Is.False);
     }
 }

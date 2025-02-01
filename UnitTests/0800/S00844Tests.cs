@@ -9,20 +9,20 @@ public class S00844Tests
     public void T1()
     {
         var sut = new S00844();
-        sut.BackspaceCompare("ab#c", "ad#c").Should().BeTrue();
+        Assert.That(sut.BackspaceCompare("ab#c", "ad#c"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00844();
-        sut.BackspaceCompare("ab##", "c#d#").Should().BeTrue();
+        Assert.That(sut.BackspaceCompare("ab##", "c#d#"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00844();
-        sut.BackspaceCompare("a#c", "b").Should().BeFalse();
+        Assert.That(sut.BackspaceCompare("a#c", "b"), Is.False);
     }
 }

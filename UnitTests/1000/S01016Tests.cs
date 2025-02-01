@@ -9,13 +9,13 @@ public class S01016Tests
     public void T1()
     {
         var sut = new S01016();
-        sut.QueryString("0110", 3).Should().BeTrue();
+        Assert.That(sut.QueryString("0110", 3), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01016();
-        sut.QueryString("0110", 4).Should().BeFalse();
+        Assert.That(sut.QueryString("0110", 4), Is.False);
     }
 }

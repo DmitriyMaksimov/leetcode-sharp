@@ -9,27 +9,27 @@ public class S02038Tests
     public void T1()
     {
         var sut = new S02038();
-        sut.WinnerOfGame("AAABABB").Should().BeTrue();
+        Assert.That(sut.WinnerOfGame("AAABABB"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02038();
-        sut.WinnerOfGame("AA").Should().BeFalse();
+        Assert.That(sut.WinnerOfGame("AA"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02038();
-        sut.WinnerOfGame("ABBBBBBBAAA").Should().BeFalse();
+        Assert.That(sut.WinnerOfGame("ABBBBBBBAAA"), Is.False);
     }
 
     [Test]
     public void T4()
     {
         var sut = new S02038();
-        sut.WinnerOfGame("AAAAABBB").Should().BeTrue();
+        Assert.That(sut.WinnerOfGame("AAAAABBB"), Is.True);
     }
 }

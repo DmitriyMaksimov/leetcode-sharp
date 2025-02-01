@@ -9,20 +9,20 @@ public class S00680Tests
     public void T1()
     {
         var sut = new S00680();
-        sut.ValidPalindrome("aba").Should().BeTrue();
+        Assert.That(sut.ValidPalindrome("aba"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00680();
-        sut.ValidPalindrome("abca").Should().BeTrue();
+        Assert.That(sut.ValidPalindrome("abca"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00680();
-        sut.ValidPalindrome("abc").Should().BeFalse();
+        Assert.That(sut.ValidPalindrome("abc"), Is.False);
     }
 }

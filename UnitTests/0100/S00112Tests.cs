@@ -9,20 +9,20 @@ public class S00112Tests
     public void T1()
     {
         var sut = new S00112();
-        sut.HasPathSum(TreeNode.Parse("[5,4,8,11,null,13,4,7,2,null,null,null,1]"), 22).Should().BeTrue();
+        Assert.That(sut.HasPathSum(TreeNode.Parse("[5,4,8,11,null,13,4,7,2,null,null,null,1]"), 22), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00112();
-        sut.HasPathSum(TreeNode.Parse("[1,2,3]"), 5).Should().BeFalse();
+        Assert.That(sut.HasPathSum(TreeNode.Parse("[1,2,3]"), 5), Is.False);
     }
     
     [Test]
     public void T3()
     {
         var sut = new S00112();
-        sut.HasPathSum(null, 0).Should().BeFalse();
+        Assert.That(sut.HasPathSum(null, 0), Is.False);
     }
 }

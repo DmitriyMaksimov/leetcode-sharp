@@ -9,20 +9,20 @@ public class S00087Tests
     public void T1()
     {
         var sut = new S00087();
-        sut.IsScramble("great", "rgeat").Should().BeTrue();
+        Assert.That(sut.IsScramble("great", "rgeat"), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00087();
-        sut.IsScramble("abcde", "caebd").Should().BeFalse();
+        Assert.That(sut.IsScramble("abcde", "caebd"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00087();
-        sut.IsScramble("a", "a").Should().BeTrue();
+        Assert.That(sut.IsScramble("a", "a"), Is.True);
     }
 }

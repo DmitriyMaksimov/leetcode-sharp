@@ -9,13 +9,13 @@ public class S00234Tests
     public void T1()
     {
         var sut = new S00234();
-        sut.IsPalindrome(ListNode.Parse("[1,2,2,1]")).Should().BeTrue();
+        Assert.That(sut.IsPalindrome(ListNode.Parse("[1,2,2,1]")), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00234();
-        sut.IsPalindrome(ListNode.Parse("[1,2]")).Should().BeFalse();
+        Assert.That(sut.IsPalindrome(ListNode.Parse("[1,2]")), Is.False);
     }
 }

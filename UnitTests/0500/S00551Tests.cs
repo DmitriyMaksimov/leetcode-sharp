@@ -9,13 +9,13 @@ public class S00551Tests
     public void T1()
     {
         var sut = new S00551();
-        sut.CheckRecord("PPALLP").Should().BeTrue();
+        Assert.That(sut.CheckRecord("PPALLP"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00551();
-        sut.CheckRecord("PPALLL").Should().BeFalse();
+        Assert.That(sut.CheckRecord("PPALLL"), Is.False);
     }
 }

@@ -9,13 +9,13 @@ public class S02396Tests
     public void Test1()
     {
         var sut = new S02396();
-        sut.IsStrictlyPalindromic(4).Should().BeFalse();
+        Assert.That(sut.IsStrictlyPalindromic(4), Is.False);
     }
     
     [Test]
     public void Test2()
     {
         var sut = new S02396();
-        sut.IsStrictlyPalindromic(9).Should().BeFalse();
+        Assert.That(sut.IsStrictlyPalindromic(9), Is.False);
     }
 }

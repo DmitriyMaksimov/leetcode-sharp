@@ -9,20 +9,20 @@ public class S00383Tests
     public void T1()
     {
         var sut = new S00383();
-        sut.CanConstruct("a", "b").Should().BeFalse();
+        Assert.That(sut.CanConstruct("a", "b"), Is.False);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00383();
-        sut.CanConstruct("aa", "ab").Should().BeFalse();
+        Assert.That(sut.CanConstruct("aa", "ab"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00383();
-        sut.CanConstruct("aa", "aab").Should().BeTrue();
+        Assert.That(sut.CanConstruct("aa", "aab"), Is.True);
     }
 }

@@ -9,41 +9,41 @@ public class S03083Tests
     public void T1()
     {
         var sut = new S03083();
-        sut.IsSubstringPresent("leetcode").Should().BeTrue();
+        Assert.That(sut.IsSubstringPresent("leetcode"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03083();
-        sut.IsSubstringPresent("abcba").Should().BeTrue();
+        Assert.That(sut.IsSubstringPresent("abcba"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03083();
-        sut.IsSubstringPresent("abcd").Should().BeFalse();
+        Assert.That(sut.IsSubstringPresent("abcd"), Is.False);
     }
 
     [Test]
     public void BruteForce1()
     {
         var sut = new S03083();
-        sut.IsSubstringPresentBruteForce("leetcode").Should().BeTrue();
+        Assert.That(sut.IsSubstringPresentBruteForce("leetcode"), Is.True);
     }
 
     [Test]
     public void BruteForce2()
     {
         var sut = new S03083();
-        sut.IsSubstringPresentBruteForce("abcba").Should().BeTrue();
+        Assert.That(sut.IsSubstringPresentBruteForce("abcba"), Is.True);
     }
 
     [Test]
     public void BruteForce3()
     {
         var sut = new S03083();
-        sut.IsSubstringPresentBruteForce("abcd").Should().BeFalse();
+        Assert.That(sut.IsSubstringPresentBruteForce("abcd"), Is.False);
     }
 }

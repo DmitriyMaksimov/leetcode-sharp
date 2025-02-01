@@ -9,13 +9,13 @@ public class S02840Tests
     public void T1()
     {
         var sut = new S02840();
-        sut.CheckStrings("abcdba", "cabdab").Should().BeTrue();
+        Assert.That(sut.CheckStrings("abcdba", "cabdab"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02840();
-        sut.CheckStrings("abe", "bea").Should().BeFalse();
+        Assert.That(sut.CheckStrings("abe", "bea"), Is.False);
     }
 }

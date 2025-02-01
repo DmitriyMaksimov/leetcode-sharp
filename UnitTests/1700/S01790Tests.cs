@@ -9,20 +9,20 @@ public class S01790Tests
     public void T1()
     {
         var sut = new S01790();
-        sut.AreAlmostEqual("bank", "kanb").Should().BeTrue();
+        Assert.That(sut.AreAlmostEqual("bank", "kanb"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01790();
-        sut.AreAlmostEqual("attack", "defend").Should().BeFalse();
+        Assert.That(sut.AreAlmostEqual("attack", "defend"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01790();
-        sut.AreAlmostEqual("kelb", "kelb").Should().BeTrue();
+        Assert.That(sut.AreAlmostEqual("kelb", "kelb"), Is.True);
     }
 }

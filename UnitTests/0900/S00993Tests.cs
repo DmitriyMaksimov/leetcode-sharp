@@ -9,20 +9,20 @@ public class S00993Tests
     public void T1()
     {
         var sut = new S00993();
-        sut.IsCousins(TreeNode.Parse("[1,2,3,4]"), 4, 3).Should().BeFalse();
+        Assert.That(sut.IsCousins(TreeNode.Parse("[1,2,3,4]"), 4, 3), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00993();
-        sut.IsCousins(TreeNode.Parse("[1,2,3,null,4,null,5]"), 5, 4).Should().BeTrue();
+        Assert.That(sut.IsCousins(TreeNode.Parse("[1,2,3,null,4,null,5]"), 5, 4), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00993();
-        sut.IsCousins(TreeNode.Parse("[1,2,3,null,4]"), 2, 3).Should().BeFalse();
+        Assert.That(sut.IsCousins(TreeNode.Parse("[1,2,3,null,4]"), 2, 3), Is.False);
     }
 }

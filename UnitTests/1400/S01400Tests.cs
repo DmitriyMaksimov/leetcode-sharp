@@ -9,20 +9,20 @@ public class S01400Tests
     public void T1()
     {
         var sut = new S01400();
-        sut.CanConstruct("annabelle", 2).Should().BeTrue();
+        Assert.That(sut.CanConstruct("annabelle", 2), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01400();
-        sut.CanConstruct("leetcode", 3).Should().BeFalse();
+        Assert.That(sut.CanConstruct("leetcode", 3), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01400();
-        sut.CanConstruct("true", 4).Should().BeTrue();
+        Assert.That(sut.CanConstruct("true", 4), Is.True);
     }
 }

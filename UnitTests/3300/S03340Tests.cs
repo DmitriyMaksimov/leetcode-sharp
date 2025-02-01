@@ -9,13 +9,13 @@ public class S03340Tests
     public void T1()
     {
         var sut = new S03340();
-        sut.IsBalanced("1234").Should().BeFalse();
+        Assert.That(sut.IsBalanced("1234"), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03340();
-        sut.IsBalanced("24123").Should().BeTrue();
+        Assert.That(sut.IsBalanced("24123"), Is.True);
     }
 }

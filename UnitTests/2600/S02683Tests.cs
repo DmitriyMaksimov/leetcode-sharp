@@ -9,20 +9,20 @@ public class S02683Tests
     public void T1()
     {
         var sut = new S02683();
-        sut.DoesValidArrayExist([1, 1, 0]).Should().BeTrue();
+        Assert.That(sut.DoesValidArrayExist([1, 1, 0]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02683();
-        sut.DoesValidArrayExist([1, 1]).Should().BeTrue();
+        Assert.That(sut.DoesValidArrayExist([1, 1]), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02683();
-        sut.DoesValidArrayExist([1, 0]).Should().BeFalse();
+        Assert.That(sut.DoesValidArrayExist([1, 0]), Is.False);
     }
 }

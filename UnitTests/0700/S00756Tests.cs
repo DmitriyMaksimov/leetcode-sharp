@@ -9,13 +9,13 @@ public class S00756Tests
     public void T1()
     {
         var sut = new S00756();
-        sut.PyramidTransition("BCD", ["BCC", "CDE", "CEA", "FFF"]).Should().BeTrue();
+        Assert.That(sut.PyramidTransition("BCD", ["BCC", "CDE", "CEA", "FFF"]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00756();
-        sut.PyramidTransition("AAAA", ["AAB", "AAC", "BCD", "BBE", "DEF"]).Should().BeFalse();
+        Assert.That(sut.PyramidTransition("AAAA", ["AAB", "AAC", "BCD", "BBE", "DEF"]), Is.False);
     }
 }

@@ -9,20 +9,20 @@ public class S01869Tests
     public void T1()
     {
         var sut = new S01869();
-        sut.CheckZeroOnes("1101").Should().BeTrue();
+        Assert.That(sut.CheckZeroOnes("1101"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01869();
-        sut.CheckZeroOnes("111000").Should().BeFalse();
+        Assert.That(sut.CheckZeroOnes("111000"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01869();
-        sut.CheckZeroOnes("110100010").Should().BeFalse();
+        Assert.That(sut.CheckZeroOnes("110100010"), Is.False);
     }
 }

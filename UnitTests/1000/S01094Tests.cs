@@ -9,13 +9,13 @@ public class S01094Tests
     public void T1()
     {
         var sut = new S01094();
-        sut.CarPooling([[2, 1, 5], [3, 3, 7]], 4).Should().BeFalse();
+        Assert.That(sut.CarPooling([[2, 1, 5], [3, 3, 7]], 4), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01094();
-        sut.CarPooling([[2, 1, 5], [3, 3, 7]], 5).Should().BeTrue();
+        Assert.That(sut.CarPooling([[2, 1, 5], [3, 3, 7]], 5), Is.True);
     }
 }

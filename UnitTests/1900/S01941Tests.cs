@@ -9,13 +9,13 @@ public class S01941Tests
     public void T1()
     {
         var sut = new S01941();
-        sut.AreOccurrencesEqual("abacbc").Should().BeTrue();
+        Assert.That(sut.AreOccurrencesEqual("abacbc"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01941();
-        sut.AreOccurrencesEqual("aaabb").Should().BeFalse();
+        Assert.That(sut.AreOccurrencesEqual("aaabb"), Is.False);
     }
 }

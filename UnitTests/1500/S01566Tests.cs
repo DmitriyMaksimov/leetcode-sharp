@@ -9,20 +9,20 @@ public class S01566Tests
     public void T1()
     {
         var sut = new S01566();
-        sut.ContainsPattern(new[] {1, 2, 4, 4, 4, 4}, 1, 3).Should().BeTrue();
+        Assert.That(sut.ContainsPattern(new[] {1, 2, 4, 4, 4, 4}, 1, 3), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01566();
-        sut.ContainsPattern(new[] {1, 2, 1, 2, 1, 1, 1, 3}, 2, 2).Should().BeTrue();
+        Assert.That(sut.ContainsPattern(new[] {1, 2, 1, 2, 1, 1, 1, 3}, 2, 2), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01566();
-        sut.ContainsPattern(new[] {1, 2, 1, 2, 1, 3}, 2, 3).Should().BeFalse();
+        Assert.That(sut.ContainsPattern(new[] {1, 2, 1, 2, 1, 3}, 2, 3), Is.False);
     }
 }

@@ -9,14 +9,14 @@ public class S00098Tests
     public void T1()
     {
         var sut = new S00098();
-        sut.IsValidBST(TreeNode.Parse("[2,1,3]")).Should().BeTrue();
+        Assert.That(sut.IsValidBST(TreeNode.Parse("[2,1,3]")), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00098();
-        sut.IsValidBST(TreeNode.Parse("[5,1,4,null,null,3,6]")).Should().BeFalse();
+        Assert.That(sut.IsValidBST(TreeNode.Parse("[5,1,4,null,null,3,6]")), Is.False);
     }
     
     [Test]
@@ -24,6 +24,6 @@ public class S00098Tests
     {
         var sut = new S00098();
         TreeNode.Print(TreeNode.Parse("[5,4,6,null,null,3,7]"));
-        sut.IsValidBST(TreeNode.Parse("[5,4,6,null,null,3,7]")).Should().BeFalse();
+        Assert.That(sut.IsValidBST(TreeNode.Parse("[5,4,6,null,null,3,7]")), Is.False);
     }
 }

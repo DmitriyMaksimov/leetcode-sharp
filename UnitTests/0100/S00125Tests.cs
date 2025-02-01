@@ -9,21 +9,21 @@ public class S00125Tests
     public void T1()
     {
         var sut = new S00125();
-        sut.IsPalindrome("A man, a plan, a canal: Panama").Should().BeTrue();
+        Assert.That(sut.IsPalindrome("A man, a plan, a canal: Panama"), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00125();
-        sut.IsPalindrome("race a car").Should().BeFalse();
+        Assert.That(sut.IsPalindrome("race a car"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00125();
-        sut.IsPalindrome(" ").Should().BeTrue();
+        Assert.That(sut.IsPalindrome(" "), Is.True);
     }
 
 }

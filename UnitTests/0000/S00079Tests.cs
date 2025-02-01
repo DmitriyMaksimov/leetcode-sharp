@@ -9,6 +9,6 @@ public class S00079Tests
     public void Test1()
     {
         var sut = new S00079();
-        sut.Exist(new[] {new[] {'A', 'B', 'C', 'E'}, new[] {'S', 'F', 'C', 'S'}, new[] {'A', 'D', 'E', 'E'}}, "ABCCED").Should().BeTrue();
+        Assert.That(sut.Exist(new[] {new[] {'A', 'B', 'C', 'E'}, new[] {'S', 'F', 'C', 'S'}, new[] {'A', 'D', 'E', 'E'}}, "ABCCED"), Is.True);
     }
 }

@@ -9,16 +9,16 @@ public class S00641Tests
     public void T1()
     {
         var sut = new S00641.MyCircularDeque(3);
-        sut.InsertLast(1).Should().BeTrue();
-        sut.InsertLast(2).Should().BeTrue();
-        sut.InsertFront(3).Should().BeTrue();
-        sut.InsertFront(4).Should().BeFalse();
+        Assert.That(sut.InsertLast(1), Is.True);
+        Assert.That(sut.InsertLast(2), Is.True);
+        Assert.That(sut.InsertFront(3), Is.True);
+        Assert.That(sut.InsertFront(4), Is.False);
         Assert.That(sut.GetRear(), Is.EqualTo(2));
-        sut.IsFull().Should().BeTrue();
-        sut.DeleteLast().Should().BeTrue();
-        sut.InsertFront(4).Should().BeTrue();
+        Assert.That(sut.IsFull(), Is.True);
+        Assert.That(sut.DeleteLast(), Is.True);
+        Assert.That(sut.InsertFront(4), Is.True);
         Assert.That(sut.GetFront(), Is.EqualTo(4));
-        sut.DeleteFront().Should().BeTrue();
+        Assert.That(sut.DeleteFront(), Is.True);
         Assert.That(sut.GetFront(), Is.EqualTo(3));
     }
 }

@@ -9,21 +9,21 @@ public class S00326Tests
     public void T1()
     {
         var sut = new S00326();
-        sut.IsPowerOfThree(27).Should().BeTrue();
+        Assert.That(sut.IsPowerOfThree(27), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00326();
-        sut.IsPowerOfThree(0).Should().BeFalse();
+        Assert.That(sut.IsPowerOfThree(0), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00326();
-        sut.IsPowerOfThree(-1).Should().BeFalse();
+        Assert.That(sut.IsPowerOfThree(-1), Is.False);
     }
 
 }

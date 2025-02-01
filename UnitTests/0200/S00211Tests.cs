@@ -12,10 +12,10 @@ public class S00211Tests
         wordDictionary.AddWord("bad");
         wordDictionary.AddWord("dad");
         wordDictionary.AddWord("mad");
-        wordDictionary.Search("pad").Should().BeFalse();
-        wordDictionary.Search("bad").Should().BeTrue();
-        wordDictionary.Search(".ad").Should().BeTrue();
-        wordDictionary.Search("b..").Should().BeTrue();
+        Assert.That(wordDictionary.Search("pad"), Is.False);
+        Assert.That(wordDictionary.Search("bad"), Is.True);
+        Assert.That(wordDictionary.Search(".ad"), Is.True);
+        Assert.That(wordDictionary.Search("b.."), Is.True);
     }
 
     [Test]
@@ -24,10 +24,10 @@ public class S00211Tests
         var wordDictionary = new S00211.WordDictionary();
         wordDictionary.AddWord("a");
         wordDictionary.AddWord("a");
-        wordDictionary.Search(".").Should().BeTrue();
-        wordDictionary.Search("a").Should().BeTrue();
-        wordDictionary.Search("aa").Should().BeFalse();
-        wordDictionary.Search("a.").Should().BeFalse();
+        Assert.That(wordDictionary.Search("."), Is.True);
+        Assert.That(wordDictionary.Search("a"), Is.True);
+        Assert.That(wordDictionary.Search("aa"), Is.False);
+        Assert.That(wordDictionary.Search("a."), Is.False);
     }
 
     [Test]
@@ -38,14 +38,14 @@ public class S00211Tests
         wordDictionary.AddWord("and");
         wordDictionary.AddWord("an");
         wordDictionary.AddWord("add");
-        wordDictionary.Search("a").Should().BeFalse();
-        wordDictionary.Search(".at").Should().BeFalse();
+        Assert.That(wordDictionary.Search("a"), Is.False);
+        Assert.That(wordDictionary.Search(".at"), Is.False);
         wordDictionary.AddWord("bat");
-        wordDictionary.Search(".at").Should().BeTrue();
-        wordDictionary.Search("an.").Should().BeTrue();
-        wordDictionary.Search("a.d.").Should().BeFalse();
-        wordDictionary.Search("b.").Should().BeFalse();
-        wordDictionary.Search("a.d").Should().BeTrue();
-        wordDictionary.Search(".").Should().BeFalse();
+        Assert.That(wordDictionary.Search(".at"), Is.True);
+        Assert.That(wordDictionary.Search("an."), Is.True);
+        Assert.That(wordDictionary.Search("a.d."), Is.False);
+        Assert.That(wordDictionary.Search("b."), Is.False);
+        Assert.That(wordDictionary.Search("a.d"), Is.True);
+        Assert.That(wordDictionary.Search("."), Is.False);
     }
 }

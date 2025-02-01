@@ -9,20 +9,20 @@ public class S00896Tests
     public void T1()
     {
         var sut = new S00896();
-        sut.IsMonotonic(new[] {1, 2, 2, 3}).Should().BeTrue();
+        Assert.That(sut.IsMonotonic(new[] {1, 2, 2, 3}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00896();
-        sut.IsMonotonic(new[] {6, 5, 4, 4}).Should().BeTrue();
+        Assert.That(sut.IsMonotonic(new[] {6, 5, 4, 4}), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00896();
-        sut.IsMonotonic(new[] {1, 3, 2}).Should().BeFalse();
+        Assert.That(sut.IsMonotonic(new[] {1, 3, 2}), Is.False);
     }
 }

@@ -9,13 +9,13 @@ public class S00914Tests
     public void T1()
     {
         var sut = new S00914();
-        sut.HasGroupsSizeX(new[] {1, 2, 3, 4, 4, 3, 2, 1}).Should().BeTrue();
+        Assert.That(sut.HasGroupsSizeX(new[] {1, 2, 3, 4, 4, 3, 2, 1}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00914();
-        sut.HasGroupsSizeX(new[] {1, 1, 1, 2, 2, 2, 3, 3}).Should().BeFalse();
+        Assert.That(sut.HasGroupsSizeX(new[] {1, 1, 1, 2, 2, 2, 3, 3}), Is.False);
     }
 }

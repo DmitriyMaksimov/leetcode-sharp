@@ -9,13 +9,13 @@ public class S00392Tests
     public void T1()
     {
         var sut = new S00392();
-        sut.IsSubsequence("abc", "ahbgdc").Should().BeTrue();
+        Assert.That(sut.IsSubsequence("abc", "ahbgdc"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00392();
-        sut.IsSubsequence("axc", "ahbgdc").Should().BeFalse();
+        Assert.That(sut.IsSubsequence("axc", "ahbgdc"), Is.False);
     }
 }

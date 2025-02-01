@@ -9,20 +9,20 @@ public class S02119Tests
     public void T1()
     {
         var sut = new S02119();
-        sut.IsSameAfterReversals(526).Should().BeTrue();
+        Assert.That(sut.IsSameAfterReversals(526), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S02119();
-        sut.IsSameAfterReversals(1800).Should().BeFalse();
+        Assert.That(sut.IsSameAfterReversals(1800), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02119();
-        sut.IsSameAfterReversals(0).Should().BeTrue();
+        Assert.That(sut.IsSameAfterReversals(0), Is.True);
     }
 }

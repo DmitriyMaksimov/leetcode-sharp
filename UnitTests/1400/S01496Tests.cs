@@ -9,13 +9,13 @@ public class S01496Tests
     public void T1()
     {
         var sut = new S01496();
-        sut.IsPathCrossing("NES").Should().BeFalse();
+        Assert.That(sut.IsPathCrossing("NES"), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01496();
-        sut.IsPathCrossing("NESWW").Should().BeTrue();
+        Assert.That(sut.IsPathCrossing("NESWW"), Is.True);
     }
 }

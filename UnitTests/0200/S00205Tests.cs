@@ -9,21 +9,21 @@ public class S00205Tests
     public void T1()
     {
         var sut = new S00205();
-        sut.IsIsomorphic("egg", "add").Should().BeTrue();
+        Assert.That(sut.IsIsomorphic("egg", "add"), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00205();
-        sut.IsIsomorphic("foo", "bar").Should().BeFalse();
+        Assert.That(sut.IsIsomorphic("foo", "bar"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00205();
-        sut.IsIsomorphic("paper", "title").Should().BeTrue();
+        Assert.That(sut.IsIsomorphic("paper", "title"), Is.True);
     }
 
 }

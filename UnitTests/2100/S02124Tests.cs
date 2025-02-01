@@ -9,20 +9,20 @@ public class S02124Tests
     public void T1()
     {
         var sut = new S02124();
-        sut.CheckString("aaabbb").Should().BeTrue();
+        Assert.That(sut.CheckString("aaabbb"), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S02124();
-        sut.CheckString("abab").Should().BeFalse();
+        Assert.That(sut.CheckString("abab"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02124();
-        sut.CheckString("bbb").Should().BeTrue();
+        Assert.That(sut.CheckString("bbb"), Is.True);
     }
 }

@@ -9,20 +9,20 @@ public class S01812Tests
     public void T1()
     {
         var sut = new S01812();
-        sut.SquareIsWhite("a1").Should().BeFalse();
+        Assert.That(sut.SquareIsWhite("a1"), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01812();
-        sut.SquareIsWhite("h3").Should().BeTrue();
+        Assert.That(sut.SquareIsWhite("h3"), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01812();
-        sut.SquareIsWhite("c7").Should().BeFalse();
+        Assert.That(sut.SquareIsWhite("c7"), Is.False);
     }
 }

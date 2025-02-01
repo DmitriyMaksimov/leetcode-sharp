@@ -9,20 +9,20 @@ public class S03011Tests
     public void T1()
     {
         var sut = new S03011();
-        sut.CanSortArray([8, 4, 2, 30, 15]).Should().BeTrue();
+        Assert.That(sut.CanSortArray([8, 4, 2, 30, 15]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03011();
-        sut.CanSortArray([1, 2, 3, 4, 5]).Should().BeTrue();
+        Assert.That(sut.CanSortArray([1, 2, 3, 4, 5]), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03011();
-        sut.CanSortArray([3, 16, 8, 4, 2]).Should().BeFalse();
+        Assert.That(sut.CanSortArray([3, 16, 8, 4, 2]), Is.False);
     }
 }

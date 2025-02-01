@@ -9,13 +9,13 @@ public class S00965Tests
     public void T1()
     {
         var sut = new S00965();
-        sut.IsUnivalTree(TreeNode.Parse("[1,1,1,1,1,null,1]")).Should().BeTrue();
+        Assert.That(sut.IsUnivalTree(TreeNode.Parse("[1,1,1,1,1,null,1]")), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00965();
-        sut.IsUnivalTree(TreeNode.Parse("[2,2,2,5,2]")).Should().BeFalse();
+        Assert.That(sut.IsUnivalTree(TreeNode.Parse("[2,2,2,5,2]")), Is.False);
     }
 }

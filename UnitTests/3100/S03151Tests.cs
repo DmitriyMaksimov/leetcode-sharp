@@ -9,20 +9,20 @@ public class S03151Tests
     public void T1()
     {
         var sut = new S03151();
-        sut.IsArraySpecial([1]).Should().BeTrue();
+        Assert.That(sut.IsArraySpecial([1]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03151();
-        sut.IsArraySpecial([2, 1, 4]).Should().BeTrue();
+        Assert.That(sut.IsArraySpecial([2, 1, 4]), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S03151();
-        sut.IsArraySpecial([4, 3, 1, 6]).Should().BeFalse();
+        Assert.That(sut.IsArraySpecial([4, 3, 1, 6]), Is.False);
     }
 }

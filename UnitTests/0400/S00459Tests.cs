@@ -9,21 +9,21 @@ public class S00459Tests
     public void T1()
     {
         var sut = new S00459();
-        sut.RepeatedSubstringPattern("abab").Should().BeTrue();
+        Assert.That(sut.RepeatedSubstringPattern("abab"), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00459();
-        sut.RepeatedSubstringPattern("aba").Should().BeFalse();
+        Assert.That(sut.RepeatedSubstringPattern("aba"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00459();
-        sut.RepeatedSubstringPattern("abcabcabcabc").Should().BeTrue();
+        Assert.That(sut.RepeatedSubstringPattern("abcabcabcabc"), Is.True);
     }
 
 }

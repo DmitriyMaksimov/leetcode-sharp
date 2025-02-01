@@ -9,20 +9,20 @@ public class S01813Tests
     public void T1()
     {
         var sut = new S01813();
-        sut.AreSentencesSimilar("My name is Haley", "My Haley").Should().BeTrue();
+        Assert.That(sut.AreSentencesSimilar("My name is Haley", "My Haley"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01813();
-        sut.AreSentencesSimilar("of", "A lot of words").Should().BeFalse();
+        Assert.That(sut.AreSentencesSimilar("of", "A lot of words"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01813();
-        sut.AreSentencesSimilar("Eating right now", "Eating").Should().BeTrue();
+        Assert.That(sut.AreSentencesSimilar("Eating right now", "Eating"), Is.True);
     }
 }

@@ -9,13 +9,13 @@ public class S02849Tests
     public void T1()
     {
         var sut = new S02849();
-        sut.IsReachableAtTime(2, 4, 7, 7, 6).Should().BeTrue();
+        Assert.That(sut.IsReachableAtTime(2, 4, 7, 7, 6), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02849();
-        sut.IsReachableAtTime(3, 1, 7, 3, 3).Should().BeFalse();
+        Assert.That(sut.IsReachableAtTime(3, 1, 7, 3, 3), Is.False);
     }
 }

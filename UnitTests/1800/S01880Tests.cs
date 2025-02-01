@@ -9,20 +9,20 @@ public class S01880Tests
     public void T1()
     {
         var sut = new S01880();
-        sut.IsSumEqual("acb", "cba", "cdb").Should().BeTrue();
+        Assert.That(sut.IsSumEqual("acb", "cba", "cdb"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01880();
-        sut.IsSumEqual("aaa", "a", "aab").Should().BeFalse();
+        Assert.That(sut.IsSumEqual("aaa", "a", "aab"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01880();
-        sut.IsSumEqual("aaa", "a", "aaaa").Should().BeTrue();
+        Assert.That(sut.IsSumEqual("aaa", "a", "aaaa"), Is.True);
     }
 }

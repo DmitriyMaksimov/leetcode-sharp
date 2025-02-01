@@ -9,13 +9,13 @@ public class S02206Tests
     public void T1()
     {
         var sut = new S02206();
-        sut.DivideArray(new[] {3, 2, 3, 2, 2, 2}).Should().BeTrue();
+        Assert.That(sut.DivideArray(new[] {3, 2, 3, 2, 2, 2}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02206();
-        sut.DivideArray(new[] {1, 2, 3, 4}).Should().BeFalse();
+        Assert.That(sut.DivideArray(new[] {1, 2, 3, 4}), Is.False);
     }
 }

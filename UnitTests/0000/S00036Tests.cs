@@ -9,7 +9,7 @@ public class S00036Tests
     public void Test1()
     {
         var sut = new S00036();
-        sut.IsValidSudoku(new[]
+        Assert.That(sut.IsValidSudoku(new[]
         {
             new[] {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
             new[] {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
@@ -20,6 +20,6 @@ public class S00036Tests
             new[] {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
             new[] {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
             new[] {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
-        }).Should().BeTrue();
+        }), Is.True);
     }
 }

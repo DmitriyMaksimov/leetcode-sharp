@@ -9,20 +9,20 @@ public class S01306Tests
     public void T1()
     {
         var sut = new S01306();
-        sut.CanReach([4, 2, 3, 0, 3, 1, 2], 5).Should().BeTrue();
+        Assert.That(sut.CanReach([4, 2, 3, 0, 3, 1, 2], 5), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01306();
-        sut.CanReach([4, 2, 3, 0, 3, 1, 2], 0).Should().BeTrue();
+        Assert.That(sut.CanReach([4, 2, 3, 0, 3, 1, 2], 0), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01306();
-        sut.CanReach([3, 0, 2, 1, 2], 2).Should().BeFalse();
+        Assert.That(sut.CanReach([3, 0, 2, 1, 2], 2), Is.False);
     }
 }

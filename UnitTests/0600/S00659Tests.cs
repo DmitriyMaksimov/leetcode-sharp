@@ -9,20 +9,20 @@ public class S00659Tests
     public void T1()
     {
         var sut = new S00659();
-        sut.IsPossible([1, 2, 3, 3, 4, 5]).Should().BeTrue();
+        Assert.That(sut.IsPossible([1, 2, 3, 3, 4, 5]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00659();
-        sut.IsPossible([1, 2, 3, 3, 4, 4, 5, 5]).Should().BeTrue();
+        Assert.That(sut.IsPossible([1, 2, 3, 3, 4, 4, 5, 5]), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00659();
-        sut.IsPossible([1, 2, 3, 4, 4, 5]).Should().BeFalse();
+        Assert.That(sut.IsPossible([1, 2, 3, 4, 4, 5]), Is.False);
     }
 }

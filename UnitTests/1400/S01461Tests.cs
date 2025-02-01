@@ -9,20 +9,20 @@ public class S01461Tests
     public void T1()
     {
         var sut = new S01461();
-        sut.HasAllCodes("00110110", 2).Should().BeTrue();
+        Assert.That(sut.HasAllCodes("00110110", 2), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01461();
-        sut.HasAllCodes("0110", 1).Should().BeTrue();
+        Assert.That(sut.HasAllCodes("0110", 1), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01461();
-        sut.HasAllCodes("0110", 2).Should().BeFalse();
+        Assert.That(sut.HasAllCodes("0110", 2), Is.False);
     }
 }

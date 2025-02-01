@@ -9,48 +9,48 @@ public class S02423Tests
     public void T1()
     {
         var sut = new S02423();
-        sut.EqualFrequency("abcc").Should().BeTrue();
+        Assert.That(sut.EqualFrequency("abcc"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02423();
-        sut.EqualFrequency("aazz").Should().BeFalse();
+        Assert.That(sut.EqualFrequency("aazz"), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02423();
-        sut.EqualFrequency("bac").Should().BeTrue();
+        Assert.That(sut.EqualFrequency("bac"), Is.True);
     }
 
     [Test]
     public void T4()
     {
         var sut = new S02423();
-        sut.EqualFrequency("cccaa").Should().BeTrue();
+        Assert.That(sut.EqualFrequency("cccaa"), Is.True);
     }
 
     [Test]
     public void T5()
     {
         var sut = new S02423();
-        sut.EqualFrequency("ddaccb").Should().BeFalse();
+        Assert.That(sut.EqualFrequency("ddaccb"), Is.False);
     }
 
     [Test]
     public void T6()
     {
         var sut = new S02423();
-        sut.EqualFrequency("abbcc").Should().BeTrue();
+        Assert.That(sut.EqualFrequency("abbcc"), Is.True);
     }
 
     [Test]
     public void T7()
     {
         var sut = new S02423();
-        sut.EqualFrequency("babbdd").Should().BeFalse();
+        Assert.That(sut.EqualFrequency("babbdd"), Is.False);
     }
 }

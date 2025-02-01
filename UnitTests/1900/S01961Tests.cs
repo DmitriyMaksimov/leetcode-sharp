@@ -9,13 +9,13 @@ public class S01961Tests
     public void T1()
     {
         var sut = new S01961();
-        sut.IsPrefixString("iloveleetcode", new[] {"i", "love", "leetcode", "apples"}).Should().BeTrue();
+        Assert.That(sut.IsPrefixString("iloveleetcode", new[] {"i", "love", "leetcode", "apples"}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01961();
-        sut.IsPrefixString("iloveleetcode", new[] {"apples", "i", "love", "leetcode"}).Should().BeFalse();
+        Assert.That(sut.IsPrefixString("iloveleetcode", new[] {"apples", "i", "love", "leetcode"}), Is.False);
     }
 }

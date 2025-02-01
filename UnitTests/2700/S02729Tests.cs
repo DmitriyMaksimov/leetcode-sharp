@@ -9,13 +9,13 @@ public class S02729Tests
     public void T1()
     {
         var sut = new S02729();
-        sut.IsFascinating(192).Should().BeTrue();
+        Assert.That(sut.IsFascinating(192), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02729();
-        sut.IsFascinating(100).Should().BeFalse();
+        Assert.That(sut.IsFascinating(100), Is.False);
     }
 }

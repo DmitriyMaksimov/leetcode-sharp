@@ -9,20 +9,20 @@ public class S00009Tests
     public void T1()
     {
         var sut = new S00009();
-        sut.IsPalindrome(121).Should().BeTrue();
+        Assert.That(sut.IsPalindrome(121), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00009();
-        sut.IsPalindrome(-121).Should().BeFalse();
+        Assert.That(sut.IsPalindrome(-121), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00009();
-        sut.IsPalindrome(10).Should().BeFalse();
+        Assert.That(sut.IsPalindrome(10), Is.False);
     }
 }

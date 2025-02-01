@@ -9,13 +9,13 @@ public class S02283Tests
     public void T1()
     {
         var sut = new S02283();
-        sut.DigitCount("1210").Should().BeTrue();
+        Assert.That(sut.DigitCount("1210"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02283();
-        sut.DigitCount("030").Should().BeFalse();
+        Assert.That(sut.DigitCount("030"), Is.False);
     }
 }

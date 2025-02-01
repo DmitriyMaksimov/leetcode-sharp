@@ -9,13 +9,13 @@ public class S00202Tests
     public void T1()
     {
         var sut = new S00202();
-        sut.IsHappy(19).Should().BeTrue();
+        Assert.That(sut.IsHappy(19), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00202();
-        sut.IsHappy(2).Should().BeFalse();
+        Assert.That(sut.IsHappy(2), Is.False);
     }
 }

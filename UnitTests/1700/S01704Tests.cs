@@ -9,6 +9,6 @@ public class S01704Tests
     public void Test1()
     {
         var sut = new S01704();
-        sut.HalvesAreAlike("book").Should().BeTrue();
+        Assert.That(sut.HalvesAreAlike("book"), Is.True);
     }
 }

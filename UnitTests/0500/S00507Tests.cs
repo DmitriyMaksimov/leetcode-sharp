@@ -9,14 +9,14 @@ public class S00507Tests
     public void T1()
     {
         var sut = new S00507();
-        sut.CheckPerfectNumber(28).Should().BeTrue();
+        Assert.That(sut.CheckPerfectNumber(28), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00507();
-        sut.CheckPerfectNumber(7).Should().BeFalse();
+        Assert.That(sut.CheckPerfectNumber(7), Is.False);
     }
 
 }

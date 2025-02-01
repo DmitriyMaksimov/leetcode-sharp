@@ -9,20 +9,20 @@ public class S00020Tests
     public void T1()
     {
         var sut = new S00020();
-        sut.IsValid("()").Should().BeTrue();
+        Assert.That(sut.IsValid("()"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00020();
-        sut.IsValid("()[]{}").Should().BeTrue();
+        Assert.That(sut.IsValid("()[]{}"), Is.True);
     }
     
     [Test]
     public void T3()
     {
         var sut = new S00020();
-        sut.IsValid("(}").Should().BeFalse();
+        Assert.That(sut.IsValid("(}"), Is.False);
     }
 }

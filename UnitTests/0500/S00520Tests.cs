@@ -9,13 +9,13 @@ public class S00520Tests
     public void T1()
     {
         var sut = new S00520();
-        sut.DetectCapitalUse("USA").Should().BeTrue();
+        Assert.That(sut.DetectCapitalUse("USA"), Is.True);
     }
     
     [Test]
     public void T2()
     {
         var sut = new S00520();
-        sut.DetectCapitalUse("FlaG").Should().BeFalse();
+        Assert.That(sut.DetectCapitalUse("FlaG"), Is.False);
     }    
 }

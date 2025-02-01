@@ -9,20 +9,20 @@ public class S00342Tests
     public void T1()
     {
         var sut = new S00342();
-        sut.IsPowerOfFour(16).Should().BeTrue();
+        Assert.That(sut.IsPowerOfFour(16), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00342();
-        sut.IsPowerOfFour(5).Should().BeFalse();
+        Assert.That(sut.IsPowerOfFour(5), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00342();
-        sut.IsPowerOfFour(1).Should().BeTrue();
+        Assert.That(sut.IsPowerOfFour(1), Is.True);
     }
 }

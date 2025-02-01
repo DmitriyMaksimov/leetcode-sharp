@@ -9,20 +9,20 @@ public class S00217Tests
     public void T1()
     {
         var sut = new S00217();
-        sut.ContainsDuplicate(new[] {1, 2, 3, 1}).Should().BeTrue();
+        Assert.That(sut.ContainsDuplicate(new[] {1, 2, 3, 1}), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00217();
-        sut.ContainsDuplicate(new[] {1, 2, 3, 4}).Should().BeFalse();
+        Assert.That(sut.ContainsDuplicate(new[] {1, 2, 3, 4}), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00217();
-        sut.ContainsDuplicate(new[] {1,1,1,3,3,4,3,2,4,2}).Should().BeTrue();
+        Assert.That(sut.ContainsDuplicate(new[] {1,1,1,3,3,4,3,2,4,2}), Is.True);
     }
 }

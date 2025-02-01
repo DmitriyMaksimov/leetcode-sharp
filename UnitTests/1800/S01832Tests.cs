@@ -9,13 +9,13 @@ public class S01832Tests
     public void T1()
     {
         var sut = new S01832();
-        sut.CheckIfPangram("thequickbrownfoxjumpsoverthelazydog").Should().BeTrue();
+        Assert.That(sut.CheckIfPangram("thequickbrownfoxjumpsoverthelazydog"), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01832();
-        sut.CheckIfPangram("leetcode").Should().BeFalse();
+        Assert.That(sut.CheckIfPangram("leetcode"), Is.False);
     }
 }

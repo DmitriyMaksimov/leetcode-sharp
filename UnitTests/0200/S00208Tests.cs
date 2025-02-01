@@ -10,10 +10,10 @@ public class S00208Tests
     {
         var trie = new S00208.Trie();
         trie.Insert("apple");
-        trie.Search("apple").Should().BeTrue();
-        trie.Search("app").Should().BeFalse();
-        trie.StartsWith("app").Should().BeTrue();
+        Assert.That(trie.Search("apple"), Is.True);
+        Assert.That(trie.Search("app"), Is.False);
+        Assert.That(trie.StartsWith("app"), Is.True);
         trie.Insert("app");
-        trie.Search("app").Should().BeTrue();
+        Assert.That(trie.Search("app"), Is.True);
     }
 }
