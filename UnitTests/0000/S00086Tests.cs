@@ -9,13 +9,13 @@ public class S00086Tests
     public void T1()
     {
         var sut = new S00086();
-        sut.Partition(ListNode.Parse("[1,4,3,2,5,2]"), 3).Should().BeEquivalentTo(ListNode.Parse("[1,2,2,4,3,5]"));
+        Assert.That(sut.Partition(ListNode.Parse("[1,4,3,2,5,2]"), 3).AsString(), Is.EqualTo("[1,2,2,4,3,5]"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00086();
-        sut.Partition(ListNode.Parse("[2,1]"), 2).Should().BeEquivalentTo(ListNode.Parse("[1,2]"));
+        Assert.That(sut.Partition(ListNode.Parse("[2,1]"), 2).AsString(), Is.EqualTo("[1,2]"));
     }
 }

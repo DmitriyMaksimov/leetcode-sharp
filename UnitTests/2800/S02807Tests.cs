@@ -9,14 +9,13 @@ public class S02807Tests
     public void T1()
     {
         var sut = new S02807();
-        sut.InsertGreatestCommonDivisors(ListNode.Parse("[18,6,10,3]")).Should()
-            .BeEquivalentTo(ListNode.Parse("[18,6,6,2,10,1,3]"));
+        Assert.That(sut.InsertGreatestCommonDivisors(ListNode.Parse("[18,6,10,3]")).AsString(), Is.EqualTo("[18,6,6,2,10,1,3]"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02807();
-        sut.InsertGreatestCommonDivisors(ListNode.Parse("[7]")).Should().BeEquivalentTo(ListNode.Parse("[7]"));
+        Assert.That(sut.InsertGreatestCommonDivisors(ListNode.Parse("[7]")).AsString(), Is.EqualTo("[7]"));
     }
 }

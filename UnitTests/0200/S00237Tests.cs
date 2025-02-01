@@ -11,7 +11,7 @@ public class S00237Tests
         var sut = new S00237();
         var list = ListNode.Parse("[4,5,1,9]");
         sut.DeleteNode(list!.next!);
-        list.Should().BeEquivalentTo(ListNode.Parse("[4,1,9]"));
+        Assert.That(list.AsString(), Is.EqualTo("[4,1,9]"));
     }
 
     [Test]
@@ -20,6 +20,6 @@ public class S00237Tests
         var sut = new S00237();
         var list = ListNode.Parse("[4,5,1,9]");
         sut.DeleteNode(list!.next!.next!);
-        list.Should().BeEquivalentTo(ListNode.Parse("[4,5,9]"));
+        Assert.That(list.AsString(), Is.EqualTo("[4,5,9]"));
     }
 }
