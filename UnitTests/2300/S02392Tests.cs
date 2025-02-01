@@ -9,7 +9,7 @@ public class S02392Tests
     public void T1()
     {
         var sut = new S02392();
-        sut.BuildMatrix(3, [[1, 2], [3, 2]], [[2, 1], [3, 2]]).Should().BeEquivalentTo([(int[])[0, 0, 1], [3, 0, 0], [0, 2, 0]]);
+        Assert.That(sut.BuildMatrix(3, [[1, 2], [3, 2]], [[2, 1], [3, 2]]), Is.EquivalentTo((int[][]) [[0, 0, 1], [3, 0, 0], [0, 2, 0]]));
     }
 
     [Test]

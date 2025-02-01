@@ -9,7 +9,7 @@ public class S00113Tests
     public void T1()
     {
         var sut = new S00113();
-        sut.PathSum(TreeNode.Parse("[5,4,8,11,null,13,4,7,2,null,null,5,1]"), 22).Should().BeEquivalentTo([(int[]) [5, 4, 11, 2], [5, 8, 4, 5]]);
+        Assert.That(sut.PathSum(TreeNode.Parse("[5,4,8,11,null,13,4,7,2,null,null,5,1]"), 22), Is.EquivalentTo((int[][]) [[5, 4, 11, 2], [5, 8, 4, 5]]));
     }
 
     [Test]

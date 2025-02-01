@@ -19,14 +19,13 @@ public class S00130Tests
 
         sut.Solve(board);
 
-        board.Should().BeEquivalentTo(
-            new[]
-            {
-                new[] {'X', 'X', 'X', 'X'},
-                new[] {'X', 'X', 'X', 'X'},
-                new[] {'X', 'X', 'X', 'X'},
-                new[] {'X', 'O', 'X', 'X'}
-            });
+        Assert.That(board, Is.EquivalentTo(new[]
+        {
+            new[] {'X', 'X', 'X', 'X'},
+            new[] {'X', 'X', 'X', 'X'},
+            new[] {'X', 'X', 'X', 'X'},
+            new[] {'X', 'O', 'X', 'X'}
+        }));
     }
 
     [Test]
@@ -35,7 +34,7 @@ public class S00130Tests
         var sut = new S00130();
         var board = new[] {new[] {'X'}};
         sut.Solve(board);
-        board.Should().BeEquivalentTo(new[] {new[] {'X'}});
+        Assert.That(board, Is.EquivalentTo(new[] {new[] {'X'}}));
     }
 
     [Test]
@@ -51,12 +50,11 @@ public class S00130Tests
 
         sut.Solve(board);
 
-        board.Should().BeEquivalentTo(
-            new[]
-            {
-                new[] {'O', 'O', 'O'},
-                new[] {'O', 'O', 'O'},
-                new[] {'O', 'O', 'O'},
-            });
+        Assert.That(board, Is.EquivalentTo(new[]
+        {
+            new[] {'O', 'O', 'O'},
+            new[] {'O', 'O', 'O'},
+            new[] {'O', 'O', 'O'},
+        }));
     }
 }

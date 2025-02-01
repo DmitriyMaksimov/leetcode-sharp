@@ -9,7 +9,7 @@ public class S01447Tests
     public void T1()
     {
         var sut = new S01447();
-        sut.SimplifiedFractions(2).Should().BeEquivalentTo("1/2");
+        Assert.That(sut.SimplifiedFractions(2), Is.EquivalentTo((string[]) ["1/2"]));
     }
 
     [Test]

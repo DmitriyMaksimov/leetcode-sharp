@@ -9,13 +9,13 @@ public class S00977Tests
     public void T1()
     {
         var sut = new S00977();
-        sut.SortedSquares(new[] {-4, -1, 0, 3, 10}).Should().BeEquivalentTo(new[] {0, 1, 9, 16, 100});
+        Assert.That(sut.SortedSquares(new[] {-4, -1, 0, 3, 10}), Is.EquivalentTo(new[] {0, 1, 9, 16, 100}));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00977();
-        sut.SortedSquares(new[] {-7, -3, 2, 3, 11}).Should().BeEquivalentTo(new[] {4, 9, 9, 49, 121});
+        Assert.That(sut.SortedSquares(new[] {-7, -3, 2, 3, 11}), Is.EquivalentTo(new[] {4, 9, 9, 49, 121}));
     }
 }

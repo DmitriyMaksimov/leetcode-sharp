@@ -9,20 +9,20 @@ public class S00046Tests
     public void T1()
     {
         var sut = new S00046();
-        sut.Permute(new[] {1, 2, 3}).Should().BeEquivalentTo(new[] {new[] {1, 2, 3}, new[] {1, 3, 2}, new[] {2, 1, 3}, new[] {2, 3, 1}, new[] {3, 1, 2}, new[] {3, 2, 1}});
+        Assert.That(sut.Permute(new[] {1, 2, 3}), Is.EquivalentTo(new[] {new[] {1, 2, 3}, new[] {1, 3, 2}, new[] {2, 1, 3}, new[] {2, 3, 1}, new[] {3, 1, 2}, new[] {3, 2, 1}}));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00046();
-        sut.Permute(new[] {0, 1}).Should().BeEquivalentTo(new[] {new[] {0, 1}, new[] {1, 0}});
+        Assert.That(sut.Permute(new[] {0, 1}), Is.EquivalentTo(new[] {new[] {0, 1}, new[] {1, 0}}));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00046();
-        sut.Permute(new[] {1}).Should().BeEquivalentTo(new[] {new[] {1}});
+        Assert.That(sut.Permute(new[] {1}), Is.EquivalentTo(new[] {new[] {1}}));
     }
 }

@@ -20,7 +20,7 @@ public class S00328Tests
             oddEvenList = oddEvenList.next;
         }
 
-        ints.Should().BeEquivalentTo(new[] {1, 3, 5, 2, 4});
+        Assert.That(ints, Is.EquivalentTo(new[] {1, 3, 5, 2, 4}));
     }
 
     [Test]

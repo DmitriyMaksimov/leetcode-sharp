@@ -9,15 +9,14 @@ public class S00140Tests
     public void T1()
     {
         var sut = new S00140();
-        sut.WordBreak("catsanddog", ["cat", "cats", "and", "sand", "dog"]).Should().BeEquivalentTo(["cats and dog", "cat sand dog"]);
+        Assert.That(sut.WordBreak("catsanddog", ["cat", "cats", "and", "sand", "dog"]), Is.EquivalentTo((string[]) ["cats and dog", "cat sand dog"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00140();
-        sut.WordBreak("pineapplepenapple", ["apple", "pen", "applepen", "pine", "pineapple"]).Should()
-            .BeEquivalentTo(["pine apple pen apple", "pineapple pen apple", "pine applepen apple"]);
+        Assert.That(sut.WordBreak("pineapplepenapple", ["apple", "pen", "applepen", "pine", "pineapple"]), Is.EquivalentTo((string[]) ["pine apple pen apple", "pineapple pen apple", "pine applepen apple"]));
     }
 
     [Test]

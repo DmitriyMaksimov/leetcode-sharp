@@ -19,7 +19,7 @@ public class S00107Tests
     public void T2()
     {
         var sut = new S00107();
-        sut.LevelOrderBottom(TreeNode.Parse("[1]")).Should().BeEquivalentTo(new[] {new[] {1}});
+        Assert.That(sut.LevelOrderBottom(TreeNode.Parse("[1]")), Is.EquivalentTo(new[] {new[] {1}}));
     }
 
     [Test]

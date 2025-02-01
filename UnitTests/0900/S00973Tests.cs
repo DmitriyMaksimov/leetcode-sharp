@@ -9,13 +9,13 @@ public class S00973Tests
     public void T1()
     {
         var sut = new S00973();
-        sut.KClosest([[1, 3], [-2, 2]], 1).Should().BeEquivalentTo([(int[]) [-2, 2]]);
+        Assert.That(sut.KClosest([[1, 3], [-2, 2]], 1), Is.EquivalentTo((int[][]) [[-2, 2]]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00973();
-        sut.KClosest([[3, 3], [5, -1], [-2, 4]], 2).Should().BeEquivalentTo([(int[]) [3, 3], [-2, 4]]);
+        Assert.That(sut.KClosest([[3, 3], [5, -1], [-2, 4]], 2), Is.EquivalentTo((int[][]) [[3, 3], [-2, 4]]));
     }
 }

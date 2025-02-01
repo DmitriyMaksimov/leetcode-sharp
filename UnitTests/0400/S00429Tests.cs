@@ -15,6 +15,6 @@ public class S00429Tests
         var n2 = new S00429.Node(2);
         var n1 = new S00429.Node(1, [n3, n2, n4]);
         var sut = new S00429();
-        sut.LevelOrder(n1).Should().BeEquivalentTo([(int[]) [1], [3, 2, 4], [5, 6]]);
+        Assert.That(sut.LevelOrder(n1), Is.EquivalentTo((int[][]) [[1], [3, 2, 4], [5, 6]]));
     }
 }

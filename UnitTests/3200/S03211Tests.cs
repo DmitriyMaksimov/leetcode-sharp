@@ -9,14 +9,14 @@ public class S03211Tests
     public void T1()
     {
         var sut = new S03211();
-        sut.ValidStrings(3).Should().BeEquivalentTo(["010", "011", "101", "110", "111"]);
+        Assert.That(sut.ValidStrings(3), Is.EquivalentTo((string[]) ["010", "011", "101", "110", "111"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S03211();
-        sut.ValidStrings(1).Should().BeEquivalentTo(["0", "1"]);
+        Assert.That(sut.ValidStrings(1), Is.EquivalentTo((string[]) ["0", "1"]));
     }
 
     [Test]

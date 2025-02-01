@@ -9,13 +9,13 @@ public class S00916Tests
     public void T1()
     {
         var sut = new S00916();
-        sut.WordSubsets(["amazon", "apple", "facebook", "google", "leetcode"], ["e", "o"]).Should().BeEquivalentTo("facebook", "google", "leetcode");
+        Assert.That(sut.WordSubsets(["amazon", "apple", "facebook", "google", "leetcode"], ["e", "o"]), Is.EquivalentTo((string[]) ["facebook", "google", "leetcode"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00916();
-        sut.WordSubsets(["amazon", "apple", "facebook", "google", "leetcode"], ["l", "e"]).Should().BeEquivalentTo(["apple", "google", "leetcode"]);
+        Assert.That(sut.WordSubsets(["amazon", "apple", "facebook", "google", "leetcode"], ["l", "e"]), Is.EquivalentTo((string[]) ["apple", "google", "leetcode"]));
     }
 }

@@ -22,7 +22,7 @@ public class S00491Tests
     public void T2()
     {
         var sut = new S00491();
-        sut.FindSubsequences(new[] {4, 4, 3, 2, 1}).Should().BeEquivalentTo(new[] {new[] {4, 4}});
+        Assert.That(sut.FindSubsequences(new[] {4, 4, 3, 2, 1}), Is.EquivalentTo(new[] {new[] {4, 4}}));
     }
 
     [Test]

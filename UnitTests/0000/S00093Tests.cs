@@ -16,7 +16,7 @@ public class S00093Tests
     public void T2()
     {
         var sut = new S00093();
-        sut.RestoreIpAddresses("0000").Should().BeEquivalentTo("0.0.0.0");
+        Assert.That(sut.RestoreIpAddresses("0000"), Is.EquivalentTo((string[]) ["0.0.0.0"]));
     }
 
     [Test]

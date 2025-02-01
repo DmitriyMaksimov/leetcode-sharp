@@ -9,17 +9,17 @@ public class S00655Tests
     public void T1()
     {
         var sut = new S00655();
-        sut.PrintTree(TreeNode.Parse("[1,2]")).Should().BeEquivalentTo([(string[]) ["", "1", ""], ["2", "", ""]]);
+        Assert.That(sut.PrintTree(TreeNode.Parse("[1,2]")), Is.EquivalentTo((string[][]) [["", "1", ""], ["2", "", ""]]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00655();
-        sut.PrintTree(TreeNode.Parse("[1,2,3,null,4]")).Should().BeEquivalentTo([
-            (string[]) ["", "", "", "1", "", "", ""],
+        Assert.That(sut.PrintTree(TreeNode.Parse("[1,2,3,null,4]")), Is.EquivalentTo(
+            (string[][]) [["", "", "", "1", "", "", ""],
             ["", "2", "", "", "", "3", ""],
             ["", "", "4", "", "", "", ""]
-        ]);
+        ]));
     }
 }

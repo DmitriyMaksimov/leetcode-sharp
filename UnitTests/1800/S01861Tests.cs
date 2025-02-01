@@ -9,46 +9,46 @@ public class S01861Tests
     public void T1()
     {
         var sut = new S01861();
-        sut.RotateTheBox([['#', '.', '#']]).Should().BeEquivalentTo([
-            (char[])
+        Assert.That(sut.RotateTheBox([['#', '.', '#']]), Is.EquivalentTo(
+            (char[][]) [
             ['.'],
             ['#'],
             ['#']
-        ]);
+        ]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01861();
-        sut.RotateTheBox([
+        Assert.That(sut.RotateTheBox([
             ['#', '.', '*', '.'],
             ['#', '#', '*', '.']
-        ]).Should().BeEquivalentTo([
-            (char[])
+        ]), Is.EquivalentTo(
+            (char[][]) [
             ['#', '.'],
             ['#', '#'],
             ['*', '*'],
             ['.', '.']
-        ]);
+        ]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01861();
-        sut.RotateTheBox([
+        Assert.That(sut.RotateTheBox([
             ['#', '#', '*', '.', '*', '.'],
             ['#', '#', '#', '*', '.', '.'],
             ['#', '#', '#', '.', '#', '.']
-        ]).Should().BeEquivalentTo([
-            (char[])
+        ]), Is.EquivalentTo(
+            (char[][]) [
             ['.', '#', '#'],
             ['.', '#', '#'],
             ['#', '#', '*'],
             ['#', '*', '.'],
             ['#', '.', '*'],
             ['#', '.', '.']
-        ]);
+        ]));
     }
 }

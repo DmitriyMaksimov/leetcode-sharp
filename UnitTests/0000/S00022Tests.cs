@@ -16,6 +16,6 @@ public class S00022Tests
     public void T2()
     {
         var sut = new S00022();
-        sut.GenerateParenthesis(1).Should().BeEquivalentTo("()");
+        Assert.That(sut.GenerateParenthesis(1), Is.EquivalentTo((string[]) ["()"]));
     }
 }

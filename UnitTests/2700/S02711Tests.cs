@@ -9,14 +9,13 @@ public class S02711Tests
     public void T1()
     {
         var sut = new S02711();
-        sut.DifferenceOfDistinctValues([[1, 2, 3], [3, 1, 5], [3, 2, 1]]).Should()
-            .BeEquivalentTo([(int[])[1, 1, 0], [1, 0, 1], [0, 1, 1]]);
+        Assert.That(sut.DifferenceOfDistinctValues([[1, 2, 3], [3, 1, 5], [3, 2, 1]]), Is.EquivalentTo((int[][]) [[1, 1, 0], [1, 0, 1], [0, 1, 1]]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02711();
-        sut.DifferenceOfDistinctValues([[1]]).Should().BeEquivalentTo([(int[])[0]]);
+        Assert.That(sut.DifferenceOfDistinctValues([[1]]), Is.EquivalentTo((int[][]) [[0]]));
     }
 }

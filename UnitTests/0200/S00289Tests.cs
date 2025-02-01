@@ -19,14 +19,13 @@ public class S00289Tests
         var sut = new S00289();
         sut.GameOfLife(board);
 
-        board.Should().BeEquivalentTo(
-        new[]
+        Assert.That(board, Is.EquivalentTo(new[]
         {
             new[] {0, 0, 0},
             new[] {1, 0, 1},
             new[] {0, 1, 1},
             new[] {0, 1, 0}
-        });
+        }));
     }
 
     [Test]
@@ -41,11 +40,10 @@ public class S00289Tests
         var sut = new S00289();
         sut.GameOfLife(board);
 
-        board.Should().BeEquivalentTo(
-        new[]
+        Assert.That(board, Is.EquivalentTo(new[]
         {
             new[] {1, 1},
             new[] {1, 1}
-        });
+        }));
     }
 }

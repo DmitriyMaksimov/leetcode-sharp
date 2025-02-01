@@ -9,13 +9,13 @@ public class S00501Tests
     public void T1()
     {
         var sut = new S00501();
-        sut.FindMode(TreeNode.Parse("[1,null,2,2]")).Should().BeEquivalentTo(new[] {2});
+        Assert.That(sut.FindMode(TreeNode.Parse("[1,null,2,2]")), Is.EquivalentTo(new[] {2}));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00501();
-        sut.FindMode(TreeNode.Parse("[0]")).Should().BeEquivalentTo(new[] {0});
+        Assert.That(sut.FindMode(TreeNode.Parse("[0]")), Is.EquivalentTo(new[] {0}));
     }
 }

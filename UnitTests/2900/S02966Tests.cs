@@ -9,7 +9,7 @@ public class S02966Tests
     public void T1()
     {
         var sut = new S02966();
-        sut.DivideArray([1, 3, 4, 8, 7, 9, 3, 5, 1], 2).Should().BeEquivalentTo([(int[]) [1, 1, 3], [3, 4, 5], [7, 8, 9]]);
+        Assert.That(sut.DivideArray([1, 3, 4, 8, 7, 9, 3, 5, 1], 2), Is.EquivalentTo((int[][]) [[1, 1, 3], [3, 4, 5], [7, 8, 9]]));
     }
 
     [Test]

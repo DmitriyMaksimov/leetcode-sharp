@@ -9,27 +9,13 @@ public class S00725Tests
     public void T1()
     {
         var sut = new S00725();
-        sut.SplitListToParts(ListNode.Parse("[1,2,3]"), 5).Should().BeEquivalentTo(new[]
-            {
-                ListNode.Parse("[1]"),
-                ListNode.Parse("[2]"),
-                ListNode.Parse("[3]"),
-                null,
-                null
-            }
-        );
+        Assert.That(sut.SplitListToParts(ListNode.Parse("[1,2,3]"), 5).Select(x => x.AsString()), Is.EquivalentTo((string[]) ["[1]", "[2]", "[3]", "[]", "[]"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00725();
-        sut.SplitListToParts(ListNode.Parse("[1,2,3,4,5,6,7,8,9,10]"), 3).Should().BeEquivalentTo(new[]
-            {
-                ListNode.Parse("[1,2,3,4]"),
-                ListNode.Parse("[5,6,7]"),
-                ListNode.Parse("[8,9,10]"),
-            }
-        );
+        Assert.That(sut.SplitListToParts(ListNode.Parse("[1,2,3,4,5,6,7,8,9,10]"), 3).Select(x => x.AsString()), Is.EquivalentTo((string[]) ["[1,2,3,4]", "[5,6,7]", "[8,9,10]"]));
     }
 }

@@ -9,14 +9,14 @@ public class S00051Tests
     public void T1()
     {
         var sut = new S00051();
-        sut.SolveNQueens(4).Should().BeEquivalentTo(new[]{new List<string> {".Q..", "...Q", "Q...", "..Q."},
-            new List<string> {"..Q.", "Q...", "...Q", ".Q.."}});
+        Assert.That(sut.SolveNQueens(4), Is.EquivalentTo(new[]{new List<string> {".Q..", "...Q", "Q...", "..Q."},
+            new List<string> {"..Q.", "Q...", "...Q", ".Q.."}}));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00051();
-        sut.SolveNQueens(1).Should().BeEquivalentTo(new[]{new List<string> {"Q"}});
+        Assert.That(sut.SolveNQueens(1), Is.EquivalentTo(new[]{new List<string> {"Q"}}));
     }
 }

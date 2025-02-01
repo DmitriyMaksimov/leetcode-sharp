@@ -23,6 +23,6 @@ public class S00784Tests
     public void T3()
     {
         var sut = new S00784();
-        sut.LetterCasePermutation("42").Should().BeEquivalentTo("42");
+        Assert.That(sut.LetterCasePermutation("42"), Is.EquivalentTo((string[]) ["42"]));
     }
 }

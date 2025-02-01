@@ -16,7 +16,7 @@ public class S00590Tests
     public void T2()
     {
         var sut = new S00590();
-        sut.Postorder(new S00590.Node()).Should().BeEquivalentTo(new List<int> {0});
+        Assert.That(sut.Postorder(new S00590.Node()), Is.EquivalentTo(new List<int> {0}));
     }
 
     [Test]

@@ -26,7 +26,7 @@ public class S01237Tests
     {
         var customFunction = new CustomFunction1();
         var sut = new S01237();
-        sut.FindSolution(customFunction, 5).Should().BeEquivalentTo([(int[])[1, 4], [2, 3], [3, 2], [4, 1]]);
+        Assert.That(sut.FindSolution(customFunction, 5), Is.EquivalentTo((int[][]) [[1, 4], [2, 3], [3, 2], [4, 1]]));
     }
 
     [Test]
@@ -34,6 +34,6 @@ public class S01237Tests
     {
         var customFunction = new CustomFunction2();
         var sut = new S01237();
-        sut.FindSolution(customFunction, 5).Should().BeEquivalentTo([(int[])[1, 5], [5, 1]]);
+        Assert.That(sut.FindSolution(customFunction, 5), Is.EquivalentTo((int[][]) [[1, 5], [5, 1]]));
     }
 }
