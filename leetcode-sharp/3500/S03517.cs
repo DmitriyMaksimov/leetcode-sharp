@@ -14,7 +14,7 @@ public class S03517
             return s;
         }
 
-π        var sortedChars = s[..m].ToArray().Order();
+        var sortedChars = s[..m].ToArray().Order();
         var firstHalf = new string(sortedChars.ToArray());
         var secondHalf = new string(sortedChars.Reverse().ToArray());
 
