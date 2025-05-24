@@ -15,8 +15,14 @@ public class S00474
 
             foreach (var c in str)
             {
-                if (c == '0') zeros++;
-                else ones++;
+                if (c == '0')
+                {
+                    zeros++;
+                }
+                else
+                {
+                    ones++;
+                }
             }
 
             for (var i = m; i >= zeros; i--)
