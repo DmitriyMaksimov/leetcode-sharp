@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
 public class S00114
 {
-    private TreeNode prev;
+    private TreeNode prev = null!;
 
     public void Flatten(TreeNode? root)
     {

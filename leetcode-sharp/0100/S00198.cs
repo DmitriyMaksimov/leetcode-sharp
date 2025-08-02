@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/house-robber/description/
 public class S00198
 {
-    private int[] _memo;
+    private int[] _memo = null!;
     
     public int Rob(int[] nums)
     {

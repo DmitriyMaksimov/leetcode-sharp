@@ -8,7 +8,7 @@ public class S00212
 {
     private int _n;
     private int _m;
-    private char[][] _board;
+    private char[][] _board = null!;
 
     private bool isChar(int x, int y, char ch)
     {

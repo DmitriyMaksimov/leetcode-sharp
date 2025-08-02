@@ -6,7 +6,7 @@ public class S00460
 {
     public class LFUCache
     {
-        public class OrderedSet<T> : ICollection<T>
+        public class OrderedSet<T> : ICollection<T> where T : notnull
         {
             private readonly IDictionary<T, LinkedListNode<T>> _dictionary;
             private readonly LinkedList<T> _linkedList;

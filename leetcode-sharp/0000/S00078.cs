@@ -5,7 +5,7 @@
 // https://leetcode.com/problems/subsets/
 public class S00078
 {
-    private int[] _nums;
+    private int[] _nums = null!;
     private int _totalElements;
 
     public IList<IList<int>> Subsets(int[] nums)

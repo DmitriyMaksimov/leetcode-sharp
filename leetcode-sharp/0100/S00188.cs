@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
 public class S00188
 {
-    private int[,,] _memo;
-    private int[] _prices;
+    private int[,,] _memo = null!;
+    private int[] _prices = null!;
     
     public int MaxProfit(int k, int[] prices)
     {

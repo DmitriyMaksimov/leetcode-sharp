@@ -6,7 +6,7 @@ public class S00105
 {
     private int _preorderIdx;
     private readonly Dictionary<int, int> _map = new();
-    private int[] _preorder;
+    private int[] _preorder = null!;
 
     public TreeNode? BuildTree(int[] preorder, int[] inorder)
     {

@@ -6,7 +6,7 @@ public class S00130
 {
     private int _m;
     private int _n;
-    private char[][] _board;
+    private char[][] _board = null!;
 
     public void Solve(char[][] board)
     {

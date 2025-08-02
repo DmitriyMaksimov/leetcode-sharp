@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/word-break/
 public class S00139
 {
-    private HashSet<string> _hashSet;
+    private HashSet<string> _hashSet = null!;
     private readonly Dictionary<int, bool> _memo = new();
 
     public bool WordBreak(string s, IList<string> wordDict)
