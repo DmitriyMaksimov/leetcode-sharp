@@ -5,7 +5,7 @@
 public class S00047
 {
     private readonly IList<IList<int>> _list = new List<IList<int>>();
-    private bool[] _used;
+    private bool[] _used = null!;
 
     public IList<IList<int>> PermuteUnique(int[] nums)
     {

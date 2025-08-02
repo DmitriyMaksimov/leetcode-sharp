@@ -76,7 +76,7 @@ public class TreeNode
         var levels = listOfLevels(root).Reverse();
         var lines = new List<string>();
         var currentLevelPositions = new List<int>();
-        TreeNode?[] previousLevel = null;
+        TreeNode?[]? previousLevel = null;
         int[]? previousLevelPositions = null;
 
         foreach (var level in levels)

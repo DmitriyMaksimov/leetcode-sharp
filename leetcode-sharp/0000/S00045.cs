@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/jump-game-ii/
 public class S00045
 {
-    private int[] _nums;
-    private Dictionary<int, int> _cache = new();
+    private int[] _nums = null!;
+    private readonly Dictionary<int, int> _cache = new();
 
     public int Jump(int[] nums)
     {

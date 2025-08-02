@@ -6,9 +6,9 @@ public class S00051
 {
     private readonly List<List<char>> _board = new();
     private readonly IList<IList<string>> _ans = new List<IList<string>>();
-    private int[] _left;
-    private int[] _upperD;
-    private int[] _lowerD;
+    private int[] _left = null!;
+    private int[] _upperD = null!;
+    private int[] _lowerD = null!;
     private int _n;
 
     private void solve(int col)

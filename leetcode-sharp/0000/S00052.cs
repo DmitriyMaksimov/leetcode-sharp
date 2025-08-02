@@ -6,9 +6,9 @@ public class S00052
 {
     private readonly List<List<char>> _board = new();
     private int _ans;
-    private int[] _left;
-    private int[] _upperD;
-    private int[] _lowerD;
+    private int[] _left = null!;
+    private int[] _upperD = null!;
+    private int[] _lowerD = null!;
     private int _n;
 
     public int TotalNQueens(int n)
