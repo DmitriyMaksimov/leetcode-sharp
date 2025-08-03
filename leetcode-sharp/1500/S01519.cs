@@ -5,9 +5,9 @@
 public class S01519
 {
     private readonly Dictionary<int, List<int>> _graph = new();
-    private string _labels;
-    private int[] _result;
-    private Dictionary<int, int[]> _counts = new();
+    private string _labels = null!;
+    private int[] _result = null!;
+    private readonly Dictionary<int, int[]> _counts = new();
 
     public int[] CountSubTrees(int n, int[][] edges, string labels)
     {

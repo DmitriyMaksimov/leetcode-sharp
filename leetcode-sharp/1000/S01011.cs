@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 public class S01011
 {
-    private int[] _weights;
+    private int[] _weights = null!;
     private int _days;
 
     public int ShipWithinDays(int[] weights, int days)

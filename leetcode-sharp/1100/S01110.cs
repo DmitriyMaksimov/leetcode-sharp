@@ -4,8 +4,8 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/delete-nodes-and-return-forest
 public class S01110
 {
-    private HashSet<int> _toDeleteSet;
-    private List<TreeNode> _result;
+    private HashSet<int> _toDeleteSet = null!;
+    private List<TreeNode> _result = null!;
 
     public IList<TreeNode> DelNodes(TreeNode? root, int[] toDelete)
     {

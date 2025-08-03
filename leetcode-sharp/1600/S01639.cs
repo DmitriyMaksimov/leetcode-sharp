@@ -8,7 +8,7 @@ public class S01639
     private readonly Dictionary<(int n, int m), int> _memo = new();
     private int _m;
     private int _n;
-    private int[,] _charAtIndexCount;
+    private int[,] _charAtIndexCount = null!;
 
     public int NumWays(string[] words, string target)
     {

@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/stone-game-ii/
 public class S01140
 {
-    private int[,,] _dp;
+    private int[,,] _dp = null!;
     private const int AliceTurn = 0;
     private const int BobTurn = 1;
 

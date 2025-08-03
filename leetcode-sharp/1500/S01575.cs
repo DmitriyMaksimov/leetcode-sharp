@@ -5,8 +5,8 @@
 public class S01575
 {
     private const int Modulo = 1_000_000_007;
-    private int[,] _dp;
-    private int[] _locations;
+    private int[,] _dp = null!;
+    private int[] _locations = null!;
 
     public int CountRoutes(int[] locations, int start, int finish, int fuel)
     {

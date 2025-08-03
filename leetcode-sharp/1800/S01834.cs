@@ -6,7 +6,7 @@ public class S01834
 {
     private readonly PriorityQueue<int, (int enqueueTime, int processingTime, int index)> _tasksByEnqueueTime = new();
     private readonly PriorityQueue<int, (int processingTime, int index)> _readyForExecution = new();
-    private int[][] _tasks;
+    private int[][] _tasks = null!;
 
     public int[] GetOrder(int[][] tasks)
     {

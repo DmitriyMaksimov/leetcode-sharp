@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/restore-the-array/
 public class S01416
 {
-    private const int Mod = 1000000007;
-    private int[] _dp;
+    private const int Mod = 1_000_000_007;
+    private int[] _dp = null!;
     private int _k;
 
     public int NumberOfArrays(string s, int k)

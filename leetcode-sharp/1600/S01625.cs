@@ -6,7 +6,7 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/lexicographically-smallest-string-after-applying-operations
 public class S01625
 {
-    string _smallest;
+    string _smallest = null!;
     private readonly HashSet<string> _set = [];
 
     public string FindLexSmallestString(string s, int a, int b)

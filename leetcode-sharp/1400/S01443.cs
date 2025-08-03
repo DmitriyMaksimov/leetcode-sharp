@@ -5,7 +5,7 @@
 public class S01443
 {
     private readonly Dictionary<int, List<int>> _graph = new();
-    private IList<bool> _hasApple;
+    private IList<bool> _hasApple = null!;
     private readonly HashSet<int> _visited = [];
 
     public int MinTime(int n, int[][] edges, IList<bool> hasApple)

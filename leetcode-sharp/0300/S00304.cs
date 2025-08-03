@@ -6,7 +6,7 @@ public class S00304
 {
     public class NumMatrix
     {
-        private readonly int[,] _dp;
+        private readonly int[,] _dp = null!;
 
         public NumMatrix(int[][]? matrix)
         {

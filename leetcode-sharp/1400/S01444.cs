@@ -5,8 +5,8 @@
 public class S01444
 {
     private const int KMod = 1_000_000_007;
-    private int[,,] _dp;
-    private int[,] _prefixSums;
+    private int[,,] _dp = null!;
+    private int[,] _prefixSums = null!;
     private int _m;
     private int _n;
 

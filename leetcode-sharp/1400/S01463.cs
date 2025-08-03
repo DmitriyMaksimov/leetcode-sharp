@@ -7,7 +7,7 @@ public class S01463
     private readonly Dictionary<(int row, int col1, int col2), int> _dp = new();
     private int _m;
     private int _n;
-    private int[][] _grid;
+    private int[][] _grid = null!;
 
     public int CherryPickup(int[][] grid)
     {

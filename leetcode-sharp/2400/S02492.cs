@@ -5,7 +5,7 @@
 public class S02492
 {
     private readonly HashSet<int> _visited = [];
-    private Dictionary<int, List<(int city, int distance)>> _graph;
+    private Dictionary<int, List<(int city, int distance)>> _graph = null!;
 
     public int MinScore(int n, int[][] roads)
     {

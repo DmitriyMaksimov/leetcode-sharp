@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/
 public class S02316
 {
-    private bool[] _visited;
-    private Dictionary<int, List<int>> _graph;
+    private bool[] _visited = null!;
+    private Dictionary<int, List<int>> _graph = null!;
     private int _count;
 
     public long CountPairs(int n, int[][] edges)

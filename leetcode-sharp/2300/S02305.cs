@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/fair-distribution-of-cookies/
 public class S02305
 {
-    private int[] _cookiesOfChild;
+    private int[] _cookiesOfChild = null!;
     private int _result = int.MaxValue;
 
     public int DistributeCookies(int[] cookies, int k)

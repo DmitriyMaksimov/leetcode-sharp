@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/best-team-with-no-conflicts/
 public class S01626
 {
-    private (int score, int age)[] _data;
+    private (int score, int age)[] _data = null!;
     private readonly Dictionary<(int index, int prev), int> _cache = new();
 
     public int BestTeamScore(int[] scores, int[] ages)
