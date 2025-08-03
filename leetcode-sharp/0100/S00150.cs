@@ -20,7 +20,8 @@ public class S00150
                     "+" => r + l,
                     "*" => r * l,
                     "-" => r - l,
-                    "/" => r / l
+                    "/" => r / l,
+                    _ => throw new ArgumentException("") 
                 };
                 _stack.Push(result);
             }

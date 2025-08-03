@@ -25,7 +25,7 @@ public class S01379Tests
         var clone = TreeNode.Parse("[7]");
         var targetOriginal = original;
         var expected = clone;
-        var targetCopy = sut.GetTargetCopy(original, clone, targetOriginal!);
+        var targetCopy = sut.GetTargetCopy(original!, clone!, targetOriginal!);
         Assert.That(targetCopy, Is.EqualTo(expected));
     }
     

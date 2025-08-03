@@ -10,7 +10,7 @@ public class S00141Tests
     {
         var sut = new S00141();
         var head = ListNode.Parse("[3,2,0,-4]");
-        head.next.next.next = head.next;
+        head!.next!.next!.next = head.next;
         Assert.That(sut.HasCycle(head), Is.True);
     }
     
@@ -19,7 +19,7 @@ public class S00141Tests
     {
         var sut = new S00141();
         var head = ListNode.Parse("[1,2]");
-        head.next = head;
+        head!.next = head;
         Assert.That(sut.HasCycle(head), Is.True);
     }
 

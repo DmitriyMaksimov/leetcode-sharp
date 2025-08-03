@@ -10,8 +10,8 @@ public class S00142Tests
     {
         var sut = new S00142();
         var head = ListNode.Parse("[3,2,0,-4]");
-        head.next.next.next = head.next;
-        Assert.That(sut.DetectCycle(head).val, Is.EqualTo(2));
+        head!.next!.next!.next = head.next;
+        Assert.That(sut.DetectCycle(head)!.val, Is.EqualTo(2));
     }
     
     [Test]
@@ -19,8 +19,8 @@ public class S00142Tests
     {
         var sut = new S00142();
         var head = ListNode.Parse("[1,2]");
-        head.next = head;
-        Assert.That(sut.DetectCycle(head).val, Is.EqualTo(1));
+        head!.next = head;
+        Assert.That(sut.DetectCycle(head)!.val, Is.EqualTo(1));
     }
 
     [Test]

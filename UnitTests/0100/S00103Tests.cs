@@ -10,6 +10,7 @@ public class S00103Tests
     {
         var sut = new S00103();
         var list = sut.ZigzagLevelOrder(TreeNode.Parse("[3,9,20,null,null,15,7]"));
+        Assert.That(list, Is.Not.Null);
         Assert.That(list[0], Is.EqualTo((int[]) [3]));
         Assert.That(list[1], Is.EqualTo((int[]) [20, 9]));
         Assert.That(list[2], Is.EqualTo((int[]) [15, 7]));
@@ -34,6 +35,7 @@ public class S00103Tests
     {
         var sut = new S00103();
         var list = sut.ZigzagLevelOrder(TreeNode.Parse("[1,2,3,4,null,null,5]"));
+        Assert.That(list, Is.Not.Null);
         Assert.That(list[0], Is.EqualTo((int[]) [1]));
         Assert.That(list[1], Is.EqualTo((int[]) [3, 2]));
         Assert.That(list[2], Is.EqualTo((int[]) [4, 5]));

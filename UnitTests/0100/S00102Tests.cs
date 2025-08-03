@@ -35,6 +35,7 @@ public class S00102Tests
     {
         var sut = new S00102();
         var list = sut.LevelOrder(TreeNode.Parse("[1,2,3,4,null,null,5]"));
+        Assert.That(list, Is.Not.Null);
         Assert.That(list[0], Is.EqualTo((int[]) [1]));
         Assert.That(list[1], Is.EqualTo((int[]) [2, 3]));
         Assert.That(list[2], Is.EqualTo((int[]) [4, 5]));
