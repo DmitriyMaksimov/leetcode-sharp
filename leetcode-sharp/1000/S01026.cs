@@ -4,20 +4,20 @@
 // https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/
 public class S01026
 {
-    public int MaxAncestorDiff(TreeNode root)
+    public int MaxAncestorDiff(TreeNode? root)
     {
-        var min = int.MaxValue;
-        var max = int.MinValue;
-
-        return findMaxDiff(root, min, max);
+        return FindMaxDiff(root, int.MaxValue, int.MinValue);
     }
 
-    private static int findMaxDiff(TreeNode node, int min, int max)
+    private static int FindMaxDiff(TreeNode? node, int min, int max)
     {
-        if (node == null) return max - min;
+        if (node == null)
+        {
+            return max - min;
+        }
 
         max = Math.Max(max, node.val);
         min = Math.Min(min, node.val);
-        return Math.Max(findMaxDiff(node.left, min, max), findMaxDiff(node.right, min, max));
+        return Math.Max(FindMaxDiff(node.left, min, max), FindMaxDiff(node.right, min, max));
     }
 }
