@@ -17,7 +17,7 @@ public class S01361
             {
                 if (!graph.ContainsKey(node))
                 {
-                    graph[node] = new List<int>();
+                    graph[node] = [];
                 }
 
                 graph[node].Add(left);
@@ -28,7 +28,7 @@ public class S01361
             {
                 if (!graph.ContainsKey(node))
                 {
-                    graph[node] = new List<int>();
+                    graph[node] = [];
                 }
 
                 graph[node].Add(right);

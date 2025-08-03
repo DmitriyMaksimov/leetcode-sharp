@@ -11,7 +11,7 @@ public class S00210
         var arr = new List<List<int>>();
         for (var i = 0; i < numCourses; i++)
         {
-            arr.Add(new List<int>());
+            arr.Add([]);
         }
 
         for (var i = 0; i < n; i++)
@@ -59,6 +59,6 @@ public class S00210
             ans[ans.Length - i - 1] = res[i];
         }
 
-        return res.Count != numCourses ? Array.Empty<int>() : ans;
+        return res.Count != numCourses ? [] : ans;
     }
 }

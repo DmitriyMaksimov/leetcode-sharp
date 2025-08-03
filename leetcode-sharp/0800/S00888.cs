@@ -16,10 +16,10 @@ public class S00888
             var b = a - diff;
             if (bobSet.Contains(b))
             {
-                return new[] {a, b};
+                return [a, b];
             }
         }
 
-        return Array.Empty<int>();
+        return [];
     }
 }

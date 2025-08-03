@@ -9,20 +9,20 @@ public class S00575Tests
     public void T1()
     {
         var sut = new S00575();
-        Assert.That(sut.DistributeCandies(new[] {1, 1, 2, 2, 3, 3}), Is.EqualTo(3));
+        Assert.That(sut.DistributeCandies([1, 1, 2, 2, 3, 3]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00575();
-        Assert.That(sut.DistributeCandies(new[] {1, 1, 2, 3}), Is.EqualTo(2));
+        Assert.That(sut.DistributeCandies([1, 1, 2, 3]), Is.EqualTo(2));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00575();
-        Assert.That(sut.DistributeCandies(new[] {6, 6, 6, 6}), Is.EqualTo(1));
+        Assert.That(sut.DistributeCandies([6, 6, 6, 6]), Is.EqualTo(1));
     }
 }

@@ -9,13 +9,13 @@ public class S00433Tests
     public void T1()
     {
         var sut = new S00433();
-        Assert.That(sut.MinMutation("AACCGGTT", "AACCGGTA", new[] {"AACCGGTA"}), Is.EqualTo(1));
+        Assert.That(sut.MinMutation("AACCGGTT", "AACCGGTA", ["AACCGGTA"]), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00433();
-        Assert.That(sut.MinMutation("AACCGGTT", "AAACGGTA", new[] {"AACCGGTA", "AACCGCTA", "AAACGGTA"}), Is.EqualTo(2));
+        Assert.That(sut.MinMutation("AACCGGTT", "AAACGGTA", ["AACCGGTA", "AACCGCTA", "AAACGGTA"]), Is.EqualTo(2));
     }
 }

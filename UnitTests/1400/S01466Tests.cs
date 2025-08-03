@@ -9,20 +9,20 @@ public class S01466Tests
     public void T1()
     {
         var sut = new S01466();
-        Assert.That(sut.MinReorder(6, new[] {new[] {0, 1}, new[] {1, 3}, new[] {2, 3}, new[] {4, 0}, new[] {4, 5}}), Is.EqualTo(3));
+        Assert.That(sut.MinReorder(6, [[0, 1], [1, 3], [2, 3], [4, 0], [4, 5]]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01466();
-        Assert.That(sut.MinReorder(6, new[] {new[] {1, 0}, new[] {2, 0}}), Is.EqualTo(0));
+        Assert.That(sut.MinReorder(6, [[1, 0], [2, 0]]), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01466();
-        Assert.That(sut.MinReorder(5, new[] {new[] {1, 0}, new[] {1, 2}, new[] {3, 2}, new[] {3, 4}}), Is.EqualTo(2));
+        Assert.That(sut.MinReorder(5, [[1, 0], [1, 2], [3, 2], [3, 4]]), Is.EqualTo(2));
     }
 }

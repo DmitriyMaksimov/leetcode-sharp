@@ -4,7 +4,7 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/minimum-absolute-difference-in-bst/
 public class S00530
 {
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     public int GetMinimumDifference(TreeNode? root)
     {

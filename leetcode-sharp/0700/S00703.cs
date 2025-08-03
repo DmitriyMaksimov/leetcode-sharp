@@ -7,7 +7,7 @@ public static class S00703
     public class KthLargest
     {
         private readonly int _k;
-        private readonly List<int> _values = new();
+        private readonly List<int> _values = [];
         
         public KthLargest(int k, int[] nums)
         {

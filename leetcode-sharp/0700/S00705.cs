@@ -13,7 +13,7 @@ public class MyHashSet
     {
         for (var i = 0; i < NumberOfBuckets; i++)
         {
-            _buckets[i] = new List<int>();
+            _buckets[i] = [];
         }
     }
 

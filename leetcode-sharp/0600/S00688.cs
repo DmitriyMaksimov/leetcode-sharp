@@ -5,7 +5,7 @@
 public class S00688
 {
     private double[,,] _dp;
-    private readonly (int x, int y)[] _moves = {(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)};
+    private readonly (int x, int y)[] _moves = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)];
 
     public double KnightProbability(int n, int k, int row, int col)
     {

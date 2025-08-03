@@ -222,7 +222,7 @@ public abstract class S00208
                 {
                     if (!current.Children.ContainsKey(ch))
                     {
-                        return Enumerable.Empty<string>();
+                        return [];
                     }
 
                     current = current.Children[ch];

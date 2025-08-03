@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/binary-tree-inorder-traversal/
 public class S00094
 {
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     public IList<int>? InorderTraversal(TreeNode? root)
     {

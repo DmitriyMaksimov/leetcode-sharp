@@ -5,7 +5,7 @@
 public class S00863
 {
     private readonly Dictionary<TreeNode, TreeNode?> _parentMap = new();
-    private readonly HashSet<TreeNode?> _visited = new();
+    private readonly HashSet<TreeNode?> _visited = [];
 
     public IList<int> DistanceK(TreeNode root, TreeNode target, int k)
     {
@@ -26,14 +26,14 @@ public class S00863
     {
         if (origin == null)
         {
-            return new List<int>();
+            return [];
         }
 
-        if (_visited.Contains(origin)) return new List<int>();
+        if (_visited.Contains(origin)) return [];
 
         if (distance == 0)
         {
-            return new List<int> {origin.val};
+            return [origin.val];
         }
 
         _visited.Add(origin);

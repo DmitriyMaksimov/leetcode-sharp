@@ -11,7 +11,7 @@ public class S00399Tests
         var sut = new S00399();
         Assert.That(sut.CalcEquation(
                 new List<IList<string>> {new[] {"a", "b"}, new[] {"b", "c"}},
-                new[] {2.0, 3.0},
+                [2.0, 3.0],
                 new List<IList<string>> {new[] {"a", "c"}, new[] {"b", "a"}, new[] {"a", "e"}, new[] {"a", "a"}, new[] {"x", "x"}}), Is.EqualTo((double[]) [6.00000, 0.50000, -1.00000, 1.00000, -1.00000]));
     }
 
@@ -21,7 +21,7 @@ public class S00399Tests
         var sut = new S00399();
         Assert.That(sut.CalcEquation(
                 new List<IList<string>> {new[] {"a", "b"}, new[] {"b", "c"}, new[] {"bc", "cd"}},
-                new[] {1.5, 2.5, 5.0},
+                [1.5, 2.5, 5.0],
                 new List<IList<string>> {new[] {"a", "c"}, new[] {"c", "b"}, new[] {"bc", "cd"}, new[] {"cd", "bc"}}), Is.EqualTo((double[]) [3.75, 0.4, 5.0, 0.2]));
     }
 
@@ -31,7 +31,7 @@ public class S00399Tests
         var sut = new S00399();
         Assert.That(sut.CalcEquation(
                 new List<IList<string>> {new[] {"a", "b"}},
-                new[] {0.5},
+                [0.5],
                 new List<IList<string>> {new[] {"a", "b"}, new[] {"b", "a"}, new[] {"a", "c"}, new[] {"x", "y"}}), Is.EqualTo((double[]) [0.5, 2.0, -1, -1]));
     }
 }

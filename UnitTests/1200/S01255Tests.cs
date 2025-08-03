@@ -10,9 +10,9 @@ public class S01255Tests
     {
         var sut = new S01255();
         Assert.That(sut.MaxScoreWords(
-            new[] {"dog", "cat", "dad", "good"},
-            new[] {'a', 'a', 'c', 'd', 'd', 'd', 'g', 'o', 'o'},
-            new[] {1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}), Is.EqualTo(23));
+            ["dog", "cat", "dad", "good"],
+            ['a', 'a', 'c', 'd', 'd', 'd', 'g', 'o', 'o'],
+            [1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Is.EqualTo(23));
     }
 
     [Test]
@@ -20,9 +20,9 @@ public class S01255Tests
     {
         var sut = new S01255();
         Assert.That(sut.MaxScoreWords(
-            new[] {"xxxz", "ax", "bx", "cx"},
-            new[] {'z', 'a', 'b', 'c', 'x', 'x', 'x'},
-            new[] {4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10}), Is.EqualTo(27));
+            ["xxxz", "ax", "bx", "cx"],
+            ['z', 'a', 'b', 'c', 'x', 'x', 'x'],
+            [4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10]), Is.EqualTo(27));
     }
 
     [Test]
@@ -30,8 +30,8 @@ public class S01255Tests
     {
         var sut = new S01255();
         Assert.That(sut.MaxScoreWords(
-            new[] {"leetcode"},
-            new[] {'l', 'e', 't', 'c', 'o', 'd'},
-            new[] {0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0}), Is.EqualTo(0));
+            ["leetcode"],
+            ['l', 'e', 't', 'c', 'o', 'd'],
+            [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]), Is.EqualTo(0));
     }
 }

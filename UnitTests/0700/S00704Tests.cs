@@ -9,13 +9,13 @@ public class S00704Tests
     public void T1()
     {
         var sut = new S00704();
-        Assert.That(sut.Search(new[] {-1, 0, 3, 5, 9, 12}, 9), Is.EqualTo(4));
+        Assert.That(sut.Search([-1, 0, 3, 5, 9, 12], 9), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00704();
-        Assert.That(sut.Search(new[] {-1, 0, 3, 5, 9, 12}, 2), Is.EqualTo(-1));
+        Assert.That(sut.Search([-1, 0, 3, 5, 9, 12], 2), Is.EqualTo(-1));
     }
 }

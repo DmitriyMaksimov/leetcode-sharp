@@ -9,20 +9,20 @@ public class S02319Tests
     public void T1()
     {
         var sut = new S02319();
-        Assert.That(sut.CheckXMatrix(new[] {new[] {2, 0, 0, 1}, new[] {0, 3, 1, 0}, new[] {0, 5, 2, 0}, new[] {4, 0, 0, 2}}), Is.True);
+        Assert.That(sut.CheckXMatrix([[2, 0, 0, 1], [0, 3, 1, 0], [0, 5, 2, 0], [4, 0, 0, 2]]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02319();
-        Assert.That(sut.CheckXMatrix(new[] {new[] {5, 7, 0}, new[] {0, 3, 1}, new[] {0, 5, 0}}), Is.False);
+        Assert.That(sut.CheckXMatrix([[5, 7, 0], [0, 3, 1], [0, 5, 0]]), Is.False);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02319();
-        Assert.That(sut.CheckXMatrix(new[] {new[] {0, 2, 1, 0}, new[] {1, 0, 0, 3}, new[] {4, 0, 0, 5}, new[] {0, 3, 3, 0}}), Is.False);
+        Assert.That(sut.CheckXMatrix([[0, 2, 1, 0], [1, 0, 0, 3], [4, 0, 0, 5], [0, 3, 3, 0]]), Is.False);
     }
 }

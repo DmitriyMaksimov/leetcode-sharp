@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/
 public class S02492
 {
-    private readonly HashSet<int> _visited = new();
+    private readonly HashSet<int> _visited = [];
     private Dictionary<int, List<(int city, int distance)>> _graph;
 
     public int MinScore(int n, int[][] roads)

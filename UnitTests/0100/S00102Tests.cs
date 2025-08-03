@@ -19,7 +19,7 @@ public class S00102Tests
     public void T2()
     {
         var sut = new S00102();
-        Assert.That(sut.LevelOrder(TreeNode.Parse("[1]")), Is.EquivalentTo(new[] {new[] {1}}));
+        Assert.That(sut.LevelOrder(TreeNode.Parse("[1]")), Is.EquivalentTo([new[] {1}]));
     }
 
     [Test]

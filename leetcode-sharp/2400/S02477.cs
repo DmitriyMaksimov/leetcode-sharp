@@ -18,9 +18,9 @@ public class S02477
         _seats = seats;
         foreach (var edge in roads)
         {
-            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], new List<int>());
+            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], []);
             _graph[edge[0]].Add(edge[1]);
-            _graph[edge[1]] = _graph.GetValueOrDefault(edge[1], new List<int>());
+            _graph[edge[1]] = _graph.GetValueOrDefault(edge[1], []);
             _graph[edge[1]].Add(edge[0]);
         }
 

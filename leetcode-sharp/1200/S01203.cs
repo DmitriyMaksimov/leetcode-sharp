@@ -20,14 +20,14 @@ public class S01203
         var itemIndegree = new int[n];
         for (var i = 0; i < n; ++i)
         {
-            itemGraph.Add(i, new List<int>());
+            itemGraph.Add(i, []);
         }
 
         var groupGraph = new Dictionary<int, List<int>>();
         var groupIndegree = new int[groupId];
         for (var i = 0; i < groupId; ++i)
         {
-            groupGraph.Add(i, new List<int>());
+            groupGraph.Add(i, []);
         }
 
         for (var curr = 0; curr < n; curr++)
@@ -50,21 +50,21 @@ public class S01203
 
         if (!itemOrder.Any() || !groupOrder.Any())
         {
-            return Array.Empty<int>();
+            return [];
         }
 
         var orderedGroups = new Dictionary<int, List<int>>();
         
         foreach (var item in itemOrder)
         {
-            orderedGroups[group[item]] = orderedGroups.GetValueOrDefault(group[item], new List<int>());
+            orderedGroups[group[item]] = orderedGroups.GetValueOrDefault(group[item], []);
             orderedGroups[group[item]].Add(item);
         }
 
         var answerList = new List<int>();
         foreach (var groupIndex in groupOrder)
         {
-            answerList.AddRange(orderedGroups.GetValueOrDefault(groupIndex, new List<int>()));
+            answerList.AddRange(orderedGroups.GetValueOrDefault(groupIndex, []));
         }
 
         return answerList.ToArray();
@@ -94,6 +94,6 @@ public class S01203
             }
         }
 
-        return visited.Count == graph.Count ? visited : new List<int>();
+        return visited.Count == graph.Count ? visited : [];
     }
 }

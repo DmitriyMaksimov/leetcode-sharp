@@ -9,13 +9,13 @@ public class S00084Tests
     public void T1()
     {
         var sut = new S00084();
-        Assert.That(sut.LargestRectangleArea(new[] {2, 1, 5, 6, 2, 3}), Is.EqualTo(10));
+        Assert.That(sut.LargestRectangleArea([2, 1, 5, 6, 2, 3]), Is.EqualTo(10));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00084();
-        Assert.That(sut.LargestRectangleArea(new[] {2, 4}), Is.EqualTo(4));
+        Assert.That(sut.LargestRectangleArea([2, 4]), Is.EqualTo(4));
     }
 }

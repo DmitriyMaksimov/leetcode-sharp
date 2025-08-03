@@ -10,7 +10,7 @@ public class S02399Tests
     {
         var sut = new S02399();
         Assert.That(sut.CheckDistances("abaccb",
-            new[] {1, 3, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}), Is.True);
+            [1, 3, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Is.True);
     }
 
     [Test]
@@ -18,6 +18,6 @@ public class S02399Tests
     {
         var sut = new S02399();
         Assert.That(sut.CheckDistances("aa",
-            new[] {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}), Is.False);
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Is.False);
     }
 }

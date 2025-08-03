@@ -10,7 +10,7 @@ public class S00150Tests
     {
         var sut = new S00150();
 
-        Assert.That(sut.EvalRPN(new[] {"2", "1", "+", "3", "*"}), Is.EqualTo(9));
+        Assert.That(sut.EvalRPN(["2", "1", "+", "3", "*"]), Is.EqualTo(9));
     }
 
     [Test]
@@ -18,7 +18,7 @@ public class S00150Tests
     {
         var sut = new S00150();
 
-        Assert.That(sut.EvalRPN(new[] {"4", "13", "5", "/", "+"}), Is.EqualTo(6));
+        Assert.That(sut.EvalRPN(["4", "13", "5", "/", "+"]), Is.EqualTo(6));
     }
 
     [Test]
@@ -26,6 +26,6 @@ public class S00150Tests
     {
         var sut = new S00150();
 
-        Assert.That(sut.EvalRPN(new[] {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}), Is.EqualTo(22));
+        Assert.That(sut.EvalRPN(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]), Is.EqualTo(22));
     }
 }

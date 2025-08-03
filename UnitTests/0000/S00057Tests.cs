@@ -9,27 +9,29 @@ public class S00057Tests
     public void T1()
     {
         var sut = new S00057();
-        Assert.That(sut.Insert(new[] {new[] {1, 3}, new[] {6, 9}}, new[] {2, 5}), Is.EquivalentTo(new[] {new[] {1, 5}, new[] {6, 9}}));
+        Assert.That(sut.Insert([[1, 3], [6, 9]], [2, 5]), Is.EquivalentTo([[1, 5], new[] {6, 9}]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00057();
-        Assert.That(sut.Insert(new[] {new[] {1, 2}, new[] {3, 5}, new[] {6, 7}, new[] {8, 10}, new[] {12, 16}}, new[] {4, 8}), Is.EquivalentTo(new[] {new[] {1, 2}, new[] {3, 10}, new[] {12, 16}}));
+        Assert.That(sut.Insert([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8]), Is.EquivalentTo([
+            [1, 2], [3, 10], new[] {12, 16}
+        ]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00057();
-        Assert.That(sut.Insert(Array.Empty<int[]>(), new[] {5, 7}), Is.EquivalentTo(new[] {new[] {5, 7}}));
+        Assert.That(sut.Insert([], [5, 7]), Is.EquivalentTo([new[] {5, 7}]));
     }
 
     [Test]
     public void T4()
     {
         var sut = new S00057();
-        Assert.That(sut.Insert(new[] {new[] {1, 5}}, new[] {2, 7}), Is.EquivalentTo(new[] {new[] {1, 7}}));
+        Assert.That(sut.Insert([[1, 5]], [2, 7]), Is.EquivalentTo([new[] {1, 7}]));
     }
 }

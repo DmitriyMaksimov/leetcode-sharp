@@ -10,7 +10,7 @@ public class S01110
     public IList<TreeNode> DelNodes(TreeNode? root, int[] toDelete)
     {
         _toDeleteSet = toDelete.ToHashSet();
-        _result = new List<TreeNode>();
+        _result = [];
 
         Helper(root, true);
 

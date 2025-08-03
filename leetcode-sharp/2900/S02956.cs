@@ -8,6 +8,6 @@ public class S02956
     {
         var set1 = new HashSet<int>(nums1);
         var set2 = new HashSet<int>(nums2);
-        return new[] {nums1.Count(x => set2.Contains(x)), nums2.Count(x => set1.Contains(x))};
+        return [nums1.Count(x => set2.Contains(x)), nums2.Count(x => set1.Contains(x))];
     }
 }

@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/binary-tree-preorder-traversal/
 public class S00144
 {
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     public IList<int>? PreorderTraversal(TreeNode? root)
     {

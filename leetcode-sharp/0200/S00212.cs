@@ -59,7 +59,7 @@ public class S00212
             {
                 if (!p.ContainsKey(_board[y][x]))
                 {
-                    p[_board[y][x]] = new List<(int, int)>();
+                    p[_board[y][x]] = [];
                 }
 
                 p[_board[y][x]].Add((x, y));
@@ -86,7 +86,7 @@ public class S00212
             }
         }
 
-        List<string> res = new List<string>();
+        List<string> res = [];
         for (var i = 0; i < words.Length; i++)
         {
             if (words[i].Length == 0)

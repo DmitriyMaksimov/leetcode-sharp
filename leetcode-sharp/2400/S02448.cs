@@ -11,7 +11,7 @@ public class S02448
         var numsAndCost = new int[n][];
         for (var i = 0; i < n; ++i)
         {
-            numsAndCost[i] = new [] {nums[i], cost[i]};
+            numsAndCost[i] = [nums[i], cost[i]];
         }
 
         Array.Sort(numsAndCost, (a, b) => a[0] - b[0]);

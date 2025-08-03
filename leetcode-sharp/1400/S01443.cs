@@ -6,7 +6,7 @@ public class S01443
 {
     private readonly Dictionary<int, List<int>> _graph = new();
     private IList<bool> _hasApple;
-    private readonly HashSet<int> _visited = new();
+    private readonly HashSet<int> _visited = [];
 
     public int MinTime(int n, int[][] edges, IList<bool> hasApple)
     {
@@ -14,9 +14,9 @@ public class S01443
         
         foreach (var edge in edges)
         {
-            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], new List<int>());
+            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], []);
             _graph[edge[0]].Add(edge[1]);
-            _graph[edge[1]] = _graph.GetValueOrDefault(edge[1], new List<int>());
+            _graph[edge[1]] = _graph.GetValueOrDefault(edge[1], []);
             _graph[edge[1]].Add(edge[0]);
         }
         

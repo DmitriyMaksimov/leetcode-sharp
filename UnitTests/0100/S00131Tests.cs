@@ -9,20 +9,20 @@ public class S00131Tests
     public void T1()
     {
         var sut = new S00131();
-        Assert.That(sut.Partition("aab"), Is.EquivalentTo(new[] {new[] {"a", "a", "b"}, new[] {"aa", "b"}}));
+        Assert.That(sut.Partition("aab"), Is.EquivalentTo([["a", "a", "b"], new[] {"aa", "b"}]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00131();
-        Assert.That(sut.Partition("a"), Is.EquivalentTo(new[] {new[] {"a"}}));
+        Assert.That(sut.Partition("a"), Is.EquivalentTo([new[] {"a"}]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00131();
-        Assert.That(sut.Partition("bb"), Is.EquivalentTo(new[] {new[] {"bb"}, new []{"b", "b"}}));
+        Assert.That(sut.Partition("bb"), Is.EquivalentTo([["bb"], new []{"b", "b"}]));
     }
 }

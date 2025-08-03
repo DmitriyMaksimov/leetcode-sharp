@@ -9,7 +9,7 @@ public class S00598Tests
     public void T1()
     {
         var sut = new S00598();
-        Assert.That(sut.MaxCount(3, 3, new[] {new[] {2, 2}, new[] {3, 3}}), Is.EqualTo(4));
+        Assert.That(sut.MaxCount(3, 3, [[2, 2], [3, 3]]), Is.EqualTo(4));
     }
 
     [Test]
@@ -17,17 +17,16 @@ public class S00598Tests
     {
         var sut = new S00598();
         Assert.That(sut.MaxCount(3, 3,
-            new[]
-            {
-                new[] {2, 2}, new[] {3, 3}, new[] {3, 3}, new[] {2, 2}, new[] {3, 3}, new[] {3, 3}, new[] {3, 3},
-                new[] {2, 2}, new[] {3, 3}, new[] {3, 3}, new[] {3, 3}
-            }), Is.EqualTo(4));
+        [
+            [2, 2], [3, 3], [3, 3], [2, 2], [3, 3], [3, 3], [3, 3],
+            [2, 2], [3, 3], [3, 3], [3, 3]
+        ]), Is.EqualTo(4));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00598();
-        Assert.That(sut.MaxCount(3, 3, Array.Empty<int[]>()), Is.EqualTo(9));
+        Assert.That(sut.MaxCount(3, 3, []), Is.EqualTo(9));
     }
 }

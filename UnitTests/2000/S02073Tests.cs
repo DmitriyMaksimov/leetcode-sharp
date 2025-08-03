@@ -9,13 +9,13 @@ public class S02073Tests
     public void T1()
     {
         var sut = new S02073();
-        Assert.That(sut.TimeRequiredToBuy(new[] {2, 3, 2}, 2), Is.EqualTo(6));
+        Assert.That(sut.TimeRequiredToBuy([2, 3, 2], 2), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02073();
-        Assert.That(sut.TimeRequiredToBuy(new[] {5, 1, 1, 1}, 0), Is.EqualTo(8));
+        Assert.That(sut.TimeRequiredToBuy([5, 1, 1, 1], 0), Is.EqualTo(8));
     }
 }

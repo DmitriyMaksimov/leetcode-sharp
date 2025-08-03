@@ -9,13 +9,13 @@ public class S00416Tests
     public void T1()
     {
         var sut = new S00416();
-        Assert.That(sut.CanPartition(new[] {1, 5, 11, 5}), Is.True);
+        Assert.That(sut.CanPartition([1, 5, 11, 5]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00416();
-        Assert.That(sut.CanPartition(new[] {1, 2, 3, 5}), Is.False);
+        Assert.That(sut.CanPartition([1, 2, 3, 5]), Is.False);
     }
 }

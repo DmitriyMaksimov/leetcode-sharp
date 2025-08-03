@@ -12,7 +12,7 @@ public class S02610
         {
             if (!unique.Any(x => x.Add(item)))
             {
-                unique.Add(new HashSet<int> {item});
+                unique.Add([item]);
             }
         }
 

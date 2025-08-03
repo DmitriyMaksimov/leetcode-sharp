@@ -9,13 +9,13 @@ public class S00560Tests
     public void T1()
     {
         var sut = new S00560();
-        Assert.That(sut.SubarraySum(new[] {1, 1, 1}, 2), Is.EqualTo(2));
+        Assert.That(sut.SubarraySum([1, 1, 1], 2), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00560();
-        Assert.That(sut.SubarraySum(new[] {1, 2, 3}, 3), Is.EqualTo(2));
+        Assert.That(sut.SubarraySum([1, 2, 3], 3), Is.EqualTo(2));
     }
 }

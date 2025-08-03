@@ -11,10 +11,10 @@ public class S00167
             var index = Array.BinarySearch(numbers, i + 1, numbers.Length - i - 1, target - numbers[i]);
             if (index >= 0)
             {
-                return new[] {i + 1, index + 1};
+                return [i + 1, index + 1];
             }
         }
 
-        return new[] {-1, -1};
+        return [-1, -1];
     }
 }

@@ -5,7 +5,7 @@
 public class S01319
 {
     private readonly Dictionary<int, List<int>> _graph = new();
-    private readonly HashSet<int> _visited = new();
+    private readonly HashSet<int> _visited = [];
 
     public int MakeConnected(int n, int[][] connections)
     {
@@ -16,10 +16,10 @@ public class S01319
 
         foreach (var connection in connections)
         {
-            _graph[connection[0]] = _graph.GetValueOrDefault(connection[0], new List<int>());
+            _graph[connection[0]] = _graph.GetValueOrDefault(connection[0], []);
             _graph[connection[0]].Add(connection[1]);
 
-            _graph[connection[1]] = _graph.GetValueOrDefault(connection[1], new List<int>());
+            _graph[connection[1]] = _graph.GetValueOrDefault(connection[1], []);
             _graph[connection[1]].Add(connection[0]);
         }
 
@@ -40,7 +40,7 @@ public class S01319
             return;
         
         _visited.Add(node);
-        foreach (var i in _graph.GetValueOrDefault(node, new List<int>()))
+        foreach (var i in _graph.GetValueOrDefault(node, []))
         {
             dfs(i);
         }

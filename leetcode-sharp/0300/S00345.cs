@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/reverse-vowels-of-a-string/
 public class S00345
 {
-    private readonly HashSet<char> _vowels = new() { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+    private readonly HashSet<char> _vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
     public string ReverseVowels(string s)
     {

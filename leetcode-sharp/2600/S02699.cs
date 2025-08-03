@@ -30,10 +30,10 @@ public class S02699
 
         Dijkstra(adjacencyList, edges, distances, source, 0, 0);
         var difference = target - distances[destination, 0];
-        if (difference < 0) return new int[0][];
+        if (difference < 0) return [];
 
         Dijkstra(adjacencyList, edges, distances, source, difference, 1);
-        if (distances[destination, 1] < target) return new int[0][];
+        if (distances[destination, 1] < target) return [];
 
         foreach (var edge in edges)
         {

@@ -6,7 +6,7 @@ public static class S02013
 {
     public class DetectSquares
     {
-        private readonly List<int[]> _coordinates = new();
+        private readonly List<int[]> _coordinates = [];
         private readonly Dictionary<string, int> _counts = new();
 
         public void Add(int[] point)

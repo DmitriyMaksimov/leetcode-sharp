@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/binary-tree-postorder-traversal/
 public class S00145
 {
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     public IList<int>? PostorderTraversal(TreeNode? root)
     {

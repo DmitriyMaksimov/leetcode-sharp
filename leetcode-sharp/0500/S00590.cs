@@ -25,7 +25,7 @@ public class S00590
         }
     }
 
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     public IList<int> Postorder(Node? root)
     {

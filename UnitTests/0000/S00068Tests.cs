@@ -9,7 +9,7 @@ public class S00068Tests
     public void T1()
     {
         var sut = new S00068();
-        Assert.That(sut.FullJustify(new[] {"This", "is", "an", "example", "of", "text", "justification."}, 16), Is.EqualTo((string[]) ["This    is    an",
+        Assert.That(sut.FullJustify(["This", "is", "an", "example", "of", "text", "justification."], 16), Is.EqualTo((string[]) ["This    is    an",
         "example  of text",
         "justification.  "]));
     }
@@ -18,7 +18,7 @@ public class S00068Tests
     public void T2()
     {
         var sut = new S00068();
-        Assert.That(sut.FullJustify(new[] {"What", "must", "be", "acknowledgment", "shall", "be"}, 16), Is.EqualTo((string[]) ["What   must   be",
+        Assert.That(sut.FullJustify(["What", "must", "be", "acknowledgment", "shall", "be"], 16), Is.EqualTo((string[]) ["What   must   be",
         "acknowledgment  ",
         "shall be        "]));
     }
@@ -28,11 +28,10 @@ public class S00068Tests
     {
         var sut = new S00068();
         Assert.That(sut.FullJustify(
-            new[]
-            {
-                "Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a", "computer.",
+        [
+            "Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a", "computer.",
                 "Art", "is", "everything", "else", "we", "do"
-            }, 20), Is.EqualTo((string[]) ["Science  is  what we",
+        ], 20), Is.EqualTo((string[]) ["Science  is  what we",
         "understand      well",
         "enough to explain to",
         "a  computer.  Art is",

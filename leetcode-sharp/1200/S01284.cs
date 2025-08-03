@@ -5,7 +5,7 @@
 public class S01284
 {
     private readonly Dictionary<string, int> _memo = new();
-    private readonly HashSet<string> _visited = new();
+    private readonly HashSet<string> _visited = [];
 
     public int MinFlips(int[][] mat)
     {

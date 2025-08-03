@@ -9,20 +9,22 @@ public class S01579Tests
     public void T1()
     {
         var sut = new S01579();
-        Assert.That(sut.MaxNumEdgesToRemove(4, new[] {new[] {3,1,2}, new[] {3,2,3}, new[] {1,1,3}, new[] {1,2,4}, new[] {1,1,2}, new[] {2,3,4}}), Is.EqualTo(2));
+        Assert.That(sut.MaxNumEdgesToRemove(4, [
+            [3,1,2], [3,2,3], [1,1,3], [1,2,4], [1,1,2], [2,3,4]
+        ]), Is.EqualTo(2));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01579();
-        Assert.That(sut.MaxNumEdgesToRemove(4, new[] {new[] {3,1,2}, new[] {3,2,3}, new[] {1,1,4}, new[] {2,1,4}}), Is.EqualTo(0));
+        Assert.That(sut.MaxNumEdgesToRemove(4, [[3,1,2], [3,2,3], [1,1,4], [2,1,4]]), Is.EqualTo(0));
     }
     
     [Test]
     public void T3()
     {
         var sut = new S01579();
-        Assert.That(sut.MaxNumEdgesToRemove(4, new[] {new[] {3,2,3}, new[] {1,1,2}, new[] {2,3,4}}), Is.EqualTo(-1));
+        Assert.That(sut.MaxNumEdgesToRemove(4, [[3,2,3], [1,1,2], [2,3,4]]), Is.EqualTo(-1));
     }
 }

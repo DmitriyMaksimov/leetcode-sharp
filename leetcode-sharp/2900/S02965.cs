@@ -31,6 +31,6 @@ public class S02965
             }
         }
 
-        return new[] {a, b};
+        return [a, b];
     }
 }

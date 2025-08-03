@@ -6,7 +6,7 @@ public abstract class S01472
 {
     public class BrowserHistory
     {
-        private readonly List<string> _history = new();
+        private readonly List<string> _history = [];
         private int _currentIndex;
 
         private int Count => _history.Count;

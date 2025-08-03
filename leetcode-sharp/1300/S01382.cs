@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/balance-a-binary-search-tree
 public class S01382
 {
-    private readonly List<int> _list = new();
+    private readonly List<int> _list = [];
 
     public TreeNode? BalanceBST(TreeNode? root)
     {

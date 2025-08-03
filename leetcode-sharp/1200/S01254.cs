@@ -6,7 +6,7 @@ public class S01254
 {
     private const int Land = 0;
     private const int Water = 1;
-    private readonly int[] _directions = {0, 1, 0, -1, 0};
+    private readonly int[] _directions = [0, 1, 0, -1, 0];
 
     public int ClosedIsland(int[][] grid)
     {

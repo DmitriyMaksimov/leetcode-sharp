@@ -14,7 +14,7 @@ public class S02570
         {
             if (nums1[p1][0] == nums2[p2][0])
             {
-                result.Add(new[] {nums1[p1][0], nums1[p1++][1] + nums2[p2++][1]});
+                result.Add([nums1[p1][0], nums1[p1++][1] + nums2[p2++][1]]);
             }
             else if (nums1[p1][0] < nums2[p2][0])
             {

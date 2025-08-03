@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/
 public class S01751
 {
-    private readonly List<int[]> _dp = new();
+    private readonly List<int[]> _dp = [];
 
     public int MaxValue(int[][] events, int k)
     {

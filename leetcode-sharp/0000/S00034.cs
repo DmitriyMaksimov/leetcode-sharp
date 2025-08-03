@@ -8,7 +8,7 @@ public class S00034
     {
         if (nums.Length == 0)
         {
-            return new[] {-1, -1};
+            return [-1, -1];
         }
 
         var first = findFirst(nums, target);
@@ -25,7 +25,7 @@ public class S00034
             last = -1;
         }
         
-        return new[] {first, last};
+        return [first, last];
     }
     
     private static int findFirst(IReadOnlyList<int> list, long key)

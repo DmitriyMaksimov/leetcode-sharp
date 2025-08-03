@@ -17,7 +17,7 @@ public class S00802
 
         for (var i = 0; i < n; i++)
         {
-            adj.Add(new List<int>());
+            adj.Add([]);
             foreach (var node in graph[i])
             {
                 adj[i].Add(node);

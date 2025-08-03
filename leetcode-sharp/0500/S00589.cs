@@ -25,7 +25,7 @@ public class S00589
         }
     }
 
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     public IList<int> Preorder(Node? root)
     {

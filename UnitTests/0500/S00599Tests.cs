@@ -9,22 +9,22 @@ public class S00599Tests
     public void T1()
     {
         var sut = new S00599();
-        Assert.That(sut.FindRestaurant(new[] {"Shogun", "Tapioca Express", "Burger King", "KFC"},
-                new[] {"Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"}), Is.EqualTo((string[]) ["Shogun"]));
+        Assert.That(sut.FindRestaurant(["Shogun", "Tapioca Express", "Burger King", "KFC"],
+            ["Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"]), Is.EqualTo((string[]) ["Shogun"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00599();
-        Assert.That(sut.FindRestaurant(new[] {"Shogun", "Tapioca Express", "Burger King", "KFC"},
-                new[] {"KFC", "Shogun", "Burger King"}), Is.EqualTo((string[]) ["Shogun"]));
+        Assert.That(sut.FindRestaurant(["Shogun", "Tapioca Express", "Burger King", "KFC"],
+            ["KFC", "Shogun", "Burger King"]), Is.EqualTo((string[]) ["Shogun"]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00599();
-        Assert.That(sut.FindRestaurant(new[] {"happy", "sad", "good"}, new[] {"sad", "happy", "good"}), Is.EqualTo((string[]) ["happy", "sad"]));
+        Assert.That(sut.FindRestaurant(["happy", "sad", "good"], ["sad", "happy", "good"]), Is.EqualTo((string[]) ["happy", "sad"]));
     }
 }

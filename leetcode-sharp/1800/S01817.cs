@@ -13,7 +13,7 @@ public class S01817
             var userId = log[0];
             var taskPerformedAtTime = log[1];
 
-            userActiveMinutes.TryAdd(userId, new HashSet<int>());
+            userActiveMinutes.TryAdd(userId, []);
             userActiveMinutes[userId].Add(taskPerformedAtTime);
         }
 

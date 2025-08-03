@@ -58,7 +58,7 @@ public class S01061
 
             if (group1 == -1 && group2 == -1)
             {
-                groups.Add(new HashSet<char> {c1, c2});
+                groups.Add([c1, c2]);
             }
             else if (group1 == group2)
             {

@@ -8,7 +8,9 @@ public class S01476Tests
     [Test]
     public void T1()
     {
-        var subrectangleQueries = new S01476.SubrectangleQueries(new[] {new[] {1, 2, 1}, new[] {4, 3, 4}, new[] {3, 2, 1}, new[] {1, 1, 1}});
+        var subrectangleQueries = new S01476.SubrectangleQueries([
+            [1, 2, 1], [4, 3, 4], [3, 2, 1], [1, 1, 1]
+        ]);
         // The initial rectangle (4x3) looks like:
         // 1 2 1
         // 4 3 4

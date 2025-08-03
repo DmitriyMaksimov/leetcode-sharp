@@ -9,20 +9,20 @@ public class S00152Tests
     public void T1()
     {
         var sut = new S00152();
-        Assert.That(sut.MaxProduct(new[] {2, 3, -2, 4}), Is.EqualTo(6));
+        Assert.That(sut.MaxProduct([2, 3, -2, 4]), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00152();
-        Assert.That(sut.MaxProduct(new[] {-2, 0, -1}), Is.EqualTo(0));
+        Assert.That(sut.MaxProduct([-2, 0, -1]), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00152();
-        Assert.That(sut.MaxProduct(new[] {-2, 3, -4}), Is.EqualTo(24));
+        Assert.That(sut.MaxProduct([-2, 3, -4]), Is.EqualTo(24));
     }
 }

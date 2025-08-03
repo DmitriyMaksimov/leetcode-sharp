@@ -9,20 +9,20 @@ public class S01444Tests
     public void T1()
     {
         var sut = new S01444();
-        Assert.That(sut.Ways(new[] {"A..", "AAA", "..."}, 3), Is.EqualTo(3));
+        Assert.That(sut.Ways(["A..", "AAA", "..."], 3), Is.EqualTo(3));
     }
     
     [Test]
     public void T2()
     {
         var sut = new S01444();
-        Assert.That(sut.Ways(new[] {"A..", "AA.", "..."}, 3), Is.EqualTo(1));
+        Assert.That(sut.Ways(["A..", "AA.", "..."], 3), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01444();
-        Assert.That(sut.Ways(new[] {"A..", "A..", "..."}, 1), Is.EqualTo(1));
+        Assert.That(sut.Ways(["A..", "A..", "..."], 1), Is.EqualTo(1));
     }
 }

@@ -9,13 +9,13 @@ public class S00785Tests
     public void T1()
     {
         var sut = new S00785();
-        Assert.That(sut.IsBipartite(new[] {new[] {1, 2, 3}, new[] {0, 2}, new[] {0, 1, 3}, new[] {0, 2}}), Is.False);
+        Assert.That(sut.IsBipartite([[1, 2, 3], [0, 2], [0, 1, 3], [0, 2]]), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00785();
-        Assert.That(sut.IsBipartite(new[] {new[] { 1,3}, new []{0,2}, new []{1,3}, new []{0,2}}), Is.True);
+        Assert.That(sut.IsBipartite([[1,3], [0,2], [1,3], [0,2]]), Is.True);
     }
 }

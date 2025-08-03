@@ -8,7 +8,7 @@ public class S02022
     {
         if (original.Length != m * n)
         {
-            return Array.Empty<int[]>();
+            return [];
         }
 
         var result = new int[m][];

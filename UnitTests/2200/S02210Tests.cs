@@ -9,13 +9,13 @@ public class S02210Tests
     public void T1()
     {
         var sut = new S02210();
-        Assert.That(sut.CountHillValley(new[] {2, 4, 1, 1, 6, 5}), Is.EqualTo(3));
+        Assert.That(sut.CountHillValley([2, 4, 1, 1, 6, 5]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02210();
-        Assert.That(sut.CountHillValley(new[] {6, 6, 5, 5, 4, 1}), Is.EqualTo(0));
+        Assert.That(sut.CountHillValley([6, 6, 5, 5, 4, 1]), Is.EqualTo(0));
     }
 }

@@ -5,7 +5,7 @@
 public class S01466
 {
     private readonly Dictionary<int, List<(int city, bool direction)>> _graph = new();
-    private readonly HashSet<int> _visited = new();
+    private readonly HashSet<int> _visited = [];
     private int _result;
 
     public int MinReorder(int n, int[][] connections)

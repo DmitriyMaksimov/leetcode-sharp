@@ -4,7 +4,8 @@
 // https://leetcode.com/problems/reformat-date/
 public class S01507
 {
-    private readonly string[] _months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    private readonly string[] _months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
 
     public string ReformatDate(string date)
     {

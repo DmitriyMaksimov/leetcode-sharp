@@ -4,7 +4,7 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/find-minimum-time-to-reach-last-room-ii
 public class S03342
 {
-    private readonly int[] _directions = {0, -1, 0, 1, 0};
+    private readonly int[] _directions = [0, -1, 0, 1, 0];
 
     public int MinTimeToReach(int[][] moveTime)
     {

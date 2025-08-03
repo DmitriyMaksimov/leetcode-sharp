@@ -4,13 +4,13 @@
 // https://leetcode.com/problems/all-possible-full-binary-trees/
 public class S00894
 {
-    private readonly List<List<TreeNode>> _dp = new();
+    private readonly List<List<TreeNode>> _dp = [];
 
     public IList<TreeNode> AllPossibleFBT(int n)
     {
         for (var i = 0; i <= n; i++)
         {
-            _dp.Add(new List<TreeNode>());
+            _dp.Add([]);
         }
 
         return solve(n);
@@ -20,7 +20,7 @@ public class S00894
     {
         if (n % 2 == 0)
         {
-            return new List<TreeNode>();
+            return [];
         }
 
         if (_dp[n].Any())

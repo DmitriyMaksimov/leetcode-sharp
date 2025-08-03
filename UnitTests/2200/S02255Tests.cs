@@ -9,13 +9,13 @@ public class S02255Tests
     public void T1()
     {
         var sut = new S02255();
-        Assert.That(sut.CountPrefixes(new[] {"a", "b", "c", "ab", "bc", "abc"}, "abc"), Is.EqualTo(3));
+        Assert.That(sut.CountPrefixes(["a", "b", "c", "ab", "bc", "abc"], "abc"), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02255();
-        Assert.That(sut.CountPrefixes(new[] {"a", "a"}, "aa"), Is.EqualTo(2));
+        Assert.That(sut.CountPrefixes(["a", "a"], "aa"), Is.EqualTo(2));
     }
 }

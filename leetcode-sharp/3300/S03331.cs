@@ -11,7 +11,7 @@ public class S03331
 
         for (var i = 0; i < n; i++)
         {
-            adj.Add(new List<int>());
+            adj.Add([]);
         }
 
         for (var i = 1; i < n; i++)
@@ -27,7 +27,7 @@ public class S03331
         var finalAdj = new List<List<int>>(n);
         for (var i = 0; i < n; i++)
         {
-            finalAdj.Add(new List<int>());
+            finalAdj.Add([]);
         }
 
         for (var i = 1; i < n; i++)

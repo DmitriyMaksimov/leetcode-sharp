@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/min-cost-to-connect-all-points/
 public class S01584
 {
-    private readonly HashSet<int[]> _visited = new();
+    private readonly HashSet<int[]> _visited = [];
     private readonly PriorityQueue<(int[] point, int wt), int> _heap = new();
 
     public int MinCostConnectPoints(int[][] points)

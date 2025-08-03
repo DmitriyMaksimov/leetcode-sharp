@@ -12,7 +12,7 @@ public class S01376
         {
             if (manager[i] != -1)
             {
-                adjList[manager[i]] = adjList.GetValueOrDefault(manager[i], new List<int>());
+                adjList[manager[i]] = adjList.GetValueOrDefault(manager[i], []);
                 adjList[manager[i]].Add(i);
             }
         }

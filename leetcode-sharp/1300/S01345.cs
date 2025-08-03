@@ -57,7 +57,7 @@ public class S01345
         for (var i = 0; i < arr.Count; i++)
         {
             var element = arr[i];
-            graph[element] = graph.GetValueOrDefault(element, new List<int>());
+            graph[element] = graph.GetValueOrDefault(element, []);
             graph[element].Add(i);
         }
 

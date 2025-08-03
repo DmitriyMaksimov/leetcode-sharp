@@ -9,20 +9,20 @@ public class S01441Tests
     public void T1()
     {
         var sut = new S01441();
-        Assert.That(sut.BuildArray(new[] {1, 3}, 3), Is.EqualTo((string[]) ["Push", "Push", "Pop", "Push"]));
+        Assert.That(sut.BuildArray([1, 3], 3), Is.EqualTo((string[]) ["Push", "Push", "Pop", "Push"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01441();
-        Assert.That(sut.BuildArray(new[] {1, 2, 3}, 3), Is.EqualTo((string[]) ["Push", "Push", "Push"]));
+        Assert.That(sut.BuildArray([1, 2, 3], 3), Is.EqualTo((string[]) ["Push", "Push", "Push"]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01441();
-        Assert.That(sut.BuildArray(new[] {1, 2}, 4), Is.EqualTo((string[]) ["Push", "Push"]));
+        Assert.That(sut.BuildArray([1, 2], 4), Is.EqualTo((string[]) ["Push", "Push"]));
     }
 }

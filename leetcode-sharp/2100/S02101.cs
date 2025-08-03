@@ -10,7 +10,7 @@ public class S02101
         var gr = new List<List<int>>(n);
         for (var i = 0; i < n; i++)
         {
-            gr.Add(new List<int>());
+            gr.Add([]);
             for (var j = 0; j < n; j++)
             {
                 if (i != j)

@@ -4,7 +4,7 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/minimum-distance-between-bst-nodes/
 public class S00783
 {
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     public int MinDiffInBST(TreeNode? root)
     {

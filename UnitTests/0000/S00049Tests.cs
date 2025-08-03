@@ -9,25 +9,24 @@ public class S00049Tests
     public void T1()
     {
         var sut = new S00049();
-        Assert.That(sut.GroupAnagrams(new[] {"eat", "tea", "tan", "ate", "nat", "bat"}), Is.EquivalentTo(new[]
-        {
-            new List<string> {"bat"},
-            new List<string> {"tan", "nat"},
+        Assert.That(sut.GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]), Is.EquivalentTo([
+            ["bat"],
+            ["tan", "nat"],
             new List<string> {"eat", "tea", "ate"}
-        }));
+        ]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00049();
-        Assert.That(sut.GroupAnagrams(new[] {""}), Is.EquivalentTo(new[] {new List<string> {""}}));
+        Assert.That(sut.GroupAnagrams([""]), Is.EquivalentTo([new List<string> {""}]));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00049();
-        Assert.That(sut.GroupAnagrams(new[] {"a"}), Is.EquivalentTo(new[] {new List<string> {"a"}}));
+        Assert.That(sut.GroupAnagrams(["a"]), Is.EquivalentTo([new List<string> {"a"}]));
     }
 }

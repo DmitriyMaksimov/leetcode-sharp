@@ -53,10 +53,10 @@ public class S02316
             var nodeA = edge[0];
             var nodeB = edge[1];
 
-            graph[nodeA] = graph.GetValueOrDefault(nodeA, new List<int>());
+            graph[nodeA] = graph.GetValueOrDefault(nodeA, []);
             graph[nodeA].Add(nodeB);
 
-            graph[nodeB] = graph.GetValueOrDefault(nodeB, new List<int>());
+            graph[nodeB] = graph.GetValueOrDefault(nodeB, []);
             graph[nodeB].Add(nodeA);
         }
 

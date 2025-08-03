@@ -16,7 +16,7 @@ public class S00212Tests
             new[] {'i', 'h', 'k', 'r'},
             new[] {'i', 'f', 'l', 'v'}
         };
-        Assert.That(sut.FindWords(board, new[] {"oath", "pea", "eat", "rain"}), Is.EquivalentTo((string[]) ["eat", "oath"]));
+        Assert.That(sut.FindWords(board, ["oath", "pea", "eat", "rain"]), Is.EquivalentTo((string[]) ["eat", "oath"]));
     }
 
     [Test]
@@ -28,7 +28,7 @@ public class S00212Tests
             new[] {'a', 'b'},
             new[] {'c', 'd'},
         };
-        Assert.That(sut.FindWords(board, new[] {"abcb"}), Is.Empty);
+        Assert.That(sut.FindWords(board, ["abcb"]), Is.Empty);
     }
 
     [Test]
@@ -52,9 +52,8 @@ public class S00212Tests
         };
 
         Assert.That(sut.FindWords(board,
-            new[]
-            {
-                "lllllll", "fffffff", "ssss", "s", "rr", "xxxx", "ttt", "eee", "ppppppp", "iiiiiiiii", "xxxxxxxxxx",
+        [
+            "lllllll", "fffffff", "ssss", "s", "rr", "xxxx", "ttt", "eee", "ppppppp", "iiiiiiiii", "xxxxxxxxxx",
                 "pppppp", "xxxxxx", "yy", "jj", "ccc", "zzz", "ffffffff", "r", "mmmmmmmmm", "tttttttt", "mm", "ttttt",
                 "qqqqqqqqqq", "z", "aaaaaaaa", "nnnnnnnnn", "v", "g", "ddddddd", "eeeeeeeee", "aaaaaaa", "ee", "n",
                 "kkkkkkkkk", "ff", "qq", "vvvvv", "kkkk", "e", "nnn", "ooo", "kkkkk", "o", "ooooooo", "jjj", "lll",
@@ -79,7 +78,7 @@ public class S00212Tests
                 "gggggggg", "xxxxx", "vvvv", "d", "qqqqqqqqq", "dd", "ggggggggg", "t", "yyyy", "bbb", "yyyyyyyyyy",
                 "tttttt", "ccccc", "aa", "eeeeee", "llllll", "kkkkkkkkkk", "sssssssss", "i", "hhhhhh", "oooooooooo",
                 "wwwwww", "ooooooooo", "zzzz", "k", "hhhhhhhh", "aaaaa", "mmmmm"
-            }), Is.EqualTo((string[]) ["aaaaaaaa", "aaaaaaa", "aaaaaa", "aaa", "aaaaaaaaa", "aaaaaaaaaa", "a", "aaaa", "aa",
+        ]), Is.EqualTo((string[]) ["aaaaaaaa", "aaaaaaa", "aaaaaa", "aaa", "aaaaaaaaa", "aaaaaaaaaa", "a", "aaaa", "aa",
         "aaaaa"]));
     }
 }

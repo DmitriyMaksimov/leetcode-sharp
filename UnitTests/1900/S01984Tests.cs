@@ -9,13 +9,13 @@ public class S01984Tests
     public void T1()
     {
         var sut = new S01984();
-        Assert.That(sut.MinimumDifference(new[] {90}, 1), Is.EqualTo(0));
+        Assert.That(sut.MinimumDifference([90], 1), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01984();
-        Assert.That(sut.MinimumDifference(new[] {9, 4, 1, 7}, 2), Is.EqualTo(2));
+        Assert.That(sut.MinimumDifference([9, 4, 1, 7], 2), Is.EqualTo(2));
     }
 }

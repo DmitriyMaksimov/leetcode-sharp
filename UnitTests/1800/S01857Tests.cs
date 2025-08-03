@@ -9,13 +9,13 @@ public class S01857Tests
     public void T1()
     {
         var sut = new S01857();
-        Assert.That(sut.LargestPathValue("abaca", new[] {new[] {0, 1}, new[] {0, 2}, new[] {2, 3}, new[] {3, 4}}), Is.EqualTo(3));
+        Assert.That(sut.LargestPathValue("abaca", [[0, 1], [0, 2], [2, 3], [3, 4]]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01857();
-        Assert.That(sut.LargestPathValue("a", new[] {new[] {0, 0}}), Is.EqualTo(-1));
+        Assert.That(sut.LargestPathValue("a", [[0, 0]]), Is.EqualTo(-1));
     }
 }

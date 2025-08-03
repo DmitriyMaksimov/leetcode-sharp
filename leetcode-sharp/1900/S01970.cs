@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/last-day-where-you-can-still-cross/
 public class S01970
 {
-    private readonly int[] _directions = {0, -1, 0, 1, 0};
+    private readonly int[] _directions = [0, -1, 0, 1, 0];
 
     public int LatestDayToCross(int row, int col, int[][] cells)
     {

@@ -9,20 +9,20 @@ public class S01413Tests
     public void T1()
     {
         var sut = new S01413();
-        Assert.That(sut.MinStartValue(new[] {-3, 2, -3, 4, 2}), Is.EqualTo(5));
+        Assert.That(sut.MinStartValue([-3, 2, -3, 4, 2]), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01413();
-        Assert.That(sut.MinStartValue(new[] {1, 2}), Is.EqualTo(1));
+        Assert.That(sut.MinStartValue([1, 2]), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01413();
-        Assert.That(sut.MinStartValue(new[] {1, -2, -3}), Is.EqualTo(5));
+        Assert.That(sut.MinStartValue([1, -2, -3]), Is.EqualTo(5));
     }
 }

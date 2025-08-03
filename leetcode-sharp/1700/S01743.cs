@@ -10,8 +10,8 @@ public class S01743
 
         foreach (var adjacentPair in adjacentPairs)
         {
-            ps.TryAdd(adjacentPair[0], new List<int>());
-            ps.TryAdd(adjacentPair[1], new List<int>());
+            ps.TryAdd(adjacentPair[0], []);
+            ps.TryAdd(adjacentPair[1], []);
             ps[adjacentPair[0]].Add(adjacentPair[1]);
             ps[adjacentPair[1]].Add(adjacentPair[0]);
         }

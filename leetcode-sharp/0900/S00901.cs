@@ -6,8 +6,8 @@ public static class S00901
 {
 public class StockSpanner
 {
-    private readonly List<int> _stockPrices = new();
-    private readonly List<int> _spans = new();
+    private readonly List<int> _stockPrices = [];
+    private readonly List<int> _spans = [];
 
     public int Next(int price)
     {

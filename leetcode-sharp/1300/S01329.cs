@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/sort-the-matrix-diagonally
 public class S01329
 {
-    private readonly HashSet<(int row, int cell)> _visited = new();
+    private readonly HashSet<(int row, int cell)> _visited = [];
 
     public int[][] DiagonalSort(int[][] mat)
     {
@@ -30,12 +30,12 @@ public class S01329
     {
         if (r >= mat.Count || c >= mat[0].Length)
         {
-            return new List<int>();
+            return [];
         }
 
         _visited.Add((r, c));
         
-        List<int> result = new() {mat[r][c]};
+        List<int> result = [mat[r][c]];
         result.AddRange(dfs(mat, r + 1, c + 1));
 
         return result;

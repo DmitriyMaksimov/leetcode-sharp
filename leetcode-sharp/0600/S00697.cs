@@ -13,7 +13,7 @@ public class S00697
 
             if (!dict.ContainsKey(num))
             {
-                dict.Add(num, new[] { 1, i, i });
+                dict.Add(num, [1, i, i]);
             }
             else
             {

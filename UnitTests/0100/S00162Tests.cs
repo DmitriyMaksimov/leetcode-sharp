@@ -9,13 +9,13 @@ public class S00162Tests
     public void T1()
     {
         var sut = new S00162();
-        Assert.That(sut.FindPeakElement(new[] {1, 2, 3, 1}), Is.EqualTo(2));
+        Assert.That(sut.FindPeakElement([1, 2, 3, 1]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00162();
-        Assert.That(sut.FindPeakElement(new[] {1, 2, 1, 3, 5, 6, 4}), Is.AnyOf(1, 5));
+        Assert.That(sut.FindPeakElement([1, 2, 1, 3, 5, 6, 4]), Is.AnyOf(1, 5));
     }
 }

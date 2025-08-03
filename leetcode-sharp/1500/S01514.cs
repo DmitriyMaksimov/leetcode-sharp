@@ -12,11 +12,11 @@ public class S01514
             var a = edges[i][0];
             var b = edges[i][1];
 
-            graph[a] = graph.GetValueOrDefault(a, new List<int[]>());
-            graph[a].Add(new[] {b, i});
+            graph[a] = graph.GetValueOrDefault(a, []);
+            graph[a].Add([b, i]);
             
-            graph[b] = graph.GetValueOrDefault(b, new List<int[]>());
-            graph[b].Add(new[] {a, i});
+            graph[b] = graph.GetValueOrDefault(b, []);
+            graph[b].Add([a, i]);
         }
 
         var probabilities = new double[n];
@@ -28,7 +28,7 @@ public class S01514
         while (queue.Any())
         {
             var current = queue.Dequeue();
-            foreach (var neighbor in graph.GetValueOrDefault(current, new List<int[]>()))
+            foreach (var neighbor in graph.GetValueOrDefault(current, []))
             {
                 var next = neighbor[0];
                 var i = neighbor[1];

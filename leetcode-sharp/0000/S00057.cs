@@ -58,6 +58,6 @@ public class S00057
 
     private static int[] merge(int[] a, int[] b)
     {
-        return new[] {Math.Min(a[0], b[0]), Math.Max(a[1], b[1])};
+        return [Math.Min(a[0], b[0]), Math.Max(a[1], b[1])];
     }
 }

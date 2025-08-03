@@ -9,13 +9,13 @@ public class S00561Tests
     public void T1()
     {
         var sut = new S00561();
-        Assert.That(sut.ArrayPairSum(new[] {1, 4, 3, 2}), Is.EqualTo(4));
+        Assert.That(sut.ArrayPairSum([1, 4, 3, 2]), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00561();
-        Assert.That(sut.ArrayPairSum(new[] {6, 2, 6, 5, 1, 2}), Is.EqualTo(9));
+        Assert.That(sut.ArrayPairSum([6, 2, 6, 5, 1, 2]), Is.EqualTo(9));
     }
 }

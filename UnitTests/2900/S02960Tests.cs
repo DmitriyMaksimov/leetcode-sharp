@@ -9,13 +9,13 @@ public class S02960Tests
     public void T1()
     {
         var sut = new S02960();
-        Assert.That(sut.CountTestedDevices(new[] {1, 1, 2, 1, 3}), Is.EqualTo(3));
+        Assert.That(sut.CountTestedDevices([1, 1, 2, 1, 3]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02960();
-        Assert.That(sut.CountTestedDevices(new[] {0, 1, 2}), Is.EqualTo(2));
+        Assert.That(sut.CountTestedDevices([0, 1, 2]), Is.EqualTo(2));
     }
 }

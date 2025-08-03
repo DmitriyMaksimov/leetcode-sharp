@@ -150,7 +150,7 @@ public class TreeNode
             lines.Add(line);
             previousLevel = level.ToArray();
             previousLevelPositions = currentLevelPositions.ToArray();
-            currentLevelPositions = new List<int>();
+            currentLevelPositions = [];
         }
 
         lines.Reverse();
@@ -187,7 +187,7 @@ public class TreeNode
             {
                 levels.Add(nextLevel);
                 currentLevel = nextLevel;
-                nextLevel = new List<TreeNode?>();
+                nextLevel = [];
             }
             else
             {

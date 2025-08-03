@@ -14,7 +14,7 @@ public class S00049
 
             if (!map.ContainsKey(sortedWord))
             {
-                map.Add(sortedWord, new List<string>());
+                map.Add(sortedWord, []);
             }
 
             map[sortedWord].Add(word);

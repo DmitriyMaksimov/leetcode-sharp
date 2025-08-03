@@ -10,8 +10,7 @@ public class S00332Tests
     {
         var sut = new S00332();
         Assert.That(sut.FindItinerary(
-                new IList<string>[]
-                    {new[] {"MUC", "LHR"}, new[] {"JFK", "MUC"}, new[] {"SFO", "SJC"}, new[] {"LHR", "SFO"}}), Is.EqualTo((string[]) ["JFK", "MUC", "LHR", "SFO", "SJC"]));
+            [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]), Is.EqualTo((string[]) ["JFK", "MUC", "LHR", "SFO", "SJC"]));
     }
 
     [Test]
@@ -19,10 +18,9 @@ public class S00332Tests
     {
         var sut = new S00332();
         Assert.That(sut.FindItinerary(
-                new IList<string>[]
-                {
-                    new[] {"JFK", "SFO"}, new[] {"JFK", "ATL"}, new[] {"SFO", "ATL"}, new[] {"ATL", "JFK"},
-                    new[] {"ATL", "SFO"}
-                }), Is.EqualTo((string[]) ["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"]));
+        [
+            ["JFK", "SFO"], ["JFK", "ATL"], ["SFO", "ATL"], ["ATL", "JFK"],
+            ["ATL", "SFO"]
+        ]), Is.EqualTo((string[]) ["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"]));
     }
 }

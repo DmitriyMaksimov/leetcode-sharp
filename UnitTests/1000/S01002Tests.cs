@@ -9,13 +9,13 @@ public class S01002Tests
     public void T1()
     {
         var sut = new S01002();
-        Assert.That(sut.CommonChars(new[] {"bella", "label", "roller"}), Is.EqualTo((string[]) ["e", "l", "l"]));
+        Assert.That(sut.CommonChars(["bella", "label", "roller"]), Is.EqualTo((string[]) ["e", "l", "l"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01002();
-        Assert.That(sut.CommonChars(new[] {"cool", "lock", "cook"}), Is.EqualTo((string[]) ["c", "o"]));
+        Assert.That(sut.CommonChars(["cool", "lock", "cook"]), Is.EqualTo((string[]) ["c", "o"]));
     }
 }

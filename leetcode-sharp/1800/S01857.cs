@@ -13,7 +13,7 @@ public class S01857
 
         for (var i = 0; i < n; i++)
         {
-            graph.Add(i, new List<int>());
+            graph.Add(i, []);
         }
 
         var inDegree = new int[n];

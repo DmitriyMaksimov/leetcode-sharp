@@ -5,7 +5,7 @@
 public class S00652
 {
     private readonly Dictionary<string, int> _map = new();
-    private readonly List<TreeNode> _result = new();
+    private readonly List<TreeNode> _result = [];
 
     public IList<TreeNode> FindDuplicateSubtrees(TreeNode? root)
     {

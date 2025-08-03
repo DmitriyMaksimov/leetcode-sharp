@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 public class S00017
 {
-    private readonly List<string> _result = new List<string>();
-    private readonly string[] _dial = {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    private readonly List<string> _result = [];
+    private readonly string[] _dial = ["0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"];
 
     public IList<string> LetterCombinations(string digits)
     {

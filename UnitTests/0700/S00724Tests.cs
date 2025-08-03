@@ -9,20 +9,20 @@ public class S00724Tests
     public void T1()
     {
         var sut = new S00724();
-        Assert.That(sut.PivotIndex(new[] {1, 7, 3, 6, 5, 6}), Is.EqualTo(3));
+        Assert.That(sut.PivotIndex([1, 7, 3, 6, 5, 6]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00724();
-        Assert.That(sut.PivotIndex(new[] {1, 2, 3}), Is.EqualTo(-1));
+        Assert.That(sut.PivotIndex([1, 2, 3]), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00724();
-        Assert.That(sut.PivotIndex(new[] {2, 1, -1}), Is.EqualTo(0));
+        Assert.That(sut.PivotIndex([2, 1, -1]), Is.EqualTo(0));
     }
 }

@@ -9,20 +9,20 @@ public class S02855Tests
     public void T1()
     {
         var sut = new S02855();
-        Assert.That(sut.MinimumRightShifts(new[] {3, 4, 5, 1, 2}), Is.EqualTo(2));
+        Assert.That(sut.MinimumRightShifts([3, 4, 5, 1, 2]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02855();
-        Assert.That(sut.MinimumRightShifts(new[] {1, 3, 5}), Is.EqualTo(0));
+        Assert.That(sut.MinimumRightShifts([1, 3, 5]), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02855();
-        Assert.That(sut.MinimumRightShifts(new[] {2, 1, 4}), Is.EqualTo(-1));
+        Assert.That(sut.MinimumRightShifts([2, 1, 4]), Is.EqualTo(-1));
     }
 }

@@ -9,7 +9,7 @@ public class S00373Tests
     public void T1()
     {
         var sut = new S00373();
-        var pairs = sut.KSmallestPairs(new[] {1, 7, 11}, new[] {2, 4, 6}, 3);
+        var pairs = sut.KSmallestPairs([1, 7, 11], [2, 4, 6], 3);
         Assert.That(pairs, Has.Count.EqualTo(3));
         Assert.That(pairs[0], Is.EqualTo((int[]) [1, 2]));
         Assert.That(pairs[1], Is.EqualTo((int[]) [1, 4]));
@@ -20,7 +20,7 @@ public class S00373Tests
     public void T2()
     {
         var sut = new S00373();
-        var pairs = sut.KSmallestPairs(new[] {1, 1, 2}, new[] {1, 2, 3}, 2);
+        var pairs = sut.KSmallestPairs([1, 1, 2], [1, 2, 3], 2);
         Assert.That(pairs, Has.Count.EqualTo(2));
         Assert.That(pairs[0], Is.EqualTo((int[]) [1, 1]));
         Assert.That(pairs[1], Is.EqualTo((int[]) [1, 1]));
@@ -30,7 +30,7 @@ public class S00373Tests
     public void T3()
     {
         var sut = new S00373();
-        var pairs = sut.KSmallestPairs(new[] {1, 2}, new[] {3}, 3);
+        var pairs = sut.KSmallestPairs([1, 2], [3], 3);
         Assert.That(pairs, Has.Count.EqualTo(2));
         Assert.That(pairs[0], Is.EqualTo((int[]) [1, 3]));
         Assert.That(pairs[1], Is.EqualTo((int[]) [2, 3]));

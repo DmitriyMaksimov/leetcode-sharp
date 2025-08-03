@@ -7,7 +7,7 @@ public static class S01845
     public class SeatManager
     {
         private int _largestReserved = 0;
-        private readonly SortedSet<int> _sortedSet = new();
+        private readonly SortedSet<int> _sortedSet = [];
         
         public SeatManager(int n)
         {

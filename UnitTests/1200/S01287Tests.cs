@@ -9,13 +9,13 @@ public class S01287Tests
     public void T1()
     {
         var sut = new S01287();
-        Assert.That(sut.FindSpecialInteger(new[] {1, 2, 2, 6, 6, 6, 6, 7, 10}), Is.EqualTo(6));
+        Assert.That(sut.FindSpecialInteger([1, 2, 2, 6, 6, 6, 6, 7, 10]), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01287();
-        Assert.That(sut.FindSpecialInteger(new[] {1, 1}), Is.EqualTo(1));
+        Assert.That(sut.FindSpecialInteger([1, 1]), Is.EqualTo(1));
     }
 }

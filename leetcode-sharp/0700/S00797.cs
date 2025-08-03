@@ -4,11 +4,11 @@
 // https://leetcode.com/problems/all-paths-from-source-to-target/
 public class S00797
 {
-    private readonly List<IList<int>> _result = new();
+    private readonly List<IList<int>> _result = [];
     
     public IList<IList<int>> AllPathsSourceTarget(int[][] graph)
     {
-        dfs(graph, 0, new List<int> {0});
+        dfs(graph, 0, [0]);
         
         return _result;
     }

@@ -6,8 +6,8 @@ public class S02657
 {
     public int[] FindThePrefixCommonArray(int[] A, int[] B)
     {
-        HashSet<int> setA = new();
-        HashSet<int> setB = new();
+        HashSet<int> setA = [];
+        HashSet<int> setB = [];
         var result = new int[A.Length];
         var count = 0;
 

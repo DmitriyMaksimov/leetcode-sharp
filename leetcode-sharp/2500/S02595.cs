@@ -26,6 +26,6 @@ public class S02595
             n /= 2;
         }
 
-        return new[] {even, odd};
+        return [even, odd];
     }
 }

@@ -28,7 +28,7 @@ public class S00133
         }
     }
 
-    private readonly HashSet<int> _visited = new();
+    private readonly HashSet<int> _visited = [];
     private readonly Dictionary<int, Node> _nodes = new();
 
     public Node? CloneGraph(Node? node)
@@ -76,7 +76,7 @@ public class S00133
         
         if (_nodes.ContainsKey(sourceNodeVal)) return;
         
-        _nodes.Add(sourceNodeVal, new Node(sourceNodeVal, new List<Node>()));
+        _nodes.Add(sourceNodeVal, new Node(sourceNodeVal, []));
         foreach (var neighbor in sourceNode.neighbors)
         {
             createNodes(neighbor);

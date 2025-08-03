@@ -9,13 +9,13 @@ public class S00748Tests
     public void T1()
     {
         var sut = new S00748();
-        Assert.That(sut.ShortestCompletingWord("1s3 PSt", new[] {"step", "steps", "stripe", "stepple"}), Is.EqualTo("steps"));
+        Assert.That(sut.ShortestCompletingWord("1s3 PSt", ["step", "steps", "stripe", "stepple"]), Is.EqualTo("steps"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00748();
-        Assert.That(sut.ShortestCompletingWord("1s3 456", new[] {"looks", "pest", "stew", "show"}), Is.EqualTo("pest"));
+        Assert.That(sut.ShortestCompletingWord("1s3 456", ["looks", "pest", "stew", "show"]), Is.EqualTo("pest"));
     }
 }

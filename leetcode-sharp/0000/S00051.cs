@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/n-queens/
 public class S00051
 {
-    private readonly List<List<char>> _board = new();
+    private readonly List<List<char>> _board = [];
     private readonly IList<IList<string>> _ans = new List<IList<string>>();
     private int[] _left = null!;
     private int[] _upperD = null!;
@@ -47,7 +47,7 @@ public class S00051
         
         for (var i = 0; i < n; i++)
         {
-            _board.Add(new List<char>(Enumerable.Repeat('.', n)));
+            _board.Add([..Enumerable.Repeat('.', n)]);
         }
 
         solve(0);

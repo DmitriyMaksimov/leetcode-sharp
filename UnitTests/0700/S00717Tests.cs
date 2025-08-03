@@ -9,13 +9,13 @@ public class S00717Tests
     public void T1()
     {
         var sut = new S00717();
-        Assert.That(sut.IsOneBitCharacter(new[] {1, 0, 0}), Is.True);
+        Assert.That(sut.IsOneBitCharacter([1, 0, 0]), Is.True);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00717();
-        Assert.That(sut.IsOneBitCharacter(new[] {1, 1, 1, 0}), Is.False);
+        Assert.That(sut.IsOneBitCharacter([1, 1, 1, 0]), Is.False);
     }
 }

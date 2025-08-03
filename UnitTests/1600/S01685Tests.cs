@@ -9,13 +9,13 @@ public class S01685Tests
     public void T1()
     {
         var sut = new S01685();
-        Assert.That(sut.GetSumAbsoluteDifferences(new[] {2, 3, 5}), Is.EqualTo((int[]) [4, 3, 5]));
+        Assert.That(sut.GetSumAbsoluteDifferences([2, 3, 5]), Is.EqualTo((int[]) [4, 3, 5]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01685();
-        Assert.That(sut.GetSumAbsoluteDifferences(new[] {1, 4, 6, 8, 10}), Is.EqualTo((int[]) [24, 15, 13, 15, 21]));
+        Assert.That(sut.GetSumAbsoluteDifferences([1, 4, 6, 8, 10]), Is.EqualTo((int[]) [24, 15, 13, 15, 21]));
     }
 }

@@ -8,7 +8,7 @@ public class S00986
     {
         if (firstList.Length == 0 || secondList.Length == 0)
         {
-            return Array.Empty<int[]>();
+            return [];
         }
 
         List<int[]> result = [];

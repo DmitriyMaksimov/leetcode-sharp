@@ -10,11 +10,11 @@ public class S01317
         {
             if (hasNoZero(i) && hasNoZero(n - i))
             {
-                return new[] {i, n - i};
+                return [i, n - i];
             }
         }
 
-        return Array.Empty<int>();
+        return [];
     }
 
     private static bool hasNoZero(int n)

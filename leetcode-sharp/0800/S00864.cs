@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/shortest-path-to-get-all-keys/
 public class S00864
 {
-    private readonly int[] _directions = {0, -1, 0, 1, 0};
+    private readonly int[] _directions = [0, -1, 0, 1, 0];
     private const char Wall = '#';
 
     public int ShortestPathAllKeys(string[] grid)

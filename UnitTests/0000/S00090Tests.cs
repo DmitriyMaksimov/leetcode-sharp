@@ -9,17 +9,16 @@ public class S00090Tests
     public void T1()
     {
         var sut = new S00090();
-        Assert.That(sut.SubsetsWithDup(new[] {1, 2, 2}), Is.EquivalentTo(new[]
-        {
-            Array.Empty<int>(),
-            new[] {1}, new[] {2}, new[] {1, 2}, new[] {2, 2}, new[] {1, 2, 2}
-        }));
+        Assert.That(sut.SubsetsWithDup([1, 2, 2]), Is.EquivalentTo([
+            [],
+            [1], [2], [1, 2], [2, 2], new[] {1, 2, 2}
+        ]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00090();
-        Assert.That(sut.SubsetsWithDup(new[] {0}), Is.EquivalentTo(new[] {Array.Empty<int>(), new[] {0}}));
+        Assert.That(sut.SubsetsWithDup([0]), Is.EquivalentTo([[], new[] {0}]));
     }
 }

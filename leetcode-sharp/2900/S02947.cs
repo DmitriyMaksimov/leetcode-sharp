@@ -4,7 +4,7 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/count-beautiful-substrings-i
 public class S02947
 {
-    private readonly HashSet<char> _vowels = new() { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+    private readonly HashSet<char> _vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
     public int BeautifulSubstrings(string s, int k)
     {

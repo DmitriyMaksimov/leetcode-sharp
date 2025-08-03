@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range
 public class S02586
 {
-    private readonly HashSet<char> _vowels = new() {'a', 'e', 'i', 'o', 'u'};
+    private readonly HashSet<char> _vowels = ['a', 'e', 'i', 'o', 'u'];
     
     public int VowelStrings(string[] words, int left, int right)
     {

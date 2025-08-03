@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/number-of-islands/
 public class S00200
 {
-    private readonly int[] _directions = {0, -1, 0, 1, 0};
+    private readonly int[] _directions = [0, -1, 0, 1, 0];
 
     public int NumIslands(char[][] grid)
     {

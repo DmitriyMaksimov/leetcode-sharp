@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/all-elements-in-two-binary-search-trees
 public class S01305
 {
-    private readonly List<int> _result = new();
+    private readonly List<int> _result = [];
 
     private void dfs(TreeNode? root)
     {

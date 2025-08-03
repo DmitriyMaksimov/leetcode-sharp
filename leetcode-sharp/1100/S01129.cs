@@ -5,7 +5,7 @@
 public class S01129
 {
     private readonly Dictionary<int, List<(int node, int color)>> _graph = new();
-    private readonly HashSet<(int node, int color)> _visited = new();
+    private readonly HashSet<(int node, int color)> _visited = [];
 
     public int[] ShortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges)
     {
@@ -14,13 +14,13 @@ public class S01129
 
         foreach (var edge in redEdges)
         {
-            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], new List<(int node, int color)>());
+            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], []);
             _graph[edge[0]].Add((edge[1], red));
         }
 
         foreach (var edge in blueEdges)
         {
-            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], new List<(int node, int color)>());
+            _graph[edge[0]] = _graph.GetValueOrDefault(edge[0], []);
             _graph[edge[0]].Add((edge[1], blue));
         }
 

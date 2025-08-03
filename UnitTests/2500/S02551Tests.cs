@@ -9,13 +9,13 @@ public class S02551Tests
     public void T1()
     {
         var sut = new S02551();
-        Assert.That(sut.PutMarbles(new[] {1, 3, 5, 1}, 2), Is.EqualTo(4));
+        Assert.That(sut.PutMarbles([1, 3, 5, 1], 2), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02551();
-        Assert.That(sut.PutMarbles(new[] {1, 3}, 2), Is.EqualTo(0));
+        Assert.That(sut.PutMarbles([1, 3], 2), Is.EqualTo(0));
     }
 }

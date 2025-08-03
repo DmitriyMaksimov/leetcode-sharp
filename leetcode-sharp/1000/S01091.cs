@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/shortest-path-in-binary-matrix/
 public class S01091
 {
-    private readonly int[] _directions = {-1, 0, 1};
+    private readonly int[] _directions = [-1, 0, 1];
 
     public int ShortestPathBinaryMatrix(int[][] grid)
     {

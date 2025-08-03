@@ -9,13 +9,13 @@ public class S02656Tests
     public void T1()
     {
         var sut = new S02656();
-        Assert.That(sut.MaximizeSum(new[] {1, 2, 3, 4, 5}, 3), Is.EqualTo(18));
+        Assert.That(sut.MaximizeSum([1, 2, 3, 4, 5], 3), Is.EqualTo(18));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02656();
-        Assert.That(sut.MaximizeSum(new[] {5, 5, 5}, 2), Is.EqualTo(11));
+        Assert.That(sut.MaximizeSum([5, 5, 5], 2), Is.EqualTo(11));
     }
 }

@@ -19,7 +19,7 @@ public class S00103Tests
     public void T2()
     {
         var sut = new S00103();
-        Assert.That(sut.ZigzagLevelOrder(TreeNode.Parse("[1]")), Is.EquivalentTo(new[] {new[] {1}}));
+        Assert.That(sut.ZigzagLevelOrder(TreeNode.Parse("[1]")), Is.EquivalentTo([new[] {1}]));
     }
 
     [Test]

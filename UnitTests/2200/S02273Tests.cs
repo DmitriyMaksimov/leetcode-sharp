@@ -9,13 +9,13 @@ public class S02273Tests
     public void T1()
     {
         var sut = new S02273();
-        Assert.That(sut.RemoveAnagrams(new[] {"abba", "baba", "bbaa", "cd", "cd"}), Is.EqualTo((string[]) ["abba", "cd"]));
+        Assert.That(sut.RemoveAnagrams(["abba", "baba", "bbaa", "cd", "cd"]), Is.EqualTo((string[]) ["abba", "cd"]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02273();
-        Assert.That(sut.RemoveAnagrams(new[] {"a", "b", "c", "d", "e"}), Is.EqualTo((string[]) ["a", "b", "c", "d", "e"]));
+        Assert.That(sut.RemoveAnagrams(["a", "b", "c", "d", "e"]), Is.EqualTo((string[]) ["a", "b", "c", "d", "e"]));
     }
 }

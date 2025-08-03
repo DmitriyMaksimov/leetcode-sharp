@@ -9,13 +9,13 @@ public class S00983Tests
     public void T1()
     {
         var sut = new S00983();
-        Assert.That(sut.MincostTickets(new[] {1, 4, 6, 7, 8, 20}, new[] {2, 7, 15}), Is.EqualTo(11));
+        Assert.That(sut.MincostTickets([1, 4, 6, 7, 8, 20], [2, 7, 15]), Is.EqualTo(11));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00983();
-        Assert.That(sut.MincostTickets(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31}, new[] {2, 7, 15}), Is.EqualTo(17));
+        Assert.That(sut.MincostTickets([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31], [2, 7, 15]), Is.EqualTo(17));
     }
 }

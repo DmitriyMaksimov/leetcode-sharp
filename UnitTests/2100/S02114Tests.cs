@@ -9,13 +9,14 @@ public class S02114Tests
     public void T1()
     {
         var sut = new S02114();
-        Assert.That(sut.MostWordsFound(new[] {"alice and bob love leetcode", "i think so too", "this is great thanks very much"}), Is.EqualTo(6));
+        Assert.That(sut.MostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"
+        ]), Is.EqualTo(6));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02114();
-        Assert.That(sut.MostWordsFound(new[] {"please wait", "continue to fight", "continue to win"}), Is.EqualTo(3));
+        Assert.That(sut.MostWordsFound(["please wait", "continue to fight", "continue to win"]), Is.EqualTo(3));
     }
 }

@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/find-median-from-data-stream/
 public class S00295
 {
-    private readonly List<int> _values = new();
+    private readonly List<int> _values = [];
 
     public S00295()
     {

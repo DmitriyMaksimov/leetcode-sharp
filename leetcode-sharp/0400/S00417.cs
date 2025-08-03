@@ -49,7 +49,7 @@ public class S00417
 
         if (_atlantic[i][j] && _pacific[i][j])
         {
-            _result.Add(new List<int> { i, j });
+            _result.Add([i, j]);
         }
 
         if (i + 1 < _m && mat[i + 1][j] >= mat[i][j])

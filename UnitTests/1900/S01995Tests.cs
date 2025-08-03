@@ -9,20 +9,20 @@ public class S01995Tests
     public void T1()
     {
         var sut = new S01995();
-        Assert.That(sut.CountQuadruplets(new[] {1, 2, 3, 6}), Is.EqualTo(1));
+        Assert.That(sut.CountQuadruplets([1, 2, 3, 6]), Is.EqualTo(1));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01995();
-        Assert.That(sut.CountQuadruplets(new[] {3, 3, 6, 4, 5}), Is.EqualTo(0));
+        Assert.That(sut.CountQuadruplets([3, 3, 6, 4, 5]), Is.EqualTo(0));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01995();
-        Assert.That(sut.CountQuadruplets(new[] {1, 1, 1, 3, 5}), Is.EqualTo(4));
+        Assert.That(sut.CountQuadruplets([1, 1, 1, 3, 5]), Is.EqualTo(4));
     }
 }

@@ -16,7 +16,7 @@ public class S00815
                 var stop = routes[i][j];
                 if (!routeDict.ContainsKey(stop))
                 {
-                    routeDict.Add(stop, new List<int>());
+                    routeDict.Add(stop, []);
                 }
 
                 routeDict[stop].Add(i);

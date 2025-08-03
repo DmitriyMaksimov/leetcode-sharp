@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/data-stream-as-disjoint-intervals/
 public class S00352
 {
-    private List<int> _startOfIntervals = new();
-    private List<int> _endOfIntervals = new();
+    private List<int> _startOfIntervals = [];
+    private List<int> _endOfIntervals = [];
     
     public void AddNum(int value)
     {
@@ -105,7 +105,7 @@ public class S00352
 
         for (var i = 0; i < _startOfIntervals.Count; i++)
         {
-            result[i] = new[] {_startOfIntervals[i], _endOfIntervals[i]};
+            result[i] = [_startOfIntervals[i], _endOfIntervals[i]];
         }
 
         return result;

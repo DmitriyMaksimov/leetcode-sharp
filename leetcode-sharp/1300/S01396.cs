@@ -18,7 +18,7 @@ public class UndergroundSystem
     {
         var (fromStationName, checkInTime) = _checkInTimes[id];
         var fromToKey = getKey(fromStationName, stationName);
-        var list = _timeBetweenStations.GetValueOrDefault(fromToKey, new List<int>());
+        var list = _timeBetweenStations.GetValueOrDefault(fromToKey, []);
         list.Add(t - checkInTime);
         _timeBetweenStations[fromToKey] = list;
     }

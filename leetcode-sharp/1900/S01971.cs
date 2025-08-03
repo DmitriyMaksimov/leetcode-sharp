@@ -10,8 +10,8 @@ public class S01971
 
         foreach (var edge in edges)
         {
-            if (!hash.ContainsKey(edge[0])) hash[edge[0]] = new List<int>();
-            if (!hash.ContainsKey(edge[1])) hash[edge[1]] = new List<int>();
+            if (!hash.ContainsKey(edge[0])) hash[edge[0]] = [];
+            if (!hash.ContainsKey(edge[1])) hash[edge[1]] = [];
             hash[edge[0]].Add(edge[1]);
             hash[edge[1]].Add(edge[0]);
         }

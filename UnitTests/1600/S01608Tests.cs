@@ -9,20 +9,20 @@ public class S01608Tests
     public void T1()
     {
         var sut = new S01608();
-        Assert.That(sut.SpecialArray(new[] {3, 5}), Is.EqualTo(2));
+        Assert.That(sut.SpecialArray([3, 5]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01608();
-        Assert.That(sut.SpecialArray(new[] {0, 0}), Is.EqualTo(-1));
+        Assert.That(sut.SpecialArray([0, 0]), Is.EqualTo(-1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01608();
-        Assert.That(sut.SpecialArray(new[] {0, 4, 3, 0, 4}), Is.EqualTo(3));
+        Assert.That(sut.SpecialArray([0, 4, 3, 0, 4]), Is.EqualTo(3));
     }
 }

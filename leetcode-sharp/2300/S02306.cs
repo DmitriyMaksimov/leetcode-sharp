@@ -10,7 +10,7 @@ public class S02306
     {
         for (var index = 0; index < _groups.Length; index++)
         {
-            _groups[index] = new HashSet<string>();
+            _groups[index] = [];
         }
 
         foreach (var idea in ideas)

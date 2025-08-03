@@ -12,7 +12,7 @@ public class S00332
         {
             if (!graph.ContainsKey(ticket[0]))
             {
-                graph[ticket[0]] = new List<string>();
+                graph[ticket[0]] = [];
             }
 
             graph[ticket[0]].Add(ticket[1]);

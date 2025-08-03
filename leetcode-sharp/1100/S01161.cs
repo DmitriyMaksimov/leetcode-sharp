@@ -27,7 +27,7 @@ public class S01161
             {
                 levels.Add(nextLevel);
                 currentLevel = nextLevel;
-                nextLevel = new List<TreeNode?>();
+                nextLevel = [];
             }
             else
             {

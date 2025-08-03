@@ -10,7 +10,7 @@ public class S00403
 
         for (var i = 0; i < dp.Length; i++)
         {
-            dp[i] = new HashSet<int>();
+            dp[i] = [];
         }
 
         dp[0].Add(0);

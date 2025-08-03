@@ -9,7 +9,7 @@ public class S00566Tests
     public void T1()
     {
         var sut = new S00566();
-        var matrix = sut.MatrixReshape(new[] {new[] {1, 2}, new[] {3, 4}}, 1, 4);
+        var matrix = sut.MatrixReshape([[1, 2], [3, 4]], 1, 4);
         Assert.That(matrix, Has.Length.EqualTo(1));
         Assert.That(matrix[0], Is.EqualTo((int[]) [1, 2, 3, 4]));
     }
@@ -18,7 +18,7 @@ public class S00566Tests
     public void T2()
     {
         var sut = new S00566();
-        var matrix = sut.MatrixReshape(new[] {new[] {1, 2}, new[] {3, 4}}, 2, 4);
+        var matrix = sut.MatrixReshape([[1, 2], [3, 4]], 2, 4);
         Assert.That(matrix, Has.Length.EqualTo(2));
         Assert.That(matrix[0], Is.EqualTo((int[]) [1, 2]));
         Assert.That(matrix[1], Is.EqualTo((int[]) [3, 4]));
@@ -28,7 +28,7 @@ public class S00566Tests
     public void T3()
     {
         var sut = new S00566();
-        var matrix = sut.MatrixReshape(new[] {new[] {1, 2}, new[] {3, 4}}, 4, 1);
+        var matrix = sut.MatrixReshape([[1, 2], [3, 4]], 4, 1);
         Assert.That(matrix, Has.Length.EqualTo(4));
         Assert.That(matrix[0], Is.EqualTo((int[]) [1]));
         Assert.That(matrix[1], Is.EqualTo((int[]) [2]));

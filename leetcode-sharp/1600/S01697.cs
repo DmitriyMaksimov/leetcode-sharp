@@ -11,7 +11,7 @@ public class S01697
         // Add query indices to help with ordering results
         for (var i = 0; i < queries.Length; i++)
         {
-            queries[i] = new[] {queries[i][0], queries[i][1], queries[i][2], i};
+            queries[i] = [queries[i][0], queries[i][1], queries[i][2], i];
         }
 
         Array.Sort(queries, (a, b) => a[2] - b[2]);

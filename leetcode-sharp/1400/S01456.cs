@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
 public class S01456
 {
-    private readonly HashSet<char> _vowels = new() {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+    private readonly HashSet<char> _vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
     public int MaxVowels(string s, int k)
     {

@@ -6,7 +6,7 @@ public static class S00676
 {
     public class MagicDictionary
     {
-        private readonly HashSet<string> _words = new();
+        private readonly HashSet<string> _words = [];
         private readonly Dictionary<string, int> _modifiedWords = new();
 
         public void BuildDict(string[] dictionary)

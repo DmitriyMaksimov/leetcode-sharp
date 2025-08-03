@@ -12,7 +12,7 @@ public class S00207
 
         for (var i = 0; i < numCourses; i++)
         {
-            adj[i] = new List<int>();
+            adj[i] = [];
         }
 
         foreach (var pair in prerequisites)

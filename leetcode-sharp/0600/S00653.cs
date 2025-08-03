@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 public class S00653
 {
-    private readonly HashSet<int> _hashSet = new();
+    private readonly HashSet<int> _hashSet = [];
 
     public bool FindTarget(TreeNode? root, int k)
     {

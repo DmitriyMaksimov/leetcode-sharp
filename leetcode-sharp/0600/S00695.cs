@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/max-area-of-island/
 public class S00695
 {
-    private readonly HashSet<(int, int)> _visited = new();
-    private readonly int[] _directions = {0, -1, 0, 1, 0};
+    private readonly HashSet<(int, int)> _visited = [];
+    private readonly int[] _directions = [0, -1, 0, 1, 0];
 
     public int MaxAreaOfIsland(int[][] grid)
     {

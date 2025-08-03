@@ -19,7 +19,7 @@ public class S00460
             public OrderedSet(IEqualityComparer<T> comparer)
             {
                 _dictionary = new Dictionary<T, LinkedListNode<T>>(comparer);
-                _linkedList = new LinkedList<T>();
+                _linkedList = [];
             }
 
             public int Count => _dictionary.Count;
@@ -90,7 +90,7 @@ public class S00460
             _cache[key] = (frequency, value);
             if (!_frequencies.ContainsKey(frequency))
             {
-                _frequencies[frequency] = new OrderedSet<int>();
+                _frequencies[frequency] = [];
             }
             _frequencies[frequency].Add(key);
         }

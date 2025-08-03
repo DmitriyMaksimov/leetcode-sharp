@@ -13,7 +13,7 @@ public class S01424
         {
             for (var j = 0; j < nums[i].Count; j++)
             {
-                dict.TryAdd(i + j, new List<int>());
+                dict.TryAdd(i + j, []);
                 dict[i + j].Add(nums[i][j]);
             }
         }

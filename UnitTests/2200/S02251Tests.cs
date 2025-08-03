@@ -9,13 +9,13 @@ public class S02251Tests
     public void T1()
     {
         var sut = new S02251();
-        Assert.That(sut.FullBloomFlowers(new[] {new[] {1, 6}, new[] {3, 7}, new[] {9, 12}, new[] {4, 13}}, new[] {2, 3, 7, 11}), Is.EqualTo((int[]) [1, 2, 2, 2]));
+        Assert.That(sut.FullBloomFlowers([[1, 6], [3, 7], [9, 12], [4, 13]], [2, 3, 7, 11]), Is.EqualTo((int[]) [1, 2, 2, 2]));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02251();
-        Assert.That(sut.FullBloomFlowers(new[] {new[] {1, 10}, new[] {3, 3}}, new[] {3, 3, 2}), Is.EqualTo((int[]) [2, 2, 1]));
+        Assert.That(sut.FullBloomFlowers([[1, 10], [3, 3]], [3, 3, 2]), Is.EqualTo((int[]) [2, 2, 1]));
     }
 }

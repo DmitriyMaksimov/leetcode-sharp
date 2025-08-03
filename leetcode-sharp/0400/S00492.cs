@@ -12,6 +12,6 @@ public class S00492
             w--;
         }
 
-        return new[] {area / w, w};
+        return [area / w, w];
     }
 }

@@ -12,11 +12,11 @@ public class S00001
             {
                 if (nums[i] + nums[j] == target)
                 {
-                    return new[] {i, j};
+                    return [i, j];
                 }
             }
         }
 
-        return new[] {-1, -1};
+        return [-1, -1];
     }
 }

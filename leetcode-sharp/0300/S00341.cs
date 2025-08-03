@@ -30,7 +30,7 @@ public class S00341
 
         private List<int> Flatten(IList<NestedInteger> nested)
         {
-            List<int> result = new List<int>();
+            List<int> result = [];
             foreach (var ni in nested)
             {
                 if (ni.IsInteger())

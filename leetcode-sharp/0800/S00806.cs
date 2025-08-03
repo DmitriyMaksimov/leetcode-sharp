@@ -25,6 +25,6 @@ public class S00806
             }
         }
 
-        return new[] {lines, width};
+        return [lines, width];
     }
 }

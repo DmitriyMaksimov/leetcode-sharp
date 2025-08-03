@@ -9,7 +9,7 @@ public class S02050
         var graph = new List<List<int>>();
         for (var i = 0; i < n; i++)
         {
-            graph.Add(new List<int>());
+            graph.Add([]);
         }
 
         foreach (var relation in relations)

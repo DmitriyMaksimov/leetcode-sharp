@@ -30,7 +30,7 @@ public class S01125
 
         var n = req_skills.Length;
         var dp = new List<int>?[1 << n];
-        dp[0] = new List<int>();
+        dp[0] = [];
 
         for (var i = 0; i < people.Count; i++)
         {

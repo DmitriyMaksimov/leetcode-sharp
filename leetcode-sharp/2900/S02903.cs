@@ -14,10 +14,10 @@ public class S02903
         {
             if (nums[i - indexDifference] < nums[minI]) minI = i - indexDifference;
             if (nums[i - indexDifference] > nums[maxI]) maxI = i - indexDifference;
-            if (nums[i] - nums[minI] >= valueDifference) return new[] {minI, i};
-            if (nums[maxI] - nums[i] >= valueDifference) return new[] {maxI, i};
+            if (nums[i] - nums[minI] >= valueDifference) return [minI, i];
+            if (nums[maxI] - nums[i] >= valueDifference) return [maxI, i];
         }
 
-        return new[] {-1, -1};
+        return [-1, -1];
     }
 }

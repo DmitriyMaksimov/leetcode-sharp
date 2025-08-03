@@ -10,13 +10,12 @@ public class S01020Tests
     {
         var sut = new S01020();
         Assert.That(sut.NumEnclaves(
-            new[]
-            {
-                new[] {0, 0, 0, 0},
-                new[] {1, 0, 1, 0},
-                new[] {0, 1, 1, 0},
-                new[] {0, 0, 0, 0},
-            }), Is.EqualTo(3));
+        [
+            [0, 0, 0, 0],
+            [1, 0, 1, 0],
+            [0, 1, 1, 0],
+            [0, 0, 0, 0]
+        ]), Is.EqualTo(3));
     }
 
     [Test]
@@ -24,12 +23,11 @@ public class S01020Tests
     {
         var sut = new S01020();
         Assert.That(sut.NumEnclaves(
-            new[]
-            {
-                new[] {0, 1, 1, 0},
-                new[] {0, 0, 1, 0},
-                new[] {0, 0, 1, 0},
-                new[] {0, 0, 0, 0},
-            }), Is.EqualTo(0));
+        [
+            [0, 1, 1, 0],
+            [0, 0, 1, 0],
+            [0, 0, 1, 0],
+            [0, 0, 0, 0]
+        ]), Is.EqualTo(0));
     }
 }

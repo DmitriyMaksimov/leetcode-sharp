@@ -5,7 +5,7 @@
 public class S00934
 {
     private int[,] _visit;
-    private readonly int[] _directions = new[] {0, 1, 0, -1, 0};
+    private readonly int[] _directions = [0, 1, 0, -1, 0];
 
     public int ShortestBridge(int[][] grid)
     {

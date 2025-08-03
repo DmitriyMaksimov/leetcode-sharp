@@ -9,13 +9,13 @@ public class S01854Tests
     public void T1()
     {
         var sut = new S01854();
-        Assert.That(sut.MaximumPopulation(new[] {new[] {1993, 1999}, new[] {2000, 2010}}), Is.EqualTo(1993));
+        Assert.That(sut.MaximumPopulation([[1993, 1999], [2000, 2010]]), Is.EqualTo(1993));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01854();
-        Assert.That(sut.MaximumPopulation(new[] {new[] {1950, 1961}, new[] {1960, 1971}, new[] {1970, 1981}}), Is.EqualTo(1960));
+        Assert.That(sut.MaximumPopulation([[1950, 1961], [1960, 1971], [1970, 1981]]), Is.EqualTo(1960));
     }
 }

@@ -6,7 +6,7 @@ public static class S00933
 {
     public class RecentCounter
     {
-        private readonly List<int> _calls = new();
+        private readonly List<int> _calls = [];
 
         public int Ping(int t)
         {

@@ -9,20 +9,20 @@ public class S02108Tests
     public void T1()
     {
         var sut = new S02108();
-        Assert.That(sut.FirstPalindrome(new[] {"abc", "car", "ada", "racecar", "cool"}), Is.EqualTo("ada"));
+        Assert.That(sut.FirstPalindrome(["abc", "car", "ada", "racecar", "cool"]), Is.EqualTo("ada"));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02108();
-        Assert.That(sut.FirstPalindrome(new[] {"notapalindrome", "racecar"}), Is.EqualTo("racecar"));
+        Assert.That(sut.FirstPalindrome(["notapalindrome", "racecar"]), Is.EqualTo("racecar"));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02108();
-        Assert.That(sut.FirstPalindrome(new[] {"def", "ghi"}), Is.EqualTo(""));
+        Assert.That(sut.FirstPalindrome(["def", "ghi"]), Is.EqualTo(""));
     }
 }

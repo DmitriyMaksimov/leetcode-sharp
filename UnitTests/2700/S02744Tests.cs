@@ -9,20 +9,20 @@ public class S02744Tests
     public void T1()
     {
         var sut = new S02744();
-        Assert.That(sut.MaximumNumberOfStringPairs(new[] {"cd", "ac", "dc", "ca", "zz"}), Is.EqualTo(2));
+        Assert.That(sut.MaximumNumberOfStringPairs(["cd", "ac", "dc", "ca", "zz"]), Is.EqualTo(2));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02744();
-        Assert.That(sut.MaximumNumberOfStringPairs(new[] {"ab", "ba", "cc"}), Is.EqualTo(1));
+        Assert.That(sut.MaximumNumberOfStringPairs(["ab", "ba", "cc"]), Is.EqualTo(1));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02744();
-        Assert.That(sut.MaximumNumberOfStringPairs(new[] {"aa", "ab"}), Is.EqualTo(0));
+        Assert.That(sut.MaximumNumberOfStringPairs(["aa", "ab"]), Is.EqualTo(0));
     }
 }

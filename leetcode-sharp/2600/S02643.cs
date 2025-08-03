@@ -31,6 +31,6 @@ public class S02643
             }
         }
         
-        return new []{rowWithMaxOnes, maxOnes};
+        return [rowWithMaxOnes, maxOnes];
     }
 }

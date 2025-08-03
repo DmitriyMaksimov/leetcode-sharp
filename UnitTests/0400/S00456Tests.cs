@@ -9,20 +9,20 @@ public class S00456Tests
     public void T1()
     {
         var sut = new S00456();
-        Assert.That(sut.Find132pattern(new[] {1, 2, 3, 4}), Is.False);
+        Assert.That(sut.Find132pattern([1, 2, 3, 4]), Is.False);
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00456();
-        Assert.That(sut.Find132pattern(new[] {3, 1, 4, 2}), Is.True);
+        Assert.That(sut.Find132pattern([3, 1, 4, 2]), Is.True);
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00456();
-        Assert.That(sut.Find132pattern(new[] {-1, 3, 2, 0}), Is.True);
+        Assert.That(sut.Find132pattern([-1, 3, 2, 0]), Is.True);
     }
 }

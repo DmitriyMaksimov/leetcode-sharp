@@ -9,13 +9,13 @@ public class S02923Tests
     public void T1()
     {
         var sut = new S02923();
-        Assert.That(sut.FindChampion(new[] {new[] {0, 1}, new[] {0, 0}}), Is.EqualTo(0));
+        Assert.That(sut.FindChampion([[0, 1], [0, 0]]), Is.EqualTo(0));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02923();
-        Assert.That(sut.FindChampion(new[] {new[] {0, 0, 1}, new[] {1, 0, 1}, new[] {0, 0, 0}}), Is.EqualTo(1));
+        Assert.That(sut.FindChampion([[0, 0, 1], [1, 0, 1], [0, 0, 0]]), Is.EqualTo(1));
     }
 }

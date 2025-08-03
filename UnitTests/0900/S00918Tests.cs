@@ -9,20 +9,20 @@ public class S00918Tests
     public void T1()
     {
         var sut = new S00918();
-        Assert.That(sut.MaxSubarraySumCircular(new[] {1, -2, 3, -2}), Is.EqualTo(3));
+        Assert.That(sut.MaxSubarraySumCircular([1, -2, 3, -2]), Is.EqualTo(3));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00918();
-        Assert.That(sut.MaxSubarraySumCircular(new[] {5, -3, 5}), Is.EqualTo(10));
+        Assert.That(sut.MaxSubarraySumCircular([5, -3, 5]), Is.EqualTo(10));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S00918();
-        Assert.That(sut.MaxSubarraySumCircular(new[] {-3, -2, -3}), Is.EqualTo(-2));
+        Assert.That(sut.MaxSubarraySumCircular([-3, -2, -3]), Is.EqualTo(-2));
     }
 }

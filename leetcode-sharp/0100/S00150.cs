@@ -5,7 +5,7 @@
 public class S00150
 {
     private Stack<int> _stack = new();
-    private HashSet<string> _operations = new() {"+", "-", "*", "/"};
+    private HashSet<string> _operations = ["+", "-", "*", "/"];
 
     public int EvalRPN(string[] tokens)
     {

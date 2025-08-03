@@ -9,7 +9,7 @@ public class S00023Tests
     public void T1()
     {
         var sut = new S00023();
-        var list = sut.MergeKLists(new[] {ListNode.Parse("[1,4,5]"), ListNode.Parse("[1,3,4]"), ListNode.Parse("[2,6]")});
+        var list = sut.MergeKLists([ListNode.Parse("[1,4,5]"), ListNode.Parse("[1,3,4]"), ListNode.Parse("[2,6]")]);
         var values = new List<int>();
         while (list != null)
         {
@@ -32,13 +32,13 @@ public class S00023Tests
     public void T3()
     {
         var sut = new S00023();
-        Assert.That(sut.MergeKLists(new [] {(ListNode?) null}), Is.Null);
+        Assert.That(sut.MergeKLists([(ListNode?) null]), Is.Null);
     }
 
     [Test]
     public void T4()
     {
         var sut = new S00023();
-        Assert.That(sut.MergeKLists(Array.Empty<ListNode?>()), Is.Null);
+        Assert.That(sut.MergeKLists([]), Is.Null);
     }
 }

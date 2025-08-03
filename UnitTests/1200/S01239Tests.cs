@@ -9,20 +9,20 @@ public class S01239Tests
     public void T1()
     {
         var sut = new S01239();
-        Assert.That(sut.MaxLength(new[] { "un","iq","ue"}), Is.EqualTo(4));
+        Assert.That(sut.MaxLength(["un","iq","ue"]), Is.EqualTo(4));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01239();
-        Assert.That(sut.MaxLength(new[] {"cha","r","act","ers" }), Is.EqualTo(6));
+        Assert.That(sut.MaxLength(["cha","r","act","ers"]), Is.EqualTo(6));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S01239();
-        Assert.That(sut.MaxLength(new[] { "abcdefghijklmnopqrstuvwxyz"}), Is.EqualTo(26));
+        Assert.That(sut.MaxLength(["abcdefghijklmnopqrstuvwxyz"]), Is.EqualTo(26));
     }
 }

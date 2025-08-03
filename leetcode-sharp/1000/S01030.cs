@@ -10,7 +10,7 @@ public class S01030
         var result = new int[rows * cols][];
         var i = 0;
         var queue = new Queue<int[]>();
-        queue.Enqueue(new[] {rCenter, cCenter});
+        queue.Enqueue([rCenter, cCenter]);
         while (queue.Any())
         {
             var cell = queue.Dequeue();
@@ -30,10 +30,10 @@ public class S01030
             result[i++] = cell;
             visited[r, c] = true;
 
-            queue.Enqueue(new[] {r, c - 1});
-            queue.Enqueue(new[] {r, c + 1});
-            queue.Enqueue(new[] {r - 1, c});
-            queue.Enqueue(new[] {r + 1, c});
+            queue.Enqueue([r, c - 1]);
+            queue.Enqueue([r, c + 1]);
+            queue.Enqueue([r - 1, c]);
+            queue.Enqueue([r + 1, c]);
         }
 
         return result;

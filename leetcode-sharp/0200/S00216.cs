@@ -4,9 +4,9 @@
 // https://leetcode.com/problems/combination-sum-iii/
 public class S00216
 {
-    private readonly int[] _arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    private readonly List<IList<int>> _ans = new();
-    private readonly List<int> _ds = new();
+    private readonly int[] _arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    private readonly List<IList<int>> _ans = [];
+    private readonly List<int> _ds = [];
 
     public IList<IList<int>> CombinationSum3(int k, int n)
     {

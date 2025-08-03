@@ -9,13 +9,13 @@ public class S01140Tests
     public void T1()
     {
         var sut = new S01140();
-        Assert.That(sut.StoneGameII(new[] {2, 7, 9, 4, 4}), Is.EqualTo(10));
+        Assert.That(sut.StoneGameII([2, 7, 9, 4, 4]), Is.EqualTo(10));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S01140();
-        Assert.That(sut.StoneGameII(new[] {1, 2, 3, 4, 5, 100}), Is.EqualTo(104));
+        Assert.That(sut.StoneGameII([1, 2, 3, 4, 5, 100]), Is.EqualTo(104));
     }
 }

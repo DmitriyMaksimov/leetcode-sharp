@@ -10,7 +10,7 @@ public class S01125Tests
     {
         var sut = new S01125();
         Assert.That(sut.SmallestSufficientTeam(
-            new[] {"java", "nodejs", "reactjs"},
+            ["java", "nodejs", "reactjs"],
             new List<IList<string>>
             {
                 new List<string> {"java"}, new List<string> {"nodejs"}, new List<string> {"nodejs", "reactjs"}
@@ -22,7 +22,7 @@ public class S01125Tests
     {
         var sut = new S01125();
         Assert.That(sut.SmallestSufficientTeam(
-            new[] {"algorithms", "math", "java", "reactjs", "csharp", "aws"},
+            ["algorithms", "math", "java", "reactjs", "csharp", "aws"],
             new List<IList<string>>
             {
                 new List<string> {"algorithms", "math", "java"},

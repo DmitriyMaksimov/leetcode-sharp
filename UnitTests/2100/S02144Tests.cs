@@ -9,20 +9,20 @@ public class S02144Tests
     public void T1()
     {
         var sut = new S02144();
-        Assert.That(sut.MinimumCost(new[] {1, 2, 3}), Is.EqualTo(5));
+        Assert.That(sut.MinimumCost([1, 2, 3]), Is.EqualTo(5));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S02144();
-        Assert.That(sut.MinimumCost(new[] {6, 5, 7, 9, 2, 2}), Is.EqualTo(23));
+        Assert.That(sut.MinimumCost([6, 5, 7, 9, 2, 2]), Is.EqualTo(23));
     }
 
     [Test]
     public void T3()
     {
         var sut = new S02144();
-        Assert.That(sut.MinimumCost(new[] {5, 5}), Is.EqualTo(10));
+        Assert.That(sut.MinimumCost([5, 5]), Is.EqualTo(10));
     }
 }

@@ -14,7 +14,7 @@ public class S01282
             var size = groupSizes[i];
             if (!dict.ContainsKey(size))
             {
-                dict.Add(size, new List<int>());
+                dict.Add(size, []);
             }
 
             dict[size].Add(i);

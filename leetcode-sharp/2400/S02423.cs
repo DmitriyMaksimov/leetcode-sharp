@@ -27,7 +27,7 @@ public class S02423
             }
             else
             {
-                freq[arr[i]] = new List<char>() {letter};
+                freq[arr[i]] = [letter];
             }
         }
 

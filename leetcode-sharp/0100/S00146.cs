@@ -6,7 +6,7 @@ public static class S00146
     {
         private readonly int _capacity;
         private readonly Dictionary<int, LinkedListNode<(int key, int value)>> _cacheMap = new();
-        private readonly LinkedList<(int key, int value)> _lruList = new();
+        private readonly LinkedList<(int key, int value)> _lruList = [];
 
         public LRUCache(int capacity)
         {
