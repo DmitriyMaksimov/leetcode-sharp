@@ -46,7 +46,7 @@ public static class S00146
             _lruList.RemoveFirst();
 
             // Remove from cache
-            _cacheMap.Remove(node.Value.key);
+            _cacheMap.Remove(node!.Value.key);
         }
     }
 }

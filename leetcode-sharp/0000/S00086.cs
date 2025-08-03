@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/partition-list/
 public class S00086
 {
-    public ListNode Partition(ListNode head, int x)
+    public ListNode Partition(ListNode? head, int x)
     {
         var before = new ListNode();
         var after = new ListNode();
@@ -24,12 +24,12 @@ public class S00086
                 afterCurrent = afterCurrent.next;
             }
 
-            head = head.next;
+            head = head.next!;
         }
 
         afterCurrent.next = null;
         beforeCurrent.next = after.next;
 
-        return before.next;
+        return before.next!;
     }
 }

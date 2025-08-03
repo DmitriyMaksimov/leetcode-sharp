@@ -20,7 +20,7 @@ public class S00203
                 }
                 else
                 {
-                    currentNode.next = head;
+                    currentNode!.next = head;
                     currentNode = currentNode.next;
                 }
             }

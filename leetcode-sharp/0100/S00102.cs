@@ -19,7 +19,7 @@ public class S00102
         {
             foreach (var node in currentLevel.Where(node => node != null))
             {
-                nextLevel.Add(node.left);
+                nextLevel.Add(node!.left);
                 nextLevel.Add(node.right);
             }
 

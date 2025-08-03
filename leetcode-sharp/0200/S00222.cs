@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/count-complete-tree-nodes/
 public class S00222
 {
-    public int CountNodes(TreeNode root)
+    public int CountNodes(TreeNode? root)
     {
         if (root is null) return 0;
 

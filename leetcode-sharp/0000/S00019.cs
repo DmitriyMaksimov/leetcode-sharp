@@ -31,7 +31,7 @@ public class S00019
 
         if (nodeToDelete != head)
         {
-            nodePrevToDelete.next = nodeToDelete?.next;
+            nodePrevToDelete!.next = nodeToDelete?.next;
         }
         else
         {

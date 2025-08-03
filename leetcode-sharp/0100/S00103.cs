@@ -19,7 +19,7 @@ public class S00103
         {
             foreach (var node in currentLevel.Where(node => node != null))
             {
-                nextLevel.Add(node.left);
+                nextLevel.Add(node!.left);
                 nextLevel.Add(node.right);
             }
 
@@ -38,7 +38,7 @@ public class S00103
         var oddLevel = true;
         var result = new List<IList<int>>();
         
-        foreach (var values in levels.Select(nodes => nodes.Where(x => x != null).Select(x => x.val)))
+        foreach (var values in levels.Select(nodes => nodes.Where(x => x != null).Select(x => x!.val)))
         {
             result.Add(oddLevel ? values.ToList() : values.Reverse().ToList());
             oddLevel = !oddLevel;

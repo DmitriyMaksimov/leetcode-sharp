@@ -40,7 +40,7 @@ public class S00025
 
         for (var i = 0; i < finalList.Count; i++)
         {
-            newNode.val = finalList[i];
+            newNode!.val = finalList[i];
             if (i != finalList.Count - 1)
             {
                 newNode.next = new ListNode();

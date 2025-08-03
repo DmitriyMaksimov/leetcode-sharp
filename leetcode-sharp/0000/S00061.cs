@@ -33,10 +33,10 @@ public class S00061
         
         for (var i = 0; i < len - k - 1; i++)
         {
-            newHead = newHead.next;
+            newHead = newHead!.next;
         }
 
-        var temp = newHead.next;
+        var temp = newHead!.next;
         newHead.next = null;
         
         return temp;

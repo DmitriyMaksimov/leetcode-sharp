@@ -33,7 +33,7 @@ public class S00002
             }
             else
             {
-                lastNode.next = node;
+                lastNode!.next = node;
             }
 
             lastNode = node;
@@ -44,7 +44,7 @@ public class S00002
 
         if (carry > 0)
         {
-            lastNode.next = new ListNode(carry);
+            lastNode!.next = new ListNode(carry);
         }
 
         return result;

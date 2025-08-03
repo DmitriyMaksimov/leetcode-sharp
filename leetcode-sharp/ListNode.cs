@@ -41,7 +41,7 @@ public class ListNode
             }
             else
             {
-                current.next = new ListNode(i);
+                current!.next = new ListNode(i);
                 current = current.next;
             }
         }

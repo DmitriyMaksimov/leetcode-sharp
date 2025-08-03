@@ -18,11 +18,11 @@ public class S00082
                     head = head.next;
                 }
 
-                prev.next = head.next;
+                prev!.next = head.next;
             }
             else
             {
-                prev = prev.next;
+                prev = prev!.next;
             }
 
             head = head.next;

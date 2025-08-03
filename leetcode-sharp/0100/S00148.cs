@@ -22,7 +22,7 @@ public class S00148
             fast = fast.next.next;
         }
 
-        prev.next = null;
+        prev!.next = null;
         var l1 = SortList(head);
         var l2 = SortList(slow);
 
@@ -56,13 +56,13 @@ public class S00148
             {
                 if (l1.val < l2.val)
                 {
-                    ft.next = l1;
+                    ft!.next = l1;
                     ft = ft.next;
                     l1 = l1.next;
                 }
                 else
                 {
-                    ft.next = l2;
+                    ft!.next = l2;
                     ft = ft.next;
                     l2 = l2.next;
                 }
@@ -71,7 +71,7 @@ public class S00148
 
         if (l1 != null)
         {
-            ft.next = l1;
+            ft!.next = l1;
         }
 
         if (l2 != null)
