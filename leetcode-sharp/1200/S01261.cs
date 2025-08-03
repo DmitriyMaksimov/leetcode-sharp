@@ -8,7 +8,7 @@ public static class S01261
     {
         private readonly HashSet<int> _hashSet = [];
 
-        public FindElements(TreeNode root)
+        public FindElements(TreeNode? root)
         {
             dfs(root, 0);
         }

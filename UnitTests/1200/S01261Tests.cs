@@ -12,6 +12,7 @@ public class S01261Tests
         Assert.That(sut.Find(1), Is.False);
         Assert.That(sut.Find(2), Is.True);
     }
+
     [Test]
     public void T2()
     {
@@ -20,6 +21,7 @@ public class S01261Tests
         Assert.That(sut.Find(3), Is.True);
         Assert.That(sut.Find(5), Is.False);
     }
+
     [Test]
     public void T3()
     {
