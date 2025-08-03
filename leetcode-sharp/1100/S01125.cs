@@ -44,16 +44,16 @@ public class S01125
                 }
 
                 var newSkills = j | personSkills;
-                if (dp[newSkills] == null || dp[j].Count + 1 < dp[newSkills].Count)
+                if (dp[newSkills] == null || dp[j]!.Count + 1 < dp[newSkills]!.Count)
                 {
-                    var newTeam = new List<int>(dp[j]) {i};
+                    var newTeam = new List<int>(dp[j]!) {i};
                     dp[newSkills] = newTeam;
                 }
             }
         }
 
         var team = dp[(1 << n) - 1];
-        var result = new int[team.Count];
+        var result = new int[team!.Count];
         for (var i = 0; i < team.Count; i++)
         {
             result[i] = team[i];

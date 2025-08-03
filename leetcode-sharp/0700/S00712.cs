@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
 public class S00712
 {
-    private int[,] _dp;
+    private int[,] _dp = null!;
 
     public int MinimumDeleteSum(string s1, string s2)
     {

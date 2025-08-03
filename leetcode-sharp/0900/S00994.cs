@@ -8,7 +8,6 @@ public class S00994
 
     public int OrangesRotting(int[][] grid)
     {
-        const int empty = 0;
         const int fresh = 1;
         const int rotten = 2;
 

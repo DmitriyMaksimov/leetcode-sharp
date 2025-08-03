@@ -4,8 +4,8 @@
 // https://leetcode.com/problems/find-eventual-safe-states/
 public class S00802
 {
-    private bool[] _visit;
-    private bool[] _inStack;
+    private bool[] _visit = null!;
+    private bool[] _inStack = null!;
 
     public IList<int> EventualSafeNodes(int[][] graph)
     {

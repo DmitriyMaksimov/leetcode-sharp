@@ -1,3 +1,4 @@
+// ReSharper disable InconsistentNaming
 namespace leetcode_sharp;
 
 // 690. Employee Importance
@@ -8,7 +9,7 @@ public class S00690
     {
         public int id;
         public int importance;
-        public IList<int> subordinates;
+        public IList<int> subordinates = null!;
     }
 
     public int GetImportance(IList<Employee> employees, int id)

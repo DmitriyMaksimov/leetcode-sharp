@@ -19,7 +19,7 @@ public class S00637
         {
             foreach (var node in currentLevel.Where(node => node != null))
             {
-                nextLevel.Add(node.left);
+                nextLevel.Add(node!.left);
                 nextLevel.Add(node.right);
             }
 
@@ -39,7 +39,7 @@ public class S00637
         
         foreach (var nodes in levels)
         {
-            var sum = nodes.Where(x => x != null).Select(x => (long)x.val).Sum();
+            var sum = nodes.Where(x => x != null).Select(x => (long)x!.val).Sum();
             result.Add((double)sum / nodes.Count(x => x != null));
         }
 

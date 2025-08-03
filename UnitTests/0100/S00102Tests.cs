@@ -10,6 +10,7 @@ public class S00102Tests
     {
         var sut = new S00102();
         var list = sut.LevelOrder(TreeNode.Parse("[3,9,20,null,null,15,7]"));
+        Assert.That(list, Is.Not.Null);
         Assert.That(list[0], Is.EqualTo((int[]) [3]));
         Assert.That(list[1], Is.EqualTo((int[]) [9, 20]));
         Assert.That(list[2], Is.EqualTo((int[]) [15, 7]));

@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/soup-servings/
 public class S00808
 {
-    private double[,] _memo;
+    private double[,] _memo = null!;
 
     public double SoupServings(int n)
     {

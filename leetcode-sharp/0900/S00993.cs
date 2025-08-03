@@ -17,7 +17,7 @@ public class S00993
         while (queue.Count > 0)
         {
             var (node, depth, parent) = queue.Dequeue();
-            if (node.val == x)
+            if (node!.val == x)
             {
                 xParent = parent;
                 xDepth = depth;

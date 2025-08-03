@@ -4,7 +4,7 @@ namespace leetcode_sharp;
 // https://leetcode.com/problems/reverse-nodes-in-even-length-groups
 public class S02074
 {
-    public ListNode ReverseEvenLengthGroups(ListNode? head)
+    public ListNode ReverseEvenLengthGroups(ListNode head)
     {
         var temp = head;
         var groupNumber = 1;

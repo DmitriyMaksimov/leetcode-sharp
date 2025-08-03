@@ -43,7 +43,7 @@ public class S02999
 
         if (_memoization[index, tight] != null)
         {
-            return _memoization[index, tight].Value;
+            return _memoization[index, tight]!.Value;
         }
 
         long answer = 0;

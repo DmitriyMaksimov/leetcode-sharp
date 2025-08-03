@@ -5,7 +5,7 @@ namespace leetcode_sharp;
 public class S00851
 {
     private readonly Dictionary<int, List<int>> _richer = [];
-    private int[] _result;
+    private int[] _result = null!;
 
     public int[] LoudAndRich(int[][] richer, int[] quiet)
     {

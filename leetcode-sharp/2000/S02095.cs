@@ -14,13 +14,13 @@ public class S02095
         var slowPointer = head;
         var fastPointer = head.next;
 
-        while (fastPointer.next != null && fastPointer.next.next != null)
+        while (fastPointer.next?.next != null)
         {
-            slowPointer = slowPointer.next;
+            slowPointer = slowPointer!.next;
             fastPointer = fastPointer.next.next;
         }
 
-        slowPointer.next = slowPointer.next.next;
+        slowPointer!.next = slowPointer.next!.next;
 
         return head;
     }

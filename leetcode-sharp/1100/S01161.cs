@@ -19,7 +19,7 @@ public class S01161
         {
             foreach (var node in currentLevel.Where(node => node != null))
             {
-                nextLevel.Add(node.left);
+                nextLevel.Add(node!.left);
                 nextLevel.Add(node.right);
             }
 
@@ -35,7 +35,7 @@ public class S01161
             }
         }
 
-        var sums = levels.Select(nodes => nodes.Where(x => x != null).Select(x => (long) x.val).Sum()).ToList();
+        var sums = levels.Select(nodes => nodes.Where(x => x != null).Select(x => (long) x!.val).Sum()).ToList();
 
         return sums.IndexOf(sums.Max()) + 1;
     }

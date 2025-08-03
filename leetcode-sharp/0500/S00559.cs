@@ -7,7 +7,7 @@ public class S00559
     public class Node
     {
         public int val;
-        public IList<Node> children;
+        public IList<Node>? children;
 
         public Node()
         {
@@ -25,26 +25,26 @@ public class S00559
         }
     }
 
-    private int max;
+    private int _max;
 
     public int MaxDepth(Node? root)
     {
-        dfs(root, 0);
-        return max;
+        Dfs(root, 0);
+        return _max;
     }
 
-    private void dfs(Node? node, int d)
+    private void Dfs(Node? node, int d)
     {
         if (node == null)
         {
             return;
         }
 
-        max = Math.Max(max, d + 1);
+        _max = Math.Max(_max, d + 1);
 
-        foreach (var child in node.children)
+        foreach (var child in node.children ?? [])
         {
-            dfs(child, d + 1);
+            Dfs(child, d + 1);
         }
     }
 }

@@ -45,13 +45,13 @@ public class S00460
                 _dictionary.Clear();
             }
 
-            public bool Remove(T item)
+            public bool Remove(T? item)
             {
                 if (item == null) return false;
                 var found = _dictionary.TryGetValue(item, out var node);
                 if (!found) return false;
                 _dictionary.Remove(item);
-                _linkedList.Remove(node);
+                _linkedList.Remove(node!);
                 return true;
             }
 

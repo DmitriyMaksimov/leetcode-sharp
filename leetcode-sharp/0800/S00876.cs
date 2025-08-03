@@ -12,9 +12,9 @@ public class S00876
         while (fast?.next != null)
         {
             fast = fast.next?.next;
-            slow = slow.next;
+            slow = slow!.next;
         }
 
-        return slow;
+        return slow!;
     }
 }

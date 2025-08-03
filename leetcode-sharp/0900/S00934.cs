@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/shortest-bridge/
 public class S00934
 {
-    private int[,] _visit;
+    private int[,] _visit = null!;
     private readonly int[] _directions = [0, 1, 0, -1, 0];
 
     public int ShortestBridge(int[][] grid)

@@ -14,21 +14,21 @@ public class S01438
 
         while (j < nums.Length)
         {
-            while (max.Count > 0 && nums[max.Last.Value] <= nums[j])
+            while (max.Count > 0 && nums[max.Last!.Value] <= nums[j])
             {
                 max.RemoveLast();
             }
 
             max.AddLast(j);
 
-            while (min.Count > 0 && nums[min.Last.Value] >= nums[j])
+            while (min.Count > 0 && nums[min.Last!.Value] >= nums[j])
             {
                 min.RemoveLast();
             }
 
             min.AddLast(j);
 
-            while (nums[max.First.Value] - nums[min.First.Value] > limit)
+            while (nums[max.First!.Value] - nums[min.First!.Value] > limit)
             {
                 i++;
                 if (max.First.Value < i)

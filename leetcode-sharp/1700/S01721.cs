@@ -20,7 +20,7 @@ public class S01721
             }
         }
 
-        (node1.val, node2.val) = (node2.val, node1.val);
+        (node1!.val, node2!.val) = (node2.val, node1.val);
 
         return head;
     }

@@ -19,7 +19,7 @@ public class S01669
             end = end?.next;
         }
 
-        start.next = list2;
+        start!.next = list2;
 
         while (list2.next != null)
         {

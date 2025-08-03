@@ -55,7 +55,7 @@ public class S00958
         {
             foreach (var node in currentLevel.Where(node => node != null))
             {
-                nextLevel.Add(node.left);
+                nextLevel.Add(node!.left);
                 nextLevel.Add(node.right);
             }
 

@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/is-graph-bipartite/
 public class S00785
 {
-    private int[] _colors;
+    private int[] _colors = null!;
 
     public bool IsBipartite(int[][] graph)
     {
