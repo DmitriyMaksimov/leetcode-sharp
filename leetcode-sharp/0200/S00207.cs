@@ -33,7 +33,7 @@ public class S00207
             }
         }
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var current = queue.Dequeue();
             ans.Add(current);

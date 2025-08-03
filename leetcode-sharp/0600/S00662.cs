@@ -18,7 +18,7 @@ public class S00662
         
         var maxWidth = 0;
         
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var size = queue.Count;
             var start = 0;

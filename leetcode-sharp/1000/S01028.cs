@@ -28,7 +28,7 @@ public class S01028
             }
 
             var node = new TreeNode(value);
-            if (stack.Any())
+            if (stack.Count != 0)
             {
                 if (stack.Peek().left == null)
                 {

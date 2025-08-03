@@ -11,7 +11,7 @@ public class S01038
         var stack = new Stack<TreeNode>();
         var current = root;
 
-        while (stack.Any() || current != null)
+        while (stack.Count != 0 || current != null)
         {
             while (current != null)
             {

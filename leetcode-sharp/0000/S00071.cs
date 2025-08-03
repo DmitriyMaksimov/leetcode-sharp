@@ -10,7 +10,7 @@ public class S00071
 
         foreach (var part in path.Split("/", StringSplitOptions.RemoveEmptyEntries))
         {
-            if (stack.Any() && part == "..")
+            if (stack.Count != 0 && part == "..")
             {
                 stack.Pop();
             }

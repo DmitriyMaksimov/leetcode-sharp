@@ -17,7 +17,7 @@ public class S00934
         findIsland(grid, n, m, queue);
 
         var count = 0;
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var size = queue.Count;
             while (size-- > 0)

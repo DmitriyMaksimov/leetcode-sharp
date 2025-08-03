@@ -20,7 +20,7 @@ public class S00127
 
         var result = 1;
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var size = queue.Count;
             for (var i = 0; i < size; i++)

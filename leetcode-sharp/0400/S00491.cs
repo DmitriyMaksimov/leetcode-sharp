@@ -13,7 +13,7 @@ public class S00491
     
         public int GetHashCode(IEnumerable<T> seq)
         {
-            return seq.Aggregate(1234567, (current, elem) => unchecked(current * 37 + elem.GetHashCode()));
+            return seq.Aggregate(1234567, (current, elem) => unchecked(current * 37 + elem!.GetHashCode()));
         }
     }
     
@@ -32,7 +32,7 @@ public class S00491
             {
                 if ((bitMask & mask) != 0)
                 {
-                    if (list.Any())
+                    if (list.Count != 0)
                     {
                         if (list.Last() > nums[bit])
                         {

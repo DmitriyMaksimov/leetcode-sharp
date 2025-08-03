@@ -13,12 +13,12 @@ public class S00084
 
         for (var i = 0; i < n; i++)
         {
-            while (stack.Any() && heights[stack.Peek()] >= heights[i])
+            while (stack.Count != 0 && heights[stack.Peek()] >= heights[i])
             {
                 stack.Pop();
             }
 
-            leftSmall[i] = stack.Any() ? stack.Peek() + 1 : 0;
+            leftSmall[i] = stack.Count != 0 ? stack.Peek() + 1 : 0;
             stack.Push(i);
         }
 
@@ -26,12 +26,12 @@ public class S00084
 
         for (var i = n - 1; i >= 0; i--)
         {
-            while (stack.Any() && heights[stack.Peek()] >= heights[i])
+            while (stack.Count != 0 && heights[stack.Peek()] >= heights[i])
             {
                 stack.Pop();
             }
 
-            rightSmall[i] = stack.Any() ? stack.Peek() - 1 : n - 1;
+            rightSmall[i] = stack.Count != 0 ? stack.Peek() - 1 : n - 1;
 
             stack.Push(i);
         }

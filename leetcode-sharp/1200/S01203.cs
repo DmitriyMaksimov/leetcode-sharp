@@ -48,7 +48,7 @@ public class S01203
         var itemOrder = topologicalSort(itemGraph, itemIndegree);
         var groupOrder = topologicalSort(groupGraph, groupIndegree);
 
-        if (!itemOrder.Any() || !groupOrder.Any())
+        if (itemOrder.Count == 0 || groupOrder.Count == 0)
         {
             return [];
         }
@@ -79,7 +79,7 @@ public class S01203
             stack.Push(key);
         }
 
-        while (stack.Any())
+        while (stack.Count != 0)
         {
             var curr = stack.Pop();
             visited.Add(curr);

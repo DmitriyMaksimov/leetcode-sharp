@@ -13,10 +13,10 @@ public class S00907
         const long mod = 1000000007;
         for (var i = 0; i < arr.Length; ++i)
         {
-            while (stack.Any() && arr[stack.Peek()] > arr[i])
+            while (stack.Count != 0 && arr[stack.Peek()] > arr[i])
                 stack.Pop();
 
-            j = stack.Any() ? stack.Peek() : -1;
+            j = stack.Count != 0 ? stack.Peek() : -1;
             
             sums[i] = ((j >= 0 ? sums[j] : 0) + (i - j) * arr[i]) % mod;
             stack.Push(i);

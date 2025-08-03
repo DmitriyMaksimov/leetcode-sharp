@@ -35,7 +35,7 @@ public class S01129
 
         queue.Enqueue((0, 0, -1));
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var (node, steps, prevColor) = queue.Dequeue();
 

@@ -39,7 +39,7 @@ public class S00210
         }
 
         var res = new List<int>();
-        while (q.Any())
+        while (q.Count != 0)
         {
             var node = q.Dequeue();
 

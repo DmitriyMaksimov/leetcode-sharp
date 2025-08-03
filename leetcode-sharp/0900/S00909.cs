@@ -10,7 +10,7 @@ public class S00909
         Queue<int> queue = new();
         queue.Enqueue(1);
         var visited = new bool[n * n + 1];
-        for (var move = 0; queue.Any(); move++)
+        for (var move = 0; queue.Count != 0; move++)
         {
             for (var size = queue.Count; size > 0; size--)
             {

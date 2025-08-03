@@ -22,7 +22,7 @@ public class S00649
             }
         }
 
-        while (rQueue.Any() && dQueue.Any())
+        while (rQueue.Count != 0 && dQueue.Count != 0)
         {
             var rIndex = rQueue.Dequeue();
             var dIndex = dQueue.Dequeue();

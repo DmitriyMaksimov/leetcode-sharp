@@ -28,7 +28,7 @@ public class S01162
 
         var tempQueue = new Queue<(int row, int col)>();
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var (row, col) = queue.Dequeue();
 
@@ -44,7 +44,7 @@ public class S01162
                 }
             }
 
-            if (queue.Any()) continue;
+            if (queue.Count != 0) continue;
             
             ++distance;
             (queue, tempQueue) = (tempQueue, queue);

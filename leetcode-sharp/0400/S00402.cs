@@ -20,7 +20,7 @@ public class S00402
         var i = 0;
         while (i < num.Length)
         {
-            while (k > 0 && stack.Any() && stack.Peek() > num[i])
+            while (k > 0 && stack.Count != 0 && stack.Peek() > num[i])
             {
                 stack.Pop();
                 k--;

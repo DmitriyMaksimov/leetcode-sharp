@@ -19,7 +19,7 @@ public class S00394
                 continue;
             }
 
-            while (stack.Any() && char.IsLetter(stack.Peek()))
+            while (stack.Count != 0 && char.IsLetter(stack.Peek()))
             {
                 temp += stack.Pop();
             }
@@ -28,7 +28,7 @@ public class S00394
 
             temp = new string(temp.Reverse().ToArray());
 
-            while (stack.Any() && char.IsDigit(stack.Peek()))
+            while (stack.Count != 0 && char.IsDigit(stack.Peek()))
             {
                 temp2 += stack.Pop();
             }

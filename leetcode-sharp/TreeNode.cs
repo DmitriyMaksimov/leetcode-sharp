@@ -27,7 +27,7 @@ public class TreeNode
         return Parse(enumerable);
     }
 
-    public static TreeNode? Parse(IEnumerable<int?> values)
+    private static TreeNode? Parse(IEnumerable<int?> values)
     {
         TreeNode? root = null;
         var isRoot = true;
@@ -38,7 +38,7 @@ public class TreeNode
 
         foreach (var value in values)
         {
-            if (queue.Any())
+            if (queue.Count != 0)
             {
                 // If the queue is non-empty, parent nodes have been processed, so we're not currently processing the root
                 (parentNode, leftChild) = queue.Dequeue();
@@ -59,11 +59,11 @@ public class TreeNode
             {
                 if (leftChild)
                 {
-                    parentNode.left = node;
+                    parentNode!.left = node;
                 }
                 else
                 {
-                    parentNode.right = node;
+                    parentNode!.right = node;
                 }
             }
         }
@@ -73,7 +73,7 @@ public class TreeNode
 
     public static void Print(TreeNode? root)
     {
-        var levels = listOfLevels(root).Reverse();
+        var levels = ListOfLevels(root).Reverse();
         var lines = new List<string>();
         var currentLevelPositions = new List<int>();
         TreeNode?[]? previousLevel = null;
@@ -117,7 +117,7 @@ public class TreeNode
 
                     var leftChild = previousLevel[i * 2];
                     var rightChild = previousLevel[i * 2 + 1];
-                    var leftChildPos = previousLevelPositions[i * 2];
+                    var leftChildPos = previousLevelPositions![i * 2];
                     var rightChildPos = previousLevelPositions[i * 2 + 1];
                     
                     // Set position of parent as midpoint of the children's positions
@@ -161,7 +161,7 @@ public class TreeNode
         }
     }
     
-    private static IEnumerable<IEnumerable<TreeNode?>> listOfLevels(TreeNode? root)
+    private static IEnumerable<IEnumerable<TreeNode?>> ListOfLevels(TreeNode? root)
     {
         var currentLevel = new List<TreeNode?> {root};
         var nextLevel = new List<TreeNode?>();

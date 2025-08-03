@@ -19,7 +19,7 @@ public class S01091
         queue.Enqueue((0, 0, 1));
         grid[0][0] = 1;
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var (x, y, steps) = queue.Dequeue();
 

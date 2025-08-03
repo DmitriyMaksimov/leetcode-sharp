@@ -20,7 +20,7 @@ public class S01345
         visited[0] = true;
         var steps = 0;
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var size = queue.Count;
             while (size-- > 0)

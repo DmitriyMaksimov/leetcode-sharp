@@ -15,7 +15,7 @@ public static class S01845
 
         public int Reserve()
         {
-            if (!_sortedSet.Any())
+            if (_sortedSet.Count == 0)
             {
                 return ++_largestReserved;
             }

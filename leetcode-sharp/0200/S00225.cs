@@ -27,7 +27,7 @@ public static class S00225
 
         public bool Empty()
         {
-            return !_queue.Any();
+            return _queue.Count == 0;
         }
     }
 }

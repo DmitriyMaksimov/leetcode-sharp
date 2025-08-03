@@ -105,7 +105,7 @@ public class S00460
             var frequency = frequencyAndValue.Item1;
             var keys = _frequencies[frequency];
             keys.Remove(key);
-            if (_minFreq == frequency && !keys.Any())
+            if (_minFreq == frequency && keys.Count == 0)
             {
                 ++_minFreq;
             }

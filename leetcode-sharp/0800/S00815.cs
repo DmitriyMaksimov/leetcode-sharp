@@ -27,7 +27,7 @@ public class S00815
         var visitedStops = new HashSet<int>();
         queue.Enqueue((source, 0));
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var item = queue.Dequeue();
             if (item.stop == target)

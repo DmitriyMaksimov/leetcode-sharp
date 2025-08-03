@@ -23,7 +23,7 @@ public class S00894
             return [];
         }
 
-        if (_dp[n].Any())
+        if (_dp[n].Count != 0)
         {
             return _dp[n];
         }

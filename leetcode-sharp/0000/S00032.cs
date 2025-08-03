@@ -15,7 +15,7 @@ public class S00032
             {
                 stack.Push(pv);
             }
-            else if (stack.Any())
+            else if (stack.Count != 0)
             {
                 res = Math.Max(res, i - (pv = stack.Pop()) + 1);
                 continue;

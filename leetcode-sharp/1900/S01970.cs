@@ -49,7 +49,7 @@ public class S01970
             visited[1, i] = true;
         }
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var (currentRow, currentCol) = queue.Dequeue();
 

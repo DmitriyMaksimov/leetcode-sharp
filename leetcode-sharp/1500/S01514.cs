@@ -25,7 +25,7 @@ public class S01514
         var queue = new Queue<int>();
         queue.Enqueue(start);
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var current = queue.Dequeue();
             foreach (var neighbor in graph.GetValueOrDefault(current, []))

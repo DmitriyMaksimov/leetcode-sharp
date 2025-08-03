@@ -11,24 +11,24 @@ public class S00735
 
         for (var i = 0; i < n; i++)
         {
-            if (!stack.Any() || asteroids[i] > 0)
+            if (stack.Count == 0 || asteroids[i] > 0)
             {
                 stack.Push(asteroids[i]);
             }
             else
             {
-                while (stack.Any() && stack.Peek() > 0 && stack.Peek() < Math.Abs(asteroids[i]))
+                while (stack.Count != 0 && stack.Peek() > 0 && stack.Peek() < Math.Abs(asteroids[i]))
                 {
                     stack.Pop();
                 }
 
-                if (stack.Any() && stack.Peek() == Math.Abs(asteroids[i]))
+                if (stack.Count != 0 && stack.Peek() == Math.Abs(asteroids[i]))
                 {
                     stack.Pop();
                 }
                 else
                 {
-                    if (!stack.Any() || stack.Peek() < 0)
+                    if (stack.Count == 0 || stack.Peek() < 0)
                     {
                         stack.Push(asteroids[i]);
                     }
@@ -38,7 +38,7 @@ public class S00735
 
         var ans = new int[stack.Count];
         var size = stack.Count;
-        while (stack.Any())
+        while (stack.Count != 0)
         {
             ans[--size] = stack.Pop();
         }

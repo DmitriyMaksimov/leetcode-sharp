@@ -32,7 +32,7 @@ public class S00149
                 }
             }
 
-            if (counts.Any())
+            if (counts.Count != 0)
             {
                 result = Math.Max(result, counts.Values.Max() + 1);
             }

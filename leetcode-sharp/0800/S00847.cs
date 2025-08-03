@@ -19,7 +19,7 @@ public class S00847
             visited.Add((i, maskValue));
         }
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var curr = queue.Dequeue();
 

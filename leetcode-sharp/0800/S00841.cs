@@ -10,7 +10,7 @@ public class S00841
         var roomsToVisit = new Queue<int>();
         roomsToVisit.Enqueue(0);
 
-        while (roomsToVisit.Any())
+        while (roomsToVisit.Count != 0)
         {
             var currentRoom = roomsToVisit.Dequeue();
             visitedRooms.Add(currentRoom);

@@ -14,7 +14,7 @@ public class MinStack
 
     public void Push(int val)
     {
-        var min = _stack.Any() ? GetMin() : val;
+        var min = _stack.Count != 0 ? GetMin() : val;
         _stack.Push((val, Math.Min(val, min)));
     }
 

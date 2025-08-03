@@ -11,7 +11,7 @@ public class S01030
         var i = 0;
         var queue = new Queue<int[]>();
         queue.Enqueue([rCenter, cCenter]);
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var cell = queue.Dequeue();
             var r = cell[0];

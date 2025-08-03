@@ -46,7 +46,7 @@ public class S01857
         var res = 0;
         var seen = 0;
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var node = queue.Dequeue();
             seen++;

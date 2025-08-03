@@ -23,7 +23,7 @@ public class S00864
         var steps = 0;
 
         // Perform BFS
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             var size = queue.Count;
             for (var i = 0; i < size; i++)
