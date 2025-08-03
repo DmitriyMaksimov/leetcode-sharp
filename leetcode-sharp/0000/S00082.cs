@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 public class S00082
 {
-    public ListNode DeleteDuplicates(ListNode head)
+    public ListNode? DeleteDuplicates(ListNode? head)
     {
         var dummy = new ListNode(0, head);
         var prev = dummy;

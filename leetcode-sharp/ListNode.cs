@@ -17,8 +17,8 @@ public class ListNode
     public static ListNode? Parse(string str)
     {
         str = str.Trim();
-        if (!str.StartsWith("[")) throw new ArgumentException("Should start with '['", nameof(str));
-        if (!str.EndsWith("]")) throw new ArgumentException("Should end with ']'", nameof(str));
+        if (!str.StartsWith('[')) throw new ArgumentException("Should start with '['", nameof(str));
+        if (!str.EndsWith(']')) throw new ArgumentException("Should end with ']'", nameof(str));
 
         str = str.Replace(" ", "");
 
