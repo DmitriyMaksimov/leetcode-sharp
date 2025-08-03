@@ -28,7 +28,7 @@ public class S02711
         return result.ToArray();
     }
 
-    private static void PopulateDiagonal(int i, int j, int m, int n, List<int[]>? result, int[][] grid)
+    private static void PopulateDiagonal(int i, int j, int m, int n, List<int[]> result, int[][] grid)
     {
         HashSet<int> topLeft = [];
         HashSet<int> bottomRight = [];
@@ -41,7 +41,7 @@ public class S02711
 
         for (var d = Math.Min(m - i, n - j) - 1; d >= 0; --d)
         {
-            result[i + d][j + d] = Math.Abs(result[i + d][j + d] - (int)bottomRight.Count);
+            result[i + d][j + d] = Math.Abs(result[i + d][j + d] - bottomRight.Count);
             bottomRight.Add(grid[i + d][j + d]);
         }
     }

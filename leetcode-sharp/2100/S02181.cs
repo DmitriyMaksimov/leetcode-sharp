@@ -4,7 +4,7 @@
 // https://leetcode.com/problems/merge-nodes-in-between-zeros
 public class S02181
 {
-    public ListNode? MergeNodes(ListNode? head)
+    public ListNode MergeNodes(ListNode head)
     {
         var current = head;
 

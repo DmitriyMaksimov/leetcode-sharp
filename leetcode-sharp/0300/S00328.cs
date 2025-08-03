@@ -4,13 +4,13 @@
 // https://leetcode.com/problems/odd-even-linked-list/
 public class S00328
 {
-    public ListNode OddEvenList(ListNode head)
+    public ListNode? OddEvenList(ListNode? head)
     {
         if (head == null)
         {
             return null;
         }
-        var second = head?.next;
+        var second = head.next;
         var currentOdd = head;
         var currentNode = second?.next;
         var currentEven = second;
@@ -35,12 +35,12 @@ public class S00328
                 }
             }
 
-            currentNode = currentNode?.next;
+            currentNode = currentNode.next;
 
             isOdd = !isOdd;
         }
 
-        currentOdd.next = second;
+        currentOdd!.next = second;
         if (currentEven != null) currentEven.next = null;
 
         return head;

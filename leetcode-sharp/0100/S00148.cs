@@ -76,7 +76,7 @@ public class S00148
 
         if (l2 != null)
         {
-            ft.next = l2;
+            ft!.next = l2;
         }
 
         return fh;

@@ -21,17 +21,17 @@ public class S02130
 
         while (fast?.next != null)
         {
-            slow = slow.next;
+            slow = slow!.next;
             fast = fast.next.next;
         }
 
-        slow = reverse(slow);
+        slow = Reverse(slow);
         fast = head;
         var sum = int.MinValue;
         
         while (slow != null)
         {
-            sum = Math.Max(slow.val + fast.val, sum);
+            sum = Math.Max(slow.val + fast!.val, sum);
             slow = slow.next;
             fast = fast.next;
         }
@@ -39,7 +39,7 @@ public class S02130
         return sum;
     }
 
-    private static ListNode? reverse(ListNode? node)
+    private static ListNode? Reverse(ListNode? node)
     {
         if (node == null)
         {
@@ -47,7 +47,7 @@ public class S02130
         }
 
         var current = node;
-        ListNode previous = null;
+        ListNode? previous = null;
         while (current != null)
         {
             var next = current.next;

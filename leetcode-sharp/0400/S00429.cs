@@ -7,7 +7,7 @@ public class S00429
     public class Node
     {
         public int val;
-        public IList<Node?>? children;
+        public IList<Node>? children;
 
         public Node()
         {
@@ -18,7 +18,7 @@ public class S00429
             val = _val;
         }
 
-        public Node(int _val, IList<Node?>? _children)
+        public Node(int _val, IList<Node>? _children)
         {
             val = _val;
             children = _children;

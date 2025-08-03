@@ -8,16 +8,12 @@ public class S00558
     {
         public bool val;
         public bool isLeaf;
-        public Node topLeft;
-        public Node topRight;
-        public Node bottomLeft;
-        public Node bottomRight;
+        public Node? topLeft;
+        public Node? topRight;
+        public Node? bottomLeft;
+        public Node? bottomRight;
 
-        public Node()
-        {
-        }
-
-        public Node(bool _val, bool _isLeaf, Node _topLeft, Node _topRight, Node _bottomLeft, Node _bottomRight)
+        public Node(bool _val, bool _isLeaf, Node? _topLeft, Node? _topRight, Node? _bottomLeft, Node? _bottomRight)
         {
             val = _val;
             isLeaf = _isLeaf;
@@ -40,10 +36,10 @@ public class S00558
             return quadTree2.val ? quadTree2 : quadTree1;
         }
 
-        var topLeft = Intersect(quadTree1.topLeft, quadTree2.topLeft);
-        var topRight = Intersect(quadTree1.topRight, quadTree2.topRight);
-        var bottomLeft = Intersect(quadTree1.bottomLeft, quadTree2.bottomLeft);
-        var bottomRight = Intersect(quadTree1.bottomRight, quadTree2.bottomRight);
+        var topLeft = Intersect(quadTree1.topLeft!, quadTree2.topLeft!);
+        var topRight = Intersect(quadTree1.topRight!, quadTree2.topRight!);
+        var bottomLeft = Intersect(quadTree1.bottomLeft!, quadTree2.bottomLeft!);
+        var bottomRight = Intersect(quadTree1.bottomRight!, quadTree2.bottomRight!);
 
         if (topLeft.isLeaf && topRight.isLeaf && bottomLeft.isLeaf && bottomRight.isLeaf && topLeft.val == topRight.val && bottomLeft.val == bottomRight.val && topLeft.val == bottomLeft.val)
         {

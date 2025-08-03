@@ -12,14 +12,7 @@ public class S00501
         while (queue.Count > 0)
         {
             var node = queue.Dequeue();
-            if (dict.ContainsKey(node.val))
-            {
-                dict[node.val]++;
-            }
-            else
-            {
-                dict.Add(node.val, 1);
-            }
+            dict[node!.val] = dict.GetValueOrDefault(node.val) + 1;
 
             if (node.left != null)
             {

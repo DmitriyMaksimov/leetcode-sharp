@@ -7,7 +7,7 @@ public class S02416
     private class Trie
     {
         public readonly Trie?[] Tries = new Trie[26];
-        public int Visited = 0;
+        public int Visited;
     }
 
     public int[] SumPrefixScores(string[] words)
@@ -22,7 +22,7 @@ public class S02416
 
             foreach (var c in word.Select(ch => ch - 'a'))
             {
-                if (t!.Tries[c] == null) t.Tries[c] = new Trie();
+                t!.Tries[c] ??= new Trie();
                 t.Tries[c]!.Visited++;
                 t = t.Tries[c];
             }
@@ -34,7 +34,7 @@ public class S02416
             var curr = 0;
             foreach (var c in word.Select(ch => ch - 'a'))
             {
-                curr += t.Tries[c].Visited;
+                curr += t!.Tries[c]!.Visited;
                 t = t.Tries[c];
             }
 

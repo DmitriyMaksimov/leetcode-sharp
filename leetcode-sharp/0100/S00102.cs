@@ -35,6 +35,6 @@ public class S00102
             }
         }
 
-        return levels.Select(nodes => nodes.Where(x => x != null).Select(x => x.val)).Select(values => values.ToList()).Cast<IList<int>>().ToList();
+        return levels.Select(nodes => nodes.Where(x => x != null).Select(x => x!.val)).Select(values => values.ToList()).Cast<IList<int>>().ToList();
     }
 }

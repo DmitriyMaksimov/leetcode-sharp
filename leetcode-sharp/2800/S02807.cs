@@ -12,18 +12,18 @@ public class S02807
 
         while (temp?.next?.next is not null)
         {
-            var newNode = new ListNode(gcd(temp.val, temp.next.val), temp.next);
+            var newNode = new ListNode(Gcd(temp.val, temp.next.val), temp.next);
             temp.next = newNode;
             temp = temp.next.next;
         }
 
-        temp.next = new ListNode(gcd(temp.val, temp.next.val), temp.next);
+        temp!.next = new ListNode(Gcd(temp.val, temp.next!.val), temp.next);
 
         return head;
     }
 
-    private static int gcd(int p, int q)
+    private static int Gcd(int p, int q)
     {
-        return q == 0 ? p : gcd(q, p % q);
+        return q == 0 ? p : Gcd(q, p % q);
     }
 }
