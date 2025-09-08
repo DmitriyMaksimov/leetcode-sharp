@@ -8,7 +8,7 @@ public class S01317
     {
         for (var i = 1; i < n; i++)
         {
-            if (hasNoZero(i) && hasNoZero(n - i))
+            if (HasNoZero(i) && HasNoZero(n - i))
             {
                 return [i, n - i];
             }
@@ -17,7 +17,7 @@ public class S01317
         return [];
     }
 
-    private static bool hasNoZero(int n)
+    private static bool HasNoZero(int n)
     {
         while (n > 0)
         {
