@@ -7,11 +7,12 @@ public class S01935
     public int CanBeTypedWords(string text, string brokenLetters)
     {
         var words = text.Split(' ');
+        var hashSet = brokenLetters.ToHashSet();
         var result = 0;
 
         foreach (var word in words)
         {
-            var isBroken = brokenLetters.Any(letter => word.Contains(letter));
+            var isBroken = word.Any(letter => hashSet.Contains(letter));
 
             if (!isBroken)
             {
