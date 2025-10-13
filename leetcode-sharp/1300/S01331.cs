@@ -6,7 +6,7 @@ public class S01331
 {
     public int[] ArrayRankTransform(int[] arr)
     {
-        var sorted = arr.OrderBy(x => x).Distinct().ToArray();
+        var sorted = arr.Order().Distinct().ToArray();
         var dict = new Dictionary<int, int>();
         for (var i = 0; i < sorted.Length; i++)
         {

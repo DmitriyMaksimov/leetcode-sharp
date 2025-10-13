@@ -6,7 +6,7 @@ public class S01637
 {
     public int MaxWidthOfVerticalArea(int[][] points)
     {
-        var xCoords = points.Select(p => p[0]).OrderBy(x => x).ToArray();
+        var xCoords = points.Select(p => p[0]).Order().ToArray();
 
         var res = 0;
 

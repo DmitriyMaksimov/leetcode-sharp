@@ -23,7 +23,7 @@ public class S01122
             dict.Remove(i);
         }
 
-        foreach (var i in dict.Keys.OrderBy(x => x))
+        foreach (var i in dict.Keys.Order())
         {
             for (var j = 0; j < dict[i]; j++)
             {

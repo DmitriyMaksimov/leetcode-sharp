@@ -10,7 +10,7 @@ public class S00049
 
         foreach (var word in strs)
         {
-            var sortedWord = new string(word.OrderBy(ch => ch).ToArray());
+            var sortedWord = new string(word.Order().ToArray());
 
             if (!map.ContainsKey(sortedWord))
             {

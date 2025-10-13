@@ -16,6 +16,6 @@ public class S00350Tests
     public void T2()
     {
         var sut = new S00350();
-        Assert.That(sut.Intersect([4, 9, 5], [9, 4, 9, 8, 4]).OrderBy(x => x), Is.EqualTo((int[]) [4, 9]));
+        Assert.That(sut.Intersect([4, 9, 5], [9, 4, 9, 8, 4]).Order(), Is.EqualTo((int[]) [4, 9]));
     }
 }

@@ -16,6 +16,6 @@ public class S02248
             }
         }
         
-        return counts.Where(x => x.Value == nums.Length).Select(x => x.Key).OrderBy(x => x).ToArray();
+        return counts.Where(x => x.Value == nums.Length).Select(x => x.Key).Order().ToArray();
     }
 }

@@ -20,7 +20,7 @@ public class S02785
             }
         }
 
-        vowelsFromString = vowelsFromString.OrderBy(x => x).ToList();
+        vowelsFromString = vowelsFromString.Order().ToList();
         
         for (var i = 0; i < vowelIndices.Count; i++)
         {

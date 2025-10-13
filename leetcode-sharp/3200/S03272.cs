@@ -24,7 +24,7 @@ public class S03272
 
             if (long.Parse(pal) % k == 0)
             {
-                var sorted = string.Concat(pal.OrderBy(c => c));
+                var sorted = string.Concat(pal.Order());
                 kPals.Add(sorted);
             }
         }

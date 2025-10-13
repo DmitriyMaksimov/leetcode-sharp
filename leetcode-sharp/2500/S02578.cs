@@ -6,7 +6,7 @@ public class S02578
 {
     public int SplitNum(int num)
     {
-        var chars = num.ToString().OrderBy(x => x).ToArray();
+        var chars = num.ToString().Order().ToArray();
 
         var n1 = 0;
         var n2 = 0;

@@ -11,7 +11,7 @@ public class S02273
 
         foreach (var word in words)
         {
-            var sorted = string.Concat(word.OrderBy(c => c));
+            var sorted = string.Concat(word.Order());
             
             if (stack.Count == 0)
             {

@@ -14,7 +14,7 @@ public class S01268
             result.Add(
                 products
                     .Where(p => (p.Length > i ? p[..i] : p) == curSearchSubstring)
-                    .OrderBy(p => p)
+                    .Order()
                     .Take(3)
                     .ToList());
         }

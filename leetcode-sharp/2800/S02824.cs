@@ -10,7 +10,7 @@ public class S02824
         var left = 0;
         var right = nums.Count - 1;
 
-        nums = nums.OrderBy(x => x).ToList();
+        nums = nums.Order().ToList();
 
         while (left < right)
         {

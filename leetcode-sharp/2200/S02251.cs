@@ -16,7 +16,7 @@ public class S02251
             events[flower[1] + 1] = events.GetValueOrDefault(flower[1] + 1) - 1;
         }
 
-        var keys = events.Keys.OrderBy(x => x).ToList();
+        var keys = events.Keys.Order().ToList();
         var sum = 0;
 
         foreach (var key in keys)

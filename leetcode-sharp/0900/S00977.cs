@@ -6,6 +6,6 @@ public class S00977
 {
     public int[] SortedSquares(int[] nums)
     {
-        return nums.Select(x => x * x).OrderBy(x => x).ToArray();
+        return nums.Select(x => x * x).Order().ToArray();
     }
 }

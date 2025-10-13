@@ -18,7 +18,7 @@ public class S02996
             countSum += nums[i];
         }
 
-        foreach (var num in nums.OrderBy(x => x))
+        foreach (var num in nums.Order())
         {
             if (countSum == num)
             {

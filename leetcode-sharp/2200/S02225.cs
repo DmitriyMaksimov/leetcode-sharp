@@ -23,7 +23,7 @@ public class S02225
         // answer[1] is a list of all players that have lost exactly one match.
         var list1 = new List<int>();
         
-        foreach (var player in allPlayers.OrderBy(x => x))
+        foreach (var player in allPlayers.Order())
         {
             if (loseCounts.TryGetValue(player, out var lost))
             {

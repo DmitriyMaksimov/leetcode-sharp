@@ -6,7 +6,7 @@ public class S02300
 {
     public int[] SuccessfulPairs(int[] spells, int[] potions, long success)
     {
-        var sortedPotions = potions.OrderBy(x => x).Select(x => (long)x).ToList();
+        var sortedPotions = potions.Order().Select(x => (long)x).ToList();
 
         var result = new int[spells.Length];
 

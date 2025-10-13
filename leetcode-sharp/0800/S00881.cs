@@ -6,7 +6,7 @@ public class S00881
 {
     public int NumRescueBoats(int[] people, int limit)
     {
-        var sortedList = people.OrderBy(x => x).ToArray();
+        var sortedList = people.Order().ToArray();
         var boats = 0;
         var lightest = 0;
         var heaviest = sortedList.Length - 1;

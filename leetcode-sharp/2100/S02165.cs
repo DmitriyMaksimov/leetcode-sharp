@@ -22,7 +22,7 @@ public class S02165
         }
         else
         {
-            digits = digits.OrderBy(c => c).ToArray();
+            digits = digits.Order().ToArray();
 
             if (digits[0] == '0')
             {

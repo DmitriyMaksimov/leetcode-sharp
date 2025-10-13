@@ -12,7 +12,7 @@ public class S03085
             freqDict[c] = freqDict.GetValueOrDefault(c) + 1;
         }
 
-        var frequencies = freqDict.Values.OrderBy(f => f).ToList();
+        var frequencies = freqDict.Values.Order().ToList();
 
         var deleted = 0;
         var result = word.Length;
