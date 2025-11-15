@@ -13,7 +13,7 @@ public class S00048
                 (matrix[i][j], matrix[j][i]) = (matrix[j][i], matrix[i][j]);
             }
             
-            matrix[i] = matrix[i].Reverse().ToArray();
+            matrix[i] = matrix[i].AsEnumerable().Reverse().ToArray();
         }
     }
 }

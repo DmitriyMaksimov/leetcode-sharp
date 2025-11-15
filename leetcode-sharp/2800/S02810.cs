@@ -12,7 +12,7 @@ public class S02810
         {
             if (letter == 'i')
             {
-                var reversedString = new string(result.ToCharArray().Reverse().ToArray());
+                var reversedString = new string(result.ToCharArray().AsEnumerable().Reverse().ToArray());
                 result = reversedString;
             }
             else

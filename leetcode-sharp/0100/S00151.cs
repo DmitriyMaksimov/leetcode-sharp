@@ -6,6 +6,6 @@ public class S00151
 {
     public string ReverseWords(string s)
     {
-        return string.Join(' ', s.Split(' ', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries).Reverse());
+        return string.Join(' ', s.Split(' ', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries).AsEnumerable().Reverse());
     }
 }

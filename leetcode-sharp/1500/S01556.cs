@@ -21,6 +21,6 @@ public class S01556
             count = 0;
         }
 
-        return new string(sb.ToString().ToCharArray().Reverse().ToArray());
+        return new string(sb.ToString().ToCharArray().AsEnumerable().Reverse().ToArray());
     }
 }

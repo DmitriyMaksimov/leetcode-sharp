@@ -22,7 +22,7 @@ public class S02396
         for (var toBase = 2; toBase <= n - 2; toBase++)
         {
             var val = convertToBase(n, toBase);
-            if (!val.SequenceEqual(val.Reverse())) return false;
+            if (!val.SequenceEqual(val.AsEnumerable().Reverse())) return false;
         }
         return true;
     }
