@@ -10,12 +10,10 @@ public class S00961
 
         foreach (var num in nums)
         {
-            if (hashSet.Contains(num))
+            if (!hashSet.Add(num))
             {
                 return num;
             }
-
-            hashSet.Add(num);
         }
         
         return 0;
