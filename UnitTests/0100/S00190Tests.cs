@@ -9,13 +9,13 @@ public class S00190Tests
     public void T1()
     {
         var sut = new S00190();
-        Assert.That(sut.reverseBits(0b00000010100101000001111010011100), Is.EqualTo(0b00111001011110000010100101000000));
+        Assert.That(sut.ReverseBits(43261596), Is.EqualTo(964176192));
     }
 
     [Test]
     public void T2()
     {
         var sut = new S00190();
-        Assert.That(sut.reverseBits(0b11111111111111111111111111111101), Is.EqualTo(0b10111111111111111111111111111111));
+        Assert.That(sut.ReverseBits(2147483644), Is.EqualTo(1073741822));
     }
 }
