@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace leetcode_sharp;
 
 // 2573. Find the String with LCP
