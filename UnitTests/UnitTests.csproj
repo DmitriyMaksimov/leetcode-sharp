@@ -25,8 +25,4 @@
       <ProjectReference Include="..\leetcode-sharp\leetcode-sharp.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="3900\" />
-    </ItemGroup>
-
 </Project>
